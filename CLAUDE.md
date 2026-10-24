@@ -29,6 +29,7 @@ Add a dependency with `uv add <pkg>`, and commit `pyproject.toml` and `uv.lock` 
 
 | Path | What |
 |---|---|
+| `challenge/` | the organisers' provided code and iqm_utils, verbatim: never edit it; copy what you need into `src/dqiqm/` and say where it came from |
 | `src/dqiqm/` | the package |
 | `src/dqiqm/hw.py` | the only path to IQM hardware |
 | `tests/` | offline tests; `conftest.py` blocks every network socket |

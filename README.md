@@ -23,6 +23,7 @@ The tests run offline and need no token. Tests that use hardware are marked `hw`
 
 | Path | What |
 |---|---|
+| `challenge/` | the organisers' provided code and iqm_utils, verbatim: never edit it; copy what you need into `src/dqiqm/` and say where it came from |
 | `src/dqiqm/` | the package; `hw.py` is the only path to IQM Resonance |
 | `tests/` | offline tests |
 | `data/` | calibration snapshots, raw hardware results, simulation tables (`data/README.md`) |
