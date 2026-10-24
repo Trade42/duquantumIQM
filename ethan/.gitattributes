@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.npz -text
+*.stim -text whitespace=cr-at-eol
+*.png -text

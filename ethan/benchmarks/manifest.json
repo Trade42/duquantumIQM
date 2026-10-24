@@ -1,0 +1,853 @@
+{
+  "schema_version": 1,
+  "description": "Immutable offline decoder replay; no credentials or QPU access",
+  "cases": [
+    {
+      "study": "vanilla_lut",
+      "id": "Z_r1_vanilla_lut",
+      "basis": "Z",
+      "rounds": 1,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 115,
+      "probability": 0.03833333333333333,
+      "ci95": [
+        0.03203229760214456,
+        0.045815172720906405
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/Z_r1_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/Z_r1_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/Z_r1_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/Z_r1_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "5aaf3e70cc5234e03c55d5204e518a57a0a56004324bac937f015549e3b161c9",
+        "decoder": "690e8a8f4d32ff17e9aa15b399952cbe56daa87f8d9c68d25bc596aa373df914",
+        "shots": "acbb5c1f785e42cdcc54063fd4c013022f906f0a56e325723bcec2ff28f0ac33",
+        "lut": "36128dd22890ff174ce7c1b87c41995d3cd9a4f2af586f137fe64bcc10468f06"
+      }
+    },
+    {
+      "study": "vanilla_lut",
+      "id": "Z_r2_vanilla_lut",
+      "basis": "Z",
+      "rounds": 2,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 409,
+      "probability": 0.13633333333333333,
+      "ci95": [
+        0.12451849239566237,
+        0.14907832357722473
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/Z_r2_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/Z_r2_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/Z_r2_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/Z_r2_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "7f45c18a58ea5e8c5b04f3a0a54d5bbcdeb68f62c3861cf0e9cb1f827d25fc6b",
+        "decoder": "b56812781588fc0586098640a8ee9b99c08d6188e128bf7bd72fde72e7026db4",
+        "shots": "1e96cbe9bb904c71b2d273a815cd5f8320c75a1dd1daaf009106e27f8945905c",
+        "lut": "6e5dd9183c4dec28452a128217f0b8e1e789bbd94d08f44cb152e48278764fc1"
+      }
+    },
+    {
+      "study": "vanilla_lut",
+      "id": "X_r3_vanilla_lut",
+      "basis": "X",
+      "rounds": 3,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 1220,
+      "probability": 0.4066666666666667,
+      "ci95": [
+        0.3892194031375169,
+        0.4243526486245439
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/X_r3_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/X_r3_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/X_r3_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/X_r3_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "8e1b975a4b34c6c3859238a87cb417b053f54a8dde428e70d097e9cac73d3d2e",
+        "decoder": "46949faa8926c8ce21553475824bfc1910c9f884f6139be46d4f941477bed50b",
+        "shots": "5f5466fc7f6a6331c178ea902e08d6c3feb891bf4f8b8d0e49071d29dc555232",
+        "lut": "70c9956e1e5dace45d88328c0f633bbcba03f814bf94cbbf1355c23cd46348cd"
+      }
+    },
+    {
+      "study": "vanilla_lut",
+      "id": "Z_r3_vanilla_lut",
+      "basis": "Z",
+      "rounds": 3,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 583,
+      "probability": 0.19433333333333333,
+      "ci95": [
+        0.18056868994365366,
+        0.20887977957709558
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/Z_r3_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/Z_r3_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/Z_r3_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/Z_r3_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "10f6a9f2c506b42e08a1a635ee1eaa6caa78e936a66ec808d9245c83d30d39cf",
+        "decoder": "644dd5ce9fbf617ab8d9360832217753a42889ad26669a9a92f2e9c1273e5640",
+        "shots": "4799de37ad251a65d4f4b28b4379eefb81b21935d4642615d3b4384e120555f2",
+        "lut": "d904be98ae0720ade0fa9d6e791ee49b054d4921d450d4a544ebad201560b30f"
+      }
+    },
+    {
+      "study": "vanilla_lut",
+      "id": "X_r1_vanilla_lut",
+      "basis": "X",
+      "rounds": 1,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 423,
+      "probability": 0.141,
+      "ci95": [
+        0.12900504479605657,
+        0.15391316858872744
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/X_r1_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/X_r1_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/X_r1_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/X_r1_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "b6b52b71a0da5132076d80aeaa64a4c6a5b8bb35225c64961f29c382e1f07e3f",
+        "decoder": "34e77c66b26fe07e628a316bb6cafbd98707b468c3af8afe587bab1165425363",
+        "shots": "b1809981b52da185826cc5c629c8b77a909b81843e5e8d4ba1496152aced53d6",
+        "lut": "8fbe7457089d79943494f8293e0cf67157bc2b51ab01adc086c5410783831c52"
+      }
+    },
+    {
+      "study": "vanilla_lut",
+      "id": "X_r2_vanilla_lut",
+      "basis": "X",
+      "rounds": 2,
+      "condition": "vanilla",
+      "decoder_family": "lut",
+      "shots": 3000,
+      "errors": 972,
+      "probability": 0.324,
+      "ci95": [
+        0.30748741854770817,
+        0.34096273620360656
+      ],
+      "files": {
+        "reference": "garnet/vanilla_lut/X_r2_vanilla_lut.stim",
+        "decoder": "garnet/vanilla_lut/X_r2_vanilla_lut.decoder.stim",
+        "shots": "garnet/vanilla_lut/X_r2_vanilla_lut.shots.npz",
+        "lut": "garnet/vanilla_lut/X_r2_vanilla_lut.lut.npz"
+      },
+      "sha256": {
+        "reference": "294745a730c1f550f43a2d79a951cfa13d5f57d8d032242eada7a66fb6ba0f74",
+        "decoder": "68d251c042532699e8df98ebebb2832e79c69815ce2a70d4df73ce832dff4cef",
+        "shots": "fc8744967780f93eb77e5d918bba76e38bee89f734df8c0f6810c2ce9697ed0e",
+        "lut": "8bdcde7d48052099d9eaef2db28c680e7302409d41de727859a4a8cd074c55ab"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_integrated_Z_r1",
+      "basis": "Z",
+      "rounds": 1,
+      "condition": "integrated",
+      "decoder_family": "lut",
+      "shots": 1500,
+      "errors": 33,
+      "probability": 0.022,
+      "ci95": [
+        0.01570756221797206,
+        0.030734473550521446
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_integrated_Z_r1.source.stim",
+        "decoder": "garnet/validated_z/confirmation_integrated_Z_r1.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_integrated_Z_r1.shots.npz",
+        "lut": "garnet/validated_z/confirmation_integrated_Z_r1.selected.lut.npz",
+        "native": "garnet/validated_z/confirmation_integrated_Z_r1.native.stim",
+        "predictions": "garnet/validated_z/confirmation_integrated_Z_r1.predictions.npz"
+      },
+      "sha256": {
+        "reference": "a277bb0a638fe8acc7b30e94f8c059b7b6ca11bf9edc557ca133a9d03ef491a8",
+        "decoder": "20a25e94e1d62d56fd3ddfb80d1624bd9073f1903077ec42aa5d5b39b98256d3",
+        "shots": "f35366611f87bd5cc7e4ff682cb41f8ebbe965183f71a204a4462a83a5be951b",
+        "lut": "f71e8ea16ae362ca18b209c27710de03bb0a0b384d2fe0e3bf09a645b6036dc5",
+        "native": "1f2af744f80d2a3c268d830adbc16a984d211bf11bc96a5e7dd57b99503d1b82",
+        "predictions": "58c7d5d045118481767a414f317e69b814e1312a3f16dc7ec04eb9651dfa278d"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_current_Z_r3",
+      "basis": "Z",
+      "rounds": 3,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 262,
+      "probability": 0.17466666666666666,
+      "ci95": [
+        0.15629008408609518,
+        0.19470533216916958
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_current_Z_r3.source.stim",
+        "decoder": "garnet/validated_z/confirmation_current_Z_r3.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_current_Z_r3.shots.npz",
+        "native": "garnet/validated_z/confirmation_current_Z_r3.native.stim",
+        "predictions": "garnet/validated_z/confirmation_current_Z_r3.predictions.npz"
+      },
+      "sha256": {
+        "reference": "8b0f5a6c383383f59d41585b158802f2f9fb519fccd96b261d3613d5bd2faf26",
+        "decoder": "169a7e67c32723217b8751581cd17fc864b16e39006d6887ba283e8cd5fd6a64",
+        "shots": "f2548541f689d58656ca29f3a3cbcaec4e31bf9a3b1270ba92c22036da856552",
+        "native": "379ef6b560a5fc8325c6b66f58471472ba842f9b66e04c70c1c8d23b20e1314d",
+        "predictions": "16f78d527557929691c6841865523d14952f732d5af38d825a421f40ecc12ea5"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_integrated_Z_r2",
+      "basis": "Z",
+      "rounds": 2,
+      "condition": "integrated",
+      "decoder_family": "lut",
+      "shots": 1500,
+      "errors": 127,
+      "probability": 0.08466666666666667,
+      "ci95": [
+        0.07161770137304219,
+        0.09983751241185523
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_integrated_Z_r2.source.stim",
+        "decoder": "garnet/validated_z/confirmation_integrated_Z_r2.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_integrated_Z_r2.shots.npz",
+        "lut": "garnet/validated_z/confirmation_integrated_Z_r2.selected.lut.npz",
+        "native": "garnet/validated_z/confirmation_integrated_Z_r2.native.stim",
+        "predictions": "garnet/validated_z/confirmation_integrated_Z_r2.predictions.npz"
+      },
+      "sha256": {
+        "reference": "640eb0ad137e011a001bfa7012de301b52f517e0f7ae4222846af7313995f322",
+        "decoder": "b5577e33f4894dfb87a604662600f95ec86657682afe43ecde210f33d9de0d4f",
+        "shots": "8de089c3ea299717579a92fd88e0c25b64a259b7d370e78717f9d52d424bbf2e",
+        "lut": "cbcca68b00d4dce389d7e6531244d0c3ed82e756cb1933ad24f0cf4a513f0b9e",
+        "native": "fbc35f84d1c7731c26087624c1970c25f85d184bbcb9a87b8035df75cd6a7dfd",
+        "predictions": "77a5a8474058b246016d1820c656fd768f1bb7920f9c16b3714e56b3f98db2a2"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_current_Z_r1",
+      "basis": "Z",
+      "rounds": 1,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 75,
+      "probability": 0.05,
+      "ci95": [
+        0.040074440990789065,
+        0.062224546657374286
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_current_Z_r1.source.stim",
+        "decoder": "garnet/validated_z/confirmation_current_Z_r1.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_current_Z_r1.shots.npz",
+        "native": "garnet/validated_z/confirmation_current_Z_r1.native.stim",
+        "predictions": "garnet/validated_z/confirmation_current_Z_r1.predictions.npz"
+      },
+      "sha256": {
+        "reference": "a277bb0a638fe8acc7b30e94f8c059b7b6ca11bf9edc557ca133a9d03ef491a8",
+        "decoder": "14ff5b787255654f7d9285831a00b77a77404050c2185d396e3dc2248f576cd3",
+        "shots": "8896dabc03099073d4e759c8b7e5271e194cba97e6ed95b48c4830a28177d92a",
+        "native": "e65d4a3b2c697054e990749707ed4c3432031397834d8edaeb31abebfc488534",
+        "predictions": "11eceb0797136756e12211c6b9d7f943445c7d9af889f86713dc272b861f5a38"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_current_Z_r2",
+      "basis": "Z",
+      "rounds": 2,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 154,
+      "probability": 0.10266666666666667,
+      "ci95": [
+        0.08830761670173384,
+        0.11905563757723706
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_current_Z_r2.source.stim",
+        "decoder": "garnet/validated_z/confirmation_current_Z_r2.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_current_Z_r2.shots.npz",
+        "native": "garnet/validated_z/confirmation_current_Z_r2.native.stim",
+        "predictions": "garnet/validated_z/confirmation_current_Z_r2.predictions.npz"
+      },
+      "sha256": {
+        "reference": "640eb0ad137e011a001bfa7012de301b52f517e0f7ae4222846af7313995f322",
+        "decoder": "f87dcdc38bd0ac0aecdb0218ebf0e59dc7a2ade6c2eb82fa02d8650f915aac18",
+        "shots": "9bf269be2c7aa8c5d441fca085cf1eaf0f1cbc2661183dbf184e1be0a2ce7f4f",
+        "native": "cf5eb73ed7612c21230804add7d566e0e8ce07de38ddbfa5fdccf1e6cbc6d099",
+        "predictions": "602cd0826b97d256224a569d694f9732f3e0ad95f7b2ae68642ae6ce02a843ca"
+      }
+    },
+    {
+      "study": "validated_z",
+      "id": "confirmation_integrated_Z_r3",
+      "basis": "Z",
+      "rounds": 3,
+      "condition": "integrated",
+      "decoder_family": "lut",
+      "shots": 1500,
+      "errors": 168,
+      "probability": 0.112,
+      "ci95": [
+        0.09702127945789121,
+        0.12896095878096964
+      ],
+      "files": {
+        "reference": "garnet/validated_z/confirmation_integrated_Z_r3.source.stim",
+        "decoder": "garnet/validated_z/confirmation_integrated_Z_r3.selected_decoder.stim",
+        "shots": "garnet/validated_z/confirmation_integrated_Z_r3.shots.npz",
+        "lut": "garnet/validated_z/confirmation_integrated_Z_r3.selected.lut.npz",
+        "native": "garnet/validated_z/confirmation_integrated_Z_r3.native.stim",
+        "predictions": "garnet/validated_z/confirmation_integrated_Z_r3.predictions.npz"
+      },
+      "sha256": {
+        "reference": "8b0f5a6c383383f59d41585b158802f2f9fb519fccd96b261d3613d5bd2faf26",
+        "decoder": "a318fcabb031b043692bbcde1d878b0dd1e1fdfedf7bb76cce4069c5d37226da",
+        "shots": "bdc6286f5b4fa533d4e8e3ff98dad3cb419d5c29ba634ccc995586e3b1893417",
+        "lut": "9b9e7f227ad074496ab23965f3fb5f90df3d9bc9504b97516bc57c068736eaa1",
+        "native": "fdc9147741c575c32d563c4b4d515e6acf256fc919ec235865fc54b400d769ba",
+        "predictions": "2320ed9e4313641c0e869920807ec7527a8a86fcb4f78b4065974474f0dd0e1e"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_integrated_X_r2",
+      "basis": "X",
+      "rounds": 2,
+      "condition": "integrated",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 121,
+      "probability": 0.08066666666666666,
+      "ci95": [
+        0.06793265072083973,
+        0.09554299850981915
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_integrated_X_r2.source.stim",
+        "decoder": "garnet/validated_x/confirmation_integrated_X_r2.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_integrated_X_r2.shots.npz",
+        "native": "garnet/validated_x/confirmation_integrated_X_r2.native.stim",
+        "predictions": "garnet/validated_x/confirmation_integrated_X_r2.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2f0e854c1d3fe18c56fc916c59b83ddf41dc28d663e7bce1db2dd1c448bcdc35",
+        "decoder": "11da1829298b940b3f0c59cc0aa814cbc6b61c8aca6661483279b75a8552c1cf",
+        "shots": "a366681eb68240447e8b0dd7d6f4008127511fd5b1113fad21f608c377fa8981",
+        "native": "c5e67ff76dcd0c17f5c58c6555a289e89b66643eeea5c119411e002609964431",
+        "predictions": "fabd682911f2b928feb6fa20c85ee88b7dcf3ad084d239f33ae3f9898c9b99a3"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_integrated_X_r1",
+      "basis": "X",
+      "rounds": 1,
+      "condition": "integrated",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 35,
+      "probability": 0.023333333333333334,
+      "ci95": [
+        0.016824677337497887,
+        0.03227721328240847
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_integrated_X_r1.source.stim",
+        "decoder": "garnet/validated_x/confirmation_integrated_X_r1.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_integrated_X_r1.shots.npz",
+        "native": "garnet/validated_x/confirmation_integrated_X_r1.native.stim",
+        "predictions": "garnet/validated_x/confirmation_integrated_X_r1.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2bd4c6af556e57949ed1f37173990ad1144e66c646c13e7cb264b5de0f3fc278",
+        "decoder": "a55b99b0b1284bd98bfe4923f6b60d12c7e8cf741cb3ec21de78c4e56ee8f16c",
+        "shots": "f37dc8a795cd6f84e2898526f4ef8f1decb4d368fd1627412f44cfeb4c6e544a",
+        "native": "4814549913e9069e1579cfd3b75362849cf84dfaedccd1fd74f5367ad69c9573",
+        "predictions": "9e034671cdd5a80eec670ee10b510ebdb47069174d26efa543f4f26ae562307b"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_current_X_r2",
+      "basis": "X",
+      "rounds": 2,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 263,
+      "probability": 0.17533333333333334,
+      "ci95": [
+        0.15692632827552022,
+        0.19539901540545096
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_current_X_r2.source.stim",
+        "decoder": "garnet/validated_x/confirmation_current_X_r2.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_current_X_r2.shots.npz",
+        "native": "garnet/validated_x/confirmation_current_X_r2.native.stim",
+        "predictions": "garnet/validated_x/confirmation_current_X_r2.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2f0e854c1d3fe18c56fc916c59b83ddf41dc28d663e7bce1db2dd1c448bcdc35",
+        "decoder": "6fc3d5dd320673bffc85eb0182e23c43f093ce513a985ccb00ac2462c9ce455f",
+        "shots": "e5ac856e47581474f5832d4580bf4e2330c2c441313c23e7f2eb267ae32743d4",
+        "native": "d21328acf66f0bc044f549de50b7264ef91932b1810ace72d0409a24b13cc37a",
+        "predictions": "fde290662b39621e82c14419cd2070a27dbd2836cbcebe40aece372e93456daf"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_current_X_r1",
+      "basis": "X",
+      "rounds": 1,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 169,
+      "probability": 0.11266666666666666,
+      "ci95": [
+        0.09764506278633239,
+        0.12966710287823488
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_current_X_r1.source.stim",
+        "decoder": "garnet/validated_x/confirmation_current_X_r1.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_current_X_r1.shots.npz",
+        "native": "garnet/validated_x/confirmation_current_X_r1.native.stim",
+        "predictions": "garnet/validated_x/confirmation_current_X_r1.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2bd4c6af556e57949ed1f37173990ad1144e66c646c13e7cb264b5de0f3fc278",
+        "decoder": "53cb30f5375d3915065c83816effd665032322ba19574c3e31209f7b5f09dfbe",
+        "shots": "223c598d796006f6a0fc645cc8d9cee5e0aa647a5a4116c6acfa18515c7f3175",
+        "native": "7130243a03c6d25be37ecd94c2e2ba6229622262608e49a1e70ecd2141251cd9",
+        "predictions": "dd0c5c18af4c68d9e21dc83457026f8e31420eef439d7bc6b6d0bd0569a52a7a"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_current_X_r3",
+      "basis": "X",
+      "rounds": 3,
+      "condition": "current",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 315,
+      "probability": 0.21,
+      "ci95": [
+        0.19014154174898645,
+        0.23134002806871878
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_current_X_r3.source.stim",
+        "decoder": "garnet/validated_x/confirmation_current_X_r3.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_current_X_r3.shots.npz",
+        "native": "garnet/validated_x/confirmation_current_X_r3.native.stim",
+        "predictions": "garnet/validated_x/confirmation_current_X_r3.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2bb173a2dab01724c8e64a1ef8dd48b53eec9f614bd008f8f16bde81f888b32e",
+        "decoder": "db2a2e8f6c9873c356ba61c1a9e69aea7931c3df5615d03199c5a69259dec14c",
+        "shots": "9f2496a0b4048880c7b8b484f520fd0ebeaf4f68aa7ae85c6c6bcbb7f0200dd6",
+        "native": "5a4d914daccaf61fb718bcbc35c60f6d232917c3a3fb67565fcb72dce25eb9c6",
+        "predictions": "6cd2aa213605d6a1f3718524f7fd47fa21f7301710d223f5135dec0846e581e9"
+      }
+    },
+    {
+      "study": "validated_x",
+      "id": "confirmation_integrated_X_r3",
+      "basis": "X",
+      "rounds": 3,
+      "condition": "integrated",
+      "decoder_family": "mwpm",
+      "shots": 1500,
+      "errors": 198,
+      "probability": 0.132,
+      "ci95": [
+        0.11580643451510408,
+        0.15007362649494949
+      ],
+      "files": {
+        "reference": "garnet/validated_x/confirmation_integrated_X_r3.source.stim",
+        "decoder": "garnet/validated_x/confirmation_integrated_X_r3.selected_decoder.stim",
+        "shots": "garnet/validated_x/confirmation_integrated_X_r3.shots.npz",
+        "native": "garnet/validated_x/confirmation_integrated_X_r3.native.stim",
+        "predictions": "garnet/validated_x/confirmation_integrated_X_r3.predictions.npz"
+      },
+      "sha256": {
+        "reference": "2bb173a2dab01724c8e64a1ef8dd48b53eec9f614bd008f8f16bde81f888b32e",
+        "decoder": "1b66df7200dede74a524a767f3f8ed6dc8351b3ede66f10b1c2d77fb4f43d511",
+        "shots": "9ba657daf1f7cef7af1b74589df8d87e1b94caa938e62759ee476f839b55229f",
+        "native": "1b895302c1f7635ad1f5c9a77d18b220c38c7904f05e70f815bb5343f45ffeab",
+        "predictions": "0a23a7c2ae04c84716ba822f467a4ad1fbcbfadfb70860b1d43943180f1eae05"
+      }
+    }
+  ],
+  "studies": [
+    {
+      "id": "vanilla_lut",
+      "source_run": "results/decoders/lookup_table/20261024T194536Z",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "created_utc": "2026-10-24T19:45:45.398670+00:00",
+      "fits": [
+        {
+          "epsilon_per_round": 0.18516611070321576,
+          "ci95_profile": [
+            0.17748469116308208,
+            0.19313522324411675
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.18516611070321576,
+            0.30175924430052037,
+            0.3751741837319984
+          ],
+          "negative_log_likelihood": 5167.25119772812,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "round_offset": 0,
+          "basis": "X",
+          "deviance": 61.03339021969191,
+          "nominal_degrees_of_freedom": 2,
+          "fit_role": "primary challenge equation"
+        },
+        {
+          "epsilon_per_round": 0.24995554188075697,
+          "ci95_profile": [
+            0.2318590260308034,
+            0.2683524934416156
+          ],
+          "amplitude": 0.7170795060942596,
+          "first_round_visibility": 0.7170795060942596,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.14146024695287018,
+            0.32069824347024645,
+            0.41033317889737864
+          ],
+          "negative_log_likelihood": 5136.895465073116,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "basis": "X",
+          "deviance": 0.3219249096831618,
+          "nominal_degrees_of_freedom": 1,
+          "fit_role": "exploratory post-first-cycle diagnostic"
+        },
+        {
+          "epsilon_per_round": 0.0672189392825523,
+          "ci95_profile": [
+            0.06326367155095788,
+            0.07134511408166745
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.06721893928255229,
+            0.12540110696856166,
+            0.17576138746054482
+          ],
+          "negative_log_likelihood": 3188.3928240751125,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "round_offset": 0,
+          "basis": "Z",
+          "deviance": 56.9400913870017,
+          "nominal_degrees_of_freedom": 2,
+          "fit_role": "primary challenge equation"
+        },
+        {
+          "epsilon_per_round": 0.09715360124874096,
+          "ci95_profile": [
+            0.08835535408227885,
+            0.10603849135690056
+          ],
+          "amplitude": 0.9213046117516464,
+          "first_round_visibility": 0.9213046117516464,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.039347694124176824,
+            0.12885575500292235,
+            0.20097175497134456
+          ],
+          "negative_log_likelihood": 3161.114259601875,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "basis": "Z",
+          "deviance": 2.3829624405270806,
+          "nominal_degrees_of_freedom": 1,
+          "fit_role": "exploratory post-first-cycle diagnostic"
+        }
+      ]
+    },
+    {
+      "id": "validated_z",
+      "source_run": "results/integrated/20261024T204754Z",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "created_utc": "2026-10-24T20:48:02.949685+00:00",
+      "fits": [
+        {
+          "condition": "current",
+          "basis": "Z",
+          "kind": "challenge",
+          "epsilon_per_round": 0.05901157810556476,
+          "ci95_profile": [
+            0.05386748533824586,
+            0.06448866738318004
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.05901157810556479,
+            0.11105842351011125,
+            0.15696253594918036
+          ],
+          "negative_log_likelihood": 1492.3671999513963,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "deviance": 6.851980542043435,
+          "nominal_df": 2
+        },
+        {
+          "condition": "current",
+          "basis": "Z",
+          "kind": "post_first",
+          "epsilon_per_round": 0.0707673056008564,
+          "ci95_profile": [
+            0.05897155202722417,
+            0.0826505417545198
+          ],
+          "amplitude": 0.9037249568100205,
+          "first_round_visibility": 0.9037249568100205,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.04813752159498974,
+            0.11209170179268524,
+            0.16699415196137563
+          ],
+          "negative_log_likelihood": 1489.9974294306194,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "deviance": 2.112439500489728,
+          "nominal_df": 1
+        },
+        {
+          "condition": "integrated",
+          "basis": "Z",
+          "kind": "challenge",
+          "epsilon_per_round": 0.0383547164343368,
+          "ci95_profile": [
+            0.034319281910193726,
+            0.0427024721623335
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.0383547164343368,
+            0.07376726432315683,
+            0.10646333574699074
+          ],
+          "negative_log_likelihood": 1127.516961503277,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "deviance": 15.767977932253459,
+          "nominal_df": 2
+        },
+        {
+          "condition": "integrated",
+          "basis": "Z",
+          "kind": "post_first",
+          "epsilon_per_round": 0.05380941029653631,
+          "ci95_profile": [
+            0.04440187667858405,
+            0.06330218356047289
+          ],
+          "amplitude": 0.9530679551987707,
+          "first_round_visibility": 0.9530679551987707,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.023466022400614628,
+            0.07475004704238614,
+            0.12051494543694413
+          ],
+          "negative_log_likelihood": 1121.2543876664408,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "deviance": 3.242830258581421,
+          "nominal_df": 1
+        }
+      ],
+      "frozen_selection": {
+        "Z": {
+          "profile": "fenced_xy4",
+          "decoder": {
+            "family": "lut",
+            "parameters": {
+              "phase_round": 0.0,
+              "backaction_scale": 0.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "validated_x",
+      "source_run": "results/integrated/20261024T212753Z",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "created_utc": "2026-10-24T21:28:01.739313+00:00",
+      "fits": [
+        {
+          "condition": "current",
+          "basis": "X",
+          "kind": "challenge",
+          "epsilon_per_round": 0.0945636741893795,
+          "ci95_profile": [
+            0.08771234031362445,
+            0.10180322573012138
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.0945636741893795,
+            0.17124277142636873,
+            0.2334197543268492
+          ],
+          "negative_log_likelihood": 2000.5456693279903,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "deviance": 10.328816698800779,
+          "nominal_df": 2
+        },
+        {
+          "condition": "current",
+          "basis": "X",
+          "kind": "post_first",
+          "epsilon_per_round": 0.06974508190839307,
+          "ci95_profile": [
+            0.05208748615507212,
+            0.08708167586424263
+          ],
+          "amplitude": 0.7704175466419612,
+          "first_round_visibility": 0.7704175466419612,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.11479122667901942,
+            0.16852406157322625,
+            0.21476169452569982
+          ],
+          "negative_log_likelihood": 1995.7617047620706,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "deviance": 0.7608875669612303,
+          "nominal_df": 1
+        },
+        {
+          "condition": "integrated",
+          "basis": "X",
+          "kind": "challenge",
+          "epsilon_per_round": 0.04155880362581569,
+          "ci95_profile": [
+            0.03734075934123423,
+            0.04609173821727476
+          ],
+          "amplitude": 1.0,
+          "fit_spam": false,
+          "fitted_probabilities": [
+            0.04155880362581571,
+            0.07966333893401317,
+            0.11460071644195802
+          ],
+          "negative_log_likelihood": 1181.5123202830878,
+          "boundary_fit": false,
+          "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+          "deviance": 19.099846542228534,
+          "nominal_df": 2
+        },
+        {
+          "condition": "integrated",
+          "basis": "X",
+          "kind": "post_first",
+          "epsilon_per_round": 0.0605238645330896,
+          "ci95_profile": [
+            0.05106575839815497,
+            0.07016513565426738
+          ],
+          "amplitude": 0.9534212828917283,
+          "first_round_visibility": 0.9534212828917283,
+          "round_offset": 1,
+          "fit_spam": true,
+          "fitted_probabilities": [
+            0.02328935855413583,
+            0.08099409912283928,
+            0.13171381188934822
+          ],
+          "negative_log_likelihood": 1171.9640791233146,
+          "boundary_fit": false,
+          "interpretation": "effective repeated-cycle rate after first round; exploratory model chosen after primary-fit mismatch",
+          "uncertainty_method": "asymptotic profile likelihood, conditional on shifted stationary binomial model",
+          "deviance": 0.003364222682407103,
+          "nominal_df": 1
+        }
+      ],
+      "frozen_selection": {
+        "X": {
+          "profile": "fused_xy4",
+          "decoder": {
+            "family": "mwpm",
+            "parameters": {
+              "phase_round": 0.0,
+              "backaction_scale": 0.5
+            }
+          }
+        }
+      }
+    }
+  ],
+  "total_shots": 36000
+}
