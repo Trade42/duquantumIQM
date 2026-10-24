@@ -46,6 +46,11 @@ def extract_syndromes(
                          Per-detector fraction of shots in which it fired.
                          Useful for spotting hot qubits or miscalibrated ancillas.
     """
+    raw_meas = np.asarray(raw_meas)
+    if raw_meas.ndim != 2 or raw_meas.shape[1] != stim_circuit_noisy.num_measurements or len(raw_meas) == 0:
+        raise ValueError("Expected nonempty (shots, num_measurements) array.")
+    if not np.all((raw_meas == 0) | (raw_meas == 1)):
+        raise ValueError("Measurements must be binary.")
     converter  = stim_circuit_noisy.compile_m2d_converter()
     det_events, obs_flips = converter.convert(
         measurements=raw_meas.astype(bool),

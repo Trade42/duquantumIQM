@@ -1,46 +1,39 @@
-import os
-import matplotlib.pyplot as plt
-from iqm.qubit_selector.qubit_selector import *
-from iqm.qubit_selector.qiskit_utils import get_circuit, CircuitType
-from iqm.qiskit_iqm import IQMProvider
-
-# Input your Resonance token
-token = "" # Replace with your actual token
-os.environ["IQM_TOKEN"] = token
-
-iqm_server_url = "https://resonance.meetiqm.com"  # Replace with your IQM server URL
-quantum_computer = "garnet"  # Replace with your quantum computer name if needed
-provider = IQMProvider(iqm_server_url, quantum_computer = quantum_computer)
-backend = provider.get_backend()
-
-calibration_data = CalibrationDataManager().get_calibration_fidelities(backend)
+"""Fetch/export a calibration snapshot explicitly; safe to import offline."""
+from __future__ import annotations
 
 
-def plot_calibration_data(key, data):
-    two_qubit_keys = [CalibrationType.CZ.value, CalibrationType.CLIFFORD.value]
-    coherence_keys = [CalibrationType.T1.value, CalibrationType.T2.value]
-    every_second = key in two_qubit_keys
-    coherence = key in coherence_keys
-    xlabel = 'Pairs' if key in two_qubit_keys else 'Qubits'
-    ylabel = 'Error' if key not in coherence_keys else 'Coherence in (us)'
-    pairs = list(data.items())
-    if every_second:
-        pairs = pairs[::2]
-    labels = [pair[0] for pair in pairs]
-
-    if coherence:
-        values = [pair[1] for pair in pairs]
-    else:
-        values = [1-pair[1] for pair in pairs]
-
-    plt.figure(figsize=(12, 6))
-    plt.bar(labels, values)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(f'{key} metrics')
-    plt.xticks(rotation=90)
-    plt.tight_layout()
-    plt.show()
+def fetch_calibration(backend, *, durations_ns, coherence_unit="us", reset_error=0.002):
+    from iqm.qubit_selector.qubit_selector import CalibrationDataManager, CalibrationType
+    from challenge.calibration import CalibrationSnapshot
+    from datetime import datetime, timezone
+    metrics = CalibrationDataManager().get_calibration_fidelities(backend)
+    # Use enum values directly to avoid depending on their serialized spelling.
+    named = {kind.name: metrics[kind.value] for kind in
+             (CalibrationType.SQG, CalibrationType.READOUT, CalibrationType.T1,
+              CalibrationType.T2, CalibrationType.CZ)}
+    return CalibrationSnapshot.from_iqm_metrics(named, durations_ns=durations_ns,
+        coherence_unit=coherence_unit, reset_error=reset_error,
+        metadata={"source": "IQM CalibrationDataManager", "retrieved_utc": datetime.now(timezone.utc).isoformat()})
 
 
-print(backend.coupling_map)
+def main():
+    import argparse
+    from challenge.run_on_hardware import connect_backend
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("output")
+    p.add_argument("--device", default="emerald")
+    p.add_argument("--one-q-ns", type=float, required=True)
+    p.add_argument("--two-q-ns", type=float, required=True)
+    p.add_argument("--measure-ns", type=float, required=True)
+    p.add_argument("--reset-ns", type=float, required=True)
+    p.add_argument("--reset-error", type=float, required=True)
+    p.add_argument("--coherence-unit", choices=["s", "ms", "us", "ns"], required=True)
+    a = p.parse_args()
+    snapshot = fetch_calibration(connect_backend(quantum_computer=a.device),
+        durations_ns={"1q": a.one_q_ns, "2q": a.two_q_ns, "measure": a.measure_ns, "reset": a.reset_ns},
+        coherence_unit=a.coherence_unit, reset_error=a.reset_error)
+    snapshot.save(a.output)
+
+
+if __name__ == "__main__":
+    main()

@@ -7,12 +7,7 @@ replaced by {j, prev(j)} (symmetric difference). Expectations come from Stim's
 reference sample of the rewritten noiseless circuit.
 """
 import stim
-from iqm.qrisp_iqm import DetectorExperiment
-from qrisp import QuantumArray, QuantumBool, cx, h, measure, parity, reset
-from qrisp.misc.stim_tools import stim_noise
-
-GATES_1Q = {"H": h}
-NOISE = {"DEPOLARIZE1", "DEPOLARIZE2", "X_ERROR", "Z_ERROR", "Y_ERROR"}
+NOISE = {"DEPOLARIZE1", "DEPOLARIZE2", "X_ERROR", "Z_ERROR", "Y_ERROR", "PAULI_CHANNEL_1"}
 SKIP = {"TICK", "QUBIT_COORDS", "SHIFT_COORDS", "DETECTOR", "OBSERVABLE_INCLUDE"}
 
 
@@ -22,7 +17,7 @@ def _analyse(flat: stim.Circuit, no_reset: bool):
     dets, obs = [], {}
     for inst in flat:
         name = inst.name
-        if name in ("M", "MR"):
+        if name in ("M", "MR", "MX", "MRX"):
             for t in inst.targets_copy():
                 j = len(meas_q)
                 meas_q.append(t.value)
@@ -30,7 +25,7 @@ def _analyse(flat: stim.Circuit, no_reset: bool):
                 # previous measurement on this qubit had its reset removed -> outcomes accumulate
                 prev_removed[j] = i if (no_reset and i is not None and i in removed) else None
                 last_on_q[t.value] = j
-                if name == "MR":
+                if name in ("MR", "MRX"):
                     removed.add(j)
         elif name == "DETECTOR":
             dets.append([len(meas_q) + t.value for t in inst.targets_copy() if t.is_measurement_record_target])
@@ -52,13 +47,28 @@ def _analyse(flat: stim.Circuit, no_reset: bool):
 
 
 def stim_to_detector_experiment(circ: stim.Circuit, no_reset: bool = True):
+    from iqm.qrisp_iqm import DetectorExperiment
+    from qrisp import QuantumArray, QuantumBool, cx, cz, h, measure, parity, reset
+    from qrisp.misc.stim_tools import stim_noise
+    GATES_1Q = {"H": h}
+    if no_reset:
+        # Transform before replay, once. No string replacement of gate names.
+        try:
+            from .surface_code import remove_ancilla_resets
+        except ImportError:
+            from surface_code import remove_ancilla_resets
+        if any(i.name in {"MR", "MRX"} for i in circ.flattened()):
+            if circ != circ.without_noise():
+                raise ValueError("Remove resets before noise insertion; pass an already generated no-reset circuit.")
+            circ = remove_ancilla_resets(circ)
+        no_reset = False
     flat = circ.flattened()
     meas_q, dets, obs = _analyse(flat, no_reset)
     qubits = sorted({t.value for inst in flat for t in inst.targets_copy() if t.is_qubit_target})
     pos = {q: i for i, q in enumerate(qubits)}
 
     # noiseless reference of the circuit that will actually run -> parity expectations
-    ref_circ = stim.Circuit(str(flat.without_noise()).replace("MR ", "M ")) if no_reset else flat.without_noise()
+    ref_circ = flat.without_noise()
     ref = ref_circ.reference_sample()
     exp_of = lambda s: int(sum(int(ref[i]) for i in s) % 2)
 
@@ -70,24 +80,38 @@ def stim_to_detector_experiment(circ: stim.Circuit, no_reset: bool = True):
             name, tg = inst.name, [t.value for t in inst.targets_copy() if t.is_qubit_target]
             if name in SKIP:
                 continue
-            if name == "R":
+            if name in ("R", "RX"):
                 for t in tg:                       # first R is free: qubits start in |0>
                     if t in touched:
                         reset(q[pos[t]])
                     touched.add(t)
+                    if name == "RX":
+                        h(q[pos[t]])
             elif name in GATES_1Q:
                 for t in tg:
                     GATES_1Q[name](q[pos[t]]); touched.add(t)
             elif name == "CX":
                 for a, b in zip(tg[::2], tg[1::2]):
                     cx(q[pos[a]], q[pos[b]]); touched |= {a, b}
-            elif name in ("M", "MR"):
+            elif name == "CZ":
+                for a, b in zip(tg[::2], tg[1::2]):
+                    cz(q[pos[a]], q[pos[b]]); touched |= {a, b}
+            elif name in ("M", "MR", "MX", "MRX"):
+                if inst.gate_args_copy() and inst.gate_args_copy()[0]:
+                    raise NotImplementedError("Qrisp replay of classical readout flips requires separate SDK support; use the validated Stim/Qiskit pipeline for noisy memories.")
                 for t in tg:
+                    if name in ("MX", "MRX"):
+                        h(q[pos[t]])
                     m.append(measure(q[pos[t]]))
-                    if name == "MR" and not no_reset:
+                    if name in ("MR", "MRX"):
                         reset(q[pos[t]])
+                        if name == "MRX":
+                            h(q[pos[t]])
+                    elif name == "MX":
+                        h(q[pos[t]])
             elif name in NOISE:
-                p = inst.gate_args_copy()[0]
+                args = inst.gate_args_copy()
+                p = args[0] if len(args) == 1 else tuple(args)
                 if name == "DEPOLARIZE2":
                     for a, b in zip(tg[::2], tg[1::2]):
                         stim_noise(name, p, q[pos[a]], q[pos[b]])

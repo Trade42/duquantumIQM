@@ -1,169 +1,160 @@
-from internal_helpers import get_qubit_lists
-import stim
+"""Exhaustive placement over square-grid translations and eight symmetries."""
+from __future__ import annotations
+from collections import Counter
+from dataclasses import dataclass
+import math
 
 
-
-"""
-
-OPTIONAL FILE: Allows you to build a custom STIM -> EMERALD mapping.
-
-QISKIT TRACK ONLY. The output is a Qiskit initial_layout. On the Qrisp track,
-use iqm.qrisp_iqm.vf2pp_layout in the pass manager instead (exact embedding,
-zero SWAPs, or an error if none exists).
-
-"""
+def interaction_pairs(circuit):
+    return [(a.value, b.value) for i in circuit.flattened() if i.name in {"CX", "CZ", "SWAP", "ISWAP"}
+            for a, b in zip(i.targets_copy()[::2], i.targets_copy()[1::2])]
 
 
-def build_emerald_qubit_map(
-    stim_circuit: stim.Circuit,
+def rotated_positions(circuit):
+    """Stim's diagonal data-check edges -> square-grid unit edges."""
+    positions = {}
+    for q, xy in circuit.get_final_qubit_coordinates().items():
+        x, y = xy[:2]
+        u, v = (x+y)/2, (x-y)/2
+        if u != int(u) or v != int(v):
+            raise ValueError("Expected rotated surface-code coordinates.")
+        positions[q] = (int(u), int(v))
+    return positions
 
-) -> dict:
+
+def validate_layout(circuit, sparse_map, couplings):
+    edges = {frozenset(e) for e in couplings}
+    if set(rotated_positions(circuit)) - set(sparse_map):
+        raise ValueError("Layout is missing circuit qubits.")
+    if len(set(sparse_map.values())) != len(sparse_map):
+        raise ValueError("Layout must be injective.")
+    bad = [(a, b) for a, b in interaction_pairs(circuit)
+           if frozenset((sparse_map[a], sparse_map[b])) not in edges]
+    if bad:
+        raise ValueError(f"Non-native interaction(s), refusing SWAP routing: {bad[:5]}")
+    return dict(two_qubit_gates=len(interaction_pairs(circuit)), non_native_pairs=0,
+                routing_swaps=0, physical_qubits=len(sparse_map))
+
+
+@dataclass(frozen=True)
+class Placement:
+    stim_to_physical: dict[int, str]
+    score: float
+    orientation: int
+    origin: tuple[int, int]
+
+    def dense_layout(self, physical_order):
+        indices = {q: i for i, q in enumerate(physical_order)}
+        return [indices[self.stim_to_physical[q]] for q in sorted(self.stim_to_physical)]
+
+
+def rank_placements(circuit, *, calibration=None, rows=8, cols=8, grid=None,
+                    couplings=None, readout_weight=1.0, coherence_weight=1.0,
+                    leakage_weight=0.0):
+    """Rank all legal geometric placements; optimum only within this search set.
+
+    A supplied grid holds QB names or None for missing locations. Actual backend
+    couplings are authoritative. No chip-numbering assumption bypasses validation.
     """
-    Maps Stim dense qubit indices (0..16) to Qiskit qubit indices for IQM Emerald.
+    if min(readout_weight, coherence_weight, leakage_weight) < 0:
+        raise ValueError("Placement weights must be nonnegative.")
+    if grid is None:
+        grid = [[f"QB{r*cols+c+1}" for c in range(cols)] for r in range(rows)]
+    rows, cols = len(grid), len(grid[0])
+    if any(len(row) != cols for row in grid):
+        raise ValueError("Grid must be rectangular.")
+    if couplings is None:
+        couplings = ([key.split("|") for key in calibration.edges] if calibration else
+            [(grid[r][c], grid[rr][cc]) for r in range(rows) for c in range(cols)
+             for rr, cc in ((r+1, c), (r, c+1)) if rr < rows and cc < cols
+             and grid[r][c] is not None and grid[rr][cc] is not None])
+    positions = rotated_positions(circuit)
+    one, measure, reset, idle_ns = Counter(), Counter(), Counter(), Counter()
+    pair_counts = Counter(tuple(sorted(pair)) for pair in interaction_pairs(circuit))
+    moment, duration = set(), 0
+    def finish_moment():
+        for q in positions:
+            if q not in moment:
+                idle_ns[q] += duration
+        moment.clear()
+    for inst in circuit.flattened():
+        name = inst.name
+        if name == "TICK":
+            finish_moment()
+            duration = 0
+            continue
+        if name in {"QUBIT_COORDS", "DETECTOR", "OBSERVABLE_INCLUDE", "SHIFT_COORDS"}:
+            continue
+        qs = [t.value for t in inst.targets_copy() if t.is_qubit_target]
+        moment.update(qs)
+        if name in {"M", "MX", "MR", "MRX"}:
+            measure.update(qs)
+            if name.startswith("MR"):
+                reset.update(qs)
+            key = "measure"
+        elif name in {"R", "RX"}:
+            reset.update(qs)
+            key = "reset"
+        elif name in {"CX", "CZ"}:
+            key = "2q"
+        else:
+            one.update(qs)
+            key = "1q"
+        duration = max(duration, calibration.durations_ns[key] if calibration else 1)
+    finish_moment()
+    candidates, seen = [], set()
+    for orientation in range(8):
+        trans = {}
+        for q, (u, v) in positions.items():
+            if orientation & 4:
+                u, v = v, u
+            trans[q] = (u * (-1 if orientation & 1 else 1), v * (-1 if orientation & 2 else 1))
+        minr, minc = min(r for r, c in trans.values()), min(c for r, c in trans.values())
+        trans = {q: (r-minr, c-minc) for q, (r, c) in trans.items()}
+        height, width = max(r for r, c in trans.values())+1, max(c for r, c in trans.values())+1
+        for row in range(rows-height+1):
+            for col in range(cols-width+1):
+                mapping = {q: grid[row+r][col+c] for q, (r, c) in trans.items()}
+                if None in mapping.values():
+                    continue
+                signature = tuple(mapping[q] for q in sorted(mapping))
+                if signature in seen:
+                    continue
+                seen.add(signature)
+                try:
+                    validate_layout(circuit, mapping, couplings)
+                    score = 0.0
+                    if calibration:
+                        for q, physical in mapping.items():
+                            cal = calibration.qubits[physical]
+                            score += one[q] * -math.log1p(-cal.single_qubit_infidelity)
+                            score += readout_weight * measure[q] * -math.log1p(-cal.readout_error)
+                            score += reset[q] * -math.log1p(-cal.reset_error)
+                            score += coherence_weight * idle_ns[q] * (1/cal.t1_ns + 1/cal.t2_ns)
+                            touches = sum(n for pair, n in pair_counts.items() if q in pair)
+                            score += leakage_weight * touches * cal.leakage_per_gate
+                        score += sum(n * -math.log1p(-calibration.edge_error(mapping[a], mapping[b]))
+                                     for (a, b), n in pair_counts.items())
+                except (ValueError, KeyError):
+                    continue
+                candidates.append(Placement(mapping, score, orientation, (row, col)))
+    if not candidates:
+        raise ValueError("No native placement in supplied grid/symmetry family. Check topology/size; qubit count alone is insufficient.")
+    return sorted(candidates, key=lambda p: (p.score, p.orientation, p.origin))
 
-    NOTE: OPTIONAL, since the qiskit transpiler automatically optimizes for least number of swap gates. Still, hand-testing is recommended.
-    You will also have to adjust which parameters this taken. Default parameters form ``print_qubit_map`` target this 5x5 sub-region of the Emerald chip (OR ANY OTHER!)
 
-        QB41 QB42 QB43 QB44 QB45   <- grid row 0 (top)
-        QB33 QB34 QB35 QB36 QB37
-        QB25 QB26 QB27 QB28 QB29
-        QB17 QB18 QB19 QB20 QB21
-        QB9  QB10 QB11 QB12 QB13   <- grid row 4 (bottom)
-
-    This maps the code's natural diagonal connectivity directly onto the hardware grid, giving
-    ALL 24 stabilizer CX pairs a Manhattan distance of 1 — no SWAPs needed.
-
-    EXAMPLARY Resulting layout on the 5x5 hardware sub-region:
-
-        col:   0     1     2     3     4
-        row 0:  .     .   D(5)  A(13)  .       QB41-QB45
-        row 1: A(2)  D(3)  A(11) D(12)  .       QB33-QB37
-        row 2: D(1)  A(9)  D(10) A(18) D(19)    QB25-QB29
-        row 3:  .    D(8)  A(16) D(17) A(25)    QB17-QB21
-        row 4:  .    A(14) D(15)  .     .       QB9 -QB13
-
-    (numbers are Stim qubit indices; 8 spare positions at edges)
-
-    IQM Resonance uses 1-based QB numbers (QB1, QB2, ...).
-    Qiskit uses 0-based indices.
-    The output could be ready ready to pass directly to transpile(initial_layout=...)
-
-    Parameters
-    ----------
-
-    Returns
-    -------
-    dict  Ready for: transpile(qc, backend, initial_layout=qubit_map)
-
-    Notes
-    -----
-    Verify before hardware runs by cross-checking with backend.coupling_map.
-    THIS NEEDS A FULL REWORK, if you want to use it for the Ising model, i.e. it needs to based on the Ising Models MemoryCiruict functionality, see github.com/NVIDIA/Ising-Decoding/code/qec/surface_code/memory_circuit.py
-    """
-    coords        = stim_circuit.get_final_qubit_coordinates()
-    qubit_map = {}
-
-    # TO BE DONE
-    return qubit_map
+def build_emerald_qubit_map(stim_circuit, grid_top_left=41, grid_n_rows=5,
+                           grid_n_cols=5, row_stride=-8, col_stride=1, qiskit_offset=-1):
+    """Compatibility wrapper: dense Qiskit index -> physical Qiskit index."""
+    grid = [[f"QB{grid_top_left+r*row_stride+c*col_stride}" for c in range(grid_n_cols)]
+            for r in range(grid_n_rows)]
+    placement = rank_placements(stim_circuit, grid=grid)[0]
+    return {i: int(placement.stim_to_physical[q][2:])+qiskit_offset
+            for i, q in enumerate(sorted(placement.stim_to_physical))}
 
 
-
-
-
-def print_qubit_map(
-    stim_circuit: stim.Circuit,
-    grid_top_left: int = 41,
-    grid_n_rows: int = 5,
-    grid_n_cols: int = 5,
-    row_stride: int = -8,
-    col_stride: int = 1,
-    qiskit_offset: int = -1,
-):
-    """
-    NOTE: If you are using qiskit, the mapping is easily compared by hand, since the expected Qiskit and Resonance qubit indices are the same (except for a -1 difference).
-
-
-    Prints a human-readable table of the Stim → Emerald qubit mapping
-    and flags any CX pairs that require SWAPs (non-adjacent physical qubits).
-    Use this to verify the mapping before submitting to hardware.
-
-    ONLY WORKS ON SQUARE PATCHES
-
-
-    Parameters
-    ----------
-    stim_circuit   : stim.Circuit
-    grid_top_left  : Resonance QB number at (row=0, col=0). Default 41.
-    grid_n_rows    : number of rows in the sub-region. Default 5.
-    grid_n_cols    : number of columns in the sub-region. Default 5.
-    row_stride     : QB number difference per row step downward. Default -8. I.e. row 0 starts at QB41, row 1 starts QB33
-    col_stride     : QB number difference per column step rightward. Default 1.
-    qiskit_offset  : added to QB numbers to get Qiskit 0-based indices.
-                     Default -1 (QB1 -> 0, QB17 -> 16, QB45 -> 44).
-                     Set to 0 to return raw Resonance QB numbers instead.
-    """
-    coords        = stim_circuit.get_final_qubit_coordinates()
-    data_q, anc_q = get_qubit_lists(stim_circuit)
-    qubit_map     = build_emerald_qubit_map(
-        stim_circuit, grid_top_left, grid_n_rows, grid_n_cols,
-        row_stride, col_stride, qiskit_offset,
-    )
-    all_stim_q    = sorted(set(data_q + anc_q))
-    stim_to_dense = {sq: i for i, sq in enumerate(all_stim_q)}
-
-    print("─" * 68)
-    print(f"{'Stim idx':>10} {'Stim coord':>12} {'Type':>8} "
-          f"{'Dense idx':>10} {'Qiskit idx':>12} {'QB (Resonance)':>16}")
-    print("─" * 68)
-    for stim_q in all_stim_q:
-        d    = stim_to_dense[stim_q]
-        qk   = qubit_map[d]
-        xy   = coords[stim_q]
-        qt   = "DATA " if stim_q in set(data_q) else "ANCL "
-        print(f"{stim_q:>10} {str((int(xy[0]),int(xy[1]))):>12} "
-              f"{qt:>8} {d:>10} {qk:>12} {'QB'+str(qk-qiskit_offset):>16}")
-    print("─" * 68)
-
-    def qiskit_to_grid(q):
-        """Convert Qiskit index to (row, col) in the Emerald sub-grid.
-        Derived from: q = (grid_top_left + qiskit_offset) + r*row_stride + c*col_stride
-        For default params: q = 40 + r*(-8) + c*1  →  r = (40-q+q%8)//8, c = q%8
-        General: solves for r and c given the stride parameters."""
-        # Shift to remove qiskit_offset: get QB number back, then find grid pos
-        qb = q - qiskit_offset          # Resonance QB number
-        # qb = grid_top_left + r*row_stride + c*col_stride
-        # Since col_stride=1: c = (qb - grid_top_left - r*row_stride)
-        # Iterate rows (small loop, only grid_n_rows iterations)
-        for r in range(grid_n_rows):
-            c = qb - grid_top_left - r * row_stride
-            if 0 <= c < grid_n_cols:
-                return r, c
-        return None, None  # not in this sub-grid
-
-    # CX connectivity check
-    n_native, n_swap = 0, 0
-    swap_details = []
-    for instr in stim_circuit.flattened():
-        if instr.name == "CX":
-            targets = [t.value for t in instr.targets_copy() if t.is_qubit_target]
-            for i in range(0, len(targets), 2):
-                sa, sb = targets[i], targets[i + 1]
-                qa = qubit_map[stim_to_dense[sa]]
-                qb = qubit_map[stim_to_dense[sb]]
-                ra, ca = qiskit_to_grid(qa)
-                rb, cb = qiskit_to_grid(qb)
-                dist = abs(ra - rb) + abs(ca - cb)
-                if dist == 1:
-                    n_native += 1
-                else:
-                    n_swap += 1
-                    swap_details.append((sa, sb, qa, qb, dist))
-
-    print(f"CX gates: {n_native} native (dist=1),  "
-          f"{n_swap} non-native (dist>1, need SWAP)")
-    if swap_details:
-        print("  Non-native pairs (sorted by distance):")
-        for sa, sb, qa, qb, d in sorted(swap_details, key=lambda x: -x[4]):
-            print(f"    stim({sa:>2},{sb:>2})  QB{qa-qiskit_offset:>2}↔QB{qb-qiskit_offset:>2}"
-                  f"  Qiskit({qa},{qb})  dist={d}")
-    print()
+def print_qubit_map(stim_circuit, **kwargs):
+    mapping = build_emerald_qubit_map(stim_circuit, **kwargs)
+    print("Dense index -> physical Qiskit index:", mapping)
+    print("Geometric placement: all circuit interactions native; verify live backend couplings before submission.")
+    return mapping

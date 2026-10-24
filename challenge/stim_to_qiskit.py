@@ -1,106 +1,59 @@
+"""Stim -> Qiskit with exact measurement order, both bases, no-reset hardware."""
 import stim
 from qiskit import QuantumCircuit
 
-from internal_helpers import get_qubit_lists
 
-# ─────────────────────────────────────────────────────────────────────────────
-#  STIM → QISKIT CONVERSION
-# ─────────────────────────────────────────────────────────────────────────────
+def stim_to_qiskit(stim_circuit: stim.Circuit, *, skip_initial_resets=True,
+                    preserve_ticks=True) -> tuple[QuantumCircuit, dict, list]:
+    """Strip simulation noise, retain parity metadata on the Stim side.
 
-# Instructions that exist only in Stim's simulation model — skip them when
-# building the Qiskit circuit for hardware.
-_STIM_SKIP = frozenset({
-    "DEPOLARIZE1", "DEPOLARIZE2", "X_ERROR", "Z_ERROR", "Y_ERROR",
-    "PAULI_CHANNEL_1", "PAULI_CHANNEL_2", "CORRELATED_ERROR",
-    "ELSE_CORRELATED_ERROR", "DETECTOR", "OBSERVABLE_INCLUDE",
-    "QUBIT_COORDS", "SHIFT_COORDS", "TICK",
-})
-
-
-def stim_to_qiskit(stim_circuit: stim.Circuit) -> tuple[QuantumCircuit, dict, list]:
+    Hardware initializes |0>; only untouched initial resets are omitted. RX
+    still emits H. Any subsequent reset remains visible for hardware validation.
     """
-    Converts a (noiseless) Stim circuit into a Qiskit QuantumCircuit.
-
-    The Stim circuit is first flattened to unroll any REPEAT blocks,
-    then noise/annotation instructions are dropped. The resulting
-    Qiskit circuit is suitable for transpilation onto IQM Resonance.
-
-    Parameters
-    ----------
-    stim_circuit : stim.Circuit  (use make_stim_circuit(..., noise=None))
-
-    Returns
-    -------
-    qc            : QuantumCircuit  with dense qubit indices 0..N-1
-    stim_to_dense : dict  stim_qubit_index → dense_qiskit_index
-    meas_order    : list[int]  stim qubit indices in measurement order
-                    Use this to map hardware bitstrings back to Stim's
-                    measurement record for detection event conversion.
-    """
-    flat = stim_circuit.flattened()
-
-    # Build dense re-indexing: Stim uses sparse indices (e.g. 1,3,5,8,…,25)
-    # Qiskit needs contiguous 0..N-1 indices.
-    data_q, anc_q = get_qubit_lists(stim_circuit)
-    all_stim_q    = sorted(set(data_q + anc_q))
-    stim_to_dense = {sq: i for i, sq in enumerate(all_stim_q)}
-
-    n_qubits = len(all_stim_q)
-    n_clbits = stim_circuit.num_measurements # one classical bit per measured qubit
-    qc = QuantumCircuit(n_qubits, n_clbits)
-
-    meas_idx  = 0
-    meas_order = []
-
-    for instr in flat:
-        name = instr.name
-
-        if name in _STIM_SKIP:
+    flat = stim_circuit.without_noise().flattened()
+    qubits = sorted({t.value for i in flat if i.name != "QUBIT_COORDS"
+                     for t in i.targets_copy() if t.is_qubit_target})
+    mapping = {q: i for i, q in enumerate(qubits)}
+    qc = QuantumCircuit(len(qubits), flat.num_measurements)
+    touched, order = set(), []
+    single = {"H": qc.h, "X": qc.x, "Y": qc.y, "Z": qc.z, "S": qc.s, "S_DAG": qc.sdg}
+    for inst in flat:
+        name = inst.name
+        if name in {"QUBIT_COORDS", "SHIFT_COORDS", "DETECTOR", "OBSERVABLE_INCLUDE"}:
             continue
-
-        # Extract qubit targets (ignore measurement-record targets in M gates)
-        targets = [t.value for t in instr.targets_copy() if t.is_qubit_target]
-        dense   = [stim_to_dense[t] for t in targets]
-
-        if name == "R":
-            # NOTE: if transpile() rejects 'reset' on Emerald, drop the first R per qubit
-            # (qubits start in |0>), as stim_to_qrisp.py does.
-            for d in dense:
-                qc.reset(d)
-
-        elif name == "H":
-            for d in dense:
-                qc.h(d)
-
-        elif name == "CX":
-            for i in range(0, len(dense), 2):
-                qc.cx(dense[i], dense[i + 1])
-
-        elif name == "CZ":
-            for i in range(0, len(dense), 2):
-                qc.cz(dense[i], dense[i + 1])
-
-        elif name == "X":
-            for d in dense:
-                qc.x(d)
-
-        elif name in ("M", "MR"):
-            for stim_q, d in zip(targets, dense):
-                qc.measure(d, meas_idx)
-                meas_order.append(stim_q)
-                meas_idx += 1
-            # MR = measure-then-reset (mid-circuit reset for multi-round)
-            # MR only appears in with-reset circuits, which Emerald does not support.
-            if name == "MR":
-                for d in dense:
+        if name == "TICK":
+            if preserve_ticks:
+                qc.barrier()
+            continue
+        qs = [t.value for t in inst.targets_copy() if t.is_qubit_target]
+        ds = [mapping[q] for q in qs]
+        if name in {"R", "RX"}:
+            for q, d in zip(qs, ds):
+                if not skip_initial_resets or q in touched:
                     qc.reset(d)
-
+                if name == "RX":
+                    qc.h(d)
+        elif name in single:
+            for d in ds:
+                single[name](d)
+        elif name in {"CX", "CZ", "SWAP", "ISWAP"}:
+            gate = {"CX": qc.cx, "CZ": qc.cz, "SWAP": qc.swap, "ISWAP": qc.iswap}[name]
+            for a, b in zip(ds[::2], ds[1::2]):
+                gate(a, b)
+        elif name in {"M", "MX", "MR", "MRX"}:
+            for q, d in zip(qs, ds):
+                if name in {"MX", "MRX"}:
+                    qc.h(d)
+                qc.measure(d, len(order))
+                order.append(q)
+                if name.startswith("MR"):
+                    qc.reset(d)
+                    if name == "MRX":
+                        qc.h(d)
+                elif name == "MX":
+                    qc.h(d)  # Preserve postmeasurement state if used again.
         else:
-            # Warn about genuinely unhandled gates (not noise/annotations)
-            raise NotImplementedError(
-                f"[stim_to_qiskit] Unhandled gate '{name}'. "
-                f"If this is a noise/annotation instruction, add it to _STIM_SKIP. "
-                f"If it is a gate instruction, implement it explicitly."
-                )
-
-    return qc, stim_to_dense, meas_order
+            raise NotImplementedError(f"Unhandled Stim gate: {name}")
+        touched.update(qs)
+    qc.metadata = {"stim_to_dense": mapping, "meas_order": order}
+    return qc, mapping, order

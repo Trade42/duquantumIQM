@@ -1,93 +1,39 @@
-import stim
+"""Measurement order and hardware bit ordering, shared across both bases."""
 import numpy as np
+import stim
 
-# ─────────────────────────────────────────────────────────────────────────────
-#  INTERNAL HELPERS
-#  These may be useful for working with Stim, when converting to qiskit
-#  and when converting measurement result back into readable files
-# ─────────────────────────────────────────────────────────────────────────────
-
-"""
-
-
-"""
+MEASURE = {"M", "MX", "MY", "MR", "MRX", "MRY"}
 
 
 def get_qubit_lists(circuit: stim.Circuit) -> tuple[list, list]:
-    """
-    For Stim circuits: Returns (data_qubit_stim_indices, ancilla_qubit_stim_indices).
-
-    NOTE: PLEASE DOUBLE CHECK FUNCTIONALITY!
-
-    Supports both standard circuits (ancillas use MR) and no-reset circuits
-    (ancillas use M). When QUBIT_COORDS annotations are present, distinguishes
-    by coordinate parity:
-        data qubits   → both x and y coordinates are odd
-        ancilla qubits → at least one coordinate is even
-
-    """
     coords = circuit.get_final_qubit_coordinates()
-
-    # Collect all measured qubit indices
-    all_measured: set[int] = set()
-    for instr in circuit.flattened():
-        if instr.name in ("M", "MR"):
-            for t in instr.targets_copy():
-                if t.is_qubit_target:
-                    all_measured.add(t.value)
-
-    data_q, anc_q = [], []
-    for q in sorted(all_measured):
-        if q in coords:
-            x, y = coords[q]
-            # data qubits sit at odd-x, odd-y grid positions
-            if int(x) % 2 == 1 and int(y) % 2 == 1:
-                data_q.append(q)
-            else:
-                anc_q.append(q)
-        else:
-            # No coordinates — conservative: treat as data
-            data_q.append(q)
-    return data_q, anc_q
+    data, anc = [], []
+    for q in sorted(set(get_meas_order(circuit))):
+        xy = coords.get(q)
+        (data if xy is None or (int(xy[0]) % 2 and int(xy[1]) % 2) else anc).append(q)
+    return data, anc
 
 
-    return data_q, anc_q
+def get_meas_order(circuit: stim.Circuit) -> list[int]:
+    return [t.value for i in circuit.flattened() if i.name in MEASURE
+            for t in i.targets_copy() if t.is_qubit_target]
 
 
-def get_meas_order(circuit: stim.Circuit) -> list:
-    """Returns list of Stim qubit indices in measurement order."""
-    order = []
-    for instr in circuit.flattened():
-        if instr.name in ("M", "MR"):
-            for t in instr.targets_copy():
-                if t.is_qubit_target:
-                    order.append(t.value)
-    return order
-
-
-
-def counts_to_measurement_array(
-    counts: dict,
-    num_measurements: int,
-    total_shots: int,
-) -> np.ndarray:
-    """
-    QISKIT TRACK ONLY. On the Qrisp track, the DetectorExperiment returns
-    detection events and observable flips directly.
-
-    Converts a Qiskit counts dict to a (total_shots, num_measurements)
-    boolean numpy array in Stim's measurement order.
-
-    Qiskit bitstrings are RIGHT-TO-LEFT: rightmost character = clbit 0.
-    Stim's measurement order corresponds to clbit 0, 1, 2, … in sequence.
-    """
-    result = np.zeros((total_shots, num_measurements), dtype=bool)
+def counts_to_measurement_array(counts: dict, num_measurements: int,
+                                 total_shots: int) -> np.ndarray:
+    """Qiskit little endian -> Stim order; reject truncated or malformed results."""
+    if total_shots < 0 or num_measurements < 0:
+        raise ValueError("Shot and measurement counts must be nonnegative.")
+    result = np.empty((total_shots, num_measurements), dtype=bool)
     row = 0
     for bitstring, count in counts.items():
-        # Reverse so index 0 = clbit 0
-        bits = bitstring[::-1]
-        meas = np.array([int(b) for b in bits[:num_measurements]], dtype=bool)
-        for _ in range(count):
-            result[row] = meas
-            row += 1
+        bits = bitstring.replace(" ", "")
+        if len(bits) != num_measurements or set(bits) - {"0", "1"}:
+            raise ValueError("Invalid measurement bitstring width or alphabet.")
+        if not isinstance(count, (int, np.integer)) or count < 0 or row + count > total_shots:
+            raise ValueError("Invalid counts or shot total.")
+        result[row:row + count] = np.array(list(bits[::-1])) == "1"
+        row += count
+    if row != total_shots:
+        raise ValueError("Counts do not sum to requested shots.")
     return result
