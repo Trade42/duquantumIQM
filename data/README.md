@@ -9,7 +9,7 @@
 
 ## Raw data is never edited
 
-Hardware results are written once and never changed afterwards. The analysis reads them; corrections and derived numbers go in new files. A job that has to be pulled again goes into a new directory, and the old one stays as it is.
+Hardware results are written once and never changed afterwards. The analysis reads them; corrections and derived numbers go in new files. A job pulled again from the server goes under a different `data_root` (a scratch directory) for comparison; the committed directory stays as it is.
 
 ## One hardware job: `hw/<YYYYMMDD>-<task>/<job id>/`
 
