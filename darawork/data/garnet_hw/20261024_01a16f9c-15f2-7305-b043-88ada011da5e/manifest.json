@@ -1,0 +1,365 @@
+{
+  "device": "IQM Garnet hardware",
+  "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "layout": {
+    "1": "QB2",
+    "2": "QB1",
+    "3": "QB4",
+    "5": "QB8",
+    "8": "QB6",
+    "9": "QB5",
+    "10": "QB10",
+    "11": "QB9",
+    "12": "QB14",
+    "13": "QB13",
+    "14": "QB7",
+    "15": "QB12",
+    "16": "QB11",
+    "17": "QB16",
+    "18": "QB15",
+    "19": "QB19",
+    "25": "QB20"
+  },
+  "decoder_model": "garnet_coherence (simulated medians; not fitted to this data)",
+  "files": [
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 1,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r1.parquet",
+      "shots": 20000,
+      "columns": 88,
+      "pm_logical_error_prob": 0.06775,
+      "pm_ci95": [
+        0.06434934922649618,
+        0.07131666594400626
+      ],
+      "mean_weight": 0.90585
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 2,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r2.parquet",
+      "shots": 20000,
+      "columns": 145,
+      "pm_logical_error_prob": 0.14605,
+      "pm_ci95": [
+        0.1412235619745754,
+        0.1510123803495411
+      ],
+      "mean_weight": 2.8395
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 3,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r3.parquet",
+      "shots": 20000,
+      "columns": 174,
+      "pm_logical_error_prob": 0.2018,
+      "pm_ci95": [
+        0.1962952668583189,
+        0.20741926344554187
+      ],
+      "mean_weight": 4.86285
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 4,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r4.parquet",
+      "shots": 20000,
+      "columns": 203,
+      "pm_logical_error_prob": 0.25495,
+      "pm_ci95": [
+        0.24895722740385823,
+        0.26103688946723863
+      ],
+      "mean_weight": 7.02845
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 5,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r5.parquet",
+      "shots": 20000,
+      "columns": 232,
+      "pm_logical_error_prob": 0.29605,
+      "pm_ci95": [
+        0.2897628166858927,
+        0.30241551482139234
+      ],
+      "mean_weight": 9.25345
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 6,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r6.parquet",
+      "shots": 20000,
+      "columns": 261,
+      "pm_logical_error_prob": 0.33255,
+      "pm_ci95": [
+        0.326053339348152,
+        0.3391109735270375
+      ],
+      "mean_weight": 11.55705
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 8,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r8.parquet",
+      "shots": 20000,
+      "columns": 319,
+      "pm_logical_error_prob": 0.3932,
+      "pm_ci95": [
+        0.38645153424629125,
+        0.39998948465529266
+      ],
+      "mean_weight": 16.3949
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "Z",
+      "rounds": 10,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_Z_r10.parquet",
+      "shots": 20000,
+      "columns": 377,
+      "pm_logical_error_prob": 0.42365,
+      "pm_ci95": [
+        0.41681705004095715,
+        0.43051227386481006
+      ],
+      "mean_weight": 21.50385
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 1,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r1.parquet",
+      "shots": 20000,
+      "columns": 88,
+      "pm_logical_error_prob": 0.2268,
+      "pm_ci95": [
+        0.22104914336679668,
+        0.23265578513425886
+      ],
+      "mean_weight": 1.6652
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 2,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r2.parquet",
+      "shots": 20000,
+      "columns": 145,
+      "pm_logical_error_prob": 0.32405,
+      "pm_ci95": [
+        0.3175980331068322,
+        0.33056954438131103
+      ],
+      "mean_weight": 3.60885
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 3,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r3.parquet",
+      "shots": 20000,
+      "columns": 174,
+      "pm_logical_error_prob": 0.38125,
+      "pm_ci95": [
+        0.374542163479034,
+        0.38800344508429074
+      ],
+      "mean_weight": 5.68995
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 4,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r4.parquet",
+      "shots": 20000,
+      "columns": 203,
+      "pm_logical_error_prob": 0.4238,
+      "pm_ci95": [
+        0.4169667004435452,
+        0.43066256585140517
+      ],
+      "mean_weight": 7.96305
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 5,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r5.parquet",
+      "shots": 20000,
+      "columns": 232,
+      "pm_logical_error_prob": 0.45065,
+      "pm_ci95": [
+        0.4437644487047751,
+        0.4575545052539624
+      ],
+      "mean_weight": 10.1919
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 6,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r6.parquet",
+      "shots": 20000,
+      "columns": 261,
+      "pm_logical_error_prob": 0.46845,
+      "pm_ci95": [
+        0.4615410101069297,
+        0.4753711073682104
+      ],
+      "mean_weight": 12.6661
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 8,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r8.parquet",
+      "shots": 20000,
+      "columns": 319,
+      "pm_logical_error_prob": 0.48005,
+      "pm_ci95": [
+        0.4731304939273856,
+        0.48697716831125293
+      ],
+      "mean_weight": 17.5852
+    },
+    {
+      "source": "hardware",
+      "model": "hardware",
+      "basis": "X",
+      "rounds": 10,
+      "distance": 3,
+      "seed": -1,
+      "job_id": "01a16f9c-15f2-7305-b043-88ada011da5e",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "file": "hw_X_r10.parquet",
+      "shots": 20000,
+      "columns": 377,
+      "pm_logical_error_prob": 0.5001,
+      "pm_ci95": [
+        0.49317112720390416,
+        0.5070288343888846
+      ],
+      "mean_weight": 22.73885
+    }
+  ],
+  "columns": {
+    "det": "detection event (stabilizer, round t); no-reset: m_t xor m_(t-2)",
+    "data": "final data-qubit measurement",
+    "meas": "raw ancilla measurement; accumulates without reset",
+    "syn": "per-round syndrome m_r xor m_(r-1)",
+    "fires": "count of detection events on this stabilizer",
+    "first": "first round fired, -1 if never",
+    "last": "last round fired, -1 if never",
+    "lag1": "pairs fired in rounds t, t+1",
+    "lag2": "pairs fired in rounds t, t+2: no-reset readout-error signature",
+    "maxrun": "longest streak of consecutive rounds fired",
+    "w": "detection events in round t",
+    "wX": "X-stabilizer events in round t",
+    "wZ": "Z-stabilizer events in round t",
+    "space": "adjacent stabilizer pairs firing together in round t (data-error signature)",
+    "diag": "adjacent pairs at t and t+1 (mid-round / hook-error signature)",
+    "weight_total": "total detection events",
+    "weight_X": "total X-stabilizer events",
+    "weight_Z": "total Z-stabilizer events",
+    "lag1_total": "sum of lag1 over stabilizers",
+    "lag2_total": "sum of lag2 over stabilizers",
+    "space_total": "sum of space over rounds",
+    "diag_total": "sum of diag over rounds",
+    "burst_max": "largest per-round weight",
+    "rounds_active": "rounds with at least one event",
+    "weight_trend": "least-squares slope of per-round weight vs round (leakage grows it)",
+    "weight_autocorr1": "lag-1 autocorrelation of per-round weight",
+    "pm_pred": "correlated MWPM predicted logical flip",
+    "pm_weight": "correlated MWPM solution weight (confidence proxy)",
+    "pm_uncorr_pred": "uncorrelated MWPM predicted logical flip",
+    "pm_disagree": "correlated and uncorrelated MWPM disagree",
+    "pm_correct": "correlated MWPM was right",
+    "obs_flip": "LABEL: true logical observable flip"
+  }
+}

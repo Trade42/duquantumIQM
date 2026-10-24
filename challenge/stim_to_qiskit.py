@@ -1,4 +1,5 @@
 """Stim -> Qiskit with exact measurement order, both bases, no-reset hardware."""
+from math import pi
 import stim
 from qiskit import QuantumCircuit
 
@@ -16,7 +17,8 @@ def stim_to_qiskit(stim_circuit: stim.Circuit, *, skip_initial_resets=True,
     mapping = {q: i for i, q in enumerate(qubits)}
     qc = QuantumCircuit(len(qubits), flat.num_measurements)
     touched, order = set(), []
-    single = {"H": qc.h, "X": qc.x, "Y": qc.y, "Z": qc.z, "S": qc.s, "S_DAG": qc.sdg}
+    single = {"H": qc.h, "X": qc.x, "Y": qc.y, "Z": qc.z, "S": qc.s, "S_DAG": qc.sdg,
+              "SQRT_Y": lambda d: qc.ry(pi / 2, d), "SQRT_Y_DAG": lambda d: qc.ry(-pi / 2, d)}
     for inst in flat:
         name = inst.name
         if name in {"QUBIT_COORDS", "SHIFT_COORDS", "DETECTOR", "OBSERVABLE_INCLUDE"}:
