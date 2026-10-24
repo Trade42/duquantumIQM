@@ -1,0 +1,17 @@
+# Observed validated Python 3.12 environment; no credentials or host paths.
+stim==1.16.0
+pymatching==2.4.0
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+qiskit==2.1.2
+qiskit-aer==0.17.2
+iqm-client[qiskit]==35.0.3
+iqm-qubit-selector==1.1.3
+networkx==3.7
+pytest==9.1.1
+iqm-pulla==14.0.3
+iqm-pulse==14.0.3
+iqm-station-control-client==13.0.3
+iqm-exa-common==28.0.3
+iqm-data-definitions==3.1.0
