@@ -1,0 +1,218 @@
+{
+  "qubits": {
+    "QB18": {
+      "single_qubit_infidelity": 0.0006133791147600043,
+      "readout_error": 0.01862464183381085,
+      "reset_error": 0.0,
+      "t1_ns": 15751.56839170037,
+      "t2_ns": 8393.073385724725,
+      "leakage_per_gate": 0.0
+    },
+    "QB16": {
+      "single_qubit_infidelity": 0.0007296192374958155,
+      "readout_error": 0.08915441176470584,
+      "reset_error": 0.0,
+      "t1_ns": 27399.184777552287,
+      "t2_ns": 6650.257950431875,
+      "leakage_per_gate": 0.0
+    },
+    "QB19": {
+      "single_qubit_infidelity": 0.0003529195324152301,
+      "readout_error": 0.008337481333997032,
+      "reset_error": 0.0,
+      "t1_ns": 57871.49204534251,
+      "t2_ns": 9124.230464139153,
+      "leakage_per_gate": 0.0
+    },
+    "QB2": {
+      "single_qubit_infidelity": 0.0006826999122502286,
+      "readout_error": 0.01822810590631363,
+      "reset_error": 0.0,
+      "t1_ns": 29772.169892017002,
+      "t2_ns": 5193.142010884132,
+      "leakage_per_gate": 0.0
+    },
+    "QB7": {
+      "single_qubit_infidelity": 0.002370379765433417,
+      "readout_error": 0.02197690905408156,
+      "reset_error": 0.0,
+      "t1_ns": 49071.77773910951,
+      "t2_ns": 9118.036559577127,
+      "leakage_per_gate": 0.0
+    },
+    "QB12": {
+      "single_qubit_infidelity": 0.0036873026481804017,
+      "readout_error": 0.015304026294166051,
+      "reset_error": 0.0,
+      "t1_ns": 51786.84460372094,
+      "t2_ns": 6438.624780601989,
+      "leakage_per_gate": 0.0
+    },
+    "QB13": {
+      "single_qubit_infidelity": 0.0005378653778159714,
+      "readout_error": 0.004165645675079599,
+      "reset_error": 0.0,
+      "t1_ns": 46761.61980930388,
+      "t2_ns": 14396.339860485208,
+      "leakage_per_gate": 0.0
+    },
+    "QB9": {
+      "single_qubit_infidelity": 0.0007030179501411604,
+      "readout_error": 0.013080990815474425,
+      "reset_error": 0.0,
+      "t1_ns": 37361.10851851821,
+      "t2_ns": 12230.43158999218,
+      "leakage_per_gate": 0.0
+    },
+    "QB6": {
+      "single_qubit_infidelity": 0.0005955832219467494,
+      "readout_error": 0.0036340316374520176,
+      "reset_error": 0.0,
+      "t1_ns": 46579.61586804711,
+      "t2_ns": 7429.94850635971,
+      "leakage_per_gate": 0.0
+    },
+    "QB10": {
+      "single_qubit_infidelity": 0.00046375305789081445,
+      "readout_error": 0.005771567436208991,
+      "reset_error": 0.0,
+      "t1_ns": 36796.92653887598,
+      "t2_ns": 9976.306058721295,
+      "leakage_per_gate": 0.0
+    },
+    "QB17": {
+      "single_qubit_infidelity": 0.0005235116608559576,
+      "readout_error": 0.008716805189539989,
+      "reset_error": 0.0,
+      "t1_ns": 50205.912870160995,
+      "t2_ns": 13367.189435484048,
+      "leakage_per_gate": 0.0
+    },
+    "QB3": {
+      "single_qubit_infidelity": 0.0005807089997675874,
+      "readout_error": 0.01548492257538725,
+      "reset_error": 0.0,
+      "t1_ns": 25361.069946779964,
+      "t2_ns": 11799.10599249921,
+      "leakage_per_gate": 0.0
+    },
+    "QB15": {
+      "single_qubit_infidelity": 0.0007831662233953596,
+      "readout_error": 0.022582631903099948,
+      "reset_error": 0.0,
+      "t1_ns": 38077.22550182981,
+      "t2_ns": 13761.199410643449,
+      "leakage_per_gate": 0.0
+    },
+    "QB1": {
+      "single_qubit_infidelity": 0.0008506003670729623,
+      "readout_error": 0.008049909438518799,
+      "reset_error": 0.0,
+      "t1_ns": 23729.532714542893,
+      "t2_ns": 9680.14817454666,
+      "leakage_per_gate": 0.0
+    },
+    "QB4": {
+      "single_qubit_infidelity": 0.000546144996807052,
+      "readout_error": 0.006028938906752379,
+      "reset_error": 0.0,
+      "t1_ns": 28338.534606417168,
+      "t2_ns": 8899.653202616684,
+      "leakage_per_gate": 0.0
+    },
+    "QB11": {
+      "single_qubit_infidelity": 0.0007726077994956171,
+      "readout_error": 0.020523138832997945,
+      "reset_error": 0.0,
+      "t1_ns": 24612.750472425963,
+      "t2_ns": 8072.090341446788,
+      "leakage_per_gate": 0.0
+    },
+    "QB8": {
+      "single_qubit_infidelity": 0.0007616452427552378,
+      "readout_error": 0.01019789983844921,
+      "reset_error": 0.0,
+      "t1_ns": 23855.12926655685,
+      "t2_ns": 6654.608145499518,
+      "leakage_per_gate": 0.0
+    },
+    "QB20": {
+      "single_qubit_infidelity": 0.0004726417737012101,
+      "readout_error": 0.043895467537770405,
+      "reset_error": 0.0,
+      "t1_ns": 35905.381615886385,
+      "t2_ns": 25487.082592420964,
+      "leakage_per_gate": 0.0
+    },
+    "QB14": {
+      "single_qubit_infidelity": 0.0003935429569680293,
+      "readout_error": 0.004612546125461248,
+      "reset_error": 0.0,
+      "t1_ns": 38034.195187545854,
+      "t2_ns": 6532.069266618318,
+      "leakage_per_gate": 0.0
+    },
+    "QB5": {
+      "single_qubit_infidelity": 0.0005840513769850286,
+      "readout_error": 0.0035770176615248506,
+      "reset_error": 0.0,
+      "t1_ns": 44243.85834622851,
+      "t2_ns": 9035.397683378249,
+      "leakage_per_gate": 0.0
+    }
+  },
+  "edges": {
+    "QB2|QB5": 0.004222626152048048,
+    "QB14|QB9": 0.002136236657345969,
+    "QB11|QB16": 0.010042041233541799,
+    "QB4|QB9": 0.006617989117879364,
+    "QB11|QB6": 0.007589088437636837,
+    "QB15|QB19": 0.0035151863565527908,
+    "QB5|QB6": 0.007716128915591591,
+    "QB8|QB9": 0.004525068109331842,
+    "QB15|QB16": 0.00951772182800481,
+    "QB1|QB4": 0.0046400918233420185,
+    "QB13|QB8": 0.004536735785306001,
+    "QB10|QB15": 0.008580668434769567,
+    "QB12|QB17": 0.003353189740002649,
+    "QB3|QB4": 0.00629825081065416,
+    "QB10|QB11": 0.00803454714326679,
+    "QB13|QB14": 0.0032458262193639786,
+    "QB19|QB20": 0.0019461412304841996,
+    "QB1|QB2": 0.004748358067709235,
+    "QB6|QB7": 0.009833905429551204,
+    "QB10|QB9": 0.010238408912804364,
+    "QB16|QB17": 0.010617274443760039,
+    "QB18|QB19": 0.0034324712919153733,
+    "QB3|QB8": 0.005605240785249599,
+    "QB10|QB5": 0.00900135732665941,
+    "QB12|QB7": 0.003974787738139196,
+    "QB14|QB18": 0.004457181465898796,
+    "QB16|QB20": 0.012028170628987755,
+    "QB4|QB5": 0.005153942160801228,
+    "QB11|QB12": 0.0031004918774060197,
+    "QB14|QB15": 0.00473377340431802
+  },
+  "durations_ns": {
+    "1q": 20.0,
+    "2q": 40.0,
+    "measure": 1500.0,
+    "reset": 1500.0
+  },
+  "metadata": {
+    "source": "IQM CalibrationDataManager",
+    "retrieved_utc": "2026-10-24T23:10:47.495472+00:00",
+    "coherence_input_unit": "us",
+    "assumed_reset_error": 0.0,
+    "missing_leakage": "not calibrated; zero unless stress-tested",
+    "device": "garnet",
+    "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+    "assumed_durations_ns": {
+      "1q": 20.0,
+      "2q": 40.0,
+      "measure": 1500.0,
+      "reset": 1500.0
+    }
+  },
+  "schema_version": 1
+}

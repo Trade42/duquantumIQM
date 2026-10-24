@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "job": "01a17003-dc8b-7688-9f19-dfce0f8090e4",
+      "rounds": 2,
+      "shots": 1000,
+      "detection_rate": 0.16275,
+      "raw_flip_rate": 0.341,
+      "errors": {
+        "pymatching_uniform": 145,
+        "pymatching_calibrated": 133,
+        "mlp": 136
+      },
+      "mlp_vs_calibrated": {
+        "shots": 1000,
+        "a_errors": 136,
+        "b_errors": 133,
+        "a_ci95": [
+          0.1161420645496615,
+          0.15864381562782268
+        ],
+        "b_ci95": [
+          0.11335116065727396,
+          0.15545768007112354
+        ],
+        "only_a_fails": 36,
+        "only_b_fails": 33,
+        "mcnemar_exact_p": 0.8099490529189248
+      }
+    }
+  ],
+  "fits": {}
+}
