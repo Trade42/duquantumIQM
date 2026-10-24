@@ -13,9 +13,11 @@ Submitting
       Unset means zero.
 
     Usage is counted from the task's earlier lines in the QPU ledger (``DQ_QPU_LEDGER``,
-    default :data:`DEFAULT_LEDGER`). The moment a submission returns a job id, its ledger
-    line is appended, before anything else. Then the raw result is saved under
-    ``data/hw/<YYYYMMDD>-<task>/<job id>/`` (:func:`save_raw`).
+    default :data:`DEFAULT_LEDGER`). The run request is built once, and the ledger's
+    physical qubits are read from that same request, which is then submitted. The moment
+    the submission returns a job id, its ledger line is appended, before anything else.
+    Then the raw result is saved under ``data/hw/<YYYYMMDD>-<task>/<job id>/``
+    (:func:`save_raw`).
 
 Reading
     :func:`backend`, :func:`retrieve`, :func:`list_devices`, :func:`architecture`,
@@ -247,8 +249,9 @@ def save_raw(
     *,
     task: str,
     device: str,
-    qubit_mapping: Mapping[int, str],
+    qubit_mapping: Sequence[Mapping[int, str]],
     shots: int,
+    physical_qubits: Sequence[Sequence[str]] | None = None,
     purpose: str = "",
     day: str | None = None,
     data_root: Path | None = None,
@@ -257,8 +260,10 @@ def save_raw(
 
     Writes ``meta.json`` and, when the job succeeded, ``memory.npz``: one uint8 array
     ``c<i>`` of shape (shots, clbits) per circuit, column j being circuit clbit j. Works on
-    a fresh result or on one re-pulled with :func:`retrieve`. ``day`` (YYYYMMDD, UTC) is
-    the submission day; it defaults to today. Refuses to overwrite.
+    a fresh result or on one re-pulled with :func:`retrieve`. ``qubit_mapping`` has one
+    logical qubit -> device qubit map per circuit, in batch order; ``physical_qubits``, when
+    known, the device qubits each circuit's instructions were sent to. ``day`` (YYYYMMDD,
+    UTC) is the submission day; it defaults to today. Refuses to overwrite.
     """
     job_id = str(result.job_id)
     day = day or dt.datetime.now(dt.UTC).strftime("%Y%m%d")
@@ -278,7 +283,8 @@ def save_raw(
         "task": task,
         "device": device,
         "calibration_set_id": calsets[0] if len(calsets) == 1 else calsets,
-        "qubit_mapping": {str(k): v for k, v in sorted(qubit_mapping.items())},
+        "qubit_mapping": [{str(k): v for k, v in sorted(m.items())} for m in qubit_mapping],
+        "physical_qubits": None if physical_qubits is None else [list(q) for q in physical_qubits],
         "shots": shots,
         "circuits": len(experiments),
         "circuit_names": [getattr(getattr(e, "header", None), "name", None) for e in experiments],
@@ -315,7 +321,17 @@ def _connect(device: str, calibration_set_id: str | None = None, *, read_only: b
 
     client = IQMClient(SERVER_URL, quantum_computer=device)
     if not read_only:
-        return IQMBackend(client, calibration_set_id=calibration_set_id)
+        from iqm.pulse import Circuit
+        from iqm.qiskit_iqm.iqm_job import IQMJob
+
+        class SubmittingIQMBackend(IQMBackend):
+            def submit_run_request(self, run_request: Any) -> Any:
+                """The second half of ``IQMBackend.run``: submit this very request (on-demand queue)."""
+                job = IQMJob(self, self.client.submit_run_request(run_request, use_timeslot=False))
+                job.circuit_metadata = [c.metadata if isinstance(c, Circuit) else {} for c in run_request.circuits]
+                return job
+
+        return SubmittingIQMBackend(client, calibration_set_id=calibration_set_id)
 
     class ReadOnlyIQMBackend(IQMBackend):
         run = _refuse
@@ -325,17 +341,35 @@ def _connect(device: str, calibration_set_id: str | None = None, *, read_only: b
     return ReadOnlyIQMBackend(client, calibration_set_id=calibration_set_id)
 
 
-def _physical_qubits(backend: Any, circuits: Sequence[Any], mapping: Mapping[int, str] | None) -> dict[int, str]:
-    """Circuit qubit index -> device qubit name, for every qubit an instruction touches."""
-    used = sorted({c.find_bit(q).index for c in circuits for inst in c.data for q in inst.qubits})
-    if mapping is not None:
-        return {i: mapping[i] for i in used}
-    return {i: backend.index_to_qubit_name(i) for i in used}
-
-
 def _qubit_sort_key(name: str) -> tuple[str, int]:
     m = re.fullmatch(r"(\D*)(\d+)", name)
     return (m.group(1), int(m.group(2))) if m else (name, -1)
+
+
+def _sent_qubits(run_request: Any) -> list[list[str]]:
+    """Per circuit of a run request: the device qubits its serialized instructions act on."""
+    return [
+        sorted({q for inst in c.instructions for q in inst.locus}, key=_qubit_sort_key) for c in run_request.circuits
+    ]
+
+
+def _qubit_mappings(backend: Any, circuits: Sequence[Any], names: Mapping[int, str] | None) -> list[dict[int, str]]:
+    """Per circuit: logical qubit -> device qubit name, reading the layout as IQM's serializer does.
+
+    A transpiled circuit's layout places logical qubit v on physical qubit
+    ``initial_index_layout(filter_ancillas=True)[v]``. A circuit with no layout (or one the
+    serializer ignores) is sent qubit for qubit, so its qubits map through their own indices.
+    """
+    name = names.__getitem__ if names is not None else backend.index_to_qubit_name
+    mappings = []
+    for c in circuits:
+        # the test serialize_instructions (iqm.qiskit_iqm.qiskit_to_iqm) uses to ignore a layout
+        if c.layout is None or c.layout.initial_layout.get_registers() != set(c.qregs):
+            used = sorted({c.find_bit(q).index for inst in c.data for q in inst.qubits})
+            mappings.append({i: name(i) for i in used})
+        else:
+            mappings.append({v: name(p) for v, p in enumerate(c.layout.initial_index_layout(filter_ancillas=True))})
+    return mappings
 
 
 @dataclass
@@ -344,7 +378,8 @@ class Submission:
     task: str
     device: str
     calibration_set_id: str
-    qubit_mapping: dict[int, str]
+    qubits: list[str]
+    qubit_mapping: list[dict[int, str]]
     circuits: int
     shots: int
     path: Path
@@ -367,7 +402,8 @@ def submit(
 
     Pass the ``calibration_set_id`` of the read-only :func:`backend` you transpiled
     against, so the job runs on the same calibration. ``run_options`` go to
-    ``IQMBackend.run`` (e.g. ``circuit_compilation_options``).
+    ``IQMBackend.create_run_request`` (e.g. ``circuit_compilation_options``). The job goes
+    to the on-demand queue.
 
     If the wait for the result fails, the job is already in the ledger: re-pull it with
     :func:`retrieve` and save it with :func:`save_raw`.
@@ -379,6 +415,8 @@ def submit(
         raise ValueError(f"shots must be a positive int, got {shots!r}")
     if not _cell(purpose):
         raise ValueError("purpose is required: it goes in the ledger")
+    if "use_timeslot" in run_options:
+        raise ValueError("use_timeslot: submit uses the on-demand queue only")
 
     task = armed_task()
     check_allowance(task, len(circuit_list), shots)
@@ -386,9 +424,15 @@ def submit(
 
     hw_backend = _connect(device, calibration_set_id, read_only=False)
     calset = str(hw_backend.architecture.calibration_set_id)
-    mapping = _physical_qubits(hw_backend, circuit_list, qubit_index_to_name)
+    # Build the request once: the ledger's qubits are read from the request that is submitted.
+    run_request = hw_backend.create_run_request(
+        circuit_list, shots=shots, qubit_index_to_name=qubit_index_to_name, **run_options
+    )
+    sent = _sent_qubits(run_request)
+    qubits = sorted({q for circuit_qubits in sent for q in circuit_qubits}, key=_qubit_sort_key)
+    mappings = _qubit_mappings(hw_backend, circuit_list, qubit_index_to_name)
 
-    job = hw_backend.run(circuit_list, shots=shots, qubit_index_to_name=qubit_index_to_name, **run_options)
+    job = hw_backend.submit_run_request(run_request)
     job_id = str(job.job_id())
     submitted = dt.datetime.now(dt.UTC)
     append_ledger(
@@ -397,7 +441,7 @@ def submit(
             task=task,
             device=device,
             calibration_set_id=calset,
-            qubits=sorted(set(mapping.values()), key=_qubit_sort_key),
+            qubits=qubits,
             circuits=len(circuit_list),
             shots=shots,
             job_id=job_id,
@@ -411,13 +455,14 @@ def submit(
         result,
         task=task,
         device=device,
-        qubit_mapping=mapping,
+        qubit_mapping=mappings,
         shots=shots,
+        physical_qubits=sent,
         purpose=purpose,
         day=submitted.strftime("%Y%m%d"),
         data_root=data_root,
     )
-    return Submission(job_id, task, device, calset, mapping, len(circuit_list), shots, path, result)
+    return Submission(job_id, task, device, calset, qubits, mappings, len(circuit_list), shots, path, result)
 
 
 # ---------------------------------------------------------------------------
@@ -456,8 +501,23 @@ def calibration_set_id(device: str) -> str:
     return str(backend(device).architecture.calibration_set_id)
 
 
-def calibration_fidelities(device: str, calibration_set_id: str | None = None) -> dict[str, dict[str, float]]:
-    """Per-qubit and per-pair calibration figures, via iqm-qubit-selector (the mentors' helper)."""
+def calibration_fidelities(device: str, calibration_set_id: str | None = None) -> dict[str, Any]:
+    """Per-qubit and per-pair calibration figures of one calibration set, parsed by iqm-qubit-selector.
+
+    The figures are that calibration set's quality metrics (the current default set's, when
+    ``calibration_set_id`` is None). ``calibration_set_id`` and ``quality_metric_set_id`` in
+    the result are the server's record of which set they describe; the other keys are
+    iqm-qubit-selector's (``CalibrationDataManager.get_calibration_fidelities``).
+    """
     from iqm.qubit_selector.qubit_selector import CalibrationDataManager
 
-    return CalibrationDataManager().get_calibration_fidelities(backend(device, calibration_set_id))
+    b = backend(device, calibration_set_id)
+    # get_calibration_fidelities always reads the default set's metrics, so fetch this set's
+    # ourselves and use its parser (private in iqm-qubit-selector 1.1.3; there is no public one).
+    metrics = b.client.get_quality_metric_set(b.architecture.calibration_set_id)
+    figures = CalibrationDataManager()._parse_calibration_metrics(metrics.observations, b)
+    return {
+        "calibration_set_id": str(metrics.describes_id),
+        "quality_metric_set_id": str(metrics.observation_set_id),
+        **figures,
+    }
