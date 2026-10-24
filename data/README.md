@@ -15,7 +15,9 @@ Hardware results are written once and never changed afterwards. The analysis rea
 
 `<YYYYMMDD>` is the UTC day the job was submitted.
 
-- `meta.json`: `job_id`, `task`, `device`, `calibration_set_id`, `qubit_mapping` (circuit qubit index to device qubit name), `shots`, `circuits`, `circuit_names`, `success`, `commit` (`git rev-parse HEAD` at submission), `purpose`, `saved_utc` and `timeline` (the server's status timestamps).
+- `meta.json`: `job_id`, `task`, `device`, `calibration_set_id`, `qubit_mapping`, `physical_qubits`, `shots`, `circuits`, `circuit_names`, `success`, `commit` (`git rev-parse HEAD` at submission), `purpose`, `saved_utc` and `timeline` (the server's status timestamps).
+  - `qubit_mapping` is a list with one map per circuit, in batch order: logical qubit index (the untranspiled circuit's) to device qubit name. It comes from the circuit's layout, `initial_index_layout(filter_ancillas=True)`, which is how IQM's serializer places the qubits. A circuit with no layout maps each qubit index through the backend's own index-to-name map.
+  - `physical_qubits` is a list, per circuit, of the device qubits its instructions were sent to, read from the submitted run request. A routed circuit's SWAPs can use qubits that are not in `qubit_mapping`. Their union is the ledger row's `physical qubits`. It is `null` when the data was saved from a re-pulled result without it.
 - `memory.npz`: per-shot measurements, one `uint8` array `c<i>` of shape `(shots, clbits)` per circuit, in batch order. Column `j` is circuit classical bit `j`, so the Qiskit bitstring order is already undone (Qiskit prints clbit 0 rightmost). It is missing when the job failed.
 
 Load it with:
