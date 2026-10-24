@@ -51,10 +51,32 @@ eps_L is the per-round logical error rate fitted over rounds 1-4 with 2 P_L = 1 
 | zeros heralding | **0.0629 [0.0616, 0.0642]**, about -7.5% | no gain with DD | about 84% (post-selected) |
 | active reset (2 cycles) | much worse | much worse | 100% |
 
-Decoders on the same held-out baseline test shots (job `01a16ffd-9995...`): coherence-aware calibrated
-PyMatching (T1/T2 idles, readout duration chosen on training shots) improves eps_L by 3-5% over the Pauli
-calibration model; GPU decoders (MLP and 3D conv) pre-trained on the coherence-aware model and fine-tuned
-on separate Garnet training shots lead at most round counts. Full tables come from `finetune_hw.py`.
+### GPU decoders on Garnet hardware shots
+
+Held-out test job `01a16ffd-9995-728f-9388-fe89b1376a5b` (baseline settings, 20,000 shots per round count);
+training: 10 separate jobs (task `garnet-train2`, 200,000 shots per round count, 90% fit / 10% validation).
+`_sim` = trained only on the coherence-aware calibrated simulation; `_ft` = then fine-tuned on Garnet training
+shots (checkpoint chosen on validation). Source: `hw_data/decoder_eval_garnet-20261024T233359.json`,
+log `hw_data/finetune_garnet.log` (Colab NVIDIA L4).
+
+| Decoder | Z eps_L (95%) | X eps_L (95%) |
+|---|---|---|
+| **3D conv, fine-tuned (GPU)** | **0.0653 [0.0641, 0.0666]** | **0.1970 [0.1940, 0.2001]** |
+| **MLP, fine-tuned (GPU)** | 0.0659 [0.0646, 0.0672] | 0.1978 [0.1947, 0.2009] |
+| MLP, simulation only (GPU) | 0.0673 [0.0660, 0.0686] | 0.2101 [0.2069, 0.2133] |
+| PyMatching, coherence-aware calibration | 0.0686 [0.0673, 0.0699] | 0.2040 [0.2009, 0.2072] |
+| conv pre-decoder + PyMatching | 0.0699 [0.0686, 0.0712] | 0.2034 [0.2003, 0.2066] |
+| PyMatching, calibrated (Pauli) | 0.0707 [0.0694, 0.0720] | 0.2137 [0.2104, 0.2170] |
+| lookup table from Garnet training shots | 0.0719 [0.0706, 0.0733] | 0.2065 [0.2034, 0.2098] |
+| BP+OSD | 0.0722 [0.0709, 0.0736] | 0.2044 [0.2013, 0.2076] |
+| PyMatching, uniform | 0.0745 [0.0732, 0.0759] | 0.2130 [0.2097, 0.2163] |
+| lookup table from uniform simulation | 0.0752 [0.0739, 0.0766] | 0.2142 [0.2109, 0.2175] |
+| BP+Union-Find | 0.0797 [0.0782, 0.0811] | 0.2041 [0.2010, 0.2073] |
+| Union-Find | 0.1027 [0.1010, 0.1044] | 0.2544 [0.2504, 0.2584] |
+
+The fine-tuned conv decoder lowers eps_L by 7.6% (Z) and 7.8% (X) relative to calibrated PyMatching; on the
+same shots it fails less at 2, 3 and 4 rounds in both bases (exact McNemar p from 1e-4 to 1e-14), and ties
+at 1 round. These are baseline-setting shots; the DD (X) and heralded (Z) runs are separate datasets.
 
 Simulation (uniform noise, rounds = d): PyMatching scales with distance (P_L 0.030, 0.024, 0.016 at
 d = 3, 5, 7, p = 0.003); the MLP beats PyMatching at d = 3 but the learned decoders fall behind it at
