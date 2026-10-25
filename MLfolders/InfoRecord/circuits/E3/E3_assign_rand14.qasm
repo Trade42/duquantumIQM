@@ -1,0 +1,35 @@
+OPENQASM 3.0;
+include "stdgates.inc";
+gate r(p0, p1) _gate_q_0 {
+  U(p0, -pi/2 + p1, pi/2 - p1) _gate_q_0;
+}
+bit[20] c;
+r(pi, 0) $0;
+r(pi, 0) $1;
+r(pi, 0) $2;
+r(pi, 0) $9;
+r(pi, 0) $14;
+r(pi, 0) $16;
+r(pi, 0) $18;
+barrier $0, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19;
+c[0] = measure $0;
+c[1] = measure $1;
+c[2] = measure $2;
+c[3] = measure $3;
+c[4] = measure $4;
+c[5] = measure $5;
+c[6] = measure $6;
+c[7] = measure $7;
+c[8] = measure $8;
+c[9] = measure $9;
+c[10] = measure $10;
+c[11] = measure $11;
+c[12] = measure $12;
+c[13] = measure $13;
+c[14] = measure $14;
+c[15] = measure $15;
+c[16] = measure $16;
+c[17] = measure $17;
+c[18] = measure $18;
+c[19] = measure $19;
+

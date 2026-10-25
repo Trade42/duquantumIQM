@@ -1,0 +1,2581 @@
+{
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "circuits": {
+  "C1_amp_x_n00": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1036.0,
+   "experiment": "C1",
+   "layers": 0,
+   "native_sha256": "708eaab5ae1457691fbc602cf74406de8403308b12eef6b0e1d0ca4541317ba1",
+   "ops": {
+    "measure": 17
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 0,
+    "pulses": 0,
+    "sequence": [],
+    "sign": null
+   },
+   "qasm_sha256": "d74bc755e7e08a85316c20f396b350ab800f279d646b4afa9575fa1251b716d9",
+   "sent": {
+    "measure": 17
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n01": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1052.0,
+   "experiment": "C1",
+   "layers": 1,
+   "native_sha256": "c9abcf5ef2b9811f4a394a98c275c0c3d0f309bbd3af7a792532bb6195c66797",
+   "ops": {
+    "barrier": 1,
+    "measure": 17,
+    "r": 17
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 1,
+    "pulses": 1,
+    "sequence": [
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "db581e30ddaad9e05e211d7329a1fd0592e5291ae6206d9893089d7dd1fa9305",
+   "sent": {
+    "barrier": 1,
+    "measure": 17,
+    "prx": 17
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n02": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1068.0,
+   "experiment": "C1",
+   "layers": 2,
+   "native_sha256": "33e58095ddd22c16ae6e02ec3fdcc8255b9732335eb263f82ccc72f8e11ece3f",
+   "ops": {
+    "barrier": 2,
+    "measure": 17,
+    "r": 34
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 2,
+    "pulses": 2,
+    "sequence": [
+     [
+      0.0,
+      2
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "9e03d6089e3fc5dee23bce1370bd8aa6b8560aa5de7e69964a6832ca4da9eb9a",
+   "sent": {
+    "barrier": 2,
+    "measure": 17,
+    "prx": 34
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n03": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1084.0,
+   "experiment": "C1",
+   "layers": 3,
+   "native_sha256": "8aed5eb135cbc42020a8fcadaf299439a30749b2875e2899e1743a0e938e14f1",
+   "ops": {
+    "barrier": 3,
+    "measure": 17,
+    "r": 51
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 3,
+    "pulses": 3,
+    "sequence": [
+     [
+      0.0,
+      3
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "773ef00ef61a6c2bc081ff3f6976f1f18e89e976c617e940651b9c10d965986e",
+   "sent": {
+    "barrier": 3,
+    "measure": 17,
+    "prx": 51
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n05": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1116.0,
+   "experiment": "C1",
+   "layers": 5,
+   "native_sha256": "443119da71d094ae84c871d3aebda16a1105e9824dcebd90ecf6e6dbbb230355",
+   "ops": {
+    "barrier": 5,
+    "measure": 17,
+    "r": 85
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 5,
+    "pulses": 5,
+    "sequence": [
+     [
+      0.0,
+      5
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "a62205816f0561f88bb3989d56e6aa91d50fa070f97542dcbc9e62d0d3f7647e",
+   "sent": {
+    "barrier": 5,
+    "measure": 17,
+    "prx": 85
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n07": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1148.0,
+   "experiment": "C1",
+   "layers": 7,
+   "native_sha256": "37826f2fe4bd5c1089552a01f076a6e7c3d997b8402d38adc17b58ec5eda6122",
+   "ops": {
+    "barrier": 7,
+    "measure": 17,
+    "r": 119
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 7,
+    "pulses": 7,
+    "sequence": [
+     [
+      0.0,
+      7
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "2ca5b456e0c9be4daa7c4644765bb544849974b90466518d600d0c6acf3c3e01",
+   "sent": {
+    "barrier": 7,
+    "measure": 17,
+    "prx": 119
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n09": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1180.0,
+   "experiment": "C1",
+   "layers": 9,
+   "native_sha256": "28be41ea5def38085c0ebfc731c3a855361ecada955b32bd05f89b536a4c0482",
+   "ops": {
+    "barrier": 9,
+    "measure": 17,
+    "r": 153
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 9,
+    "pulses": 9,
+    "sequence": [
+     [
+      0.0,
+      9
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "140463b24b8c9db9ba81f110c4a554187ff0936f462146995a1612f4280dbbb2",
+   "sent": {
+    "barrier": 9,
+    "measure": 17,
+    "prx": 153
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n11": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1212.0,
+   "experiment": "C1",
+   "layers": 11,
+   "native_sha256": "863cc38313e9b239d665daa2fcc97a1a36fec91d528e8be21b2821d63b43d517",
+   "ops": {
+    "barrier": 11,
+    "measure": 17,
+    "r": 187
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 11,
+    "pulses": 11,
+    "sequence": [
+     [
+      0.0,
+      11
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "2ca2d469511652d47d046dc0112a248ab6e4f2a4e7fac86a8e02b45eab5b1f70",
+   "sent": {
+    "barrier": 11,
+    "measure": 17,
+    "prx": 187
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n17": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1308.0,
+   "experiment": "C1",
+   "layers": 17,
+   "native_sha256": "babc213e09d0afe6da5be52996501b6b519e9ddd7e2cd6537c899311b81505ac",
+   "ops": {
+    "barrier": 17,
+    "measure": 17,
+    "r": 289
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 17,
+    "pulses": 17,
+    "sequence": [
+     [
+      0.0,
+      17
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "ee398ec7241b3233f752a7a4acd613e08b6d044b76724b7318281279cea8045d",
+   "sent": {
+    "barrier": 17,
+    "measure": 17,
+    "prx": 289
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n19": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1340.0,
+   "experiment": "C1",
+   "layers": 19,
+   "native_sha256": "151afcee7ec39719b3d810d9010dc6ffdcb7e96788745f1a5f79f3f19fc73c30",
+   "ops": {
+    "barrier": 19,
+    "measure": 17,
+    "r": 323
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 19,
+    "pulses": 19,
+    "sequence": [
+     [
+      0.0,
+      19
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "ecfabbe1075754175a73d8789ae4fce0f39753bfe801add5ef59dc54e5fbeea3",
+   "sent": {
+    "barrier": 19,
+    "measure": 17,
+    "prx": 323
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n33": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1564.0,
+   "experiment": "C1",
+   "layers": 33,
+   "native_sha256": "2ec9dc474b09ceb28314b849663712b64db6f1237054ee26cdc69a26cdbea4fa",
+   "ops": {
+    "barrier": 33,
+    "measure": 17,
+    "r": 561
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 33,
+    "pulses": 33,
+    "sequence": [
+     [
+      0.0,
+      33
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "24bf9dc2993ed7dd4a09bed17339ffed000e92902c9236190c33a19ebcd92f65",
+   "sent": {
+    "barrier": 33,
+    "measure": 17,
+    "prx": 561
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n35": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1596.0,
+   "experiment": "C1",
+   "layers": 35,
+   "native_sha256": "d905add3ede688c1fa7d93055cc0d21465bf2cb4c80c024c8ecda6a66dfed36d",
+   "ops": {
+    "barrier": 35,
+    "measure": 17,
+    "r": 595
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 35,
+    "pulses": 35,
+    "sequence": [
+     [
+      0.0,
+      35
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "f0cfe35b88dc5a73997da51db703b7a50192e7c34a56f02b033e9a89704b47fb",
+   "sent": {
+    "barrier": 35,
+    "measure": 17,
+    "prx": 595
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n40": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1676.0,
+   "experiment": "C1",
+   "layers": 40,
+   "native_sha256": "00dd26987ef40c3c4474f33e6cc13ad9d402e3d6e0a178e2e27f77195dcf24ad",
+   "ops": {
+    "barrier": 40,
+    "measure": 17,
+    "r": 680
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 40,
+    "pulses": 40,
+    "sequence": [
+     [
+      0.0,
+      40
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "e41a1527b9e5938d38f3e96647229d4de960bd7ce6dde394606267b456df888a",
+   "sent": {
+    "barrier": 40,
+    "measure": 17,
+    "prx": 680
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n41": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1692.0,
+   "experiment": "C1",
+   "layers": 41,
+   "native_sha256": "f11faba55aa7dc1c4636ca11a73831fb556b7bb9fd074bbe8365c193d0a1e143",
+   "ops": {
+    "barrier": 41,
+    "measure": 17,
+    "r": 697
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 41,
+    "pulses": 41,
+    "sequence": [
+     [
+      0.0,
+      41
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "ea928ff4cdd1b283589d5b28273a3b2010d678111129923c1f0b4cec78aecc8c",
+   "sent": {
+    "barrier": 41,
+    "measure": 17,
+    "prx": 697
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n42": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1708.0,
+   "experiment": "C1",
+   "layers": 42,
+   "native_sha256": "bca12e4e0372ef08fde0f7e72c2936a93be3c8b67b5b89ab7b88ceed674096a7",
+   "ops": {
+    "barrier": 42,
+    "measure": 17,
+    "r": 714
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 42,
+    "pulses": 42,
+    "sequence": [
+     [
+      0.0,
+      42
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "0cb578b666a558cd7b46ec09f36bb9f0a95db717a2f2adf7322b621883f164cd",
+   "sent": {
+    "barrier": 42,
+    "measure": 17,
+    "prx": 714
+   },
+   "target": "hardware"
+  },
+  "C1_amp_x_n43": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1724.0,
+   "experiment": "C1",
+   "layers": 43,
+   "native_sha256": "b18fabaf84b1d9c0633675a4fa55a9b09cb313c52553625d5574c89cafbd90c9",
+   "ops": {
+    "barrier": 43,
+    "measure": 17,
+    "r": 731
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_x",
+    "n": 43,
+    "pulses": 43,
+    "sequence": [
+     [
+      0.0,
+      43
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "35e02d698198f73a5e264e66f092ecf06f94d604515932dbf44e365cd4b7be99",
+   "sent": {
+    "barrier": 43,
+    "measure": 17,
+    "prx": 731
+   },
+   "target": "hardware"
+  },
+  "C1_amp_y_n17": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1308.0,
+   "experiment": "C1",
+   "layers": 17,
+   "native_sha256": "18fd1c7c3b9b545b7af2b65d3254d8f3e1fa941554d07c31a79bf52a34359d20",
+   "ops": {
+    "barrier": 17,
+    "measure": 17,
+    "r": 289
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_y",
+    "n": 17,
+    "pulses": 17,
+    "sequence": [
+     [
+      1.5707963267948966,
+      17
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "d1c93bde6da242691cb17f17caad5afb101fffc8759cd56fec1d1aa87572ac91",
+   "sent": {
+    "barrier": 17,
+    "measure": 17,
+    "prx": 289
+   },
+   "target": "hardware"
+  },
+  "C1_amp_y_n19": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1340.0,
+   "experiment": "C1",
+   "layers": 19,
+   "native_sha256": "d3fb751cb87ca9102f764236e7d3404f24054fdf64090916213c365d2b3e950d",
+   "ops": {
+    "barrier": 19,
+    "measure": 17,
+    "r": 323
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_y",
+    "n": 19,
+    "pulses": 19,
+    "sequence": [
+     [
+      1.5707963267948966,
+      19
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "b0a4933a76481ffa560058d3f09ff356f9f08d26828f99f2838429931caf0db0",
+   "sent": {
+    "barrier": 19,
+    "measure": 17,
+    "prx": 323
+   },
+   "target": "hardware"
+  },
+  "C1_amp_y_n41": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1692.0,
+   "experiment": "C1",
+   "layers": 41,
+   "native_sha256": "3e4ecfee10105d17bc19d9b4950e0e5960ce71a251ed82c7431d4e130117fb9c",
+   "ops": {
+    "barrier": 41,
+    "measure": 17,
+    "r": 697
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_y",
+    "n": 41,
+    "pulses": 41,
+    "sequence": [
+     [
+      1.5707963267948966,
+      41
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "a54c43a30d9de38a2005210deaa13c2e8a39b1ef76b4fcc280bc1571463f1924",
+   "sent": {
+    "barrier": 41,
+    "measure": 17,
+    "prx": 697
+   },
+   "target": "hardware"
+  },
+  "C1_amp_y_n43": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1724.0,
+   "experiment": "C1",
+   "layers": 43,
+   "native_sha256": "2f3d57c0af5ae34975458baabc861a9bb59b7f8f6ded96054f624b3e6094be92",
+   "ops": {
+    "barrier": 43,
+    "measure": 17,
+    "r": 731
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "amp_y",
+    "n": 43,
+    "pulses": 43,
+    "sequence": [
+     [
+      1.5707963267948966,
+      43
+     ]
+    ],
+    "sign": null
+   },
+   "qasm_sha256": "9bb656bb31da20308f6781d26adbe36a2bef7b5605a1812269189feedb915131",
+   "sent": {
+    "barrier": 43,
+    "measure": 17,
+    "prx": 731
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p00_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1068.0,
+   "experiment": "C1",
+   "layers": 2,
+   "native_sha256": "20007584c6c7471ed0c7d7601d058554faad5f9ffa2994e6836ae218cd6c30cd",
+   "ops": {
+    "barrier": 2,
+    "measure": 17,
+    "r": 34
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 0,
+    "pulses": 2,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "a27a3256e1cbd915a5828d7ddaa6a91ae7a96191d69e29107f4a594009cee789",
+   "sent": {
+    "barrier": 2,
+    "measure": 17,
+    "prx": 34
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p00_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1068.0,
+   "experiment": "C1",
+   "layers": 2,
+   "native_sha256": "dab97489ec3b6d524309155ff4704fa69f9c3a8167f1c6635419992cbd3a3431",
+   "ops": {
+    "barrier": 2,
+    "measure": 17,
+    "r": 34
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 0,
+    "pulses": 2,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "734aaf8f06fe585a914d470de7fe82c1676d4cffabfec34e3e783ce4c6197fe8",
+   "sent": {
+    "barrier": 2,
+    "measure": 17,
+    "prx": 34
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p02_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1132.0,
+   "experiment": "C1",
+   "layers": 6,
+   "native_sha256": "dd482cd696dd8a44cac91f08e9b229654a6c0ff35347f5a306c89d5e50485dae",
+   "ops": {
+    "barrier": 6,
+    "measure": 17,
+    "r": 102
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 2,
+    "pulses": 6,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "14059531ad28fcac0ab9157f63f0c1f731650b1292f53985116217231344a424",
+   "sent": {
+    "barrier": 6,
+    "measure": 17,
+    "prx": 102
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p02_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1132.0,
+   "experiment": "C1",
+   "layers": 6,
+   "native_sha256": "9e783f041de51595407275ce27b882467df501555dce762a65399e5adb3eec43",
+   "ops": {
+    "barrier": 6,
+    "measure": 17,
+    "r": 102
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 2,
+    "pulses": 6,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "86af018f3935dbe310b74aef0a38c92668632b61864bc6d2fdbc1b39e7c82e38",
+   "sent": {
+    "barrier": 6,
+    "measure": 17,
+    "prx": 102
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p04_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1196.0,
+   "experiment": "C1",
+   "layers": 10,
+   "native_sha256": "9f72dae3a3c2cc8791cf0ffd9a76c24de8e85fb788fd9e37a4d9745e6dc297c8",
+   "ops": {
+    "barrier": 10,
+    "measure": 17,
+    "r": 170
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 4,
+    "pulses": 10,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "066f53d2d4e402a42858168d357b89e8efc3a89a01f18f11bbb20005e437a90d",
+   "sent": {
+    "barrier": 10,
+    "measure": 17,
+    "prx": 170
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p04_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1196.0,
+   "experiment": "C1",
+   "layers": 10,
+   "native_sha256": "da64197dc8083dabcb405a5f7aac4b8ea6033b5e5dbb341aaa5cfbd34b636927",
+   "ops": {
+    "barrier": 10,
+    "measure": 17,
+    "r": 170
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 4,
+    "pulses": 10,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "2791f42966ee42fe58c1fdfe4b3861afe65e352c4b9c2e20f153dcc28954586d",
+   "sent": {
+    "barrier": 10,
+    "measure": 17,
+    "prx": 170
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p08_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1324.0,
+   "experiment": "C1",
+   "layers": 18,
+   "native_sha256": "044ebcf115dccde01e2d0daff272eae4923847afd766166598ada714779bc517",
+   "ops": {
+    "barrier": 18,
+    "measure": 17,
+    "r": 306
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 8,
+    "pulses": 18,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "4e669a9ac7d523a02c280ad6a4516fce23916b663ca4fe7a083456d273b59c02",
+   "sent": {
+    "barrier": 18,
+    "measure": 17,
+    "prx": 306
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p08_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1324.0,
+   "experiment": "C1",
+   "layers": 18,
+   "native_sha256": "242ad890d926ebfa8cd4d0240bc0f20a034e51685f171cc43fa784a91c99ccb4",
+   "ops": {
+    "barrier": 18,
+    "measure": 17,
+    "r": 306
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 8,
+    "pulses": 18,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "e0b19e295dc43c86c370279221518b9645dc8470898ed0dbd6a707834ab87144",
+   "sent": {
+    "barrier": 18,
+    "measure": 17,
+    "prx": 306
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p12_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1452.0,
+   "experiment": "C1",
+   "layers": 26,
+   "native_sha256": "e5378eb1868c65ac3953beb45b884003b43b25759e7b5cc5a846ea8b8109fd83",
+   "ops": {
+    "barrier": 26,
+    "measure": 17,
+    "r": 442
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 12,
+    "pulses": 26,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "010b0e1b16a0de1873150110913aa30d5bc4d4ed3d62b1aaca3938e9c101a080",
+   "sent": {
+    "barrier": 26,
+    "measure": 17,
+    "prx": 442
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p12_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1452.0,
+   "experiment": "C1",
+   "layers": 26,
+   "native_sha256": "69b6bddac02b9f7089449a613992ffc996d2ccb18bd8e5378fe0037e082327f4",
+   "ops": {
+    "barrier": 26,
+    "measure": 17,
+    "r": 442
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 12,
+    "pulses": 26,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "243eda2822c55b68441400bf0aa45cdbc3ac1dac5bfea3cf44a022ab898e8699",
+   "sent": {
+    "barrier": 26,
+    "measure": 17,
+    "prx": 442
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p16_neg": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1580.0,
+   "experiment": "C1",
+   "layers": 34,
+   "native_sha256": "e15e8c1f1d1099a8f560c8166584967463b762541827b52608be67c88c1e9a85",
+   "ops": {
+    "barrier": 34,
+    "measure": 17,
+    "r": 578
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 16,
+    "pulses": 34,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ]
+    ],
+    "sign": "neg"
+   },
+   "qasm_sha256": "9ea44ccc562c5c1bdb72cbe268015c8468bae626bab58068cdee39b5ee5c17ba",
+   "sent": {
+    "barrier": 34,
+    "measure": 17,
+    "prx": 578
+   },
+   "target": "hardware"
+  },
+  "C1_tilt_p16_pos": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "checks": {
+    "check": "passed",
+    "swaps": 0,
+    "validate_circuit": "passed (IQMFakeGarnet)"
+   },
+   "device": "garnet",
+   "duration_ns": 1580.0,
+   "experiment": "C1",
+   "layers": 34,
+   "native_sha256": "f0b03277938ee5516b2d98b517f3c4a4bd59622434b4df7d4a96ab652db062ea",
+   "ops": {
+    "barrier": 34,
+    "measure": 17,
+    "r": 578
+   },
+   "params": {
+    "driven": [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ],
+    "family": "prx_amplification",
+    "kind": "tilt",
+    "n": 16,
+    "pulses": 34,
+    "sequence": [
+     [
+      1.5707963267948966,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ],
+     [
+      3.141592653589793,
+      1
+     ],
+     [
+      0.0,
+      1
+     ]
+    ],
+    "sign": "pos"
+   },
+   "qasm_sha256": "3b9337884dd58d8b2e21a928cf264a32c8e2c7901738ff263361f8f8a4b5c5b1",
+   "sent": {
+    "barrier": 34,
+    "measure": 17,
+    "prx": 578
+   },
+   "target": "hardware"
+  }
+ },
+ "column_qubits": [
+  "QB1",
+  "QB2",
+  "QB4",
+  "QB5",
+  "QB6",
+  "QB7",
+  "QB8",
+  "QB9",
+  "QB10",
+  "QB11",
+  "QB12",
+  "QB13",
+  "QB14",
+  "QB15",
+  "QB16",
+  "QB19",
+  "QB20"
+ ],
+ "device": "garnet",
+ "format": "dqiqm.characterization/1",
+ "note": "clbit j of every circuit is column_qubits[j]; submit with qubit_index_to_name",
+ "qubit_index_to_name": {
+  "0": "QB1",
+  "1": "QB2",
+  "10": "QB11",
+  "11": "QB12",
+  "12": "QB13",
+  "13": "QB14",
+  "14": "QB15",
+  "15": "QB16",
+  "18": "QB19",
+  "19": "QB20",
+  "3": "QB4",
+  "4": "QB5",
+  "5": "QB6",
+  "6": "QB7",
+  "7": "QB8",
+  "8": "QB9",
+  "9": "QB10"
+ }
+}

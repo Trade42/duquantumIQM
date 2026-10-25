@@ -1,0 +1,6734 @@
+{
+ "E1_d3_X_r01_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 24,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 616.0,
+  "native_sha256": "9716bf757771abebe58d40e7d7c6501a8ae36a93cfa0fe470aec57e5b47573c6",
+  "num_detectors": 8,
+  "num_measurements": 17,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 5,
+   "cz": 24,
+   "measure": 17,
+   "r": 36
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 1
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "23a1d962a589aed75711ad13d0f48663f28c10db0a1583f15ca346d729883ceb",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8875f07c369e4cea254e6dc52ced0f98f46e3039c065fc0739dad2feea9aacfb",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r01_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 24,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 616.0,
+  "native_sha256": "32d14909b0749995d4dc8d81c91f1379e05deb7a3a102a1564d8902fd188cf5f",
+  "num_detectors": 8,
+  "num_measurements": 17,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 5,
+   "cz": 24,
+   "measure": 17,
+   "r": 36
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 1
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "b3201cd3be9d10a98f003d11344da671ce607cf334666ea2ed58a05669e2ffc8",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8875f07c369e4cea254e6dc52ced0f98f46e3039c065fc0739dad2feea9aacfb",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r02_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 48,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1232.0,
+  "native_sha256": "ed70450ebb2471f73b223a1ace6c5838738ee8fe45b016dbbfdc9c8895a42bb3",
+  "num_detectors": 16,
+  "num_measurements": 25,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 48,
+   "measure": 25,
+   "r": 70
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 2
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "376a26be3df9ff098f93f4da9acf9d65f5a359f981fd187003eec970615bf3a1",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "340200182795724d585b61ec629f64cec1a3efa9e4dffb04646c4a971dc2283c",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r02_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 48,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1232.0,
+  "native_sha256": "b823d72df184dbd0cd31c6a5a2662c1fb04172116112e3891049c991c1e58984",
+  "num_detectors": 16,
+  "num_measurements": 25,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 48,
+   "measure": 25,
+   "r": 70
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 2
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "d9bdfc1db6a4d8317e6b21941dc3b00b893e6537497664b3608abbf6b5013fff",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "340200182795724d585b61ec629f64cec1a3efa9e4dffb04646c4a971dc2283c",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r03_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 72,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1848.0,
+  "native_sha256": "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458",
+  "num_detectors": 24,
+  "num_measurements": 33,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 17,
+   "cz": 72,
+   "measure": 33,
+   "r": 104
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 3
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "cf53641c5e47307ebce08b2364e4bc7865ec787db5d5209fbe3e2483c71b7661",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "af1fe0587be71db4b67d7955a2f4ecc0aefc5d9fb06090c728826fb5e927dd99",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r03_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 72,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1848.0,
+  "native_sha256": "da7d941489f46e08010eb792c6d87afeb0e32169155f84fc3d9fccccb768dd45",
+  "num_detectors": 24,
+  "num_measurements": 33,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 17,
+   "cz": 72,
+   "measure": 33,
+   "r": 104
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 3
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "a6122ba8619b6da189074c111be353ba766e157c86fedbf5b9255c2d30378a38",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "af1fe0587be71db4b67d7955a2f4ecc0aefc5d9fb06090c728826fb5e927dd99",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r04_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 96,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 2464.0,
+  "native_sha256": "288852abcc96b3f63354286844ab9023f140a79fc2c089e5e5652c4c3db8f544",
+  "num_detectors": 32,
+  "num_measurements": 41,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 23,
+   "cz": 96,
+   "measure": 41,
+   "r": 138
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 4
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "79b309baa9653a2c95608d17f4603ef6a39a0fba9c411eea4ca67acadc3124c5",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "f22e74e0de641f53e2ab750f655b44a44a847684368f59d02ddd2cdac48a5b85",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r04_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 96,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 2464.0,
+  "native_sha256": "3b9be2b2c350520c6d07c99e30ee0dc727be36e871c60ed9ce37d6fcd68859e9",
+  "num_detectors": 32,
+  "num_measurements": 41,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 23,
+   "cz": 96,
+   "measure": 41,
+   "r": 138
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 4
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "38090f4f6e5984f9c54eb1367f1ab603e9315b3b4df41d51f45e81bbf3360b80",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "f22e74e0de641f53e2ab750f655b44a44a847684368f59d02ddd2cdac48a5b85",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r05_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 120,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3080.0,
+  "native_sha256": "fda20f5ffed28eb6123f01b976c3900d41ad15abb53985337fe239ace03b022d",
+  "num_detectors": 40,
+  "num_measurements": 49,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 29,
+   "cz": 120,
+   "measure": 49,
+   "r": 172
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 5
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "fe6de8e7e0ca6c1f8a4c6effd392e3c4e6414ccee510e05fea87019875f75d02",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "6fa4525e570fbd523fdc71bdae06776804800fcce79e6e57374df2e7242752af",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r05_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 120,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3080.0,
+  "native_sha256": "07134ceaf94635df83cbc4925ad28f540da057f80962aa3fb89e4f07c61ae7f7",
+  "num_detectors": 40,
+  "num_measurements": 49,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 29,
+   "cz": 120,
+   "measure": 49,
+   "r": 172
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 5
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "02c4bf1a10bc14ca92a1e36dee49ad34affb0d27a1ed5249d3a735dac8c84977",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "6fa4525e570fbd523fdc71bdae06776804800fcce79e6e57374df2e7242752af",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r06_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 144,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3696.0,
+  "native_sha256": "a3d5c8bcf64614b2208f19bf617c3bf3f5ae5fba6fa8f22543950374aeb670e8",
+  "num_detectors": 48,
+  "num_measurements": 57,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 35,
+   "cz": 144,
+   "measure": 57,
+   "r": 206
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 6
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "7fa7fa4c71ac8959d1a5a80ce956b97ee25bf2708a4d2cfea47ea47c78556388",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "9a61f003a0f45459bf52d7e5a8f3600d43f757c2b852718e1fbdb01107e3959e",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r06_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 144,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3696.0,
+  "native_sha256": "270f9039102aa510e16a3c38530701fbc573824901e4e0dae0e2b5dea583201f",
+  "num_detectors": 48,
+  "num_measurements": 57,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 35,
+   "cz": 144,
+   "measure": 57,
+   "r": 206
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 6
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "dee33770d4a2645f02f184eebc59c5940cebcdfd9b6d444b1d9db542d24ee554",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "9a61f003a0f45459bf52d7e5a8f3600d43f757c2b852718e1fbdb01107e3959e",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r08_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 192,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 4928.0,
+  "native_sha256": "82e38ddad866525dda5948c7421f70e62f23c9eb03cf48a8b3118ef80181cd97",
+  "num_detectors": 64,
+  "num_measurements": 73,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 192,
+   "measure": 73,
+   "r": 274
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 8
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "a9d8e6cfef38df49815b8ab0ebb4eaecc0768aa026a077447db29dbd8962bad7",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a1168de2d7069116200da0e022ab373e2c3c0f868c86f23f1601bdd4479c864c",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r08_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 192,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 4928.0,
+  "native_sha256": "c7605b74a92b4f8c6316f707ab5caa3faafdb6b29641351185ed7acc53032649",
+  "num_detectors": 64,
+  "num_measurements": 73,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 192,
+   "measure": 73,
+   "r": 274
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 8
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "cf4b1463466afc3ca6248698148f59f998b48676e0103efdfb44f3b3624df908",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a1168de2d7069116200da0e022ab373e2c3c0f868c86f23f1601bdd4479c864c",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r10_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 240,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 6160.0,
+  "native_sha256": "4b7a4311bf8a23af530ad256e481a34a86aa66b934111086e5ea3c78e52becb9",
+  "num_detectors": 80,
+  "num_measurements": 89,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 59,
+   "cz": 240,
+   "measure": 89,
+   "r": 342
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 10
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "db2c5ef511f1a6426b4c3edaa498fc07d0b51df9d802a98d47e60fd0cc0b56eb",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4d959a23ba7502ca816a7fd6269d60a66a4e60ece01c2de2be642e0d5afa5852",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r10_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 240,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 6160.0,
+  "native_sha256": "915e6ddade5078b25ba30dcee46b0766407a62de2c0ea4c577237b01d27afc02",
+  "num_detectors": 80,
+  "num_measurements": 89,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 59,
+   "cz": 240,
+   "measure": 89,
+   "r": 342
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 10
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "6ee11a573be5c4183cb6646dbb8c5608e9d0cdf4f7c68e93e612185620ab18a0",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4d959a23ba7502ca816a7fd6269d60a66a4e60ece01c2de2be642e0d5afa5852",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r12_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 288,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 7392.0,
+  "native_sha256": "b46b9ed8541ba6b4d07459ae01a33acd406144532e1b3a4146f8d2c995b5c880",
+  "num_detectors": 96,
+  "num_measurements": 105,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 71,
+   "cz": 288,
+   "measure": 105,
+   "r": 410
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 12
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "bea560f7e0a11f3d794f023c0619306a2b92ff32eefc25acb418573f59e28999",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "28307f5fc3717e267332cebe6da983fe1cc43b7fef65282c9e4cdc1707eba6b9",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r12_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 288,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 7392.0,
+  "native_sha256": "833e0ff57d8c44249464ca616fe10d60e4a69f193c8d4a0cbe4d5099410796bb",
+  "num_detectors": 96,
+  "num_measurements": 105,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 71,
+   "cz": 288,
+   "measure": 105,
+   "r": 410
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 12
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "b5571df7bfefdf7dbf68fa32e168ea118e93710fba949c9b91e18672e6e7106a",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "28307f5fc3717e267332cebe6da983fe1cc43b7fef65282c9e4cdc1707eba6b9",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r15_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 360,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 9240.0,
+  "native_sha256": "55881fdb3e08f8e3d83cd834c1b474f2d04dd94c42d096366fb50de049ecb339",
+  "num_detectors": 120,
+  "num_measurements": 129,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 89,
+   "cz": 360,
+   "measure": 129,
+   "r": 512
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 15
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "04f4ec79f33ff8e466125f0e16628b5970c7f618f8756ab12dd20d771c6dbe84",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "fc1d8eb2ddf83a35663089364559a3a1ebcb55d38277fe41a2d202a2edad0140",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r15_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 360,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 9240.0,
+  "native_sha256": "4bab3b6780965168a04cedce8a3516cd2e849ef142df960f79b652324ce4dcc4",
+  "num_detectors": 120,
+  "num_measurements": 129,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 89,
+   "cz": 360,
+   "measure": 129,
+   "r": 512
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 15
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "14b66dbb288485c17e5b9e9d71506f63ff1bd224421b9de5e29c69db9e1586ae",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "fc1d8eb2ddf83a35663089364559a3a1ebcb55d38277fe41a2d202a2edad0140",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r20_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 480,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 12320.0,
+  "native_sha256": "36ce68070fc804e5bc44da8e9c2b4aeb7236357f6a6acb9a7acdb99c546fdf25",
+  "num_detectors": 160,
+  "num_measurements": 169,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 480,
+   "measure": 169,
+   "r": 682
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "+",
+   "rounds": 20
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "df96a83a38add086fd84a86603c4d7d6f4f3609a418abfa8edaeb6c34f3b37f6",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "adda8d4644934a13cb99ca52de9b98185cfb0d5aeed2c511807297fe46067531",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_X_r20_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 480,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 12320.0,
+  "native_sha256": "3e3c2ae7884eb73e266d86586ca9aa714903a77c0ef99730472aa92373b03bd9",
+  "num_detectors": 160,
+  "num_measurements": 169,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 480,
+   "measure": 169,
+   "r": 682
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "+",
+   "rounds": 20
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "2063eef1f354fd5634abac29c11657fd067fb59d3d8711221d3ee0a577ccd9da",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "adda8d4644934a13cb99ca52de9b98185cfb0d5aeed2c511807297fe46067531",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r01_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 24,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 616.0,
+  "native_sha256": "c1e3c494baafe28a00d6ba44de614e9af06ef90d4c451d28d1bc72b237601553",
+  "num_detectors": 8,
+  "num_measurements": 17,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 5,
+   "cz": 24,
+   "measure": 17,
+   "r": 38
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 1
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "de3bffe447fb808c7171e102516bba953146ea621941827a197aa37f25eee2f3",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "faff54d0f8dd012c118c519c72d50b1df74844d3950a41814b825830d9b6999f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r01_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 24,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 616.0,
+  "native_sha256": "df7dd1fd617a5f6f904a025939c7d361feb938a8687fab8e48de53d235efc2e0",
+  "num_detectors": 8,
+  "num_measurements": 17,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 5,
+   "cz": 24,
+   "measure": 17,
+   "r": 38
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 1
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "12da8c5be0efb72bc8af95e5a61ccd60f02ea928b5ff0ea49bde35069cb92e7e",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "faff54d0f8dd012c118c519c72d50b1df74844d3950a41814b825830d9b6999f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r02_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 48,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1232.0,
+  "native_sha256": "d885dd32b9b144e5ed59e421f180105a9bf653dded239a2b320441586686aa4d",
+  "num_detectors": 16,
+  "num_measurements": 25,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 48,
+   "measure": 25,
+   "r": 72
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 2
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "2935b50780797e7c90a85906065c768322ac43511d03a07eeda0291af4a85851",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "989e7d1d41100d88224acf054ceaff0d89331a209e96d4d7b5ee506085f48d42",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r02_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 48,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1232.0,
+  "native_sha256": "7db56755ff7f45b23dd6180a62cd75868302be951419b2cf5686f92d6f4a3d4e",
+  "num_detectors": 16,
+  "num_measurements": 25,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 48,
+   "measure": 25,
+   "r": 72
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 2
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "a1d45407274529fa8ead26f83e8c76fa1e7e0da1296c05c61d8a51429eee44ab",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "989e7d1d41100d88224acf054ceaff0d89331a209e96d4d7b5ee506085f48d42",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r03_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 72,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1848.0,
+  "native_sha256": "f70ccfd7a5e0d0428ddb25fa5fe3435e8562d2b0e628841d4ea39975a0fbd092",
+  "num_detectors": 24,
+  "num_measurements": 33,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 17,
+   "cz": 72,
+   "measure": 33,
+   "r": 106
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 3
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "78863be378ebf15fa79f5b18988fadbff8e8ad0c28c8b7b7398fd6e9e6346383",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "0f9ad36639de0de952861f506fb379c4020bf366f2805b5fc8f114ef207e17c5",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r03_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 72,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 1848.0,
+  "native_sha256": "e2a451d861b76e2f4cd1ddad978393121a6282762e65e6790a16dfc5b7cb67da",
+  "num_detectors": 24,
+  "num_measurements": 33,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 17,
+   "cz": 72,
+   "measure": 33,
+   "r": 106
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 3
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "29e83117b38fb198c6eb358a453943d7c6722927d0bfce4f005431629cc190e4",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "0f9ad36639de0de952861f506fb379c4020bf366f2805b5fc8f114ef207e17c5",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r04_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 96,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 2464.0,
+  "native_sha256": "3117e0498b1e7f5257a712311c792700cc73dbf48ed2f74e9c2303101e247d95",
+  "num_detectors": 32,
+  "num_measurements": 41,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 23,
+   "cz": 96,
+   "measure": 41,
+   "r": 140
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 4
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "b9ae0623f9b671a22823947ac74f0a86795ce060add34e00b03c3adb775bbfaf",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8535871c673521ea1cfe0d90a7e8a1beb62fc15d3e72c79da6ed64f4746a9163",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r04_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 96,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 2464.0,
+  "native_sha256": "dabf5d283c9977063f8e03956a376de24201e43ca8ce56446c9976eb161c238e",
+  "num_detectors": 32,
+  "num_measurements": 41,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 23,
+   "cz": 96,
+   "measure": 41,
+   "r": 140
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 4
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "2dd0ff48c4ba3799eefcfc170db3efcf4d47c163ad0640e20fb7941335edd742",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8535871c673521ea1cfe0d90a7e8a1beb62fc15d3e72c79da6ed64f4746a9163",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r05_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 120,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3080.0,
+  "native_sha256": "4f718ebe74b250d4287ba793fb171be40432f85dcfd0e4f6d9b7a0c3e461b8cb",
+  "num_detectors": 40,
+  "num_measurements": 49,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 29,
+   "cz": 120,
+   "measure": 49,
+   "r": 174
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 5
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "880c128b30e2be11f589497c96cd9ce9a60dca28e911e6208b4a3f098258cc9d",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8e78a029b26daf9ae2e433bee309602e82138ec35c17fa36746ebaacc03a2301",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r05_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 120,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3080.0,
+  "native_sha256": "0adf329402020cf41fa2098940fb5f7f0622a6a1e9fe84df95e0fc572f7a8e52",
+  "num_detectors": 40,
+  "num_measurements": 49,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 29,
+   "cz": 120,
+   "measure": 49,
+   "r": 174
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 5
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "1458b2c9b108b2ffd2cd19ac274d3089932c96feab6c748aa7501d70e65f34d4",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8e78a029b26daf9ae2e433bee309602e82138ec35c17fa36746ebaacc03a2301",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r06_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 144,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3696.0,
+  "native_sha256": "55f7e5ae27db20332b8cfd89e8bc18047b3f1f53237839adb0f0c2682303fdf9",
+  "num_detectors": 48,
+  "num_measurements": 57,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 35,
+   "cz": 144,
+   "measure": 57,
+   "r": 208
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 6
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "5dfce596735856dfcf094e08a3b9a51521d03f387da86674a1af81859f8fe471",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "ddcd98cd2535fc69772340430a0193b2c956c2e3f0a5967f07361f9ba6cb2797",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r06_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 144,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 3696.0,
+  "native_sha256": "e68e3b5133f9222b19d3bb3227c7e179949023372736c629d93ad022b692ae72",
+  "num_detectors": 48,
+  "num_measurements": 57,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 35,
+   "cz": 144,
+   "measure": 57,
+   "r": 208
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 6
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "8b55e4288c2ff4b73ea98716b53c332f09b6e12d422312df406c7e0a0e209ef1",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "ddcd98cd2535fc69772340430a0193b2c956c2e3f0a5967f07361f9ba6cb2797",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r08_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 192,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 4928.0,
+  "native_sha256": "69c59e7736632f5af76a6d9a3377712490904fe4d6afe695b553097e598cf6c3",
+  "num_detectors": 64,
+  "num_measurements": 73,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 192,
+   "measure": 73,
+   "r": 276
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 8
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "021cadafadfd1fea721e9bbc25a85c1f7a6f23ba4714cbc592484e87667119ff",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a017bc6b147f7e487f57e70525c479ad8e982a80574ce8f210845f246a29e473",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r08_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 192,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 4928.0,
+  "native_sha256": "c3b26090225c92680b6e3aae384d6829b5455dbe4867ada67624bf48c38b334c",
+  "num_detectors": 64,
+  "num_measurements": 73,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 192,
+   "measure": 73,
+   "r": 276
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 8
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "60e498411a3eca2953093f8122adde0ba8a0fee3bbb3c4948e1e152aea1d2af3",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a017bc6b147f7e487f57e70525c479ad8e982a80574ce8f210845f246a29e473",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r10_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 240,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 6160.0,
+  "native_sha256": "635b5e1ddb633b0085e9bd7a5565f9d3309186d63d7d42a3d024e3644ab7413c",
+  "num_detectors": 80,
+  "num_measurements": 89,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 59,
+   "cz": 240,
+   "measure": 89,
+   "r": 344
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 10
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "bad1ddfbece1372ca709bcab013611e0d1a030c2609ecb94ddf99aa6f674f2c8",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "22b7c7a9e74ceeed3ae282758c71c49484eb347c041da722c773a40b2f7b8ae2",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r10_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 240,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 6160.0,
+  "native_sha256": "62c7db3ba1684b84ac0076cd0a87460ce8d42e4004a684057749d917f493c072",
+  "num_detectors": 80,
+  "num_measurements": 89,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 59,
+   "cz": 240,
+   "measure": 89,
+   "r": 344
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 10
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "cd622764e5aa974983611a5ad489873cd0696d92aeea322d226b4bfa6b2eaf48",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "22b7c7a9e74ceeed3ae282758c71c49484eb347c041da722c773a40b2f7b8ae2",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r12_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 288,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 7392.0,
+  "native_sha256": "98185bb526abf11004efacfd3fb02a1a962797708334f5fe5ce590c5b7c75d07",
+  "num_detectors": 96,
+  "num_measurements": 105,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 71,
+   "cz": 288,
+   "measure": 105,
+   "r": 412
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 12
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "1f81b6f82491bc5598c395c64676c6c621f77b6e5841bddbfd1ab460b7046d7c",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "c8434daac58edebd7dc5591970f8baec24a1d047b0bd538f50a6c4ba51cf8963",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r12_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 288,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 7392.0,
+  "native_sha256": "2a3ada5f9c62af2cd4239106a13872bd9445f42c8bbf96bbc51cb14d219ff589",
+  "num_detectors": 96,
+  "num_measurements": 105,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 71,
+   "cz": 288,
+   "measure": 105,
+   "r": 412
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 12
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "75e80d7227b25dae66add1d906b6ec39541a2af0035b7a77a8d0f793f1e7921e",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "c8434daac58edebd7dc5591970f8baec24a1d047b0bd538f50a6c4ba51cf8963",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r15_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 360,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 9240.0,
+  "native_sha256": "d519618da77163904c5adf7eaa506dc18c81f3adc555e5b49d3b5cf5890d87e8",
+  "num_detectors": 120,
+  "num_measurements": 129,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 89,
+   "cz": 360,
+   "measure": 129,
+   "r": 514
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 15
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "ab1c75067f820cccbc9a7677f4f7562cd18b7200c4836c06cd220feaf4691c67",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "dd20b403adb9547cf8fc7ef67cf85ba78cf98f6ef05bbe9855438c954a80367f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r15_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 360,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 9240.0,
+  "native_sha256": "4570f73145c7f976a186007ebb87d5721ea0a7deb627fb0e3407cbc6d8bbf9fa",
+  "num_detectors": 120,
+  "num_measurements": 129,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 89,
+   "cz": 360,
+   "measure": 129,
+   "r": 514
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 15
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "abdbfb7db1e8a7a919a19580d66bf86c906807e013b8dc8d12dbef89ba382feb",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "dd20b403adb9547cf8fc7ef67cf85ba78cf98f6ef05bbe9855438c954a80367f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r20_eA": {
+  "checks": {
+   "live_couplers": {
+    "cz": 480,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 12320.0,
+  "native_sha256": "3e0c2779a705915fd15822ea61809aa516d1077f5e6200244f94e0ea64f22926",
+  "num_detectors": 160,
+  "num_measurements": 169,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 480,
+   "measure": 169,
+   "r": 684
+  },
+  "orientation": 1,
+  "origin": [
+   2,
+   4
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 1,
+   "patch": "eA",
+   "prep": "0",
+   "rounds": 20
+  },
+  "placement": {
+   "1": "QB13",
+   "10": "QB29",
+   "11": "QB30",
+   "12": "QB38",
+   "13": "QB39",
+   "14": "QB19",
+   "15": "QB27",
+   "16": "QB28",
+   "17": "QB36",
+   "18": "QB37",
+   "19": "QB45",
+   "2": "QB14",
+   "25": "QB44",
+   "3": "QB22",
+   "5": "QB31",
+   "8": "QB20",
+   "9": "QB21"
+  },
+  "qasm_sha256": "fcd1dbfe9339e7ddcb361bbc89206ec82e8ef3a29a8d79ced77cd02a126b10ef",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4d5963c4b453922bc89bd0e58d2a2640fb108ecf08ff8dc072fb90944185d9ab",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E1_d3_Z_r20_eB": {
+  "checks": {
+   "live_couplers": {
+    "cz": 480,
+    "swaps": 0
+   },
+   "swaps": 0
+  },
+  "device": "emerald",
+  "duration_ns": 12320.0,
+  "native_sha256": "3956b3f5af105670a2d7459ef136b10883eab64015008a3276c669b88d79c510",
+  "num_detectors": 160,
+  "num_measurements": 169,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 480,
+   "measure": 169,
+   "r": 684
+  },
+  "orientation": 2,
+  "origin": [
+   1,
+   1
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 3,
+   "family": "surface_memory",
+   "orientation": 2,
+   "patch": "eB",
+   "prep": "0",
+   "rounds": 20
+  },
+  "placement": {
+   "1": "QB20",
+   "10": "QB18",
+   "11": "QB26",
+   "12": "QB25",
+   "13": "QB33",
+   "14": "QB5",
+   "15": "QB4",
+   "16": "QB10",
+   "17": "QB9",
+   "18": "QB17",
+   "19": "QB16",
+   "2": "QB28",
+   "25": "QB8",
+   "3": "QB27",
+   "5": "QB34",
+   "8": "QB11",
+   "9": "QB19"
+  },
+  "qasm_sha256": "ecac0b3e0c64ef0d10d86eca4641de8c78a6494965650f988e62cacd072abcce",
+  "roles": {
+   "1": "data",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "ancilla",
+   "15": "data",
+   "16": "ancilla",
+   "17": "data",
+   "18": "ancilla",
+   "19": "data",
+   "2": "ancilla",
+   "25": "ancilla",
+   "3": "data",
+   "5": "data",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "11": {
+    "label": "X(4,2)",
+    "pauli": "X",
+    "support": [
+     3,
+     5,
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "Z(6,2)",
+    "pauli": "Z",
+    "support": [
+     5,
+     12
+    ]
+   },
+   "14": {
+    "label": "Z(0,4)",
+    "pauli": "Z",
+    "support": [
+     8,
+     15
+    ]
+   },
+   "16": {
+    "label": "X(2,4)",
+    "pauli": "X",
+    "support": [
+     8,
+     10,
+     15,
+     17
+    ]
+   },
+   "18": {
+    "label": "Z(4,4)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12,
+     17,
+     19
+    ]
+   },
+   "2": {
+    "label": "X(2,0)",
+    "pauli": "X",
+    "support": [
+     1,
+     3
+    ]
+   },
+   "25": {
+    "label": "X(4,6)",
+    "pauli": "X",
+    "support": [
+     17,
+     19
+    ]
+   },
+   "9": {
+    "label": "Z(2,2)",
+    "pauli": "Z",
+    "support": [
+     1,
+     3,
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4d5963c4b453922bc89bd0e58d2a2640fb108ecf08ff8dc072fb90944185d9ab",
+  "swaps": 0,
+  "target": "hardware"
+ }
+}

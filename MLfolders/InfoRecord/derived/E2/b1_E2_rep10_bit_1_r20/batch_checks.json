@@ -1,0 +1,183 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "garnet-b1",
+ "device": "garnet",
+ "batch": 1,
+ "split": "finetune+validation",
+ "job": "B1-4-E2",
+ "job_id": "01a17086-6288-7536-b723-32cdbb0c2f13",
+ "position_in_job": 18,
+ "circuit": "E2_rep10_bit_1_r20",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "priors": "hardware_noise (79092cf)",
+ "prior": {
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "family": "repetition",
+  "readout_window_ns": 1100.0,
+  "readout_window_source": "compiled measure_window_ns (data/calibration/garnet/pulse/compile.a18a947f-0408-4628-81ea-1715637e434f.json)",
+  "delay_ns": 0.0,
+  "idle_ns": 1100.0,
+  "idle_channel": "depolarize",
+  "idle_frame": null,
+  "t2": "ramsey",
+  "final_readout": "measure (the repetition builder does not mark its final readout layer)",
+  "idle_after_last_round": true
+ },
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    5000,
+    190
+   ],
+   "band": [
+    5000,
+    190
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 0,
+   "band": "<= 25",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": null,
+   "band": "none in this circuit",
+   "pass": true
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.047711111111111114,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "x_type": [],
+    "z_type": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.1410899470899471,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": 0.16421666666666668,
+    "ratio_to_model": 0.8591694738046103
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB19",
+    "QB20"
+   ],
+   "band": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB19",
+    "QB20"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "per_round_detection_rate": {
+  "0": 0.047711111111111114,
+  "1": 0.13771111111111112,
+  "2": 0.14515555555555557,
+  "3": 0.14753333333333332,
+  "4": 0.14997777777777777,
+  "5": 0.15055555555555555,
+  "6": 0.1534,
+  "7": 0.15588888888888888,
+  "8": 0.1532,
+  "9": 0.1544222222222222,
+  "10": 0.15313333333333334,
+  "11": 0.15188888888888888,
+  "12": 0.15426666666666666,
+  "13": 0.1479111111111111,
+  "14": 0.14822222222222223,
+  "15": 0.1497111111111111,
+  "16": 0.14864444444444444,
+  "17": 0.14262222222222223,
+  "18": 0.13955555555555554,
+  "19": 0.13655555555555557,
+  "20": 0.09482222222222222
+ },
+ "model_with_idle": {
+  "shots": 20000,
+  "seed": 2026,
+  "idle_ns": 1100.0,
+  "detection_fraction": 0.16421666666666668,
+  "all_zero": 0.0,
+  "random_first_mean": null,
+  "deterministic_first_misread": 0.05411666666666667
+ },
+ "numbers": {
+  "shots": 5000,
+  "det_rate": 0.1410899470899471,
+  "all_zero": 0,
+  "obs_flips": 3257,
+  "pm_failures": 254
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T00:52:57Z",
+ "commit": "fcd08bdb08ecbc72bd3167a4b3aa4b95da617b0c"
+}

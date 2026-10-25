@@ -1,0 +1,14 @@
+{
+ "label": "HARDWARE",
+ "device": "garnet",
+ "batch": 3,
+ "split": "test",
+ "priors": "hardware_noise (79092cf)",
+ "decoder": "pymatching on the noisy copy of the circuit that ran",
+ "noise": "priors: hardware_noise (79092cf). dqiqm.experiments.device.hardware_noise(calibration set a18a947f-0408-4628-81ea-1715637e434f, spec): calibrated_noise with the depolarize idle over 1100 ns per mid-circuit readout layer (readout window 1100 ns from compiled measure_window_ns (data/calibration/garnet/pulse/compile.a18a947f-0408-4628-81ea-1715637e434f.json), plus a 0 ns delay), T2 ramsey, final readout measure (the stability builder does not mark its final readout layer)",
+ "zero_failure_points": [],
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E5",
+ "run_id": "X_b3",
+ "points": "ler_points.csv"
+}

@@ -1,0 +1,213 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "garnet-b1",
+ "device": "garnet",
+ "batch": 1,
+ "split": "finetune+validation",
+ "job": "B1-4-E2",
+ "job_id": "01a17086-6288-7536-b723-32cdbb0c2f13",
+ "position_in_job": 13,
+ "circuit": "E2_rep10_phase_p_r50",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "priors": "hardware_noise (79092cf)",
+ "prior": {
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "family": "repetition",
+  "readout_window_ns": 1100.0,
+  "readout_window_source": "compiled measure_window_ns (data/calibration/garnet/pulse/compile.a18a947f-0408-4628-81ea-1715637e434f.json)",
+  "delay_ns": 0.0,
+  "idle_ns": 1100.0,
+  "idle_channel": "depolarize",
+  "idle_frame": null,
+  "t2": "ramsey",
+  "final_readout": "measure (the repetition builder does not mark its final readout layer)",
+  "idle_after_last_round": true
+ },
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    5000,
+    460
+   ],
+   "band": [
+    5000,
+    460
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 14,
+   "band": "any: the noiseless record is all zero",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": null,
+   "band": "none in this circuit",
+   "pass": true
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.029555555555555557,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "x_type": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "z_type": []
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.04361350762527233,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": 0.16817167755991286,
+    "ratio_to_model": 0.25933919586271936
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB19",
+    "QB20"
+   ],
+   "band": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB19",
+    "QB20"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "per_round_detection_rate": {
+  "0": 0.029555555555555557,
+  "1": 0.03233333333333333,
+  "2": 0.03517777777777778,
+  "3": 0.03677777777777778,
+  "4": 0.03631111111111111,
+  "5": 0.037066666666666664,
+  "6": 0.03844444444444445,
+  "7": 0.03811111111111111,
+  "8": 0.04031111111111111,
+  "9": 0.040822222222222225,
+  "10": 0.04064444444444444,
+  "11": 0.03988888888888889,
+  "12": 0.04126666666666667,
+  "13": 0.0424,
+  "14": 0.042755555555555554,
+  "15": 0.0428,
+  "16": 0.042555555555555555,
+  "17": 0.04331111111111111,
+  "18": 0.04384444444444444,
+  "19": 0.044311111111111114,
+  "20": 0.04455555555555556,
+  "21": 0.04448888888888889,
+  "22": 0.04455555555555556,
+  "23": 0.04473333333333333,
+  "24": 0.045644444444444446,
+  "25": 0.04437777777777778,
+  "26": 0.04391111111111111,
+  "27": 0.046511111111111114,
+  "28": 0.0438,
+  "29": 0.04622222222222222,
+  "30": 0.04586666666666667,
+  "31": 0.046377777777777775,
+  "32": 0.0454,
+  "33": 0.04548888888888889,
+  "34": 0.04624444444444444,
+  "35": 0.04717777777777778,
+  "36": 0.04708888888888889,
+  "37": 0.0478,
+  "38": 0.047377777777777776,
+  "39": 0.04971111111111111,
+  "40": 0.04753333333333333,
+  "41": 0.04873333333333333,
+  "42": 0.04975555555555555,
+  "43": 0.04962222222222222,
+  "44": 0.05073333333333333,
+  "45": 0.046844444444444445,
+  "46": 0.04988888888888889,
+  "47": 0.04777777777777778,
+  "48": 0.04611111111111111,
+  "49": 0.04437777777777778,
+  "50": 0.03688888888888889
+ },
+ "model_with_idle": {
+  "shots": 20000,
+  "seed": 2026,
+  "idle_ns": 1100.0,
+  "detection_fraction": 0.16817167755991286,
+  "all_zero": 0.0,
+  "random_first_mean": null,
+  "deterministic_first_misread": 0.05167777777777778
+ },
+ "numbers": {
+  "shots": 5000,
+  "det_rate": 0.04361350762527233,
+  "all_zero": 14,
+  "obs_flips": 27,
+  "pm_failures": 1
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T00:52:55Z",
+ "commit": "fcd08bdb08ecbc72bd3167a4b3aa4b95da617b0c"
+}

@@ -1,0 +1,198 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "simulated": false,
+ "experiment": "E1",
+ "circuit": "E1_d3_Z_r20_eA",
+ "run_id": "fresh_F1_E1_d3_Z_r20_eA",
+ "batch": 4,
+ "job_id": "01a17101-70aa-7365-b524-5c9dae448536",
+ "position_in_job": 4,
+ "split": {
+  "rule": "fresh: shots taken after every decoder was trained, tuned and selected (emerald-fresh, Sal 2026-10-25 02:49 UTC); never finetune, validation or test, never in the ML training or tuning data; nothing is chosen on them",
+  "job": "F1",
+  "role": "fresh",
+  "counts": {
+   "fresh": 2000
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 20,
+  "basis": "Z",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "0",
+  "patch": "eA",
+  "delay_ns": 0.0,
+  "barriers": true,
+  "orientation": 1
+ },
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "calibration": {
+  "before": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T025612Z.json",
+  "after": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T030327Z.json",
+  "job": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T025612Z.json"
+ },
+ "shots": 2000,
+ "num_measurements": 169,
+ "num_detectors": 160,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    2000,
+    169
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "78a73849653b67d871e6fd244857f823a859129f3fec02a65981443bdbc480ac"
+  },
+  "det_events.npy": {
+   "shape": [
+    2000,
+    160
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "902ad93b9556dbb183a29eee4c0025c61a35a1fbf5c55b4aa3ea05ab9f0d8b53"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    2000,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "224f3c6adb7fca694231139d209e0e66a0b29b81affe09c52cdb8f3eba742b2f"
+  }
+ },
+ "placement": {
+  "1": "QB13",
+  "2": "QB14",
+  "3": "QB22",
+  "5": "QB31",
+  "8": "QB20",
+  "9": "QB21",
+  "10": "QB29",
+  "11": "QB30",
+  "12": "QB38",
+  "13": "QB39",
+  "14": "QB19",
+  "15": "QB27",
+  "16": "QB28",
+  "17": "QB36",
+  "18": "QB37",
+  "19": "QB45",
+  "25": "QB44"
+ },
+ "circuit_files": {
+  "stim": "circuits/E1/E1_d3_Z_r20_eA.stim",
+  "qasm": "circuits/E1/E1_d3_Z_r20_eA.qasm"
+ },
+ "stim_sha256": "4d5963c4b453922bc89bd0e58d2a2640fb108ecf08ff8dc072fb90944185d9ab",
+ "qasm_sha256": "fcd1dbfe9339e7ddcb361bbc89206ec82e8ef3a29a8d79ced77cd02a126b10ef",
+ "native_sha256": "3e0c2779a705915fd15822ea61809aa516d1077f5e6200244f94e0ea64f22926",
+ "raw": {
+  "path": "raw/20261025-emerald-fresh/01a17101-70aa-7365-b524-5c9dae448536/memory.npz",
+  "key": "c4",
+  "meta": "raw/20261025-emerald-fresh/01a17101-70aa-7365-b524-5c9dae448536/meta.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "priors: hardware_noise fallback 360 ns (windows=None; chosen on B1+B2 validation by emerald-redecode 47f0c07). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec, windows=None): calibrated_noise with the depolarize idle over 360 ns per mid-circuit readout layer (readout window 360 ns from measure_ns (no compile data: probe only), plus a 0 ns delay), T2 ramsey, final readout measure_fidelity (unheralded)",
+  "num_dem_errors": 2844
+ },
+ "duration_ns": 12320.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-25T03:05:25Z",
+ "job_timeline": [
+  {
+   "source": "iqm-server",
+   "status": "created",
+   "timestamp": "2026-10-25T03:01:22.232497Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "received",
+   "timestamp": "2026-10-25T03:01:22.736187Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_started",
+   "timestamp": "2026-10-25T03:01:22.829930Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_ended",
+   "timestamp": "2026-10-25T03:01:22.903020Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_started",
+   "timestamp": "2026-10-25T03:01:22.994175Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_ended",
+   "timestamp": "2026-10-25T03:01:23.840853Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_started",
+   "timestamp": "2026-10-25T03:01:24.562996Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_ended",
+   "timestamp": "2026-10-25T03:01:41.910597Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_started",
+   "timestamp": "2026-10-25T03:01:41.930068Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_ended",
+   "timestamp": "2026-10-25T03:01:42.465924Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "ready",
+   "timestamp": "2026-10-25T03:01:42.469785Z"
+  },
+  {
+   "source": "iqm-server",
+   "status": "completed",
+   "timestamp": "2026-10-25T03:01:43.716657Z"
+  }
+ ],
+ "commit": "00ed4bc17a3fc826438e2b54bb14ad98e30e9eea",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": null,
+ "simulator": null
+}

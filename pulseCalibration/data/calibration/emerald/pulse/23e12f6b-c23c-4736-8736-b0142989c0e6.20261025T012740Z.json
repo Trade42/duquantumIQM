@@ -1,0 +1,1115 @@
+{
+ "schema": "dqiqm.pulla-check/1",
+ "device": "emerald",
+ "utc": "2026-10-25T01:27:40Z",
+ "versions": {
+  "iqm-pulla": "14.0.3",
+  "iqm-pulse": "14.0.3",
+  "iqm-client": "35.0.3",
+  "iqm-station-control-client": "13.0.3",
+  "iqm-exa-common": "28.0.3",
+  "qiskit": "2.1.2"
+ },
+ "dqiqm_commit": "9699986424eb0e653434f2044d968842411f2219",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "scope": "summary over every locus: median, min, max",
+ "chip_label": "M216_F0W102525_H03_F08",
+ "stash_observations": 7011,
+ "implementation_classes": {
+  "cz.slepian_crf": {
+   "class": "CZ_Slepian_CRF",
+   "coupler_wave": "Slepian",
+   "qubit_wave": "CosineRiseFall"
+  },
+  "measure.constant": {
+   "class": "Measure_Constant",
+   "wave_i": "Constant",
+   "wave_q": "Constant"
+  },
+  "measure_fidelity.shelved_constant": {
+   "class": "Shelved_Measure_Constant",
+   "wave_i": "Constant",
+   "wave_q": "Constant"
+  },
+  "prx.drag_crf_sx": {
+   "class": "PRX_DRAGCosineRiseFallSX",
+   "wave_i": "CosineRiseFall",
+   "wave_q": "CosineRiseFallDerivative"
+  },
+  "reset_wait.reset_wait": {
+   "class": "Reset_Wait"
+  },
+  "cz.crf_acstarkcrf": {
+   "class": "CZ_CRF_ACStarkCRF",
+   "coupler_wave": "CosineRiseFall"
+  }
+ },
+ "default_implementations": {
+  "cz": "slepian_crf",
+  "measure": "constant",
+  "measure_fidelity": "shelved_constant",
+  "prx": "drag_crf_sx",
+  "reset_wait": "reset_wait"
+ },
+ "override_default_for_loci": {
+  "cz.crf_acstarkcrf": [
+   "QB44__QB50",
+   "QB49__QB50",
+   "QB51__QB50",
+   "QB54__QB50"
+  ]
+ },
+ "units": {
+  "measure.constant.average_response_e": "V",
+  "measure.constant.average_response_g": "V",
+  "measure.constant.average_response_phase": "rad",
+  "measure_fidelity.constant.average_response_e": "V",
+  "measure_fidelity.constant.average_response_g": "V",
+  "measure_fidelity.constant.average_response_phase": "rad",
+  "measure_fidelity.shelved_constant.average_response_e": "V",
+  "measure_fidelity.shelved_constant.average_response_g": "V",
+  "measure_fidelity.shelved_constant.average_response_phase": "rad",
+  "cz.crf_acstarkcrf.coupler.center_offset": "s",
+  "cz.crf_acstarkcrf.coupler.rise_time": "s",
+  "cz.crf_acstarkcrf.first_qubit.center_offset": "s",
+  "cz.crf_acstarkcrf.first_qubit.modulation_frequency": "Hz",
+  "cz.crf_acstarkcrf.first_qubit.phase": "rad",
+  "cz.crf_acstarkcrf.rz.QB44": "rad",
+  "cz.crf_acstarkcrf.rz.QB50": "rad",
+  "cz.crf_acstarkcrf.second_qubit.center_offset": "s",
+  "cz.crf_acstarkcrf.second_qubit.modulation_frequency": "Hz",
+  "cz.crf_acstarkcrf.second_qubit.phase": "rad",
+  "cz.crf_acstarkcrf.rz.QB51": "rad",
+  "cz.slepian_crf.coupler.center_offset": "s",
+  "cz.slepian_crf.coupler.flat_width": "s",
+  "cz.slepian_crf.qubit.center_offset": "s",
+  "cz.slepian_crf.rz.QB10": "rad",
+  "cz.slepian_crf.rz.QB11": "rad",
+  "cz.slepian_crf.rz.QB12": "rad",
+  "cz.slepian_crf.rz.QB19": "rad",
+  "cz.slepian_crf.rz.QB5": "rad",
+  "cz.slepian_crf.rz.QB13": "rad",
+  "cz.slepian_crf.rz.QB14": "rad",
+  "cz.slepian_crf.rz.QB21": "rad",
+  "cz.slepian_crf.rz.QB7": "rad",
+  "cz.slepian_crf.rz.QB15": "rad",
+  "cz.slepian_crf.rz.QB16": "rad",
+  "cz.slepian_crf.rz.QB17": "rad",
+  "cz.slepian_crf.rz.QB24": "rad",
+  "cz.slepian_crf.rz.QB8": "rad",
+  "cz.slepian_crf.rz.QB18": "rad",
+  "cz.slepian_crf.rz.QB26": "rad",
+  "cz.slepian_crf.rz.QB1": "rad",
+  "cz.slepian_crf.rz.QB2": "rad",
+  "cz.slepian_crf.rz.QB20": "rad",
+  "cz.slepian_crf.rz.QB28": "rad",
+  "cz.slepian_crf.rz.QB22": "rad",
+  "cz.slepian_crf.rz.QB30": "rad",
+  "cz.slepian_crf.rz.QB23": "rad",
+  "cz.slepian_crf.rz.QB25": "rad",
+  "cz.slepian_crf.rz.QB33": "rad",
+  "cz.slepian_crf.rz.QB27": "rad",
+  "cz.slepian_crf.rz.QB35": "rad",
+  "cz.slepian_crf.rz.QB29": "rad",
+  "cz.slepian_crf.rz.QB37": "rad",
+  "cz.slepian_crf.rz.QB31": "rad",
+  "cz.slepian_crf.rz.QB39": "rad",
+  "cz.slepian_crf.rz.QB32": "rad",
+  "cz.slepian_crf.rz.QB40": "rad",
+  "cz.slepian_crf.rz.QB34": "rad",
+  "cz.slepian_crf.rz.QB42": "rad",
+  "cz.slepian_crf.rz.QB36": "rad",
+  "cz.slepian_crf.rz.QB44": "rad",
+  "cz.slepian_crf.rz.QB38": "rad",
+  "cz.slepian_crf.rz.QB46": "rad",
+  "cz.slepian_crf.rz.QB41": "rad",
+  "cz.slepian_crf.rz.QB47": "rad",
+  "cz.slepian_crf.rz.QB43": "rad",
+  "cz.slepian_crf.rz.QB49": "rad",
+  "cz.slepian_crf.rz.QB45": "rad",
+  "cz.slepian_crf.rz.QB51": "rad",
+  "cz.slepian_crf.rz.QB48": "rad",
+  "cz.slepian_crf.rz.QB52": "rad",
+  "cz.slepian_crf.rz.QB4": "rad",
+  "cz.slepian_crf.rz.QB3": "rad",
+  "cz.slepian_crf.rz.QB53": "rad",
+  "cz.slepian_crf.rz.QB54": "rad",
+  "cz.slepian_crf.rz.QB6": "rad",
+  "cz.slepian_crf.rz.QB9": "rad",
+  "measure.constant.acquisition_delay": "s",
+  "measure.constant.duration": "V",
+  "measure.constant.frequency": "Hz",
+  "measure.constant.integration_length": "V",
+  "measure.constant.phase": "rad",
+  "measure.constant.amplitude_i": "V",
+  "measure_fidelity.constant.acquisition_delay": "s",
+  "measure_fidelity.constant.duration": "V",
+  "measure_fidelity.constant.frequency": "Hz",
+  "measure_fidelity.constant.integration_length": "V",
+  "measure_fidelity.constant.phase": "rad",
+  "measure_fidelity.constant.amplitude_i": "V",
+  "measure_fidelity.shelved_constant.acquisition_delay": "s",
+  "measure_fidelity.shelved_constant.duration": "V",
+  "measure_fidelity.shelved_constant.frequency": "Hz",
+  "measure_fidelity.shelved_constant.integration_length": "V",
+  "measure_fidelity.shelved_constant.phase": "rad",
+  "measure_fidelity.shelved_constant.second_prx_12_offset": "s",
+  "measure_fidelity.shelved_constant.amplitude_i": "V",
+  "prx.drag_crf_sx.center_offset": "s",
+  "prx.drag_crf_sx.duration": "s",
+  "prx.drag_crf_sx.full_width": "s",
+  "prx.drag_crf_sx.modulation_frequency": "Hz",
+  "prx.drag_crf_sx.rz_after": "rad",
+  "prx.drag_crf_sx.rz_before": "rad",
+  "reset_wait.reset_wait.duration": "s"
+ },
+ "dropped_non_numeric": 162,
+ "gates": {
+  "cz": {
+   "crf_acstarkcrf": {
+    "loci": 2,
+    "parameters": {
+     "coupler.amplitude": {
+      "median": 0.18390552998195286,
+      "min": 0.15313760437438337,
+      "max": 0.2146734555895224,
+      "n": 2
+     },
+     "coupler.center_offset": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "n": 2
+     },
+     "coupler.full_width": {
+      "median": 5.2e-08,
+      "min": 5.2e-08,
+      "max": 5.2e-08,
+      "n": 2
+     },
+     "coupler.rise_time": {
+      "median": 6e-09,
+      "min": 6e-09,
+      "max": 6e-09,
+      "n": 2
+     },
+     "duration": {
+      "median": 6e-08,
+      "min": 6e-08,
+      "max": 6e-08,
+      "n": 2
+     },
+     "first_qubit.amplitude": {
+      "median": 0.09836119873994674,
+      "min": 0,
+      "max": 0.19672239747989348,
+      "n": 2
+     },
+     "first_qubit.center_offset": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "n": 2
+     },
+     "first_qubit.full_width": {
+      "median": 6e-08,
+      "min": 6e-08,
+      "max": 6e-08,
+      "n": 2
+     },
+     "first_qubit.modulation_frequency": {
+      "median": 200000000.0,
+      "min": 200000000.0,
+      "max": 200000000.0,
+      "n": 2
+     },
+     "first_qubit.phase": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "n": 2
+     },
+     "first_qubit.rise_time": {
+      "median": 8e-09,
+      "min": 8e-09,
+      "max": 8e-09,
+      "n": 2
+     },
+     "rz.QB44": {
+      "median": -2.200074566953502,
+      "min": -2.200074566953502,
+      "max": -2.200074566953502,
+      "n": 1
+     },
+     "rz.QB50": {
+      "median": -1.3047219587112266,
+      "min": -1.355799739272454,
+      "max": -1.2536441781499992,
+      "n": 2
+     },
+     "rz.QB51": {
+      "median": -0.9948113334573812,
+      "min": -0.9948113334573812,
+      "max": -0.9948113334573812,
+      "n": 1
+     },
+     "second_qubit.amplitude": {
+      "median": 0.25592908752142696,
+      "min": 0,
+      "max": 0.5118581750428539,
+      "n": 2
+     },
+     "second_qubit.center_offset": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "n": 2
+     },
+     "second_qubit.full_width": {
+      "median": 6e-08,
+      "min": 6e-08,
+      "max": 6e-08,
+      "n": 2
+     },
+     "second_qubit.modulation_frequency": {
+      "median": 200000000.0,
+      "min": 200000000.0,
+      "max": 200000000.0,
+      "n": 2
+     },
+     "second_qubit.phase": {
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "n": 2
+     },
+     "second_qubit.rise_time": {
+      "median": 8e-09,
+      "min": 8e-09,
+      "max": 8e-09,
+      "n": 2
+     }
+    }
+   },
+   "slepian_crf": {
+    "loci": 83,
+    "parameters": {
+     "coupler.amplitude": {
+      "median": 0.09336868944716802,
+      "min": -0.3068089837496425,
+      "max": 0.26228403207485085,
+      "n": 83
+     },
+     "coupler.center_offset": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 83
+     },
+     "coupler.coupling_strength_normalized": {
+      "median": 0.012263759188727678,
+      "min": 0.00414656365121658,
+      "max": 0.014627224210394993,
+      "n": 83
+     },
+     "coupler.flat_width": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 83
+     },
+     "coupler.frequency_initial_normalized": {
+      "median": 0.7403873620448354,
+      "min": 0.6457678434653316,
+      "max": 0.8779211163904399,
+      "n": 83
+     },
+     "coupler.frequency_to_minimize_normalized": {
+      "median": 0.9637817450321658,
+      "min": 0.8759722833951338,
+      "max": 1.0166420369743052,
+      "n": 83
+     },
+     "coupler.full_width": {
+      "median": 3.3e-08,
+      "min": 3.3e-08,
+      "max": 4.8e-08,
+      "n": 83
+     },
+     "coupler.lambda_1": {
+      "median": -0.33461341552314927,
+      "min": -0.3670077704499689,
+      "max": -0.14663209444629244,
+      "n": 83
+     },
+     "coupler.lambda_2": {
+      "median": 0.08004475861827015,
+      "min": 0.034324277523156255,
+      "max": 0.08833222711705763,
+      "n": 83
+     },
+     "coupler.squid_asymmetry": {
+      "median": 4.121682685709338e-07,
+      "min": 0.0,
+      "max": 0.6301897536020915,
+      "n": 83
+     },
+     "duration": {
+      "median": 4e-08,
+      "min": 4e-08,
+      "max": 5.6e-08,
+      "n": 83
+     },
+     "qubit.amplitude": {
+      "median": 0.006505297085898571,
+      "min": -0.06894866465580218,
+      "max": 0.07143936750423056,
+      "n": 83
+     },
+     "qubit.center_offset": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 83
+     },
+     "qubit.full_width": {
+      "median": 3.5e-08,
+      "min": 3.5e-08,
+      "max": 5e-08,
+      "n": 83
+     },
+     "qubit.rise_time": {
+      "median": 1e-09,
+      "min": 1e-09,
+      "max": 2e-09,
+      "n": 83
+     },
+     "rz.QB1": {
+      "median": -0.69832032759262,
+      "min": -2.6178517130951056,
+      "max": 1.2212110579098656,
+      "n": 2
+     },
+     "rz.QB10": {
+      "median": -2.501842238886867,
+      "min": -2.620455362412587,
+      "max": -2.3968421809812,
+      "n": 4
+     },
+     "rz.QB11": {
+      "median": -0.7929384840399116,
+      "min": -2.9325042157081747,
+      "max": 0.27024466607271425,
+      "n": 4
+     },
+     "rz.QB12": {
+      "median": -2.4617152410192644,
+      "min": -2.69953631060306,
+      "max": -2.3747069141157873,
+      "n": 4
+     },
+     "rz.QB13": {
+      "median": 0.19122320749742405,
+      "min": -1.540154412000855,
+      "max": 1.4185525163613004,
+      "n": 4
+     },
+     "rz.QB14": {
+      "median": -2.436801843738425,
+      "min": -2.4957365841875276,
+      "max": -2.377867103289322,
+      "n": 2
+     },
+     "rz.QB15": {
+      "median": -2.438717050985856,
+      "min": -2.438717050985856,
+      "max": -2.438717050985856,
+      "n": 1
+     },
+     "rz.QB16": {
+      "median": 0.8149415094725265,
+      "min": -0.8359795619070489,
+      "max": 1.5071423966143025,
+      "n": 4
+     },
+     "rz.QB17": {
+      "median": -2.608401147242904,
+      "min": -2.7144097876526505,
+      "max": -2.4620521224606353,
+      "n": 4
+     },
+     "rz.QB18": {
+      "median": 0.6392849654677526,
+      "min": -1.4831934679470071,
+      "max": 0.8429173842515492,
+      "n": 4
+     },
+     "rz.QB19": {
+      "median": -2.50109567993018,
+      "min": -2.6261200072753095,
+      "max": -2.4621961762561995,
+      "n": 4
+     },
+     "rz.QB2": {
+      "median": -2.4484258781437114,
+      "min": -2.5466112898851705,
+      "max": -2.3502404664022523,
+      "n": 2
+     },
+     "rz.QB20": {
+      "median": 1.0726954363814443,
+      "min": -0.6070557783015147,
+      "max": 2.936907947145653,
+      "n": 4
+     },
+     "rz.QB21": {
+      "median": -2.513978226345067,
+      "min": -2.58155988863637,
+      "max": -2.362959319852622,
+      "n": 4
+     },
+     "rz.QB22": {
+      "median": -0.00590915544072379,
+      "min": -0.7617431877761511,
+      "max": 2.320350149396358,
+      "n": 3
+     },
+     "rz.QB23": {
+      "median": 1.4055683105371397,
+      "min": 1.4055683105371397,
+      "max": 1.4055683105371397,
+      "n": 1
+     },
+     "rz.QB24": {
+      "median": -2.412520497374018,
+      "min": -2.5045245615440805,
+      "max": 3.0854394203569795,
+      "n": 3
+     },
+     "rz.QB25": {
+      "median": 0.8746606714182392,
+      "min": -1.0931031750096023,
+      "max": 2.6294305447253787,
+      "n": 4
+     },
+     "rz.QB26": {
+      "median": -2.5179485472025,
+      "min": -2.670492108143641,
+      "max": -2.41711799406466,
+      "n": 4
+     },
+     "rz.QB27": {
+      "median": -0.3154860083597537,
+      "min": -1.7675406502492113,
+      "max": 3.102813195966297,
+      "n": 4
+     },
+     "rz.QB28": {
+      "median": -2.41970953350588,
+      "min": -2.544373638393436,
+      "max": -1.0354973947763677,
+      "n": 4
+     },
+     "rz.QB29": {
+      "median": -0.8153698540553771,
+      "min": -2.8519641250458037,
+      "max": 2.9662824749141468,
+      "n": 4
+     },
+     "rz.QB3": {
+      "median": -2.4341146466281365,
+      "min": -2.489123160042011,
+      "max": -2.379106133214262,
+      "n": 2
+     },
+     "rz.QB30": {
+      "median": -1.1679447489991617,
+      "min": -2.560380388344754,
+      "max": -1.0936824841462869,
+      "n": 4
+     },
+     "rz.QB31": {
+      "median": 0.3061813870757242,
+      "min": -0.1152334749037216,
+      "max": 0.72759624905517,
+      "n": 2
+     },
+     "rz.QB32": {
+      "median": 0.7814908235876734,
+      "min": -0.19194373643200535,
+      "max": 1.7549253836073522,
+      "n": 2
+     },
+     "rz.QB33": {
+      "median": -2.5486047394535656,
+      "min": -2.6258490783105266,
+      "max": -1.0346425381606252,
+      "n": 4
+     },
+     "rz.QB34": {
+      "median": -1.5202526612842893,
+      "min": -2.8915659183979097,
+      "max": 0.9965765953808718,
+      "n": 4
+     },
+     "rz.QB35": {
+      "median": -2.197600425426362,
+      "min": -2.5543927344976183,
+      "max": -1.0081597776135087,
+      "n": 4
+     },
+     "rz.QB36": {
+      "median": -0.22297981401014955,
+      "min": -0.7160389890198164,
+      "max": 2.4091094095829995,
+      "n": 4
+     },
+     "rz.QB37": {
+      "median": -2.4987990952475796,
+      "min": -2.7024060600785624,
+      "max": -1.112331430589741,
+      "n": 4
+     },
+     "rz.QB38": {
+      "median": -0.8271252491585094,
+      "min": -3.1373736436909274,
+      "max": 1.274184790499537,
+      "n": 4
+     },
+     "rz.QB39": {
+      "median": -1.7236368008703726,
+      "min": -2.4143777044310273,
+      "max": -1.032895897309718,
+      "n": 2
+     },
+     "rz.QB4": {
+      "median": -1.0042705370495817,
+      "min": -1.1155578394963683,
+      "max": -0.34906404124916435,
+      "n": 3
+     },
+     "rz.QB40": {
+      "median": -1.783829788445666,
+      "min": -2.5210419844640075,
+      "max": -1.0466175924273244,
+      "n": 2
+     },
+     "rz.QB41": {
+      "median": 0.021184736861000197,
+      "min": -0.9853507003168928,
+      "max": 3.131402806418155,
+      "n": 4
+     },
+     "rz.QB42": {
+      "median": -1.730223699018051,
+      "min": -2.4479864989076603,
+      "max": -1.0606901895866798,
+      "n": 4
+     },
+     "rz.QB43": {
+      "median": 0.17530325558845083,
+      "min": -2.1146741760778296,
+      "max": 2.7949848110336264,
+      "n": 4
+     },
+     "rz.QB44": {
+      "median": -2.4955655143763025,
+      "min": -2.525044372466149,
+      "max": -1.1875663374522958,
+      "n": 3
+     },
+     "rz.QB45": {
+      "median": 2.148554220619034,
+      "min": 1.1863211572181402,
+      "max": 2.6568688248210908,
+      "n": 4
+     },
+     "rz.QB46": {
+      "median": -1.615118538383106,
+      "min": -2.2214566320339486,
+      "max": -1.0087804447322632,
+      "n": 2
+     },
+     "rz.QB47": {
+      "median": -1.0498981971276873,
+      "min": -1.0519115749521006,
+      "max": -1.047884819303274,
+      "n": 2
+     },
+     "rz.QB48": {
+      "median": -2.0517739600347613,
+      "min": -3.003699081726303,
+      "max": 1.5227528418251062,
+      "n": 4
+     },
+     "rz.QB49": {
+      "median": -2.355586385763041,
+      "min": -2.4503106333828466,
+      "max": -1.072610202152788,
+      "n": 3
+     },
+     "rz.QB5": {
+      "median": -2.450112100928716,
+      "min": -2.7992389544425205,
+      "max": -2.348115966401833,
+      "n": 4
+     },
+     "rz.QB51": {
+      "median": -2.32355958107528,
+      "min": -2.32355958107528,
+      "max": -2.32355958107528,
+      "n": 1
+     },
+     "rz.QB52": {
+      "median": -1.2166892708660813,
+      "min": -1.240196904511066,
+      "max": -1.1931816372210964,
+      "n": 2
+     },
+     "rz.QB53": {
+      "median": 2.2629506147404506,
+      "min": -0.5827161197982882,
+      "max": 2.3736998186705955,
+      "n": 3
+     },
+     "rz.QB54": {
+      "median": -2.2772766710811316,
+      "min": -2.2772766710811316,
+      "max": -2.2772766710811316,
+      "n": 1
+     },
+     "rz.QB6": {
+      "median": -1.515141116644673,
+      "min": -2.4107374157673007,
+      "max": 1.795681110605699,
+      "n": 3
+     },
+     "rz.QB7": {
+      "median": -2.405308488528423,
+      "min": -2.405308488528423,
+      "max": -2.405308488528423,
+      "n": 1
+     },
+     "rz.QB8": {
+      "median": -2.603787491775905,
+      "min": -2.7559912570051193,
+      "max": -2.4515837265466907,
+      "n": 2
+     },
+     "rz.QB9": {
+      "median": -0.8635074054550416,
+      "min": -3.0186370089508774,
+      "max": 1.5458686007657343,
+      "n": 4
+     }
+    }
+   }
+  },
+  "measure": {
+   "constant": {
+    "loci": 54,
+    "parameters": {
+     "acquisition_delay": {
+      "median": 4.6e-07,
+      "min": 4.6e-07,
+      "max": 4.6e-07,
+      "n": 54
+     },
+     "amplitude_i": {
+      "median": 0.03234927738394845,
+      "min": 0.010741001933408947,
+      "max": 0.12143888888888892,
+      "n": 54
+     },
+     "amplitude_q": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     },
+     "duration": {
+      "median": 3.6e-07,
+      "min": 3.6e-07,
+      "max": 3.6e-07,
+      "n": 54
+     },
+     "frequency": {
+      "median": 5566200000.0,
+      "min": 5100633333.333333,
+      "max": 6052742000.0,
+      "n": 54
+     },
+     "integration_length": {
+      "median": 5e-07,
+      "min": 5e-07,
+      "max": 5e-07,
+      "n": 54
+     },
+     "integration_threshold": {
+      "median": 0.008015342420408187,
+      "min": -0.015698015003765838,
+      "max": 0.0521448782976937,
+      "n": 54
+     },
+     "phase": {
+      "median": -0.32286935686037577,
+      "min": -3.110585886994988,
+      "max": 2.9770522506714476,
+      "n": 54
+     }
+    }
+   }
+  },
+  "measure_fidelity": {
+   "constant": {
+    "loci": 54,
+    "parameters": {
+     "acquisition_delay": {
+      "median": 4.6e-07,
+      "min": 4.6e-07,
+      "max": 4.6e-07,
+      "n": 54
+     },
+     "amplitude_i": {
+      "median": 0.031608510287120486,
+      "min": 0.01003893520629622,
+      "max": 0.11110636049742036,
+      "n": 54
+     },
+     "amplitude_q": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     },
+     "duration": {
+      "median": 3.6e-07,
+      "min": 3.6e-07,
+      "max": 3.6e-07,
+      "n": 54
+     },
+     "frequency": {
+      "median": 5566057142.857143,
+      "min": 5098490476.190476,
+      "max": 6055800000.0,
+      "n": 54
+     },
+     "integration_length": {
+      "median": 5e-07,
+      "min": 5e-07,
+      "max": 5e-07,
+      "n": 54
+     },
+     "integration_threshold": {
+      "median": 0.008356300604829538,
+      "min": -0.020095778084125604,
+      "max": 0.03651454014109798,
+      "n": 54
+     },
+     "phase": {
+      "median": 0.2289940227428615,
+      "min": -3.133961530177322,
+      "max": 3.0350759153538385,
+      "n": 54
+     }
+    }
+   },
+   "shelved_constant": {
+    "loci": 54,
+    "parameters": {
+     "acquisition_delay": {
+      "median": 4.6e-07,
+      "min": 4.6e-07,
+      "max": 4.6e-07,
+      "n": 54
+     },
+     "amplitude_i": {
+      "median": 0.029721669854137447,
+      "min": 0.01003893520629622,
+      "max": 0.09999572444767832,
+      "n": 54
+     },
+     "amplitude_q": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     },
+     "duration": {
+      "median": 3.6e-07,
+      "min": 3.6e-07,
+      "max": 3.6e-07,
+      "n": 54
+     },
+     "frequency": {
+      "median": 5567623809.523809,
+      "min": 5100823809.523809,
+      "max": 6055133333.333333,
+      "n": 54
+     },
+     "integration_length": {
+      "median": 5e-07,
+      "min": 5e-07,
+      "max": 5e-07,
+      "n": 54
+     },
+     "integration_threshold": {
+      "median": 0.004105811207723619,
+      "min": -0.01758272854779831,
+      "max": 0.02681650926175182,
+      "n": 54
+     },
+     "phase": {
+      "median": -0.3459395743011844,
+      "min": -3.1321081336354535,
+      "max": 2.7064493716635143,
+      "n": 54
+     },
+     "second_prx_12_offset": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     }
+    }
+   }
+  },
+  "prx": {
+   "drag_crf_sx": {
+    "loci": 54,
+    "parameters": {
+     "amplitude_i": {
+      "median": 0.18259363721137517,
+      "min": 0.11848690043768306,
+      "max": 0.391767613572018,
+      "n": 54
+     },
+     "amplitude_q": {
+      "median": -0.026119115319465536,
+      "min": -0.08004761456294635,
+      "max": -0.01815675945921292,
+      "n": 54
+     },
+     "center_offset": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     },
+     "duration": {
+      "median": 2.4e-08,
+      "min": 2.4e-08,
+      "max": 2.4e-08,
+      "n": 54
+     },
+     "full_width": {
+      "median": 2.2e-08,
+      "min": 2.2e-08,
+      "max": 2.2e-08,
+      "n": 54
+     },
+     "modulation_frequency": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 54
+     },
+     "rz_after": {
+      "median": 0.04715637963007974,
+      "min": -0.012416821266024612,
+      "max": 0.20822205823905035,
+      "n": 54
+     },
+     "rz_before": {
+      "median": 0.04715637963007974,
+      "min": -0.012416821266024612,
+      "max": 0.20822205823905035,
+      "n": 54
+     }
+    }
+   }
+  },
+  "reset_wait": {
+   "reset_wait": {
+    "loci": 152,
+    "parameters": {
+     "duration": {
+      "median": 0.0004,
+      "min": 0.0004,
+      "max": 0.0004,
+      "n": 152
+     }
+    }
+   }
+  }
+ },
+ "readout_characterization": {
+  "measure": {
+   "constant": {
+    "loci": 54,
+    "parameters": {
+     "average_response_e": {
+      "median": 0.02452875663360031,
+      "min": 0.0010126102373479023,
+      "max": 0.08105635529914826,
+      "n": 54
+     },
+     "average_response_g": {
+      "median": -0.004320691279307301,
+      "min": -0.029540513776457084,
+      "max": 0.02885979399063078,
+      "n": 54
+     },
+     "average_response_phase": {
+      "median": -0.32286935686037577,
+      "min": -3.110585886994988,
+      "max": 2.9770522506714476,
+      "n": 54
+     },
+     "single_shot_01_error": {
+      "median": 0.0010054326113897217,
+      "min": 0.0,
+      "max": 0.026541095890410957,
+      "n": 54
+     },
+     "single_shot_10_error": {
+      "median": 0.010800186490825816,
+      "min": 0.004624045034177724,
+      "max": 0.18663406682966585,
+      "n": 54
+     }
+    }
+   }
+  },
+  "measure_fidelity": {
+   "constant": {
+    "loci": 54,
+    "parameters": {
+     "average_response_e": {
+      "median": 0.022865406789689263,
+      "min": 0.0025989306154202228,
+      "max": 0.06494722641474543,
+      "n": 54
+     },
+     "average_response_g": {
+      "median": -0.0055003410797875825,
+      "min": -0.03802847618139087,
+      "max": 0.017806033913389724,
+      "n": 54
+     },
+     "average_response_phase": {
+      "median": 0.2289940227428615,
+      "min": -3.133961530177322,
+      "max": 3.0350759153538385,
+      "n": 54
+     },
+     "single_shot_01_error": {
+      "median": 0.00732421875,
+      "min": 0.00146484375,
+      "max": 0.0185546875,
+      "n": 54
+     },
+     "single_shot_10_error": {
+      "median": 0.013671875,
+      "min": 0.005859375,
+      "max": 0.05419921875,
+      "n": 54
+     }
+    }
+   },
+   "shelved_constant": {
+    "loci": 54,
+    "parameters": {
+     "average_response_e": {
+      "median": 0.022374315817226313,
+      "min": -0.0027098052423620567,
+      "max": 0.056177256412178855,
+      "n": 54
+     },
+     "average_response_g": {
+      "median": -0.009581678268602983,
+      "min": -0.03637932011511938,
+      "max": 0.012644385451536405,
+      "n": 54
+     },
+     "average_response_phase": {
+      "median": -0.3459395743011844,
+      "min": -3.1321081336354535,
+      "max": 2.7064493716635143,
+      "n": 54
+     },
+     "single_shot_01_error": {
+      "median": 0.0010172665659340637,
+      "min": 0.0,
+      "max": 0.016297087897408497,
+      "n": 54
+     },
+     "single_shot_10_error": {
+      "median": 0.004051911748845002,
+      "min": 0.0004814636494944632,
+      "max": 0.03305046895935686,
+      "n": 54
+     }
+    }
+   }
+  }
+ },
+ "drive_frequency_hz": {
+  "loci": 54,
+  "parameters": {
+   "frequency": {
+    "median": 3946065400.303299,
+    "min": 3802403362.6943703,
+    "max": 4207092133.658939,
+    "n": 54
+   }
+  }
+ },
+ "requests": [
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/settings",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/chip-design-records",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "calibration-sets/emerald/default/dynamic-quantum-architecture",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "calibration-sets/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  }
+ ]
+}

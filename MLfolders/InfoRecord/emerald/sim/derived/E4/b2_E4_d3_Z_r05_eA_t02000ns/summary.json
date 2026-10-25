@@ -1,0 +1,14 @@
+{
+ "label": "SIMULATED",
+ "device": "emerald",
+ "stand_in": "IQMFakeAphrodite+profile(23e12f6b)",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E4/b2_E4_d3_Z_r05_eA_t02000ns",
+ "shots": 48,
+ "det_rate_mean": 0.07864583333333333,
+ "same_stab_lag1": 0.01110385489248224,
+ "same_stab_lag2": 0.0056236575358717955,
+ "same_stab_lag3": -0.005119080754670879,
+ "cross_stab_lag0": 0.0033199223830522226,
+ "cross_stab_lag1": 0.002406243824245789
+}

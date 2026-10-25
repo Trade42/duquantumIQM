@@ -1,0 +1,148 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "SIMULATED",
+ "simulated": true,
+ "experiment": "E1",
+ "circuit": "E1_d3_Z_r08_pA",
+ "run_id": "b1_E1_d3_Z_r08_pA",
+ "batch": 1,
+ "job_id": "sim-B1-2-E1",
+ "position_in_job": 15,
+ "split": {
+  "rule": "batch test_batch is the test set, never fine-tuned on; in every other job, a seeded draw of round(validation_fraction * shots) shot indices (numpy default_rng([seed, crc32(job label)]).permutation) is validation, the rest finetune; the same indices for every circuit of the job",
+  "test_batch": 3,
+  "validation_fraction": 0.2,
+  "seed": 2026,
+  "job": "B1-2-E1",
+  "role": "finetune+validation",
+  "counts": {
+   "finetune": 102,
+   "validation": 26
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 8,
+  "basis": "Z",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "0",
+  "patch": "pA",
+  "delay_ns": 0.0,
+  "barriers": true,
+  "orientation": 4
+ },
+ "device": "IQMFakeGarnet+profile(a18a947f)",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "calibration": {
+  "before": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json",
+  "after": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json"
+ },
+ "shots": 128,
+ "num_measurements": 73,
+ "num_detectors": 64,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    128,
+    73
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "547b617532c128affbdf24a122039c710c8c0ae713fb40ea3438c686fa2e37bf"
+  },
+  "det_events.npy": {
+   "shape": [
+    128,
+    64
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "b92de67c1735151532c405fcdb058fcca74415bd371fb401ab6c11029dcc56bf"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    128,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "6a5b0be75f32579a8428bdc8edd312b6dbbc7ec4bb71883fc7b83101970259f1"
+  }
+ },
+ "placement": {
+  "1": "QB12",
+  "2": "QB7",
+  "3": "QB6",
+  "5": "QB2",
+  "8": "QB16",
+  "9": "QB11",
+  "10": "QB10",
+  "11": "QB5",
+  "12": "QB4",
+  "13": "QB1",
+  "14": "QB20",
+  "15": "QB19",
+  "16": "QB15",
+  "17": "QB14",
+  "18": "QB9",
+  "19": "QB8",
+  "25": "QB13"
+ },
+ "circuit_files": {
+  "stim": "circuits/E1/E1_d3_Z_r08_pA.stim",
+  "qasm": "circuits/E1/E1_d3_Z_r08_pA.qasm"
+ },
+ "stim_sha256": "a017bc6b147f7e487f57e70525c479ad8e982a80574ce8f210845f246a29e473",
+ "qasm_sha256": "f52da664d45eeb5cd41ce670ce76c175c62ef0af35aa82d46e712c4d37972a75",
+ "native_sha256": "645fd59d26b785b8873bd6e6e74b5154b9405bdcd65bb1c0d0754365af735108",
+ "raw": {
+  "path": "raw/20261024-garnet-dryrun/sim-B1-2-E1/memory.npz",
+  "key": "c15",
+  "meta": "raw/20261024-garnet-dryrun/sim-B1-2-E1/meta.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "dqiqm.experiments.device.calibrated_noise(live calibration, idle_ns=0): the stand-in's own noise (gate depolarizing + relaxation over gate durations, mean readout assignment error as record flips)",
+  "num_dem_errors": 1044
+ },
+ "duration_ns": 6240.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-24T20:09:05Z",
+ "job_timeline": [],
+ "commit": "830ca7bd02f8b415edf758cfbab94b8bb564b06b",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": {
+  "aer_seed_simulator": 143322,
+  "circuit_index": 15
+ },
+ "simulator": {
+  "backend": "IQMFakeGarnet+profile(a18a947f)",
+  "aer_method": "matrix_product_state",
+  "noise": "IQMFakeGarnet error profile from the live snapshot (dqiqm.experiments.device.error_profile, Ramsey T2)",
+  "threads": 4
+ }
+}

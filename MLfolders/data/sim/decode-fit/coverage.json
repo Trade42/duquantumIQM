@@ -1,0 +1,73 @@
+{
+  "what": "coverage of fit_eps's 95% intervals on synthetic binomial data with a known truth",
+  "truth": {
+    "eps": 0.002,
+    "amplitude": 0.9987,
+    "rounds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "shots_per_point": 100000
+  },
+  "seed": 2026,
+  "results": {
+    "A = 1 form, A = 1 truth": {
+      "free_amplitude": false,
+      "true_amplitude": 1.0,
+      "curvature": {
+        "hits": 953,
+        "trials": 1000,
+        "coverage": 0.953,
+        "wilson_lo": 0.9380600619184716,
+        "wilson_hi": 0.9644728948936154
+      },
+      "mean_eps": 0.002000483235423959,
+      "bias": 4.832354239588804e-07,
+      "sd_eps": 1.9228118734492646e-05
+    },
+    "free A form, A < 1 truth": {
+      "free_amplitude": true,
+      "true_amplitude": 0.9987,
+      "curvature": {
+        "hits": 940,
+        "trials": 1000,
+        "coverage": 0.94,
+        "wilson_lo": 0.9235289252086434,
+        "wilson_hi": 0.953103527324068
+      },
+      "mean_eps": 0.0019996343131393553,
+      "bias": -3.656868606447504e-07,
+      "sd_eps": 3.475819560283818e-05,
+      "bootstrap": {
+        "hits": 193,
+        "trials": 200,
+        "coverage": 0.965,
+        "wilson_lo": 0.9295293884777092,
+        "wilson_hi": 0.9829444579914328,
+        "replicates": 300
+      }
+    },
+    "A = 1 form, A < 1 truth": {
+      "free_amplitude": false,
+      "true_amplitude": 0.9987,
+      "curvature": {
+        "hits": 0,
+        "trials": 1000,
+        "coverage": 0.0,
+        "wilson_lo": 0.0,
+        "wilson_hi": 0.0038267584855551234
+      },
+      "mean_eps": 0.0021191706061772305,
+      "bias": 0.00011917060617723041,
+      "sd_eps": 2.044785215065388e-05
+    }
+  }
+}

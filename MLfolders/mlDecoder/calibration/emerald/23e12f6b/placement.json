@@ -1,0 +1,1892 @@
+{
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "fetched_utc": "2026-10-24T19:13:21.046969Z",
+ "note": "Stim qubit index -> device qubit and role, for the circuits of circuits/. E1's Stim indices and coordinates are dqiqm.surface.memory_circuit's (Stim's rotated-code numbering, q = x + 7*floor(y/2) at d = 3), whose detectors are the team's make_stim_circuit's. Placements are chosen from this calibration; a new calibration set can move them.",
+ "E1": {
+  "eA": {
+   "orientation": 1,
+   "x_ancillas": [
+    "QB14",
+    "QB28",
+    "QB30",
+    "QB44"
+   ],
+   "qubits": {
+    "1": {
+     "qb": "QB13",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      1.0
+     ]
+    },
+    "2": {
+     "qb": "QB14",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,0)",
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB22",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      1.0
+     ]
+    },
+    "5": {
+     "qb": "QB31",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      1.0
+     ]
+    },
+    "8": {
+     "qb": "QB20",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      3.0
+     ]
+    },
+    "9": {
+     "qb": "QB21",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,2)",
+     "stim_coords": [
+      2.0,
+      2.0
+     ]
+    },
+    "10": {
+     "qb": "QB29",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      3.0
+     ]
+    },
+    "11": {
+     "qb": "QB30",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,2)",
+     "stim_coords": [
+      4.0,
+      2.0
+     ]
+    },
+    "12": {
+     "qb": "QB38",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      3.0
+     ]
+    },
+    "13": {
+     "qb": "QB39",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(6,2)",
+     "stim_coords": [
+      6.0,
+      2.0
+     ]
+    },
+    "14": {
+     "qb": "QB19",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(0,4)",
+     "stim_coords": [
+      0.0,
+      4.0
+     ]
+    },
+    "15": {
+     "qb": "QB27",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      5.0
+     ]
+    },
+    "16": {
+     "qb": "QB28",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,4)",
+     "stim_coords": [
+      2.0,
+      4.0
+     ]
+    },
+    "17": {
+     "qb": "QB36",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      5.0
+     ]
+    },
+    "18": {
+     "qb": "QB37",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(4,4)",
+     "stim_coords": [
+      4.0,
+      4.0
+     ]
+    },
+    "19": {
+     "qb": "QB45",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      5.0
+     ]
+    },
+    "25": {
+     "qb": "QB44",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,6)",
+     "stim_coords": [
+      4.0,
+      6.0
+     ]
+    }
+   }
+  },
+  "eB": {
+   "orientation": 2,
+   "x_ancillas": [
+    "QB8",
+    "QB10",
+    "QB26",
+    "QB28"
+   ],
+   "qubits": {
+    "1": {
+     "qb": "QB20",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      1.0
+     ]
+    },
+    "2": {
+     "qb": "QB28",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,0)",
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB27",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      1.0
+     ]
+    },
+    "5": {
+     "qb": "QB34",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      1.0
+     ]
+    },
+    "8": {
+     "qb": "QB11",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      3.0
+     ]
+    },
+    "9": {
+     "qb": "QB19",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,2)",
+     "stim_coords": [
+      2.0,
+      2.0
+     ]
+    },
+    "10": {
+     "qb": "QB18",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      3.0
+     ]
+    },
+    "11": {
+     "qb": "QB26",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,2)",
+     "stim_coords": [
+      4.0,
+      2.0
+     ]
+    },
+    "12": {
+     "qb": "QB25",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      3.0
+     ]
+    },
+    "13": {
+     "qb": "QB33",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(6,2)",
+     "stim_coords": [
+      6.0,
+      2.0
+     ]
+    },
+    "14": {
+     "qb": "QB5",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(0,4)",
+     "stim_coords": [
+      0.0,
+      4.0
+     ]
+    },
+    "15": {
+     "qb": "QB4",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      5.0
+     ]
+    },
+    "16": {
+     "qb": "QB10",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,4)",
+     "stim_coords": [
+      2.0,
+      4.0
+     ]
+    },
+    "17": {
+     "qb": "QB9",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      5.0
+     ]
+    },
+    "18": {
+     "qb": "QB17",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(4,4)",
+     "stim_coords": [
+      4.0,
+      4.0
+     ]
+    },
+    "19": {
+     "qb": "QB16",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      5.0
+     ]
+    },
+    "25": {
+     "qb": "QB8",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,6)",
+     "stim_coords": [
+      4.0,
+      6.0
+     ]
+    }
+   }
+  },
+  "ranking": {
+   "device": "emerald",
+   "cz_less_couplers_excluded": [
+    [
+     "QB6",
+     "QB7"
+    ],
+    [
+     "QB15",
+     "QB23"
+    ],
+    [
+     "QB24",
+     "QB32"
+    ],
+    [
+     "QB49",
+     "QB50"
+    ],
+    [
+     "QB50",
+     "QB54"
+    ]
+   ],
+   "rule": "eA: the lowest mean P_L(R=3, Z and X) under calibrated Stim noise over every zero-SWAP placement on the calibrated couplers; eB: the best placement on a different qubit set",
+   "rank_shots": 50000,
+   "placements": [
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB14",
+      "QB28",
+      "QB30",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.0464,
+      "X": 0.04866
+     },
+     "mean_p_l_r3": 0.04753,
+     "patch": "eA"
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB37",
+      "QB39"
+     ],
+     "p_l_r3": {
+      "Z": 0.0474,
+      "X": 0.04932
+     },
+     "mean_p_l_r3": 0.04836,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB14",
+      "QB28",
+      "QB30",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.04852,
+      "X": 0.04844
+     },
+     "mean_p_l_r3": 0.048479999999999995,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB37",
+      "QB39"
+     ],
+     "p_l_r3": {
+      "Z": 0.0495,
+      "X": 0.04864
+     },
+     "mean_p_l_r3": 0.04907,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB8",
+      "QB10",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.053,
+      "X": 0.04768
+     },
+     "mean_p_l_r3": 0.050339999999999996,
+     "patch": "eB"
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB3",
+      "QB17",
+      "QB19",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.05008,
+      "X": 0.05292
+     },
+     "mean_p_l_r3": 0.051500000000000004,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB8",
+      "QB10",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.05476,
+      "X": 0.04962
+     },
+     "mean_p_l_r3": 0.05219,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB5",
+      "QB17",
+      "QB19",
+      "QB33"
+     ],
+     "p_l_r3": {
+      "Z": 0.04922,
+      "X": 0.05518
+     },
+     "mean_p_l_r3": 0.052199999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB10",
+      "QB12",
+      "QB24",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.05466,
+      "X": 0.05076
+     },
+     "mean_p_l_r3": 0.05271,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB5",
+      "QB17",
+      "QB19",
+      "QB33"
+     ],
+     "p_l_r3": {
+      "Z": 0.05162,
+      "X": 0.05458
+     },
+     "mean_p_l_r3": 0.053099999999999994,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB10",
+      "QB12",
+      "QB24",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.05428,
+      "X": 0.05214
+     },
+     "mean_p_l_r3": 0.05321,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB3",
+      "QB17",
+      "QB19",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.05102,
+      "X": 0.05542
+     },
+     "mean_p_l_r3": 0.05322,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB6",
+      "QB18",
+      "QB20",
+      "QB34"
+     ],
+     "p_l_r3": {
+      "Z": 0.0567,
+      "X": 0.0535
+     },
+     "mean_p_l_r3": 0.055099999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB6",
+      "QB18",
+      "QB20",
+      "QB34"
+     ],
+     "p_l_r3": {
+      "Z": 0.05524,
+      "X": 0.0555
+     },
+     "mean_p_l_r3": 0.05537,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB11",
+      "QB27",
+      "QB29",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.05564,
+      "X": 0.05578
+     },
+     "mean_p_l_r3": 0.05571,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB4",
+      "QB18",
+      "QB20",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06388,
+      "X": 0.04816
+     },
+     "mean_p_l_r3": 0.05602,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB11",
+      "QB27",
+      "QB29",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.05676,
+      "X": 0.05552
+     },
+     "mean_p_l_r3": 0.056139999999999995,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB4",
+      "QB18",
+      "QB20",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06362,
+      "X": 0.0488
+     },
+     "mean_p_l_r3": 0.056209999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB26",
+      "QB28",
+      "QB40",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.0594,
+      "X": 0.05416
+     },
+     "mean_p_l_r3": 0.05678,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB26",
+      "QB28",
+      "QB40",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.06194,
+      "X": 0.05374
+     },
+     "mean_p_l_r3": 0.05784,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB9",
+      "QB11",
+      "QB27",
+      "QB29"
+     ],
+     "p_l_r3": {
+      "Z": 0.0612,
+      "X": 0.0551
+     },
+     "mean_p_l_r3": 0.05815,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB9",
+      "QB11",
+      "QB27",
+      "QB29"
+     ],
+     "p_l_r3": {
+      "Z": 0.05996,
+      "X": 0.05658
+     },
+     "mean_p_l_r3": 0.05827,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB11",
+      "QB13",
+      "QB25",
+      "QB27"
+     ],
+     "p_l_r3": {
+      "Z": 0.05694,
+      "X": 0.06052
+     },
+     "mean_p_l_r3": 0.05873,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB20",
+      "QB22",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.05112,
+      "X": 0.0669
+     },
+     "mean_p_l_r3": 0.05901,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB11",
+      "QB13",
+      "QB25",
+      "QB27"
+     ],
+     "p_l_r3": {
+      "Z": 0.0568,
+      "X": 0.06198
+     },
+     "mean_p_l_r3": 0.05939,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB17",
+      "QB33",
+      "QB35",
+      "QB49"
+     ],
+     "p_l_r3": {
+      "Z": 0.05308,
+      "X": 0.0658
+     },
+     "mean_p_l_r3": 0.05944,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB17",
+      "QB33",
+      "QB35",
+      "QB49"
+     ],
+     "p_l_r3": {
+      "Z": 0.05244,
+      "X": 0.06744
+     },
+     "mean_p_l_r3": 0.05994,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB20",
+      "QB22",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.05238,
+      "X": 0.06762
+     },
+     "mean_p_l_r3": 0.06,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB2",
+      "QB10",
+      "QB12",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.06676,
+      "X": 0.05562
+     },
+     "mean_p_l_r3": 0.06119,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB11",
+      "QB25",
+      "QB27",
+      "QB41"
+     ],
+     "p_l_r3": {
+      "Z": 0.0586,
+      "X": 0.06504
+     },
+     "mean_p_l_r3": 0.06182,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB11",
+      "QB25",
+      "QB27",
+      "QB41"
+     ],
+     "p_l_r3": {
+      "Z": 0.05936,
+      "X": 0.0648
+     },
+     "mean_p_l_r3": 0.062079999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB12",
+      "QB14",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.06264,
+      "X": 0.06196
+     },
+     "mean_p_l_r3": 0.0623,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB5",
+      "QB19",
+      "QB21",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.06068,
+      "X": 0.06558
+     },
+     "mean_p_l_r3": 0.06312999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB12",
+      "QB14",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.0667,
+      "X": 0.05966
+     },
+     "mean_p_l_r3": 0.06318,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB3",
+      "QB5",
+      "QB19",
+      "QB21"
+     ],
+     "p_l_r3": {
+      "Z": 0.05618,
+      "X": 0.0716
+     },
+     "mean_p_l_r3": 0.06389,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB2",
+      "QB10",
+      "QB12",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.07136,
+      "X": 0.05726
+     },
+     "mean_p_l_r3": 0.06431,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB3",
+      "QB5",
+      "QB19",
+      "QB21"
+     ],
+     "p_l_r3": {
+      "Z": 0.0595,
+      "X": 0.06928
+     },
+     "mean_p_l_r3": 0.06439,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB5",
+      "QB19",
+      "QB21",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.06074,
+      "X": 0.07026
+     },
+     "mean_p_l_r3": 0.0655,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB16",
+      "QB18",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06016,
+      "X": 0.07114
+     },
+     "mean_p_l_r3": 0.06565,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB16",
+      "QB18",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06116,
+      "X": 0.07066
+     },
+     "mean_p_l_r3": 0.06591,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB12",
+      "QB26",
+      "QB28",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.07848,
+      "X": 0.05602
+     },
+     "mean_p_l_r3": 0.06725,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB12",
+      "QB26",
+      "QB28",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.081,
+      "X": 0.05966
+     },
+     "mean_p_l_r3": 0.07033,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB10",
+      "QB26",
+      "QB28",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.08054,
+      "X": 0.0618
+     },
+     "mean_p_l_r3": 0.07117,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB10",
+      "QB26",
+      "QB28",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.081,
+      "X": 0.0614
+     },
+     "mean_p_l_r3": 0.0712,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB13",
+      "QB27",
+      "QB29",
+      "QB43"
+     ],
+     "p_l_r3": {
+      "Z": 0.06384,
+      "X": 0.08214
+     },
+     "mean_p_l_r3": 0.07299,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB20",
+      "QB34",
+      "QB36",
+      "QB48"
+     ],
+     "p_l_r3": {
+      "Z": 0.08106,
+      "X": 0.06794
+     },
+     "mean_p_l_r3": 0.0745,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB20",
+      "QB34",
+      "QB36",
+      "QB48"
+     ],
+     "p_l_r3": {
+      "Z": 0.08168,
+      "X": 0.07026
+     },
+     "mean_p_l_r3": 0.07597000000000001,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB18",
+      "QB20",
+      "QB36",
+      "QB38"
+     ],
+     "p_l_r3": {
+      "Z": 0.07652,
+      "X": 0.07582
+     },
+     "mean_p_l_r3": 0.07617,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB25",
+      "QB27",
+      "QB43",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.07796,
+      "X": 0.07478
+     },
+     "mean_p_l_r3": 0.07637,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB13",
+      "QB27",
+      "QB29",
+      "QB43"
+     ],
+     "p_l_r3": {
+      "Z": 0.06872,
+      "X": 0.08526
+     },
+     "mean_p_l_r3": 0.07699,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB18",
+      "QB20",
+      "QB36",
+      "QB38"
+     ],
+     "p_l_r3": {
+      "Z": 0.0754,
+      "X": 0.07932
+     },
+     "mean_p_l_r3": 0.07736,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB17",
+      "QB19",
+      "QB35",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.07268,
+      "X": 0.0847
+     },
+     "mean_p_l_r3": 0.07869,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB17",
+      "QB19",
+      "QB35",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.07368,
+      "X": 0.08594
+     },
+     "mean_p_l_r3": 0.07980999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB33",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.07232,
+      "X": 0.08776
+     },
+     "mean_p_l_r3": 0.08004,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB33",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.0739,
+      "X": 0.08688
+     },
+     "mean_p_l_r3": 0.08038999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB25",
+      "QB27",
+      "QB43",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.08296,
+      "X": 0.07984
+     },
+     "mean_p_l_r3": 0.0814,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB19",
+      "QB35",
+      "QB37",
+      "QB51"
+     ],
+     "p_l_r3": {
+      "Z": 0.07838,
+      "X": 0.0977
+     },
+     "mean_p_l_r3": 0.08804000000000001,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB19",
+      "QB35",
+      "QB37",
+      "QB51"
+     ],
+     "p_l_r3": {
+      "Z": 0.08254,
+      "X": 0.09634
+     },
+     "mean_p_l_r3": 0.08943999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB28",
+      "QB30",
+      "QB42",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.09546,
+      "X": 0.09038
+     },
+     "mean_p_l_r3": 0.09292,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB28",
+      "QB30",
+      "QB42",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.09904,
+      "X": 0.08832
+     },
+     "mean_p_l_r3": 0.09368,
+     "patch": null
+    }
+   ],
+   "qubit_sets": [
+    [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ],
+    [
+     "QB4",
+     "QB5",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34"
+    ],
+    [
+     "QB3",
+     "QB4",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB24",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB34",
+     "QB35"
+    ],
+    [
+     "QB5",
+     "QB6",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB34",
+     "QB35"
+    ],
+    [
+     "QB11",
+     "QB12",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB44",
+     "QB45"
+    ],
+    [
+     "QB4",
+     "QB5",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB35",
+     "QB36"
+    ],
+    [
+     "QB17",
+     "QB18",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB32",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB40",
+     "QB41",
+     "QB42",
+     "QB43",
+     "QB48",
+     "QB49"
+    ],
+    [
+     "QB1",
+     "QB2",
+     "QB3",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27"
+    ],
+    [
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB24",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB41",
+     "QB42"
+    ],
+    [
+     "QB5",
+     "QB6",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB36",
+     "QB37"
+    ],
+    [
+     "QB11",
+     "QB12",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB42",
+     "QB43"
+    ],
+    [
+     "QB10",
+     "QB11",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB43",
+     "QB44"
+    ],
+    [
+     "QB12",
+     "QB13",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB43",
+     "QB44"
+    ],
+    [
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB42",
+     "QB43",
+     "QB44",
+     "QB45",
+     "QB48",
+     "QB49"
+    ],
+    [
+     "QB19",
+     "QB20",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB42",
+     "QB43",
+     "QB44",
+     "QB45",
+     "QB50",
+     "QB51"
+    ]
+   ],
+   "patches": {
+    "eA": [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ],
+    "eB": [
+     "QB4",
+     "QB5",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34"
+    ]
+   }
+  }
+ }
+}

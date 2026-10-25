@@ -1,0 +1,38 @@
+# Sal's ML decoders, shipped as MLfolders/mlDecoder/ inside the team's repo (Trade42/duquantumIQM).
+# The team's package (challenge/) is the repo root, a path dependency two folders up; uv.lock pins everything else.
+#
+#   cd MLfolders/mlDecoder && uv sync --extra test      # .venv here: challenge (editable), torch 2.14.1+cu132, relay-bp
+#   cd ../.. && MLfolders/mlDecoder/.venv/Scripts/python.exe -m pytest -q MLfolders/mlDecoder/tests
+#
+# The package is used in place, not built: run it as `python -m MLfolders.mlDecoder.<module>` from the repo root.
+[project]
+name = "mldecoder"
+version = "0.1.0"
+description = "LSTM decoders and the LSTM -> Relay-BP -> correlated MWPM cascade for the team's d=3 no-reset surface-code memory on IQM Garnet and Emerald"
+requires-python = ">=3.13"
+dependencies = [
+    "duquantum-iqm-surface-code",   # the team's package (challenge/): the repo root, see tool.uv.sources
+    "numpy>=2.2,<3",
+    "scipy>=1.14,<2",
+    "stim>=1.16,<1.17",
+    "pymatching>=2.4,<3",
+    "matplotlib>=3.9,<4",
+    "torch==2.14.1",                # the CUDA 13.2 build; it runs on the CPU too
+    "relay-bp==0.2.2",              # the cascade's second layer (IBM's Relay-BP)
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'win32'", "sys_platform == 'linux'"]
+
+[tool.uv.sources]
+duquantum-iqm-surface-code = { path = "../..", editable = true }
+torch = { index = "pytorch-cu132" }
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true

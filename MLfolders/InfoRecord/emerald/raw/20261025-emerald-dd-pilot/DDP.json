@@ -1,0 +1,395 @@
+{
+ "format": "dqiqm.emerald-dd/1",
+ "task": "emerald-dd-pilot",
+ "device": "emerald",
+ "label": "DDP",
+ "dd": "on",
+ "compilation_options": {
+  "max_circuit_duration_over_t2": null,
+  "heralding_mode": "none",
+  "move_gate_validation": "strict",
+  "move_gate_frame_tracking": "full",
+  "active_reset_cycles": null,
+  "dd_mode": "enabled",
+  "dd_strategy": {
+   "merge_contiguous_waits": true,
+   "target_qubits": null,
+   "skip_leading_wait": true,
+   "skip_trailing_wait": true,
+   "gate_sequences": [
+    [
+     9,
+     "XYXYYXYX",
+     "asap"
+    ],
+    [
+     5,
+     "YXYX",
+     "asap"
+    ],
+    [
+     2,
+     "XX",
+     "center"
+    ]
+   ]
+  }
+ },
+ "experiment": "E1",
+ "segment_position": 0,
+ "shots": 1000,
+ "circuits": 1,
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "purpose": "emerald-dd-pilot DDP E1 DD on (1 circuits x 1000 shots) [dd=ENABLED,dd_strategy=879fe63c]",
+ "order": [
+  {
+   "position": 0,
+   "circuit": "E1_d3_X_r03_eA",
+   "native_sha256": "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  }
+ ],
+ "qubit_index_to_name": {
+  "12": "QB13",
+  "13": "QB14",
+  "18": "QB19",
+  "19": "QB20",
+  "20": "QB21",
+  "21": "QB22",
+  "26": "QB27",
+  "27": "QB28",
+  "28": "QB29",
+  "29": "QB30",
+  "30": "QB31",
+  "35": "QB36",
+  "36": "QB37",
+  "37": "QB38",
+  "38": "QB39",
+  "43": "QB44",
+  "44": "QB45"
+ },
+ "note": "IQM returns circuit_names [null]: this file (and meta.json's circuit_order) links c<i> in memory.npz to a circuit",
+ "split": "dd_ab: not in the ML split (never finetune, validation or test)",
+ "job_id": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+ "raw": "raw/20261025-emerald-dd-pilot/01a170c2-72b7-74bd-a439-40a869cc85fc",
+ "written_utc": "2026-10-25T01:52:33Z",
+ "submitted_utc": "2026-10-25T01:52:34Z",
+ "ledger_rows": 1,
+ "ledger_check": {
+  "task": {
+   "want": "emerald-dd-pilot",
+   "got": "emerald-dd-pilot",
+   "ok": true
+  },
+  "device": {
+   "want": "emerald",
+   "got": "emerald",
+   "ok": true
+  },
+  "calibration_set_id": {
+   "want": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "got": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "ok": true
+  },
+  "qubits": {
+   "want": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "got": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "ok": true
+  },
+  "circuits x shots": {
+   "want": "1 x 1000",
+   "got": "1 x 1000",
+   "ok": true
+  },
+  "job id": {
+   "want": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+   "got": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+   "ok": true
+  },
+  "purpose": {
+   "want": "emerald-dd-pilot DDP E1 DD on (1 circuits x 1000 shots) [dd=ENABLED,dd_strategy=879fe63c]",
+   "got": "emerald-dd-pilot DDP E1 DD on (1 circuits x 1000 shots) [dd=ENABLED,dd_strategy=879fe63c]",
+   "ok": true
+  }
+ },
+ "meta_check": {
+  "qubit_mapping": true,
+  "physical_qubits": true,
+  "measured_qubits": true,
+  "circuit_order": true,
+  "compilation_options": true,
+  "calibration_set_id": true,
+  "shots": true,
+  "circuits": true,
+  "success": true,
+  "timeline": true
+ },
+ "server": {
+  "status": "completed",
+  "compilation_options": {
+   "max_circuit_duration_over_t2": null,
+   "heralding_mode": "none",
+   "move_gate_validation": "strict",
+   "move_gate_frame_tracking": "full",
+   "active_reset_cycles": null,
+   "dd_mode": "enabled",
+   "dd_strategy": {
+    "merge_contiguous_waits": true,
+    "target_qubits": null,
+    "skip_leading_wait": true,
+    "skip_trailing_wait": true,
+    "gate_sequences": [
+     [
+      9,
+      "XYXYYXYX",
+      "asap"
+     ],
+     [
+      5,
+      "YXYX",
+      "asap"
+     ],
+     [
+      2,
+      "XX",
+      "center"
+     ]
+    ]
+   }
+  },
+  "shots": 1000,
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "native_sha256": [
+   "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458"
+  ],
+  "fetched_utc": "2026-10-25T01:52:41Z",
+  "via": "hw.retrieve_native(job_id, 'emerald').parameters (read-only)"
+ },
+ "server_check": {
+  "dd_mode": true,
+  "dd_strategy sequences": true,
+  "heralding and reset": true,
+  "circuits = native_sha256": true,
+  "shots": true,
+  "calibration_set_id": true
+ },
+ "sanity": [
+  {
+   "position": 0,
+   "circuit": "E1_d3_X_r03_eA",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      1000,
+      33
+     ],
+     "band": [
+      1000,
+      33
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 20.625",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.50025,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.05425,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.119625,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.10572083333333333,
+      "ratio_to_model": 1.1315177550939974
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    },
+    {
+     "check": "timeline: execution_started and execution_ended",
+     "value": [
+      "compilation_ended",
+      "compilation_started",
+      "completed",
+      "created",
+      "execution_ended",
+      "execution_started",
+      "post_processing_ended",
+      "post_processing_started",
+      "ready",
+      "received",
+      "validation_ended",
+      "validation_started"
+     ],
+     "band": [
+      "execution_started",
+      "execution_ended"
+     ],
+     "pass": true
+    },
+    {
+     "check": "detection fraction against the priors' own",
+     "value": 0.119625,
+     "band": [
+      0.05286041666666667,
+      0.21144166666666667
+     ],
+     "pass": true,
+     "info": {
+      "model": 0.10572083333333333,
+      "ratio": 1.1315177550939974,
+      "batch_dd_off": [
+       0.134208,
+       0.136833,
+       0.124729
+      ]
+     }
+    },
+    {
+     "check": "decoded P_L against the batch's DD-off P_L",
+     "value": 0.081,
+     "band": "<= 2 x 0.0995 = 0.1990",
+     "pass": true,
+     "info": {
+      "pm_failures": 81,
+      "shots": 1000,
+      "wilson95": [
+       0.0656496215412003,
+       0.0995572020696949
+      ],
+      "obs_flips": 196,
+      "batch_dd_off": [
+       {
+        "batch": 1,
+        "job_id": "01a17093-aba4-773f-8755-4727f0c943ee",
+        "pm_failures": 167,
+        "shots": 2000
+       },
+       {
+        "batch": 2,
+        "job_id": "01a17097-6a9d-70e2-9ec4-6b8669dce3d4",
+        "pm_failures": 199,
+        "shots": 2000
+       },
+       {
+        "batch": 3,
+        "job_id": "01a170a1-17bf-77ad-a986-fadac8637f39",
+        "pm_failures": 167,
+        "shots": 2000
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "ok": true,
+ "checked_utc": "2026-10-25T01:52:41Z"
+}

@@ -1,0 +1,16 @@
+{
+ "label": "HARDWARE",
+ "device": "emerald",
+ "batch": 2,
+ "split": "finetune+validation",
+ "priors": "hardware_noise (79092cf)",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E1/b2_E1_d3_X_r01_eA",
+ "shots": 2000,
+ "det_rate_mean": 0.05075,
+ "same_stab_lag1": 0.016625141829639534,
+ "same_stab_lag2": null,
+ "same_stab_lag3": null,
+ "cross_stab_lag0": 0.004723655182542692,
+ "cross_stab_lag1": 0.0020962519425888845
+}

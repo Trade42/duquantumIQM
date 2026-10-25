@@ -1,0 +1,182 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "emerald-b3",
+ "device": "emerald",
+ "batch": 3,
+ "split": "test",
+ "job": "E-B3-4-E1",
+ "job_id": "01a170a2-0517-758f-ab18-4108f91e97fb",
+ "position_in_job": 3,
+ "circuit": "E1_d3_X_r15_eB",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "priors": "hardware_noise (79092cf)",
+ "prior": {
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "family": "surface_memory",
+  "readout_window_ns": 360.0,
+  "readout_window_source": "measure_ns (no compile data: probe only)",
+  "delay_ns": 0.0,
+  "idle_ns": 360.0,
+  "idle_channel": "depolarize",
+  "idle_frame": null,
+  "t2": "ramsey",
+  "final_readout": "measure_fidelity (unheralded)",
+  "idle_after_last_round": false
+ },
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    2000,
+    129
+   ],
+   "band": [
+    2000,
+    129
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 0,
+   "band": "<= 16.7188",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": 0.500875,
+   "band": [
+    0.4,
+    0.6
+   ],
+   "pass": true,
+   "info": {
+    "columns": [
+     1,
+     3,
+     4,
+     6
+    ],
+    "x_type": [],
+    "z_type": [
+     1,
+     3,
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.07175,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "x_type": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "z_type": []
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.18894166666666667,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": 0.13386958333333332,
+    "ratio_to_model": 1.411386081603053
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB4",
+    "QB5",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20",
+    "QB25",
+    "QB26",
+    "QB27",
+    "QB28",
+    "QB33",
+    "QB34"
+   ],
+   "band": [
+    "QB4",
+    "QB5",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20",
+    "QB25",
+    "QB26",
+    "QB27",
+    "QB28",
+    "QB33",
+    "QB34"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "per_round_detection_rate": {
+  "0": 0.07175,
+  "1": 0.14425,
+  "2": 0.158875,
+  "3": 0.1720625,
+  "4": 0.1873125,
+  "5": 0.1880625,
+  "6": 0.1875,
+  "7": 0.1988125,
+  "8": 0.1985,
+  "9": 0.2046875,
+  "10": 0.209375,
+  "11": 0.2148125,
+  "12": 0.2233125,
+  "13": 0.22525,
+  "14": 0.216375,
+  "15": 0.138125
+ },
+ "model_with_idle": {
+  "shots": 20000,
+  "seed": 2026,
+  "idle_ns": 360.0,
+  "detection_fraction": 0.13386958333333332,
+  "all_zero": 0.0,
+  "random_first_mean": 0.5002125,
+  "deterministic_first_misread": 0.061725
+ },
+ "numbers": {
+  "shots": 2000,
+  "det_rate": 0.18894166666666667,
+  "all_zero": 0,
+  "obs_flips": 899,
+  "pm_failures": 805
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T01:19:09Z",
+ "commit": "9b6bbf4defb27a696b8c2d506feb5be9651cd09a"
+}

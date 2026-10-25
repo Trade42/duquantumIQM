@@ -1,0 +1,621 @@
+{
+ "team_generator": "/home/sal/duquantumIQM/worktrees/team-main/challenge/surface_code.py",
+ "team_head": "01951f8138b2eded29af0aa053363b5ec7fc1d4e",
+ "method": "orchestration/scratch/gen-crosscheck/crosscheck.py record sets, compared per detector in order, plus get_detector_coordinates() and the observable",
+ "circuits": 68,
+ "pass": true,
+ "rows": [
+  {
+   "circuit": "E1_d3_Z_r01_eA",
+   "detectors": "8/8",
+   "measurements": "17/17",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r02_eA",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r03_eA",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r04_eA",
+   "detectors": "32/32",
+   "measurements": "41/41",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r05_eA",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r06_eA",
+   "detectors": "48/48",
+   "measurements": "57/57",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r08_eA",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r10_eA",
+   "detectors": "80/80",
+   "measurements": "89/89",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r12_eA",
+   "detectors": "96/96",
+   "measurements": "105/105",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r15_eA",
+   "detectors": "120/120",
+   "measurements": "129/129",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r20_eA",
+   "detectors": "160/160",
+   "measurements": "169/169",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r01_eA",
+   "detectors": "8/8",
+   "measurements": "17/17",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r02_eA",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r03_eA",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r04_eA",
+   "detectors": "32/32",
+   "measurements": "41/41",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r05_eA",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r06_eA",
+   "detectors": "48/48",
+   "measurements": "57/57",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r08_eA",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r10_eA",
+   "detectors": "80/80",
+   "measurements": "89/89",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r12_eA",
+   "detectors": "96/96",
+   "measurements": "105/105",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r15_eA",
+   "detectors": "120/120",
+   "measurements": "129/129",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r20_eA",
+   "detectors": "160/160",
+   "measurements": "169/169",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r01_eB",
+   "detectors": "8/8",
+   "measurements": "17/17",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r02_eB",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r03_eB",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r04_eB",
+   "detectors": "32/32",
+   "measurements": "41/41",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r05_eB",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r06_eB",
+   "detectors": "48/48",
+   "measurements": "57/57",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r08_eB",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r10_eB",
+   "detectors": "80/80",
+   "measurements": "89/89",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r12_eB",
+   "detectors": "96/96",
+   "measurements": "105/105",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r15_eB",
+   "detectors": "120/120",
+   "measurements": "129/129",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_Z_r20_eB",
+   "detectors": "160/160",
+   "measurements": "169/169",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r01_eB",
+   "detectors": "8/8",
+   "measurements": "17/17",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r02_eB",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r03_eB",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r04_eB",
+   "detectors": "32/32",
+   "measurements": "41/41",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r05_eB",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r06_eB",
+   "detectors": "48/48",
+   "measurements": "57/57",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r08_eB",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r10_eB",
+   "detectors": "80/80",
+   "measurements": "89/89",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r12_eB",
+   "detectors": "96/96",
+   "measurements": "105/105",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r15_eB",
+   "detectors": "120/120",
+   "measurements": "129/129",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E1_d3_X_r20_eB",
+   "detectors": "160/160",
+   "measurements": "169/169",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r02_eA_t01000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r02_eA_t02000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r02_eA_t05000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r03_eA_t01000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r03_eA_t02000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r03_eA_t05000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r05_eA_t01000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r05_eA_t02000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r05_eA_t05000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r08_eA_t01000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r08_eA_t02000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_Z_r08_eA_t05000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r02_eA_t01000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r02_eA_t02000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r02_eA_t05000ns",
+   "detectors": "16/16",
+   "measurements": "25/25",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r03_eA_t01000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r03_eA_t02000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r03_eA_t05000ns",
+   "detectors": "24/24",
+   "measurements": "33/33",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r05_eA_t01000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r05_eA_t02000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r05_eA_t05000ns",
+   "detectors": "40/40",
+   "measurements": "49/49",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r08_eA_t01000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r08_eA_t02000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  },
+  {
+   "circuit": "E4_d3_X_r08_eA_t05000ns",
+   "detectors": "64/64",
+   "measurements": "73/73",
+   "same_detectors_in_order": true,
+   "same_coordinates": true,
+   "same_observable": true,
+   "pass": true
+  }
+ ]
+}

@@ -1,0 +1,4839 @@
+{
+ "E3_assign_all0": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 556.0,
+  "native_sha256": "ad84f6b841f569c2e2560ec9e1bba1c47e000bc6659ccc6952346c78bd668027",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "measure": 20
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "00000000000000000000",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "187dede45acd231cc944a8d2a54b4b7cd20733982d9b2a9f85c8e9c7878cd1e3",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "3f52b940166b6e7ea8445d7e0b28af63a8cb10be2111851f97afc5a792efad32",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_all1": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "86233b71ef553b42c54ad81454c3983b3938810c5d7d879b1ec27e54e00af9f5",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 20
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11111111111111111111",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "44fec1e01a690ce9da6b217dd00a91cb672bed4afccc295e0819beac90b2480d",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "af4c2d9582bf9693807d0f2c2f38ce98ec914acedb186a5e89278327461ba12b",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand00": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "2e45480daf9175da69f57076a88e0c3c6591036b96434d1216c972a2c75efe04",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "10010000101111101100",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "076363a22d33a0c09fc642c6adf4881238e02e7abf326634bae73395c1e636ca",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "e386536e223db0ff53a6856ebb0613dae170e5a7addb2ffd4608535dfcdb48c0",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand01": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "59c011d3e97cc8324d3a70abd8b79473bb46f42f34dce1f37d618f08c627a482",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01110111011110000000",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "456ac61f396ba969fba796efa2735c641e4d8e540cba4e0483ab1f242af1024b",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "433aa00ca78c64cee172570a8d4d6b026b61e3cea853a83dd8a0f3d50ae739e8",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand02": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "f23175f70fde6ba351957c66a575a4f74a67b1017942b7334d8c3aa286c85fea",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 7
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11000110001000010010",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "495412b5317e2251ca53fd72431a5e1903ee360fa7403fd0fa73d0d8532067e9",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "84708095f5dccb9cb28cd5694e30e64d358c968abc9214021a1c373bda17cf4a",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand03": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "c4fa52e81363dcc47d90aa9f9416c5630a396c806e760007d12c6d2edf3bcd62",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 12
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "10111111000111100100",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "d4d4ff45af76d6971355f8cfc407f6cc1861561f7e33a2e1fedbd7c168fd8794",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "35805e72c9ab8aa889d8f6c3a99b3f5c92a508e5c072f08047e2566105383665",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand04": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "1896737e09d7227bcc46a5cddb2e70f6faad4178522637782f92677078fea79d",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 8
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01000001001001100111",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "508c83e47f2f81f1e5f52ddd5ee9292078369a349b232cddaffd3bc6daf10df6",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "1e10d9e25b18ff9d165c60b48a3dddbdab265508909d652b9e81563d9b2fa927",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand05": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "d1a0e5d40738f3cc7bf2d109f287edf15ae354906fb29b4533d0897f50d55465",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 9
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01000010100111101001",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "d5d44e5711ab4f32d65dcace0b7ac63a25c491e4ba23692bde3c6a56e39172c8",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "c0769a7971df1638a6481c4ee2d3a9aa55dcfdc33fa1c37603bb7776a050db9f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand06": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "8fc19b515b901f1a1de2166e34312e8d1031db8c59a7f6e61a96b4eaf635c2dd",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 9
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11101000010100001110",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "a986fef0e23402436b61eee02097d0708b8e6a3b2ace34a8f6f820d93d50a692",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "1e1b1c860a5be11e5d790ffc341d702c07f5135d87e870c044b8f30fd008f597",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand07": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "9bbd0caf39beec10350a7d5c221af6e35ab5464a1a6fa7afb396f6b473bddd8b",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01100111111100010000",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "fb3ecd52303c8b726c7420137bd3d52551cf1e9923c582cc6ae1f5b34e54fa63",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "44096e5877df95f828f1a2aff7634a01661cf45768b990cbaab5b968db6d2410",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand08": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "cc55246080225505bc0508c79884039ab5f964eb5cb3f6cb50dc8abae2bbffe1",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "10010000001110110111",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "586a8fb0c6b76f4a6fd2cfc614d35f5cdb34df9ab98739a571a8e60829ab3393",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "a315877b297139b28c25d2679322fe555d6827b6e678e43049a3bfce9d2689d2",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand09": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "5907e7c8ee4b0dcbb90bade775f4365e670d2b6129f55bdb91a292028abe3f49",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 12
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01000101110101111011",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "03637cde5e47a827c587ff5e1262c15c4f90d55b728094f600624833a643b56c",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "800fd5843ddc726a5e10a1f8e01e8a6b48c841ba8dec97049c7671ec96148f0d",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand10": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "632688f9209cacf8a5745e0cf33da72a37d280c56e7193ef27cc82f12ed92c54",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11001100010001110110",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "8aba5900e08d71cd3c3922fa20eb907602e1fc02ae47e353d7cb39315a9ed66f",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "9b72ce40d0582e71ec5e44cb708b0c68d19cb5074e7e58d631635b988db16416",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand11": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "5d26babe6f1160810975c98dfadb61689d1b128e5b1ffb80e7c8f90ff2b39559",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 9
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01101110000000110011",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "67fa7855448392926f6c840022ee7139af74ce15776eba7aaf311c5ed4823084",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "ad347e32426072fa204938c86c15f2764f395deb2740a5e0664acfd27c3828bf",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand12": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "7ee9769b8da81cb1e7de4cd3b504ebd036f6d1dc97e97ae52520c795f960fea3",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 10
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11111010100001010001",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "7f45244112419ba28ce5048fe17735c30e4fc414677f31a254391d0153bf2553",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "ce7737052d412d6d21cd1ed0d28e479c6d0916e23c366aa285859f33f9665997",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand13": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "b2104a7a09e736c1c7b5fac0f20bc293f0848c0e16f21cf850e81cc771388c92",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 14
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01111101000111111011",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "4eb4bc522906689ef09269c2845110d5006c221973eaaebf9d93a4022141b019",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "c4a7a646102a29fadc300a58d1b4391133c494c3b10668dc8f15de076ef81239",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand14": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "cbdb619bccb5201bf4fc1e15b02663058dde40ef5cdef85c66d6b2fc9fc38ddc",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 7
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "11100000010000101010",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "87d8d3f864c4c0e88ecac34332f42859a56594c8d95f137b7c5f5d73eab5f7fb",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "80dde95827d35369b4dcbabb70c72f3da94d8dcf6de73ec9433da865b243ca97",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_assign_rand15": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 572.0,
+  "native_sha256": "d53a37c006eb282d333bd3a4c77cf511e9cd5f9f5378350b6ca5f89fd43f0c30",
+  "num_detectors": 20,
+  "num_measurements": 20,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 1,
+   "measure": 20,
+   "r": 7
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "assignment",
+   "patch": "all20",
+   "prep": "01000100110001000011",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "b93e37135bb32bb026c9dddbdd73919278065f85771ea085761515087a8efe8a",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "d9b7dbc46cd6bd3afcf4eead62b280f8617f5a92ae7431255eac357d6ca96013",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_repeat_all0_k15": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8340.0,
+  "native_sha256": "cefa8bc9317e88019387ed5715a62ed28e0b11de314ab024eda3e19f73f268ff",
+  "num_detectors": 300,
+  "num_measurements": 300,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 14,
+   "measure": 300
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "repeated",
+   "patch": "all20",
+   "prep": "00000000000000000000",
+   "rounds": 15
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "3a98bf9ae650f8d43826c89eff46936a770d8f696d255622c6a612b2d96addc0",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "39ff10f5696eb0b56be173575d8e9fefbc2c6cb0cf561953845ce26ad0ce03f1",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_repeat_all1_k15": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8356.0,
+  "native_sha256": "52e93da7d73ae386f1c3a14bb468edb454adb864ca6b87359cff84dbae782d6f",
+  "num_detectors": 300,
+  "num_measurements": 300,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 15,
+   "measure": 300,
+   "r": 20
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "repeated",
+   "patch": "all20",
+   "prep": "11111111111111111111",
+   "rounds": 15
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "3429f28fbfc46e7259b06f90587563eb2fa51b294e08de0636c3f7302c393e84",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "71a5d4320c80539ec8edc9e563c5086c5c368c07554435c045fac4844b4a91d9",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_repeat_chkA_k15": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8356.0,
+  "native_sha256": "8f7540bf130a43bbf4e109e2ec9c36964e0f733e6a6d91dd8b93c880ecc9b1b7",
+  "num_detectors": 300,
+  "num_measurements": 300,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 15,
+   "measure": 300,
+   "r": 11
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "repeated",
+   "patch": "all20",
+   "prep": "10101010101010101101",
+   "rounds": 15
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "88312b6d5f4fe6adaee71ae5ba723354d6c5d3af7014b2fd20dcd581a13e776b",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "b65a764bad06f72848824a0d1bc83f176d69dd2fe81fc94518030c5290a9a502",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E3_repeat_chkB_k15": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8356.0,
+  "native_sha256": "efd845dde0befeb5391107107013ad3791f30742501b79c7d272095c87cbe144",
+  "num_detectors": 300,
+  "num_measurements": 300,
+  "num_observables": 0,
+  "ops": {
+   "barrier": 15,
+   "measure": 300,
+   "r": 9
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "family": "readout",
+   "kind": "repeated",
+   "patch": "all20",
+   "prep": "01010101010101010010",
+   "rounds": 15
+  },
+  "placement": {
+   "0": "QB1",
+   "1": "QB2",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB18",
+   "18": "QB19",
+   "19": "QB20",
+   "2": "QB3",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10"
+  },
+  "qasm_sha256": "18331fedd29a65ed180ad76fff64c2ddf57e700b05ec67a3e6cc45614e13a012",
+  "roles": {
+   "0": "readout",
+   "1": "readout",
+   "10": "readout",
+   "11": "readout",
+   "12": "readout",
+   "13": "readout",
+   "14": "readout",
+   "15": "readout",
+   "16": "readout",
+   "17": "readout",
+   "18": "readout",
+   "19": "readout",
+   "2": "readout",
+   "3": "readout",
+   "4": "readout",
+   "5": "readout",
+   "6": "readout",
+   "7": "readout",
+   "8": "readout",
+   "9": "readout"
+  },
+  "stabilizers": {
+   "0": {
+    "label": "M(QB1)",
+    "pauli": "Z",
+    "support": [
+     0
+    ]
+   },
+   "1": {
+    "label": "M(QB2)",
+    "pauli": "Z",
+    "support": [
+     1
+    ]
+   },
+   "10": {
+    "label": "M(QB11)",
+    "pauli": "Z",
+    "support": [
+     10
+    ]
+   },
+   "11": {
+    "label": "M(QB12)",
+    "pauli": "Z",
+    "support": [
+     11
+    ]
+   },
+   "12": {
+    "label": "M(QB13)",
+    "pauli": "Z",
+    "support": [
+     12
+    ]
+   },
+   "13": {
+    "label": "M(QB14)",
+    "pauli": "Z",
+    "support": [
+     13
+    ]
+   },
+   "14": {
+    "label": "M(QB15)",
+    "pauli": "Z",
+    "support": [
+     14
+    ]
+   },
+   "15": {
+    "label": "M(QB16)",
+    "pauli": "Z",
+    "support": [
+     15
+    ]
+   },
+   "16": {
+    "label": "M(QB17)",
+    "pauli": "Z",
+    "support": [
+     16
+    ]
+   },
+   "17": {
+    "label": "M(QB18)",
+    "pauli": "Z",
+    "support": [
+     17
+    ]
+   },
+   "18": {
+    "label": "M(QB19)",
+    "pauli": "Z",
+    "support": [
+     18
+    ]
+   },
+   "19": {
+    "label": "M(QB20)",
+    "pauli": "Z",
+    "support": [
+     19
+    ]
+   },
+   "2": {
+    "label": "M(QB3)",
+    "pauli": "Z",
+    "support": [
+     2
+    ]
+   },
+   "3": {
+    "label": "M(QB4)",
+    "pauli": "Z",
+    "support": [
+     3
+    ]
+   },
+   "4": {
+    "label": "M(QB5)",
+    "pauli": "Z",
+    "support": [
+     4
+    ]
+   },
+   "5": {
+    "label": "M(QB6)",
+    "pauli": "Z",
+    "support": [
+     5
+    ]
+   },
+   "6": {
+    "label": "M(QB7)",
+    "pauli": "Z",
+    "support": [
+     6
+    ]
+   },
+   "7": {
+    "label": "M(QB8)",
+    "pauli": "Z",
+    "support": [
+     7
+    ]
+   },
+   "8": {
+    "label": "M(QB9)",
+    "pauli": "Z",
+    "support": [
+     8
+    ]
+   },
+   "9": {
+    "label": "M(QB10)",
+    "pauli": "Z",
+    "support": [
+     9
+    ]
+   }
+  },
+  "stim_sha256": "54dc6cfbbcab5ab67c48cc82e38731bcd06c47bf4e1b936d6eca99f86a764e8e",
+  "swaps": 0,
+  "target": "hardware"
+ }
+}

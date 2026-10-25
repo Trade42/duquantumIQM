@@ -1,0 +1,1645 @@
+{
+ "format": "dqiqm.characterization.pulse-plan/1",
+ "device": "garnet",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "source": "a18a947f-0408-4628-81ea-1715637e434f.json",
+ "status": "designed only: needs a guarded hw.submit_playlist and the mentors' yes on submission rights",
+ "prx_experiments": {
+  "B1_amplitude_coarse": {
+   "setting": "gates.prx.drag_crf_sx.<q>.amplitude_i",
+   "half_range": {
+    "relative": 0.08
+   },
+   "points": 17,
+   "shots": 500,
+   "probe": [
+    "C1_amp_x_n05",
+    "C1_amp_x_n07"
+   ],
+   "fit": "P(n05) - P(n07) ~ C sin(6 eps(A)), eps(A) = (pi/2)(A/A_ref - 1) + eps_0: the zero of eps(A)",
+   "why": "Rabi in amplification units: N = 5, 7 keep N eps within +-0.9 rad over +-8%, so no aliasing"
+  },
+  "B1_amplitude_fine": {
+   "setting": "gates.prx.drag_crf_sx.<q>.amplitude_i",
+   "half_range": {
+    "relative": 0.01,
+    "around": "the coarse zero"
+   },
+   "points": 9,
+   "shots": 1000,
+   "probe": [
+    "C1_amp_x_n41",
+    "C1_amp_x_n43"
+   ],
+   "fit": "the same, with N = 41, 43: about 8x the coarse sensitivity",
+   "why": "the C1 eps resolution (about 0.0004 rad) at the amplitude that zeroes it"
+  },
+  "B2_drag": {
+   "setting": "gates.prx.drag_crf_sx.<q>.amplitude_q",
+   "half_range": {
+    "relative": 0.5
+   },
+   "points": 11,
+   "shots": 500,
+   "probe": [
+    "C1_tilt_p16_pos",
+    "C1_tilt_p16_neg"
+   ],
+   "fit": "eta(Q) is linear near the optimum: the zero of [P(pos) - P(neg)]; the leakage objective needs C3's readout",
+   "why": "DRAG sets the phase error and the |2> leakage of the 16 ns pulse; without a |2> readout only eta is seen, so the sweep stays within +-50% of the saved Q (Q/I stays within the patch's -0.16..-0.22 x 1.5)"
+  },
+  "B3_detuning": {
+   "setting": "controllers.<q>.drive.frequency",
+   "half_range": {
+    "absolute_hz": 200000.0
+   },
+   "points": 0,
+   "shots": 500,
+   "probe": [
+    "Ramsey with virtual detuning: prx(pi/2, 0), delay(t), prx(pi/2, 2 pi f_v t), t in 0..4 us (a circuit job: no pulse access needed to measure it)"
+   ],
+   "fit": "the fringe frequency minus f_v is the drive detuning; the correction is drive.frequency - detuning",
+   "why": "a detuning tilts every pulse (eta) and precesses idles; set once from the Ramsey fit, capped at +-200 kHz"
+  },
+  "B4_virtual_phase": {
+   "setting": "gates.prx.drag_crf_sx.<q>.rz_before and .rz_after (kept equal, as calibrated)",
+   "half_range": {
+    "absolute_rad": 0.1
+   },
+   "points": 11,
+   "shots": 500,
+   "probe": [
+    "C1_tilt_p16_pos",
+    "C1_tilt_p16_neg"
+   ],
+   "fit": "eta(rz) is linear: the zero; a virtual change, so it costs no hardware risk",
+   "why": "the static part of the phase error per pulse; first-order degenerate with B2 in C1, so B2 runs at the saved Q while B4 runs, and B2 is settled by leakage once C3 can run"
+  }
+ },
+ "cz_experiments": {
+  "B5_coupler_amplitude": {
+   "setting": "gates.cz.slepian_crf.<QBa__QBb>.coupler.amplitude",
+   "half_range": {
+    "relative": 0.04
+   },
+   "points": 9,
+   "shots": 500,
+   "probe": [
+    "C2 layer circuits, target = ancilla, n in {1, 9}, s in {0, 1}, 4 analysis phases (32 circuits)"
+   ],
+   "fit": "delta(A) is monotonic near the calibrated point: the zero of delta; the contrast at n = 9 and the control's P1 (s = 1) flag leakage and decay",
+   "why": "the coupler pulse sets the |11>-|20> interaction and so the conditional phase; +-4% stays near the calibrated trajectory, away from other crossings"
+  },
+  "B6_qubit_flux_amplitude": {
+   "setting": "gates.cz.slepian_crf.<QBa__QBb>.qubit.amplitude",
+   "half_range": {
+    "relative": 0.04
+   },
+   "points": 9,
+   "shots": 500,
+   "probe": [
+    "as B5"
+   ],
+   "fit": "as B5; run after B5, at its zero",
+   "why": "the fluxed qubit's detuning trajectory; second knob on delta and on the |20> population"
+  },
+  "B7_local_phase": {
+   "setting": "gates.cz.slepian_crf.<QBa__QBb>.rz.<q> for both qubits",
+   "half_range": {
+    "absolute_rad": 0.2
+   },
+   "points": 0,
+   "shots": 500,
+   "probe": [
+    "C2 (both orientations), once, at the corrected value"
+   ],
+   "fit": "rz.<q> -= phi_q from the table; one verification run",
+   "why": "virtual and zero-risk; the same as the circuit-level compensation (phase tracking) but inside the gate"
+  }
+ },
+ "acceptance": [
+  "a new value is used only in our own jobs, never written to IQM's calibration",
+  "accept it only if the probe re-run at the new value moves the coherent error toward 0 by at least 3 sigma (eps, eta, delta or phi, from the C1/C2 fit)",
+  "and the incoherent part does not get worse: lam (C1) or the n = 9 contrast (C2) within 2 sigma of the saved value's",
+  "and the E1 pilot (E1_d3_Z_r03_pA, 1,000 shots) at the new values has a detection fraction no higher than at the saved ones (Wilson intervals)",
+  "any change of more than the half-range, or any probe that fails its pilot band, stops the run"
+ ],
+ "qubits": {
+  "QB1": {
+   "amplitude_i": {
+    "centre": 0.21722297293602957,
+    "low": 0.1998451351011472,
+    "high": 0.23460081077091194,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04753721502571069,
+    "low": -0.07130582253856604,
+    "high": -0.023768607512855346,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.05670189500442133,
+    "low": -0.04329810499557868,
+    "high": 0.15670189500442133,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4599102201.081829,
+    "low": 4598902201.081829,
+    "high": 4599302201.081829,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB2": {
+   "amplitude_i": {
+    "centre": 0.2880853998467756,
+    "low": 0.26503856785903357,
+    "high": 0.31113223183451766,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.05361272530685504,
+    "low": -0.08041908796028256,
+    "high": -0.02680636265342752,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.05996334633243513,
+    "low": -0.04003665366756488,
+    "high": 0.15996334633243514,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4630035184.838796,
+    "low": 4629835184.838796,
+    "high": 4630235184.838796,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB4": {
+   "amplitude_i": {
+    "centre": 0.21412215825855405,
+    "low": 0.19699238559786972,
+    "high": 0.23125193091923837,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04493437146138888,
+    "low": -0.06740155719208332,
+    "high": -0.02246718573069444,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.07486845825260266,
+    "low": -0.025131541747397346,
+    "high": 0.17486845825260267,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4717377616.636493,
+    "low": 4717177616.636493,
+    "high": 4717577616.636493,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB5": {
+   "amplitude_i": {
+    "centre": 0.28123248735578726,
+    "low": 0.2587338883673243,
+    "high": 0.3037310863442502,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.05032292740271686,
+    "low": -0.07548439110407529,
+    "high": -0.02516146370135843,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.057027674934401106,
+    "low": -0.0429723250655989,
+    "high": 0.15702767493440112,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4510407181.341485,
+    "low": 4510207181.341485,
+    "high": 4510607181.341485,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB6": {
+   "amplitude_i": {
+    "centre": 0.257719660314806,
+    "low": 0.2371020874896215,
+    "high": 0.2783372331399905,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04872142270218034,
+    "low": -0.07308213405327052,
+    "high": -0.02436071135109017,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.08055878338517672,
+    "low": -0.019441216614823287,
+    "high": 0.18055878338517672,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4661262226.803187,
+    "low": 4661062226.803187,
+    "high": 4661462226.803187,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB7": {
+   "amplitude_i": {
+    "centre": 0.2352931090802785,
+    "low": 0.21646966035385623,
+    "high": 0.2541165578067008,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04160367394084848,
+    "low": -0.06240551091127272,
+    "high": -0.02080183697042424,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.09328326625758988,
+    "low": -0.006716733742410122,
+    "high": 0.1932832662575899,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4511836487.40463,
+    "low": 4511636487.40463,
+    "high": 4512036487.40463,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB8": {
+   "amplitude_i": {
+    "centre": 0.12235489687955872,
+    "low": 0.11256650512919403,
+    "high": 0.13214328862992342,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.023100505232219373,
+    "low": -0.03465075784832906,
+    "high": -0.011550252616109686,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.052471152939211584,
+    "low": -0.04752884706078842,
+    "high": 0.1524711529392116,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4645314987.404834,
+    "low": 4645114987.404834,
+    "high": 4645514987.404834,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB9": {
+   "amplitude_i": {
+    "centre": 0.10412776559259972,
+    "low": 0.09579754434519173,
+    "high": 0.1124579868400077,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.020777902088434053,
+    "low": -0.03116685313265108,
+    "high": -0.010388951044217026,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.08027528953164412,
+    "low": -0.019724710468355888,
+    "high": 0.18027528953164412,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4534681620.916264,
+    "low": 4534481620.916264,
+    "high": 4534881620.916264,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB10": {
+   "amplitude_i": {
+    "centre": 0.1151996561129539,
+    "low": 0.10598368362391758,
+    "high": 0.12441562860199021,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.02424214400427229,
+    "low": -0.03636321600640843,
+    "high": -0.012121072002136146,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.04536937211370198,
+    "low": -0.05463062788629802,
+    "high": 0.145369372113702,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4770241161.801243,
+    "low": 4770041161.801243,
+    "high": 4770441161.801243,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB11": {
+   "amplitude_i": {
+    "centre": 0.24545501274149653,
+    "low": 0.22581861172217682,
+    "high": 0.26509141376081624,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04597136548561915,
+    "low": -0.06895704822842873,
+    "high": -0.022985682742809575,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.10775120145613894,
+    "low": 0.007751201456138931,
+    "high": 0.20775120145613896,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4502769210.8324175,
+    "low": 4502569210.8324175,
+    "high": 4502969210.8324175,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB12": {
+   "amplitude_i": {
+    "centre": 0.27685452678811223,
+    "low": 0.25470616464506324,
+    "high": 0.2990028889311612,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.04571604706452643,
+    "low": -0.06857407059678965,
+    "high": -0.022858023532263214,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.0427972102773754,
+    "low": -0.0572027897226246,
+    "high": 0.1427972102773754,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4691955887.81118,
+    "low": 4691755887.81118,
+    "high": 4692155887.81118,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB13": {
+   "amplitude_i": {
+    "centre": 0.12575631094277617,
+    "low": 0.11569580606735408,
+    "high": 0.13581681581819827,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.024916578540544375,
+    "low": -0.03737486781081656,
+    "high": -0.012458289270272187,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.08068892244958764,
+    "low": -0.019311077550412364,
+    "high": 0.18068892244958765,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4506936484.177318,
+    "low": 4506736484.177318,
+    "high": 4507136484.177318,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB14": {
+   "amplitude_i": {
+    "centre": 0.16468048906642158,
+    "low": 0.15150604994110786,
+    "high": 0.1778549281917353,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.02659848722850703,
+    "low": -0.03989773084276055,
+    "high": -0.013299243614253515,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.024282411719351,
+    "low": -0.075717588280649,
+    "high": 0.124282411719351,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4630598470.283725,
+    "low": 4630398470.283725,
+    "high": 4630798470.283725,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB15": {
+   "amplitude_i": {
+    "centre": 0.1289978622112625,
+    "low": 0.11867803323436149,
+    "high": 0.1393176911881635,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.02370083497580117,
+    "low": -0.035551252463701756,
+    "high": -0.011850417487900585,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.09955888189314452,
+    "low": -0.000441118106855487,
+    "high": 0.19955888189314452,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4516007689.158558,
+    "low": 4515807689.158558,
+    "high": 4516207689.158558,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB16": {
+   "amplitude_i": {
+    "centre": 0.10653870211546176,
+    "low": 0.09801560594622483,
+    "high": 0.1150617982846987,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.018923808341269777,
+    "low": -0.028385712511904665,
+    "high": -0.009461904170634888,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.06704983416924745,
+    "low": -0.032950165830752554,
+    "high": 0.16704983416924746,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4623254456.348654,
+    "low": 4623054456.348654,
+    "high": 4623454456.348654,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB19": {
+   "amplitude_i": {
+    "centre": 0.199040503207776,
+    "low": 0.1831172629511539,
+    "high": 0.2149637434643981,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.03463364674017595,
+    "low": -0.05195047011026393,
+    "high": -0.017316823370087976,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.06918251986834355,
+    "low": -0.030817480131656458,
+    "high": 0.16918251986834354,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4644164982.701436,
+    "low": 4643964982.701436,
+    "high": 4644364982.701436,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  },
+  "QB20": {
+   "amplitude_i": {
+    "centre": 0.12403182265444952,
+    "low": 0.11410927684209356,
+    "high": 0.13395436846680547,
+    "margin": {
+     "relative": 0.08
+    }
+   },
+   "amplitude_q": {
+    "centre": -0.023363687586316607,
+    "low": -0.035045531379474915,
+    "high": -0.011681843793158304,
+    "margin": {
+     "relative": 0.5
+    }
+   },
+   "rz_before=rz_after": {
+    "centre": 0.03693191121852267,
+    "low": -0.06306808878147734,
+    "high": 0.13693191121852266,
+    "margin": {
+     "absolute_rad": 0.1
+    }
+   },
+   "drive_frequency_hz": {
+    "centre": 4516376408.729818,
+    "low": 4516176408.729818,
+    "high": 4516576408.729818,
+    "margin": {
+     "absolute_hz": 200000.0
+    }
+   }
+  }
+ },
+ "couplers": {
+  "QB10__QB11": {
+   "fluxed_qubit": "QB10",
+   "coupler.amplitude": {
+    "centre": 0.23688792665074743,
+    "low": 0.22741240958471753,
+    "high": 0.24636344371677732,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.14473263235199252,
+    "low": -0.15052193764607222,
+    "high": -0.13894332705791282,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB10": {
+    "centre": -2.6679729228913445,
+    "low": -2.8679729228913446,
+    "high": -2.4679729228913443,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB11": {
+    "centre": -2.441605383052014,
+    "low": -2.6416053830520143,
+    "high": -2.241605383052014,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB10__QB15": {
+   "fluxed_qubit": "QB10",
+   "coupler.amplitude": {
+    "centre": 0.11916192377047231,
+    "low": 0.11439544681965343,
+    "high": 0.1239284007212912,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.1263523247145505,
+    "low": -0.13140641770313252,
+    "high": -0.12129823172596847,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB10": {
+    "centre": 0.21129280311474696,
+    "low": 0.011292803114746952,
+    "high": 0.411292803114747,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB15": {
+    "centre": -2.4067943123602946,
+    "low": -2.606794312360295,
+    "high": -2.2067943123602944,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB10__QB5": {
+   "fluxed_qubit": "QB10",
+   "coupler.amplitude": {
+    "centre": 0.11747129110123963,
+    "low": 0.11277243945719005,
+    "high": 0.12217014274528921,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.13677914233667882,
+    "low": -0.14225030803014596,
+    "high": -0.13130797664321167,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB10": {
+    "centre": 2.1119834676168825,
+    "low": 1.9119834676168825,
+    "high": 2.3119834676168827,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB5": {
+    "centre": -2.1937928844213204,
+    "low": -2.3937928844213205,
+    "high": -1.9937928844213204,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB10__QB9": {
+   "fluxed_qubit": "QB10",
+   "coupler.amplitude": {
+    "centre": 0.1855406878498013,
+    "low": 0.17811906033580924,
+    "high": 0.19296231536379335,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.10696749067373625,
+    "low": -0.1112461903006857,
+    "high": -0.1026887910467868,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB10": {
+    "centre": 2.972387827446759,
+    "low": 2.772387827446759,
+    "high": 3.172387827446759,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB9": {
+    "centre": -2.1006631861302987,
+    "low": -2.300663186130299,
+    "high": -1.9006631861302987,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB12__QB11": {
+   "fluxed_qubit": "QB12",
+   "coupler.amplitude": {
+    "centre": 0.2024760080620777,
+    "low": 0.1943769677395946,
+    "high": 0.2105750483845608,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.054985423592425704,
+    "low": -0.05718484053612273,
+    "high": -0.05278600664872868,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB12": {
+    "centre": -1.5011446383377145,
+    "low": -1.7011446383377145,
+    "high": -1.3011446383377145,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB11": {
+    "centre": -2.160690946090086,
+    "low": -2.3606909460900862,
+    "high": -1.960690946090086,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB12__QB7": {
+   "fluxed_qubit": "QB12",
+   "coupler.amplitude": {
+    "centre": 0.1074471458760788,
+    "low": 0.10314926004103565,
+    "high": 0.11174503171112195,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.0377014689831108,
+    "low": -0.03920952774243523,
+    "high": -0.036193410223786374,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB12": {
+    "centre": 2.6446900264347777,
+    "low": 2.4446900264347775,
+    "high": 2.844690026434778,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB7": {
+    "centre": -2.2478307339581765,
+    "low": -2.4478307339581766,
+    "high": -2.0478307339581763,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB14__QB13": {
+   "fluxed_qubit": "QB14",
+   "coupler.amplitude": {
+    "centre": -0.0999667220956507,
+    "low": -0.10396539097947673,
+    "high": -0.09596805321182468,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.04905557158016747,
+    "low": 0.04709334871696077,
+    "high": 0.05101779444337417,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB14": {
+    "centre": 3.1328303358684018,
+    "low": 2.9328303358684016,
+    "high": 3.332830335868402,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB13": {
+    "centre": -2.1935220200188885,
+    "low": -2.3935220200188887,
+    "high": -1.9935220200188886,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB14__QB15": {
+   "fluxed_qubit": "QB14",
+   "coupler.amplitude": {
+    "centre": -0.09175354831667049,
+    "low": -0.0954236902493373,
+    "high": -0.08808340638400367,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.06828865933389396,
+    "low": 0.06555711296053819,
+    "high": 0.07102020570724972,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB14": {
+    "centre": 0.3487535723534725,
+    "low": 0.14875357235347247,
+    "high": 0.5487535723534724,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB15": {
+    "centre": -2.371152164890363,
+    "low": -2.5711521648903632,
+    "high": -2.171152164890363,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB14__QB9": {
+   "fluxed_qubit": "QB14",
+   "coupler.amplitude": {
+    "centre": 0.1223642620741922,
+    "low": 0.1174696915912245,
+    "high": 0.1272588325571599,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.09274495523968676,
+    "low": 0.08903515703009929,
+    "high": 0.09645475344927423,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB14": {
+    "centre": 3.053943104820794,
+    "low": 2.853943104820794,
+    "high": 3.2539431048207943,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB9": {
+    "centre": -2.287294168341446,
+    "low": -2.487294168341446,
+    "high": -2.0872941683414457,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB16__QB11": {
+   "fluxed_qubit": "QB16",
+   "coupler.amplitude": {
+    "centre": 0.1071249613470884,
+    "low": 0.10283996289320486,
+    "high": 0.11140995980097194,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.04368768288348725,
+    "low": 0.041940175568147754,
+    "high": 0.04543519019882674,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB16": {
+    "centre": 1.8413089477772395,
+    "low": 1.6413089477772396,
+    "high": 2.0413089477772397,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB11": {
+    "centre": -2.2688864755988076,
+    "low": -2.468886475598808,
+    "high": -2.0688864755988075,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB16__QB15": {
+   "fluxed_qubit": "QB16",
+   "coupler.amplitude": {
+    "centre": 0.167655881366404,
+    "low": 0.16094964611174783,
+    "high": 0.17436211662106016,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.058561802790015,
+    "low": 0.0562193306784144,
+    "high": 0.0609042749016156,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB16": {
+    "centre": -0.9787702906254444,
+    "low": -1.1787702906254445,
+    "high": -0.7787702906254443,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB15": {
+    "centre": -2.245265868999435,
+    "low": -2.445265868999435,
+    "high": -2.0452658689994347,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB16__QB20": {
+   "fluxed_qubit": "QB16",
+   "coupler.amplitude": {
+    "centre": 0.10345083587606778,
+    "low": 0.09931280244102507,
+    "high": 0.10758886931111049,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.05983273903022604,
+    "low": 0.057439429469017,
+    "high": 0.06222604859143508,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB16": {
+    "centre": -1.3106302613212364,
+    "low": -1.5106302613212363,
+    "high": -1.1106302613212364,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB20": {
+    "centre": -2.312657301877344,
+    "low": -2.5126573018773444,
+    "high": -2.112657301877344,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB19__QB15": {
+   "fluxed_qubit": "QB19",
+   "coupler.amplitude": {
+    "centre": 0.19115053645351832,
+    "low": 0.1835045149953776,
+    "high": 0.19879655791165904,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.03452399732682624,
+    "low": 0.03314303743375319,
+    "high": 0.03590495721989929,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB19": {
+    "centre": -2.7422819353835415,
+    "low": -2.9422819353835417,
+    "high": -2.5422819353835413,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB15": {
+    "centre": -2.251101827124846,
+    "low": -2.4511018271248464,
+    "high": -2.051101827124846,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB19__QB20": {
+   "fluxed_qubit": "QB19",
+   "coupler.amplitude": {
+    "centre": 0.15968336099874525,
+    "low": 0.15329602655879543,
+    "high": 0.16607069543869507,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.03278757953572235,
+    "low": 0.03147607635429346,
+    "high": 0.034099082717151244,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB19": {
+    "centre": -2.353094430035526,
+    "low": -2.553094430035526,
+    "high": -2.1530944300355257,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB20": {
+    "centre": -2.351124458132606,
+    "low": -2.5511244581326062,
+    "high": -2.151124458132606,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB2__QB1": {
+   "fluxed_qubit": "QB2",
+   "coupler.amplitude": {
+    "centre": 0.2746228370217683,
+    "low": 0.2636379235408976,
+    "high": 0.28560775050263904,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.21881480591160513,
+    "low": 0.2100622136751409,
+    "high": 0.22756739814806934,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB2": {
+    "centre": 1.916960807847384,
+    "low": 1.7169608078473841,
+    "high": 2.1169608078473843,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB1": {
+    "centre": -2.101528946881853,
+    "low": -2.301528946881853,
+    "high": -1.901528946881853,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB2__QB5": {
+   "fluxed_qubit": "QB2",
+   "coupler.amplitude": {
+    "centre": 0.13674380020067212,
+    "low": 0.13127404819264524,
+    "high": 0.142213552208699,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.06458043929467423,
+    "low": 0.06199722172288726,
+    "high": 0.0671636568664612,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB2": {
+    "centre": 1.476981640024844,
+    "low": 1.276981640024844,
+    "high": 1.6769816400248438,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB5": {
+    "centre": -2.518277078558498,
+    "low": -2.718277078558498,
+    "high": -2.3182770785584976,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB4__QB1": {
+   "fluxed_qubit": "QB4",
+   "coupler.amplitude": {
+    "centre": 0.149514789579463,
+    "low": 0.14353419799628447,
+    "high": 0.1554953811626415,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.06285349053317825,
+    "low": 0.06033935091185112,
+    "high": 0.06536763015450538,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB4": {
+    "centre": -2.8939455752802026,
+    "low": -3.0939455752802028,
+    "high": -2.6939455752802024,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB1": {
+    "centre": -2.1671868357491393,
+    "low": -2.3671868357491395,
+    "high": -1.9671868357491393,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB4__QB5": {
+   "fluxed_qubit": "QB4",
+   "coupler.amplitude": {
+    "centre": 0.2763756535094105,
+    "low": 0.2653206273690341,
+    "high": 0.2874306796497869,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.07623583824498792,
+    "low": -0.07928527177478743,
+    "high": -0.0731864047151884,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB4": {
+    "centre": -2.813104188444637,
+    "low": -3.013104188444637,
+    "high": -2.6131041884446367,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB5": {
+    "centre": -2.3326451433060393,
+    "low": -2.5326451433060395,
+    "high": -2.132645143306039,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB4__QB9": {
+   "fluxed_qubit": "QB4",
+   "coupler.amplitude": {
+    "centre": 0.1394696564720997,
+    "low": 0.1338908702132157,
+    "high": 0.1450484427309837,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": -0.03851394747722963,
+    "low": -0.040054505376318814,
+    "high": -0.03697338957814045,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB4": {
+    "centre": -2.187129638333613,
+    "low": -2.3871296383336134,
+    "high": -1.9871296383336132,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB9": {
+    "centre": -2.3563713944267866,
+    "low": -2.5563713944267867,
+    "high": -2.1563713944267864,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB6__QB11": {
+   "fluxed_qubit": "QB6",
+   "coupler.amplitude": {
+    "centre": 0.11299806069523584,
+    "low": 0.1084781382674264,
+    "high": 0.11751798312304527,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.007839033311857401,
+    "low": 0.007525471979383106,
+    "high": 0.008152594644331698,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB6": {
+    "centre": -2.6123415001784425,
+    "low": -2.8123415001784426,
+    "high": -2.4123415001784423,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB11": {
+    "centre": -2.33607903060998,
+    "low": -2.5360790306099803,
+    "high": -2.13607903060998,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB6__QB5": {
+   "fluxed_qubit": "QB6",
+   "coupler.amplitude": {
+    "centre": 0.2671691303374715,
+    "low": 0.25648236512397266,
+    "high": 0.2778558955509704,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.014932323681721043,
+    "low": 0.0143350307344522,
+    "high": 0.015529616628989886,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB6": {
+    "centre": 2.4482296106049706,
+    "low": 2.2482296106049704,
+    "high": 2.6482296106049708,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB5": {
+    "centre": -2.2722728003667916,
+    "low": -2.4722728003667918,
+    "high": -2.0722728003667914,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB6__QB7": {
+   "fluxed_qubit": "QB6",
+   "coupler.amplitude": {
+    "centre": 0.2414954040182981,
+    "low": 0.2318355878575662,
+    "high": 0.25115522017903,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.017526386258358354,
+    "low": 0.01682533080802402,
+    "high": 0.01822744170869269,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB6": {
+    "centre": 2.039744427577312,
+    "low": 1.839744427577312,
+    "high": 2.239744427577312,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB7": {
+    "centre": -2.2816390452409756,
+    "low": -2.481639045240976,
+    "high": -2.0816390452409754,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB8__QB13": {
+   "fluxed_qubit": "QB8",
+   "coupler.amplitude": {
+    "centre": -0.2380376720504849,
+    "low": -0.2475591789325043,
+    "high": -0.2285161651684655,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.02480175975244898,
+    "low": 0.023809689362351023,
+    "high": 0.02579383014254694,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB8": {
+    "centre": 0.7898977665600215,
+    "low": 0.5898977665600216,
+    "high": 0.9898977665600215,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB13": {
+    "centre": -2.3437708887432898,
+    "low": -2.54377088874329,
+    "high": -2.1437708887432896,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  },
+  "QB8__QB9": {
+   "fluxed_qubit": "QB8",
+   "coupler.amplitude": {
+    "centre": -0.11186267326879394,
+    "low": -0.1163371801995457,
+    "high": -0.10738816633804218,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "qubit.amplitude": {
+    "centre": 0.06868215496719497,
+    "low": 0.06593486876850717,
+    "high": 0.07142944116588278,
+    "margin": {
+     "relative": 0.04
+    }
+   },
+   "rz.QB8": {
+    "centre": 0.23128332422384237,
+    "low": 0.03128332422384236,
+    "high": 0.4312833242238424,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "rz.QB9": {
+    "centre": -2.438155452391852,
+    "low": -2.6381554523918522,
+    "high": -2.238155452391852,
+    "margin": {
+     "absolute_rad": 0.2
+    }
+   },
+   "duration_s": {
+    "centre": 4e-08,
+    "sweep": "fixed: changing it moves every other parameter"
+   }
+  }
+ }
+}

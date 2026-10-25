@@ -1,0 +1,16 @@
+{
+ "label": "HARDWARE",
+ "device": "garnet",
+ "batch": 3,
+ "split": "test",
+ "priors": "hardware_noise (79092cf)",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E1/b3_E1_d3_Z_r20_pB",
+ "shots": 5000,
+ "det_rate_mean": 0.32166,
+ "same_stab_lag1": 0.14255303396232907,
+ "same_stab_lag2": 0.10710263785274593,
+ "same_stab_lag3": 0.10331717532698008,
+ "cross_stab_lag0": 0.05368486069886495,
+ "cross_stab_lag1": 0.030945940226602874
+}

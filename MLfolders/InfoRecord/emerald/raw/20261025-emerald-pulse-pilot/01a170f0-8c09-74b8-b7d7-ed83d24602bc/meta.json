@@ -1,0 +1,425 @@
+{
+  "job_id": "01a170f0-8c09-74b8-b7d7-ed83d24602bc",
+  "kind": "playlist",
+  "task": "emerald-pulse-pilot",
+  "device": "emerald",
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "playlist_sha256": "2f20cfbb1782bce3f5276d3a321dddc70a2ee12128d6433d2329ba13013d0dc3",
+  "physical_qubits": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB23",
+    "QB24",
+    "QB25",
+    "QB26",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB32",
+    "QB33",
+    "QB34",
+    "QB35",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB40",
+    "QB41",
+    "QB42",
+    "QB43",
+    "QB44",
+    "QB45",
+    "QB46",
+    "QB47",
+    "QB48",
+    "QB49",
+    "QB50",
+    "QB51",
+    "QB52",
+    "QB53",
+    "QB54"
+  ],
+  "segments": 1,
+  "spots": 1,
+  "circuits": 1,
+  "shots": 1000,
+  "averaging_bins": 1000,
+  "status": "completed",
+  "success": true,
+  "commit": "030f8362cf4102a16d2250ae8694b5024daab542",
+  "purpose": "emerald-pulse EP0 E1_d3_Z_r03_eA as a locally compiled Pulla playlist [pulse,playlist=2f20cfbb]",
+  "saved_utc": "2026-10-25T02:43:04Z",
+  "timeline": [
+    {
+      "source": "iqm-server",
+      "status": "created",
+      "timestamp": "2026-10-25T02:42:55.122371Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "received",
+      "timestamp": "2026-10-25T02:42:56.372345Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_started",
+      "timestamp": "2026-10-25T02:42:56.513400Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_ended",
+      "timestamp": "2026-10-25T02:42:58.857490Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_started",
+      "timestamp": "2026-10-25T02:43:01.415453Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_ended",
+      "timestamp": "2026-10-25T02:43:03.089937Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_started",
+      "timestamp": "2026-10-25T02:43:03.092431Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_ended",
+      "timestamp": "2026-10-25T02:43:03.101961Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "ready",
+      "timestamp": "2026-10-25T02:43:03.103698Z"
+    },
+    {
+      "source": "iqm-server",
+      "status": "completed",
+      "timestamp": "2026-10-25T02:43:03.316194Z"
+    }
+  ],
+  "arrays": [
+    {
+      "key": "a0",
+      "return_parameter": "QB28__c_33_0_13",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a1",
+      "return_parameter": "QB37__c_33_0_14",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a2",
+      "return_parameter": "QB21__c_33_0_1",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a3",
+      "return_parameter": "QB19__c_33_0_12",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a4",
+      "return_parameter": "QB39__c_33_0_19",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a5",
+      "return_parameter": "QB22__c_33_0_25",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a6",
+      "return_parameter": "QB21__c_33_0_17",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a7",
+      "return_parameter": "QB44__c_33_0_15",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a8",
+      "return_parameter": "QB13__c_33_0_24",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a9",
+      "return_parameter": "QB37__c_33_0_22",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a10",
+      "return_parameter": "QB30__c_33_0_10",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a11",
+      "return_parameter": "QB14__c_33_0_16",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a12",
+      "return_parameter": "QB14__c_33_0_8",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a13",
+      "return_parameter": "QB19__c_33_0_4",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a14",
+      "return_parameter": "QB27__c_33_0_30",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a15",
+      "return_parameter": "QB30__c_33_0_18",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a16",
+      "return_parameter": "QB29__c_33_0_28",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a17",
+      "return_parameter": "QB39__c_33_0_3",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a18",
+      "return_parameter": "QB44__c_33_0_7",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a19",
+      "return_parameter": "QB30__c_33_0_2",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a20",
+      "return_parameter": "QB39__c_33_0_11",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a21",
+      "return_parameter": "QB28__c_33_0_21",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a22",
+      "return_parameter": "QB20__c_33_0_27",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a23",
+      "return_parameter": "QB19__c_33_0_20",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a24",
+      "return_parameter": "QB14__c_33_0_0",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a25",
+      "return_parameter": "QB21__c_33_0_9",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a26",
+      "return_parameter": "QB44__c_33_0_23",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a27",
+      "return_parameter": "QB31__c_33_0_26",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a28",
+      "return_parameter": "QB38__c_33_0_29",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a29",
+      "return_parameter": "QB36__c_33_0_31",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a30",
+      "return_parameter": "QB28__c_33_0_5",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a31",
+      "return_parameter": "QB37__c_33_0_6",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    },
+    {
+      "key": "a32",
+      "return_parameter": "QB45__c_33_0_32",
+      "spot": 0,
+      "shape": [
+        1000
+      ],
+      "dtype": "float64"
+    }
+  ]
+}

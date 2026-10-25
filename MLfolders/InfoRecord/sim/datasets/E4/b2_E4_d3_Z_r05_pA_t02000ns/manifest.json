@@ -1,0 +1,148 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "SIMULATED",
+ "simulated": true,
+ "experiment": "E4",
+ "circuit": "E4_d3_Z_r05_pA_t02000ns",
+ "run_id": "b2_E4_d3_Z_r05_pA_t02000ns",
+ "batch": 2,
+ "job_id": "sim-B2-4-E4",
+ "position_in_job": 12,
+ "split": {
+  "rule": "batch test_batch is the test set, never fine-tuned on; in every other job, a seeded draw of round(validation_fraction * shots) shot indices (numpy default_rng([seed, crc32(job label)]).permutation) is validation, the rest finetune; the same indices for every circuit of the job",
+  "test_batch": 3,
+  "validation_fraction": 0.2,
+  "seed": 2026,
+  "job": "B2-4-E4",
+  "role": "finetune+validation",
+  "counts": {
+   "finetune": 102,
+   "validation": 26
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 5,
+  "basis": "Z",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "0",
+  "patch": "pA",
+  "delay_ns": 2000.0,
+  "barriers": true,
+  "orientation": 4
+ },
+ "device": "IQMFakeGarnet+profile(a18a947f)",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "calibration": {
+  "before": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json",
+  "after": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json"
+ },
+ "shots": 128,
+ "num_measurements": 49,
+ "num_detectors": 40,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    128,
+    49
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "439f35887b6fc580bbcb666bb6575c73b55add7c3907c9b23c13907834de3553"
+  },
+  "det_events.npy": {
+   "shape": [
+    128,
+    40
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "64fc58435dfa892276f76075a550e1ff77b4783fa1d1934a27cd54ca56cd6d4b"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    128,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "fae467b236385167c1d1eb22e7c0e6a1acdfff5a96c739d33f1b081c36ebdeb0"
+  }
+ },
+ "placement": {
+  "1": "QB12",
+  "2": "QB7",
+  "3": "QB6",
+  "5": "QB2",
+  "8": "QB16",
+  "9": "QB11",
+  "10": "QB10",
+  "11": "QB5",
+  "12": "QB4",
+  "13": "QB1",
+  "14": "QB20",
+  "15": "QB19",
+  "16": "QB15",
+  "17": "QB14",
+  "18": "QB9",
+  "19": "QB8",
+  "25": "QB13"
+ },
+ "circuit_files": {
+  "stim": "circuits/E4/E4_d3_Z_r05_pA_t02000ns.stim",
+  "qasm": "circuits/E4/E4_d3_Z_r05_pA_t02000ns.qasm"
+ },
+ "stim_sha256": "8e78a029b26daf9ae2e433bee309602e82138ec35c17fa36746ebaacc03a2301",
+ "qasm_sha256": "1a0a08d3d02b0b2b74945a760bdfaecfeb0553e03b55b17a0d4039b4e42ef8a0",
+ "native_sha256": "221220ee904729755e11c35b546e3eeaa5cf9f5340b4073d8be03f4b7b59f1e7",
+ "raw": {
+  "path": "raw/20261024-garnet-dryrun/sim-B2-4-E4/memory.npz",
+  "key": "c12",
+  "meta": "raw/20261024-garnet-dryrun/sim-B2-4-E4/meta.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "dqiqm.experiments.device.calibrated_noise(live calibration, idle_ns=0): the stand-in's own noise (gate depolarizing + relaxation over gate durations, mean readout assignment error as record flips)",
+  "num_dem_errors": 594
+ },
+ "duration_ns": 11900.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-24T20:12:25Z",
+ "job_timeline": [],
+ "commit": "830ca7bd02f8b415edf758cfbab94b8bb564b06b",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": {
+  "aer_seed_simulator": 959671,
+  "circuit_index": 12
+ },
+ "simulator": {
+  "backend": "IQMFakeGarnet+profile(a18a947f)",
+  "aer_method": "matrix_product_state",
+  "noise": "IQMFakeGarnet error profile from the live snapshot (dqiqm.experiments.device.error_profile, Ramsey T2)",
+  "threads": 4
+ }
+}

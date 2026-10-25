@@ -1,0 +1,45 @@
+suite: 68 circuits built and checked in 24.0 s; calibration 23e12f6b-c23c-4736-8736-b0142989c0e6
+  E1: 44 circuits
+  E4: 24 circuits
+  patch eA: QB13, QB14, QB19, QB20, QB21, QB22, QB27, QB28, QB29, QB30, QB31, QB36, QB37, QB38, QB39, QB44, QB45
+  patch eB: QB4, QB5, QB8, QB9, QB10, QB11, QB16, QB17, QB18, QB19, QB20, QB25, QB26, QB27, QB28, QB33, QB34
+EP0: 1 circuits x 1000 shots in 8.7 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-EP0
+E-B1-1-E1: 11 circuits x 96 shots in 22.6 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B1-1-E1
+E-B1-2-E1: 11 circuits x 96 shots in 23.7 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B1-2-E1
+E-B1-3-E1: 11 circuits x 96 shots in 38.4 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B1-3-E1
+E-B1-4-E1: 11 circuits x 96 shots in 29.1 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B1-4-E1
+E-B2-1-E1: 11 circuits x 96 shots in 19.0 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-1-E1
+E-B2-2-E1: 11 circuits x 96 shots in 21.9 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-2-E1
+E-B2-3-E1: 11 circuits x 96 shots in 36.2 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-3-E1
+E-B2-4-E1: 11 circuits x 96 shots in 28.7 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-4-E1
+E-B2-5-E4: 12 circuits x 48 shots in 6.5 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-5-E4
+E-B2-6-E4: 12 circuits x 48 shots in 8.0 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B2-6-E4
+E-B3-1-E1: 11 circuits x 96 shots in 19.6 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B3-1-E1
+E-B3-2-E1: 11 circuits x 96 shots in 21.5 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B3-2-E1
+E-B3-3-E1: 11 circuits x 96 shots in 38.1 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B3-3-E1
+E-B3-4-E1: 11 circuits x 96 shots in 27.9 s -> InfoRecord/emerald/sim/raw/20261024-emerald-dryrun/sim-E-B3-4-E1
+LER E1 X_eA_b1: eps(A=1) 0.0149, eps(free A) 0.0128, A 0.971
+LER E1 X_eA_b2: eps(A=1) 0.0160, eps(free A) 0.0160, A 1.000
+LER E1 X_eA_b3: eps(A=1) 0.0167, eps(free A) 0.0167, A 1.000
+LER E1 X_eB_b1: eps(A=1) 0.0165, eps(free A) 0.0165, A 1.000
+LER E1 X_eB_b2: eps(A=1) 0.0127, eps(free A) 0.0127, A 1.000
+LER E1 X_eB_b3: eps(A=1) 0.0134, eps(free A) 0.0134, A 1.000
+LER E1 Z_eA_b1: eps(A=1) 0.0143, eps(free A) 0.0143, A 1.000
+LER E1 Z_eA_b2: eps(A=1) 0.0135, eps(free A) 0.0135, A 1.000
+LER E1 Z_eA_b3: eps(A=1) 0.0151, eps(free A) 0.0148, A 0.996
+LER E1 Z_eB_b1: eps(A=1) 0.0190, eps(free A) 0.0190, A 1.000
+LER E1 Z_eB_b2: eps(A=1) 0.0198, eps(free A) 0.0198, A 1.000
+LER E1 Z_eB_b3: eps(A=1) 0.0158, eps(free A) 0.0158, A 1.000
+LER E4 X_eA_t1000ns_b2: eps(A=1) 0.0149, eps(free A) 0.0062, A 0.925
+LER E4 X_eA_t2000ns_b2: eps(A=1) 0.0110, eps(free A) 0.0023, A 0.925
+LER E4 X_eA_t5000ns_b2: eps(A=1) 0.0136, eps(free A) 0.0136, A 1.000
+LER E4 Z_eA_t1000ns_b2: eps(A=1) 0.0217, eps(free A) 0.0217, A 1.000
+LER E4 Z_eA_t2000ns_b2: eps(A=1) 0.0097, eps(free A) 0.0097, A 1.000
+LER E4 Z_eA_t5000ns_b2: eps(A=1) 0.0123, eps(free A) 0.0069, A 0.953
+structure: 68 circuits in 1.7 s; distances [3]; swaps [0]; cz on live couplers: all
+noiseless: 68 circuits, 0 detection events, 0 observable flips, up to 49 random columns (36.2 s)
+decode E1 pooled: PyMatching 0.0991 [0.0942, 0.1042] vs always-0 0.2397 [0.2326, 0.2469] over 13672 shots, better: True
+crosscheck against the team's make_stim_circuit: 68 circuits, pass True
+d=5: 0 zero-SWAP placements on the calibrated couplers; 4 on all 90, needing [['QB15', 'QB23'], ['QB24', 'QB32'], ['QB49', 'QB50']]
+sim/: 2591 files, 16.9 MB
+done in 457 s: 157 runs, 18 LER records

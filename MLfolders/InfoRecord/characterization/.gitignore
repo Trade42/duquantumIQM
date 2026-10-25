@@ -1,0 +1,6 @@
+# The SIMULATED closure's raw records beyond replica 1 of each world stay on disk; they are
+# regenerable and seeded (scripts/garnet_calib_closure.py). Hardware raw/ at this level is never ignored.
+/sim/raw/*/sim-none-r0[2-9]-*/
+/sim/raw/*/sim-none-r[1-9][0-9]-*/
+/sim/raw/*/sim-injected-r0[2-9]-*/
+/sim/raw/*/sim-injected-r[1-9][0-9]-*/

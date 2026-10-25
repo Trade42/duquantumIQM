@@ -1,0 +1,173 @@
+{
+  "job_id": "01a17100-951b-773e-827b-8dc870c96307",
+  "task": "emerald-fresh",
+  "device": "emerald",
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "qubit_mapping": [
+    {
+      "0": "QB13",
+      "1": "QB14",
+      "2": "QB22",
+      "3": "QB31",
+      "4": "QB20",
+      "5": "QB21",
+      "6": "QB29",
+      "7": "QB30",
+      "8": "QB38",
+      "9": "QB39",
+      "10": "QB19",
+      "11": "QB27",
+      "12": "QB28",
+      "13": "QB36",
+      "14": "QB37",
+      "15": "QB45",
+      "16": "QB44"
+    }
+  ],
+  "physical_qubits": [
+    [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+    ]
+  ],
+  "measured_qubits": [
+    {
+      "0": "QB14",
+      "1": "QB21",
+      "2": "QB30",
+      "3": "QB39",
+      "4": "QB19",
+      "5": "QB28",
+      "6": "QB37",
+      "7": "QB44",
+      "8": "QB14",
+      "9": "QB21",
+      "10": "QB30",
+      "11": "QB39",
+      "12": "QB19",
+      "13": "QB28",
+      "14": "QB37",
+      "15": "QB44",
+      "16": "QB14",
+      "17": "QB21",
+      "18": "QB30",
+      "19": "QB39",
+      "20": "QB19",
+      "21": "QB28",
+      "22": "QB37",
+      "23": "QB44",
+      "24": "QB13",
+      "25": "QB22",
+      "26": "QB31",
+      "27": "QB20",
+      "28": "QB29",
+      "29": "QB38",
+      "30": "QB27",
+      "31": "QB36",
+      "32": "QB45"
+    }
+  ],
+  "shots": 1000,
+  "circuits": 1,
+  "circuit_names": [
+    null
+  ],
+  "circuit_order": [
+    {
+      "position": 0,
+      "name": "E1_d3_Z_r03_eA",
+      "native_sha256": "f70ccfd7a5e0d0428ddb25fa5fe3435e8562d2b0e628841d4ea39975a0fbd092"
+    }
+  ],
+  "compilation_options": {
+    "max_circuit_duration_over_t2": null,
+    "heralding_mode": "none",
+    "move_gate_validation": "strict",
+    "move_gate_frame_tracking": "full",
+    "active_reset_cycles": null,
+    "dd_mode": "disabled",
+    "dd_strategy": null
+  },
+  "success": true,
+  "commit": "5e3735bc1b07308e41b95c604b2047ca3b6d98e9",
+  "purpose": "emerald-fresh F0 E1 (1 circuits x 1000 shots)",
+  "saved_utc": "2026-10-25T03:00:30Z",
+  "timeline": [
+    {
+      "source": "iqm-server",
+      "status": "created",
+      "timestamp": "2026-10-25T03:00:26.016158Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "received",
+      "timestamp": "2026-10-25T03:00:26.185015Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_started",
+      "timestamp": "2026-10-25T03:00:26.279223Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_ended",
+      "timestamp": "2026-10-25T03:00:26.283886Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_started",
+      "timestamp": "2026-10-25T03:00:26.366049Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_ended",
+      "timestamp": "2026-10-25T03:00:26.496630Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_started",
+      "timestamp": "2026-10-25T03:00:26.794856Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_ended",
+      "timestamp": "2026-10-25T03:00:28.311611Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_started",
+      "timestamp": "2026-10-25T03:00:28.313752Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_ended",
+      "timestamp": "2026-10-25T03:00:28.333199Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "ready",
+      "timestamp": "2026-10-25T03:00:28.334562Z"
+    },
+    {
+      "source": "iqm-server",
+      "status": "completed",
+      "timestamp": "2026-10-25T03:00:28.681674Z"
+    }
+  ],
+  "memory": "memory.npz: c<i> uint8 (shots, clbits), column j = clbit j"
+}

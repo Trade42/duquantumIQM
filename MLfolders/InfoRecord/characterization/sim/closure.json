@@ -1,0 +1,273 @@
+{
+ "label": "SIMULATED",
+ "device": "garnet",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "stand_in": "IQMFakeGarnet+profile(a18a947f)",
+ "jobs": [
+  {
+   "label": "C1",
+   "circuits": 32,
+   "shots": 1000
+  },
+  {
+   "label": "C2-L1",
+   "circuits": 64,
+   "shots": 500
+  },
+  {
+   "label": "C2-L2",
+   "circuits": 64,
+   "shots": 500
+  },
+  {
+   "label": "C2-L3",
+   "circuits": 64,
+   "shots": 500
+  },
+  {
+   "label": "C2-L4",
+   "circuits": 64,
+   "shots": 500
+  }
+ ],
+ "worlds": {
+  "noiseless": 1,
+  "none": 5,
+  "injected": 10
+ },
+ "injected_ranges_rad": {
+  "eps": 0.03,
+  "eta": 0.03,
+  "delta": 0.08,
+  "phi": 0.08
+ },
+ "coverage_injected": {
+  "eps": {
+   "n": 170,
+   "covered": 162,
+   "max_abs_z": 3.280038049032795,
+   "fraction": 0.9529411764705882,
+   "expected_range": [
+    155.93035728255393,
+    167.06964271744607
+   ]
+  },
+  "eta": {
+   "n": 170,
+   "covered": 164,
+   "max_abs_z": 2.315642308410245,
+   "fraction": 0.9647058823529412,
+   "expected_range": [
+    155.93035728255393,
+    167.06964271744607
+   ]
+  },
+  "delta": {
+   "n": 240,
+   "covered": 229,
+   "max_abs_z": 3.2654615854751317,
+   "fraction": 0.9541666666666667,
+   "expected_range": [
+    221.38227833767542,
+    234.61772166232458
+   ]
+  },
+  "phi": {
+   "n": 480,
+   "covered": 467,
+   "max_abs_z": 3.38085345846865,
+   "fraction": 0.9729166666666667,
+   "expected_range": [
+    446.64112827313033,
+    465.35887172686967
+   ]
+  }
+ },
+ "nothing_injected": {
+  "noiseless": {
+   "eps": {
+    "n": 17,
+    "covered": 17,
+    "max_abs": 0.0006055918888954506,
+    "max_abs_z": 1.15949118489025
+   },
+   "eta": {
+    "n": 17,
+    "covered": 17,
+    "max_abs": 0.0018882696102811359,
+    "max_abs_z": 1.6193878287047418
+   },
+   "delta": {
+    "n": 24,
+    "covered": 23,
+    "max_abs": 0.012342172155505666,
+    "max_abs_z": 2.439262191157211
+   },
+   "phi": {
+    "n": 48,
+    "covered": 46,
+    "max_abs": 0.010858275359626912,
+    "max_abs_z": 2.4056703517833506
+   }
+  },
+  "none": {
+   "eps": {
+    "n": 85,
+    "covered": 83,
+    "max_abs": 0.001000547327878674,
+    "max_abs_z": 2.467381989917527
+   },
+   "eta": {
+    "n": 85,
+    "covered": 81,
+    "max_abs": 0.002389155655287179,
+    "max_abs_z": 2.7477282334775897
+   },
+   "delta": {
+    "n": 120,
+    "covered": 112,
+    "max_abs": 0.015199785743443377,
+    "max_abs_z": 2.51111420258373
+   },
+   "phi": {
+    "n": 240,
+    "covered": 229,
+    "max_abs": 0.017127498504850625,
+    "max_abs_z": 3.192017727689768
+   }
+  }
+ },
+ "noiseless_ideal_vs_counts": {
+  "deterministic_columns": 3652,
+  "random_columns": 1244,
+  "mean_z": 0.02684197434119005,
+  "std_z": 1.0000272136435169,
+  "max_abs_z": 4.02492235949962,
+  "deterministic_columns_exact": true
+ },
+ "pilot": {
+  "label": "SIMULATED",
+  "raw": "raw/20261024-garnet-calib-closure/sim-pilot-P0",
+  "stand_in": {
+   "p1_n00": [
+    0.006,
+    0.017,
+    0.008,
+    0.007,
+    0.012,
+    0.008,
+    0.001,
+    0.016,
+    0.017,
+    0.021,
+    0.01,
+    0.021,
+    0.01,
+    0.008,
+    0.031,
+    0.028,
+    0.021
+   ],
+   "p1_n02": [
+    0.974,
+    0.916,
+    0.982,
+    0.974,
+    0.983,
+    0.95,
+    0.972,
+    0.962,
+    0.979,
+    0.902,
+    0.941,
+    0.978,
+    0.953,
+    0.96,
+    0.961,
+    0.962,
+    0.973
+   ],
+   "D": 0.0491176470588235,
+   "R": 0.8119470586517487,
+   "R_per_coupler": [
+    0.8226369529334073,
+    0.7566788332938725,
+    0.8309888791217439,
+    0.7582604853150607,
+    0.80540657990239,
+    0.8977106213440172
+   ],
+   "checks": {
+    "shape": true,
+    "readout_n00": true,
+    "readout_n02": true,
+    "c1_no_merge": true,
+    "c2_no_merge": true
+   },
+   "verdict": "GO"
+  },
+  "mock_merged": {
+   "p1_n00": [
+    0.006,
+    0.017,
+    0.008,
+    0.007,
+    0.012,
+    0.008,
+    0.001,
+    0.016,
+    0.017,
+    0.021,
+    0.01,
+    0.021,
+    0.01,
+    0.008,
+    0.031,
+    0.028,
+    0.021
+   ],
+   "p1_n02": [
+    0.974,
+    0.916,
+    0.982,
+    0.974,
+    0.983,
+    0.95,
+    0.972,
+    0.962,
+    0.979,
+    0.902,
+    0.941,
+    0.978,
+    0.953,
+    0.96,
+    0.961,
+    0.962,
+    0.973
+   ],
+   "D": 0.0,
+   "R": 1.0,
+   "R_per_coupler": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "checks": {
+    "shape": true,
+    "readout_n00": true,
+    "readout_n02": true,
+    "c1_no_merge": false,
+    "c2_no_merge": false
+   },
+   "verdict": "STOP",
+   "how": "C1_amp_x_n02's record in place of n42, and n01's in place of n17: what the device would return if the server collapsed each chain"
+  }
+ },
+ "seeds": {
+  "aer": "2026 + crc32(job label) % 1e6",
+  "errors": "1000 + replica"
+ }
+}

@@ -1,0 +1,772 @@
+{
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "fetched_utc": "2026-10-24T19:13:13.190422Z",
+ "note": "Stim qubit index -> device qubit and role, for the circuits of circuits/. E1's Stim indices and coordinates are dqiqm.surface.memory_circuit's (Stim's rotated-code numbering, q = x + 7*floor(y/2) at d = 3), whose detectors are the team's make_stim_circuit's. Placements are chosen from this calibration; a new calibration set can move them.",
+ "E1": {
+  "pA": {
+   "orientation": 4,
+   "x_ancillas": [
+    "QB5",
+    "QB7",
+    "QB13",
+    "QB15"
+   ],
+   "qubits": {
+    "1": {
+     "qb": "QB12",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      1.0
+     ]
+    },
+    "2": {
+     "qb": "QB7",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,0)",
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB6",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      1.0
+     ]
+    },
+    "5": {
+     "qb": "QB2",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      1.0
+     ]
+    },
+    "8": {
+     "qb": "QB16",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      3.0
+     ]
+    },
+    "9": {
+     "qb": "QB11",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,2)",
+     "stim_coords": [
+      2.0,
+      2.0
+     ]
+    },
+    "10": {
+     "qb": "QB10",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      3.0
+     ]
+    },
+    "11": {
+     "qb": "QB5",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,2)",
+     "stim_coords": [
+      4.0,
+      2.0
+     ]
+    },
+    "12": {
+     "qb": "QB4",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      3.0
+     ]
+    },
+    "13": {
+     "qb": "QB1",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(6,2)",
+     "stim_coords": [
+      6.0,
+      2.0
+     ]
+    },
+    "14": {
+     "qb": "QB20",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(0,4)",
+     "stim_coords": [
+      0.0,
+      4.0
+     ]
+    },
+    "15": {
+     "qb": "QB19",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      5.0
+     ]
+    },
+    "16": {
+     "qb": "QB15",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,4)",
+     "stim_coords": [
+      2.0,
+      4.0
+     ]
+    },
+    "17": {
+     "qb": "QB14",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      5.0
+     ]
+    },
+    "18": {
+     "qb": "QB9",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(4,4)",
+     "stim_coords": [
+      4.0,
+      4.0
+     ]
+    },
+    "19": {
+     "qb": "QB8",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      5.0
+     ]
+    },
+    "25": {
+     "qb": "QB13",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,6)",
+     "stim_coords": [
+      4.0,
+      6.0
+     ]
+    }
+   }
+  },
+  "pB": {
+   "orientation": 7,
+   "x_ancillas": [
+    "QB1",
+    "QB9",
+    "QB11",
+    "QB20"
+   ],
+   "qubits": {
+    "1": {
+     "qb": "QB19",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      1.0
+     ]
+    },
+    "2": {
+     "qb": "QB20",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,0)",
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB16",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      1.0
+     ]
+    },
+    "5": {
+     "qb": "QB12",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      1.0
+     ]
+    },
+    "8": {
+     "qb": "QB14",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      3.0
+     ]
+    },
+    "9": {
+     "qb": "QB15",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,2)",
+     "stim_coords": [
+      2.0,
+      2.0
+     ]
+    },
+    "10": {
+     "qb": "QB10",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      3.0
+     ]
+    },
+    "11": {
+     "qb": "QB11",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,2)",
+     "stim_coords": [
+      4.0,
+      2.0
+     ]
+    },
+    "12": {
+     "qb": "QB6",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      3.0
+     ]
+    },
+    "13": {
+     "qb": "QB7",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(6,2)",
+     "stim_coords": [
+      6.0,
+      2.0
+     ]
+    },
+    "14": {
+     "qb": "QB13",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(0,4)",
+     "stim_coords": [
+      0.0,
+      4.0
+     ]
+    },
+    "15": {
+     "qb": "QB8",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      5.0
+     ]
+    },
+    "16": {
+     "qb": "QB9",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,4)",
+     "stim_coords": [
+      2.0,
+      4.0
+     ]
+    },
+    "17": {
+     "qb": "QB4",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      5.0
+     ]
+    },
+    "18": {
+     "qb": "QB5",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(4,4)",
+     "stim_coords": [
+      4.0,
+      4.0
+     ]
+    },
+    "19": {
+     "qb": "QB2",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      5.0,
+      5.0
+     ]
+    },
+    "25": {
+     "qb": "QB1",
+     "role": "X_ancilla",
+     "stabilizer": "X(4,6)",
+     "stim_coords": [
+      4.0,
+      6.0
+     ]
+    }
+   }
+  },
+  "ranking": {
+   "placements": [
+    {
+     "orientation": 4,
+     "origin": [
+      0,
+      0
+     ],
+     "x_ancillas": [
+      "QB5",
+      "QB7",
+      "QB13",
+      "QB15"
+     ],
+     "p_l_r3": {
+      "Z": 0.08104,
+      "X": 0.08408
+     },
+     "mean_p_l_r3": 0.08256,
+     "patch": "pA"
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      0,
+      0
+     ],
+     "x_ancillas": [
+      "QB5",
+      "QB7",
+      "QB13",
+      "QB15"
+     ],
+     "p_l_r3": {
+      "Z": 0.0844,
+      "X": 0.08596
+     },
+     "mean_p_l_r3": 0.08518,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      0,
+      0
+     ],
+     "x_ancillas": [
+      "QB1",
+      "QB9",
+      "QB11",
+      "QB20"
+     ],
+     "p_l_r3": {
+      "Z": 0.08424,
+      "X": 0.08632
+     },
+     "mean_p_l_r3": 0.08528,
+     "patch": "pB"
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      0,
+      0
+     ],
+     "x_ancillas": [
+      "QB1",
+      "QB9",
+      "QB11",
+      "QB20"
+     ],
+     "p_l_r3": {
+      "Z": 0.08592,
+      "X": 0.08756
+     },
+     "mean_p_l_r3": 0.08674,
+     "patch": null
+    }
+   ],
+   "rank_shots": 50000,
+   "qubits": [
+    "QB1",
+    "QB2",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB19",
+    "QB20"
+   ]
+  }
+ },
+ "E2": {
+  "line19": {
+   "path": [
+    "QB13",
+    "QB14",
+    "QB9",
+    "QB8",
+    "QB3",
+    "QB4",
+    "QB1",
+    "QB2",
+    "QB5",
+    "QB6",
+    "QB11",
+    "QB10",
+    "QB15",
+    "QB19",
+    "QB20",
+    "QB16",
+    "QB17",
+    "QB12",
+    "QB7"
+   ],
+   "qubits": {
+    "0": {
+     "qb": "QB13",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      0.0,
+      0.0
+     ]
+    },
+    "1": {
+     "qb": "QB14",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(1)",
+     "stim_coords": [
+      1.0,
+      0.0
+     ]
+    },
+    "2": {
+     "qb": "QB9",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB8",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(3)",
+     "stim_coords": [
+      3.0,
+      0.0
+     ]
+    },
+    "4": {
+     "qb": "QB3",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      4.0,
+      0.0
+     ]
+    },
+    "5": {
+     "qb": "QB4",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(5)",
+     "stim_coords": [
+      5.0,
+      0.0
+     ]
+    },
+    "6": {
+     "qb": "QB1",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      6.0,
+      0.0
+     ]
+    },
+    "7": {
+     "qb": "QB2",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(7)",
+     "stim_coords": [
+      7.0,
+      0.0
+     ]
+    },
+    "8": {
+     "qb": "QB5",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      8.0,
+      0.0
+     ]
+    },
+    "9": {
+     "qb": "QB6",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(9)",
+     "stim_coords": [
+      9.0,
+      0.0
+     ]
+    },
+    "10": {
+     "qb": "QB11",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      10.0,
+      0.0
+     ]
+    },
+    "11": {
+     "qb": "QB10",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(11)",
+     "stim_coords": [
+      11.0,
+      0.0
+     ]
+    },
+    "12": {
+     "qb": "QB15",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      12.0,
+      0.0
+     ]
+    },
+    "13": {
+     "qb": "QB19",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(13)",
+     "stim_coords": [
+      13.0,
+      0.0
+     ]
+    },
+    "14": {
+     "qb": "QB20",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      14.0,
+      0.0
+     ]
+    },
+    "15": {
+     "qb": "QB16",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(15)",
+     "stim_coords": [
+      15.0,
+      0.0
+     ]
+    },
+    "16": {
+     "qb": "QB17",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      16.0,
+      0.0
+     ]
+    },
+    "17": {
+     "qb": "QB12",
+     "role": "Z_ancilla",
+     "stabilizer": "ZZ(17)",
+     "stim_coords": [
+      17.0,
+      0.0
+     ]
+    },
+    "18": {
+     "qb": "QB7",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      18.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "ranking": {
+   "path": [
+    "QB13",
+    "QB14",
+    "QB9",
+    "QB8",
+    "QB3",
+    "QB4",
+    "QB1",
+    "QB2",
+    "QB5",
+    "QB6",
+    "QB11",
+    "QB10",
+    "QB15",
+    "QB19",
+    "QB20",
+    "QB16",
+    "QB17",
+    "QB12",
+    "QB7"
+   ],
+   "score": 0.7255105221556564,
+   "n_paths": 566,
+   "next_scores": [
+    0.7255222429373432,
+    0.725533677882255,
+    0.7255453986639417
+   ]
+  }
+ },
+ "E5": {
+  "block3x3": {
+   "qubits": {
+    "1": {
+     "qb": "QB9",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      1.0
+     ]
+    },
+    "2": {
+     "qb": "QB4",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,0)",
+     "stim_coords": [
+      2.0,
+      0.0
+     ]
+    },
+    "3": {
+     "qb": "QB5",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      1.0
+     ]
+    },
+    "5": {
+     "qb": "QB14",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(0,2)",
+     "stim_coords": [
+      0.0,
+      2.0
+     ]
+    },
+    "6": {
+     "qb": "QB15",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      1.0,
+      3.0
+     ]
+    },
+    "7": {
+     "qb": "QB10",
+     "role": "X_ancilla",
+     "stabilizer": "X(2,2)",
+     "stim_coords": [
+      2.0,
+      2.0
+     ]
+    },
+    "8": {
+     "qb": "QB11",
+     "role": "data",
+     "stabilizer": null,
+     "stim_coords": [
+      3.0,
+      3.0
+     ]
+    },
+    "9": {
+     "qb": "QB6",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(4,2)",
+     "stim_coords": [
+      4.0,
+      2.0
+     ]
+    },
+    "12": {
+     "qb": "QB16",
+     "role": "Z_ancilla",
+     "stabilizer": "Z(2,4)",
+     "stim_coords": [
+      2.0,
+      4.0
+     ]
+    }
+   }
+  },
+  "ranking": {
+   "score": 0.3977508528457172,
+   "blocks": 4,
+   "placements": 32,
+   "scores": [
+    0.3978,
+    0.4023,
+    0.4155,
+    0.4592
+   ],
+   "qubits": {
+    "1": "QB9",
+    "2": "QB4",
+    "3": "QB5",
+    "5": "QB14",
+    "6": "QB15",
+    "7": "QB10",
+    "8": "QB11",
+    "9": "QB6",
+    "12": "QB16"
+   }
+  }
+ }
+}

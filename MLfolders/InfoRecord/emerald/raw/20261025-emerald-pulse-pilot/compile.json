@@ -1,0 +1,615 @@
+{
+ "schema": "dqiqm.pulla-check/1",
+ "device": "emerald",
+ "utc": "2026-10-25T02:39:56Z",
+ "versions": {
+  "iqm-pulla": "14.0.3",
+  "iqm-pulse": "14.0.3",
+  "iqm-client": "35.0.3",
+  "iqm-station-control-client": "13.0.3",
+  "iqm-exa-common": "28.0.3",
+  "qiskit": "2.1.2"
+ },
+ "dqiqm_commit": "53b2a199fd39a8a98b13fa0981759004ec856f81",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "task": "emerald-pulse",
+ "armed_task": "emerald-pulse-pilot",
+ "circuit": "E1_d3_Z_r03_eA",
+ "shots": 1000,
+ "snapshot": {
+  "utc": "2026-10-25T02:39:35Z",
+  "default_calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "stash": {
+   "observations": 7011,
+   "sha256": "f6096180eaf5555d37ae639a31828d5ce97848f9d626c6012746704f6c0a1d05"
+  },
+  "patch_gates_missing": {
+   "prx": [],
+   "measure": [],
+   "cz": []
+  }
+ },
+ "frozen": {
+  "native_sha256": "f70ccfd7a5e0d0428ddb25fa5fe3435e8562d2b0e628841d4ea39975a0fbd092",
+  "qasm_sha256": "78863be378ebf15fa79f5b18988fadbff8e8ad0c28c8b7b7398fd6e9e6346383",
+  "ops": {
+   "barrier": 17,
+   "cz": 72,
+   "measure": 33,
+   "prx": 106
+  },
+  "instructions": 228,
+  "swaps": 0
+ },
+ "compile": {
+  "compiler": "Pulla get_standard_compiler(loading_rules=[LatestFromStash(<calset stash>)])",
+  "settings": "get_settings(circuits=[EP0]); set_shots(1000) (averaging_bins = 1000: per-shot data)",
+  "barriers": "kept (the instructions EP0's request sent)",
+  "stage_options": "defaults",
+  "deterministic_in_process": true,
+  "PYTHONHASHSEED": "0"
+ },
+ "playlist_sha256": "2f20cfbb1782bce3f5276d3a321dddc70a2ee12128d6433d2329ba13013d0dc3",
+ "run_definition_sha256": "0a74dfd05f3d9f28ffa9a42aaff00351bfcac8c058e5d197bbb5503717de2b35",
+ "run_definition_bytes": 12218954,
+ "shape": {
+  "segments": 1,
+  "spots": 1,
+  "shots": 1000,
+  "averaging_bins": 1000,
+  "circuits": 1,
+  "qubits": [
+   "QB1",
+   "QB2",
+   "QB3",
+   "QB4",
+   "QB5",
+   "QB6",
+   "QB7",
+   "QB8",
+   "QB9",
+   "QB10",
+   "QB11",
+   "QB12",
+   "QB13",
+   "QB14",
+   "QB15",
+   "QB16",
+   "QB17",
+   "QB18",
+   "QB19",
+   "QB20",
+   "QB21",
+   "QB22",
+   "QB23",
+   "QB24",
+   "QB25",
+   "QB26",
+   "QB27",
+   "QB28",
+   "QB29",
+   "QB30",
+   "QB31",
+   "QB32",
+   "QB33",
+   "QB34",
+   "QB35",
+   "QB36",
+   "QB37",
+   "QB38",
+   "QB39",
+   "QB40",
+   "QB41",
+   "QB42",
+   "QB43",
+   "QB44",
+   "QB45",
+   "QB46",
+   "QB47",
+   "QB48",
+   "QB49",
+   "QB50",
+   "QB51",
+   "QB52",
+   "QB53",
+   "QB54"
+  ]
+ },
+ "qpu_runtime_s": 0.408956,
+ "qpu_runtime_cap_s": 10.0,
+ "end_delay_s": 5e-06,
+ "segment_duration_ns": {
+  "max": 403956.0,
+  "min": 403956.0,
+  "channels": 95,
+  "per_channel": {
+   "PL-1__readout": 403956.0,
+   "PL-2__readout": 403956.0,
+   "PL-3__readout": 403956.0,
+   "PL-4__readout": 403956.0,
+   "PL-5__readout": 403956.0,
+   "PL-6__readout": 403956.0,
+   "PL-7__readout": 403956.0,
+   "PL-8__readout": 403956.0,
+   "QB10__drive.awg": 403956.0,
+   "QB11__drive.awg": 403956.0,
+   "QB12__drive.awg": 403956.0,
+   "QB13__drive.awg": 403956.0,
+   "QB13__flux.awg": 403956.0,
+   "QB14__drive.awg": 403956.0,
+   "QB15__drive.awg": 403956.0,
+   "QB16__drive.awg": 403956.0,
+   "QB17__drive.awg": 403956.0,
+   "QB18__drive.awg": 403956.0,
+   "QB19__drive.awg": 403956.0,
+   "QB1__drive.awg": 403956.0,
+   "QB20__drive.awg": 403956.0,
+   "QB20__flux.awg": 403956.0,
+   "QB21__drive.awg": 403956.0,
+   "QB22__drive.awg": 403956.0,
+   "QB22__flux.awg": 403956.0,
+   "QB23__drive.awg": 403956.0,
+   "QB24__drive.awg": 403956.0,
+   "QB25__drive.awg": 403956.0,
+   "QB26__drive.awg": 403956.0,
+   "QB27__drive.awg": 403956.0,
+   "QB27__flux.awg": 403956.0,
+   "QB28__drive.awg": 403956.0,
+   "QB29__drive.awg": 403956.0,
+   "QB29__flux.awg": 403956.0,
+   "QB2__drive.awg": 403956.0,
+   "QB30__drive.awg": 403956.0,
+   "QB31__drive.awg": 403956.0,
+   "QB31__flux.awg": 403956.0,
+   "QB32__drive.awg": 403956.0,
+   "QB33__drive.awg": 403956.0,
+   "QB34__drive.awg": 403956.0,
+   "QB35__drive.awg": 403956.0,
+   "QB36__drive.awg": 403956.0,
+   "QB36__flux.awg": 403956.0,
+   "QB37__drive.awg": 403956.0,
+   "QB38__drive.awg": 403956.0,
+   "QB38__flux.awg": 403956.0,
+   "QB39__drive.awg": 403956.0,
+   "QB3__drive.awg": 403956.0,
+   "QB40__drive.awg": 403956.0,
+   "QB41__drive.awg": 403956.0,
+   "QB42__drive.awg": 403956.0,
+   "QB43__drive.awg": 403956.0,
+   "QB44__drive.awg": 403956.0,
+   "QB45__drive.awg": 403956.0,
+   "QB45__flux.awg": 403956.0,
+   "QB46__drive.awg": 403956.0,
+   "QB47__drive.awg": 403956.0,
+   "QB48__drive.awg": 403956.0,
+   "QB49__drive.awg": 403956.0,
+   "QB4__drive.awg": 403956.0,
+   "QB50__drive.awg": 403956.0,
+   "QB51__drive.awg": 403956.0,
+   "QB52__drive.awg": 403956.0,
+   "QB53__drive.awg": 403956.0,
+   "QB54__drive.awg": 403956.0,
+   "QB5__drive.awg": 403956.0,
+   "QB6__drive.awg": 403956.0,
+   "QB7__drive.awg": 403956.0,
+   "QB8__drive.awg": 403956.0,
+   "QB9__drive.awg": 403956.0,
+   "TC-13-14__flux.awg": 403956.0,
+   "TC-13-21__flux.awg": 403956.0,
+   "TC-14-22__flux.awg": 403956.0,
+   "TC-19-20__flux.awg": 403956.0,
+   "TC-19-27__flux.awg": 403956.0,
+   "TC-20-21__flux.awg": 403956.0,
+   "TC-20-28__flux.awg": 403956.0,
+   "TC-21-22__flux.awg": 403956.0,
+   "TC-21-29__flux.awg": 403956.0,
+   "TC-22-30__flux.awg": 403956.0,
+   "TC-27-28__flux.awg": 403956.0,
+   "TC-28-29__flux.awg": 403956.0,
+   "TC-28-36__flux.awg": 403956.0,
+   "TC-29-30__flux.awg": 403956.0,
+   "TC-29-37__flux.awg": 403956.0,
+   "TC-30-31__flux.awg": 403956.0,
+   "TC-30-38__flux.awg": 403956.0,
+   "TC-31-39__flux.awg": 403956.0,
+   "TC-36-37__flux.awg": 403956.0,
+   "TC-36-44__flux.awg": 403956.0,
+   "TC-37-38__flux.awg": 403956.0,
+   "TC-37-45__flux.awg": 403956.0,
+   "TC-38-39__flux.awg": 403956.0,
+   "TC-44-45__flux.awg": 403956.0
+  }
+ },
+ "return_parameters": [
+  "QB14__c_33_0_0",
+  "QB21__c_33_0_1",
+  "QB28__c_33_0_5",
+  "QB14__c_33_0_8",
+  "QB21__c_33_0_9",
+  "QB28__c_33_0_13",
+  "QB14__c_33_0_16",
+  "QB21__c_33_0_17",
+  "QB28__c_33_0_21",
+  "QB13__c_33_0_24",
+  "QB20__c_33_0_27",
+  "QB27__c_33_0_30",
+  "QB30__c_33_0_2",
+  "QB37__c_33_0_6",
+  "QB30__c_33_0_10",
+  "QB37__c_33_0_14",
+  "QB30__c_33_0_18",
+  "QB37__c_33_0_22",
+  "QB22__c_33_0_25",
+  "QB29__c_33_0_28",
+  "QB38__c_33_0_29",
+  "QB36__c_33_0_31",
+  "QB45__c_33_0_32",
+  "QB39__c_33_0_3",
+  "QB39__c_33_0_11",
+  "QB39__c_33_0_19",
+  "QB31__c_33_0_26",
+  "QB19__c_33_0_4",
+  "QB19__c_33_0_12",
+  "QB19__c_33_0_20",
+  "QB44__c_33_0_7",
+  "QB44__c_33_0_15",
+  "QB44__c_33_0_23"
+ ],
+ "readout_map": {
+  "QB14__c_33_0_0": 0,
+  "QB21__c_33_0_1": 1,
+  "QB30__c_33_0_2": 2,
+  "QB39__c_33_0_3": 3,
+  "QB19__c_33_0_4": 4,
+  "QB28__c_33_0_5": 5,
+  "QB37__c_33_0_6": 6,
+  "QB44__c_33_0_7": 7,
+  "QB14__c_33_0_8": 8,
+  "QB21__c_33_0_9": 9,
+  "QB30__c_33_0_10": 10,
+  "QB39__c_33_0_11": 11,
+  "QB19__c_33_0_12": 12,
+  "QB28__c_33_0_13": 13,
+  "QB37__c_33_0_14": 14,
+  "QB44__c_33_0_15": 15,
+  "QB14__c_33_0_16": 16,
+  "QB21__c_33_0_17": 17,
+  "QB30__c_33_0_18": 18,
+  "QB39__c_33_0_19": 19,
+  "QB19__c_33_0_20": 20,
+  "QB28__c_33_0_21": 21,
+  "QB37__c_33_0_22": 22,
+  "QB44__c_33_0_23": 23,
+  "QB13__c_33_0_24": 24,
+  "QB22__c_33_0_25": 25,
+  "QB31__c_33_0_26": 26,
+  "QB20__c_33_0_27": 27,
+  "QB29__c_33_0_28": 28,
+  "QB38__c_33_0_29": 29,
+  "QB27__c_33_0_30": 30,
+  "QB36__c_33_0_31": 31,
+  "QB45__c_33_0_32": 32
+ },
+ "integration_occurrences": {
+  "QB13__c_33_0_24": [
+   1
+  ],
+  "QB14__c_33_0_0": [
+   1
+  ],
+  "QB14__c_33_0_16": [
+   1
+  ],
+  "QB14__c_33_0_8": [
+   1
+  ],
+  "QB19__c_33_0_12": [
+   1
+  ],
+  "QB19__c_33_0_20": [
+   1
+  ],
+  "QB19__c_33_0_4": [
+   1
+  ],
+  "QB20__c_33_0_27": [
+   1
+  ],
+  "QB21__c_33_0_1": [
+   1
+  ],
+  "QB21__c_33_0_17": [
+   1
+  ],
+  "QB21__c_33_0_9": [
+   1
+  ],
+  "QB22__c_33_0_25": [
+   1
+  ],
+  "QB27__c_33_0_30": [
+   1
+  ],
+  "QB28__c_33_0_13": [
+   1
+  ],
+  "QB28__c_33_0_21": [
+   1
+  ],
+  "QB28__c_33_0_5": [
+   1
+  ],
+  "QB29__c_33_0_28": [
+   1
+  ],
+  "QB30__c_33_0_10": [
+   1
+  ],
+  "QB30__c_33_0_18": [
+   1
+  ],
+  "QB30__c_33_0_2": [
+   1
+  ],
+  "QB31__c_33_0_26": [
+   1
+  ],
+  "QB36__c_33_0_31": [
+   1
+  ],
+  "QB37__c_33_0_14": [
+   1
+  ],
+  "QB37__c_33_0_22": [
+   1
+  ],
+  "QB37__c_33_0_6": [
+   1
+  ],
+  "QB38__c_33_0_29": [
+   1
+  ],
+  "QB39__c_33_0_11": [
+   1
+  ],
+  "QB39__c_33_0_19": [
+   1
+  ],
+  "QB39__c_33_0_3": [
+   1
+  ],
+  "QB44__c_33_0_15": [
+   1
+  ],
+  "QB44__c_33_0_23": [
+   1
+  ],
+  "QB44__c_33_0_7": [
+   1
+  ],
+  "QB45__c_33_0_32": [
+   1
+  ]
+ },
+ "mapped_readout_keys": {},
+ "couplers": [],
+ "probe_lines": [
+  "PL-1",
+  "PL-2",
+  "PL-3",
+  "PL-4",
+  "PL-8"
+ ],
+ "readout_components": 17,
+ "use_timeslot": false,
+ "schedule_full": {
+  "duration_ns": 403956.0,
+  "instructions": {
+   "Block": 133,
+   "Block0": 442,
+   "FluxPulse": 144,
+   "IQPulse": 214,
+   "ReadoutTrigger": 18,
+   "VirtualRZ": 144,
+   "Wait": 492
+  },
+  "readout_triggers": [
+   {
+    "channel": "PL-1__readout",
+    "start_ns": 400256.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-2__readout",
+    "start_ns": 400256.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 3
+   },
+   {
+    "channel": "PL-3__readout",
+    "start_ns": 400256.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 2
+   },
+   {
+    "channel": "PL-4__readout",
+    "start_ns": 400256.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-8__readout",
+    "start_ns": 400256.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-1__readout",
+    "start_ns": 401548.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-2__readout",
+    "start_ns": 401548.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 3
+   },
+   {
+    "channel": "PL-3__readout",
+    "start_ns": 401548.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 2
+   },
+   {
+    "channel": "PL-4__readout",
+    "start_ns": 401548.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-8__readout",
+    "start_ns": 401548.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 1
+   },
+   {
+    "channel": "PL-1__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   },
+   {
+    "channel": "PL-2__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   },
+   {
+    "channel": "PL-3__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   },
+   {
+    "channel": "PL-4__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 6
+   },
+   {
+    "channel": "PL-5__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 6
+   },
+   {
+    "channel": "PL-6__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   },
+   {
+    "channel": "PL-7__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   },
+   {
+    "channel": "PL-8__readout",
+    "start_ns": 402880.0,
+    "duration_ns": 1036.0,
+    "probe_ns": 376.0,
+    "acquisitions": 7
+   }
+  ]
+ },
+ "context_passed": [
+  "mapped_readout_keys",
+  "readout_metrics"
+ ],
+ "context_deepcopy_ok": true,
+ "iqm_post_processing_matches_readout_map": true,
+ "run_definition_file": "run_definition.pb.gz",
+ "run_definition_gz_sha256": "2d00948f4df69f9bf124ec97160cce04202dd2c5975052f62acaf61d645f4eee",
+ "requests": [
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/settings",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/chip-design-records",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "calibration-sets/emerald/default/dynamic-quantum-architecture",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "calibration-sets/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "calibration-sets/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6/dynamic-quantum-architecture",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  }
+ ]
+}

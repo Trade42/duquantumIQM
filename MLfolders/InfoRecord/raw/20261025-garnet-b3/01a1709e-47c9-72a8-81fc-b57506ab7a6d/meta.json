@@ -1,0 +1,357 @@
+{
+  "job_id": "01a1709e-47c9-72a8-81fc-b57506ab7a6d",
+  "task": "garnet-b3",
+  "device": "garnet",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "qubit_mapping": [
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    },
+    {
+      "0": "QB9",
+      "1": "QB4",
+      "2": "QB5",
+      "3": "QB14",
+      "4": "QB15",
+      "5": "QB10",
+      "6": "QB11",
+      "7": "QB6",
+      "8": "QB16"
+    }
+  ],
+  "physical_qubits": [
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ],
+    [
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB14",
+      "QB15",
+      "QB16"
+    ]
+  ],
+  "shots": 5000,
+  "circuits": 12,
+  "circuit_names": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "success": true,
+  "commit": "f45b2973e964e2dd291d8d6f6ab5171e7e0c1fa6",
+  "purpose": "garnet-b3 B3-4-E5 E5 (12 circuits x 5000 shots)",
+  "saved_utc": "2026-10-25T01:13:39Z",
+  "timeline": [
+    {
+      "source": "iqm-server",
+      "status": "created",
+      "timestamp": "2026-10-25T01:13:03.700799Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "received",
+      "timestamp": "2026-10-25T01:13:03.796040Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_started",
+      "timestamp": "2026-10-25T01:13:03.818207Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_ended",
+      "timestamp": "2026-10-25T01:13:03.846303Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_started",
+      "timestamp": "2026-10-25T01:13:03.862393Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_ended",
+      "timestamp": "2026-10-25T01:13:04.049578Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_started",
+      "timestamp": "2026-10-25T01:13:13.088268Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_ended",
+      "timestamp": "2026-10-25T01:13:35.102052Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_started",
+      "timestamp": "2026-10-25T01:13:35.117150Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_ended",
+      "timestamp": "2026-10-25T01:13:35.522441Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "ready",
+      "timestamp": "2026-10-25T01:13:35.525413Z"
+    },
+    {
+      "source": "iqm-server",
+      "status": "completed",
+      "timestamp": "2026-10-25T01:13:36.294691Z"
+    }
+  ],
+  "memory": "memory.npz: c<i> uint8 (shots, clbits), column j = clbit j"
+}

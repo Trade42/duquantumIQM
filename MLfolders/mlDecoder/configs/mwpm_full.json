@@ -1,0 +1,12 @@
+{
+  "backend": "mwpm",
+  "description": "Baseline table: correlated and uncorrelated MWPM on every frozen test set, with PyMatching's speed (CPU, 1 thread).",
+  "grid": {"distance": [3, 5, 7], "rounds": [1, 2, 3, 5, 8, 10], "basis": ["X", "Z"],
+           "noise": ["uniform", "leakage"], "p": [0.001, 0.003], "gate_basis": "cz", "no_reset": true},
+  "test": {"target_failures": 100, "safety": 1.25, "max_shots": 10000000,
+           "min_shots": 100000, "min_shots_leakage": 100000,
+           "pilot_target_failures": 30, "pilot_max_shots": 2000000, "pilot_max_shots_leakage": 200000},
+  "eval": {"batch_sizes": [1, 64, 4096, 65536], "min_seconds": 0.2},
+  "workers": 4,
+  "seed": 0
+}

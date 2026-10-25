@@ -1,0 +1,127 @@
+{
+ "label": "HARDWARE",
+ "device": "emerald",
+ "batch": 2,
+ "split": "finetune+validation",
+ "priors": "hardware_noise compiled-1036ns (53b2a19)",
+ "decoder": "pymatching on the noisy copy of the circuit that ran",
+ "noise": "priors: hardware_noise compiled-1036ns (53b2a19). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec): calibrated_noise with the depolarize idle over 3036 ns per mid-circuit readout layer (readout window 1036 ns from compiled measure_window_ns (data/calibration/emerald/pulse/compile.23e12f6b-c23c-4736-8736-b0142989c0e6.json), plus a 2000 ns delay), T2 ramsey, final readout measure_fidelity (unheralded)",
+ "zero_failure_points": [],
+ "redecode_of": "ler/E4/X_eA_t2000ns_b2 (priors hardware_noise (79092cf))",
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E4",
+ "run_id": "X_eA_t2000ns_b2_c1036",
+ "points": "ler_points.csv",
+ "model": "2 P_L = 1 - A (1 - 2 eps_L)^R, maximum likelihood on the binomial counts (dqiqm.stats.fit_eps)",
+ "fixed_A": {
+  "form": "F = (1-2eps)^n",
+  "free_amplitude": false,
+  "eps": 0.11058479008018852,
+  "eps_se_curvature": 0.003014187618132334,
+  "eps_ci_curvature": [
+   0.10467709090600258,
+   0.11649248925437447
+  ],
+  "eps_ci_bootstrap": [
+   0.10500172857564624,
+   0.11658096464694616
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": null,
+  "amplitude_ci_bootstrap": [
+   null,
+   null
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   318,
+   524,
+   779,
+   909
+  ],
+  "n": [
+   2000,
+   2000,
+   2000,
+   2000
+  ],
+  "p_fit": [
+   0.1967115885662183,
+   0.2637897591905355,
+   0.35672034260101293,
+   0.4323117552453754
+  ],
+  "pearson_residuals": [
+   -4.242668516114038,
+   -0.18162670583815527,
+   3.0602405173280585,
+   2.0030162499272044
+  ],
+  "chi2": 31.41037051926765,
+  "dof": 3,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 10.470123506422551
+ },
+ "free_A": {
+  "form": "F = A(1-2eps)^n",
+  "free_amplitude": true,
+  "eps": 0.11058479008018852,
+  "eps_se_curvature": 0.007612271751069391,
+  "eps_ci_curvature": [
+   0.09566501160756087,
+   0.1255045685528162
+  ],
+  "eps_ci_bootstrap": [
+   0.10500172857564624,
+   0.11658096464683189
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": 0.05711623559911007,
+  "amplitude_ci_bootstrap": [
+   1.0,
+   1.0
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   318,
+   524,
+   779,
+   909
+  ],
+  "n": [
+   2000,
+   2000,
+   2000,
+   2000
+  ],
+  "p_fit": [
+   0.1967115885662183,
+   0.2637897591905355,
+   0.35672034260101293,
+   0.4323117552453754
+  ],
+  "pearson_residuals": [
+   -4.242668516114038,
+   -0.18162670583815527,
+   3.0602405173280585,
+   2.0030162499272044
+  ],
+  "chi2": 31.41037051926765,
+  "dof": 2,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 15.705185259633826
+ },
+ "plot": "ler.png"
+}

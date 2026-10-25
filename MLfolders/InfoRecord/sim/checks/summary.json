@@ -1,0 +1,45 @@
+{
+ "label": "SIMULATED",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "stand_in": "IQMFakeGarnet+profile(a18a947f)",
+ "dry_shots": {
+  "P0": 1000,
+  "P1": 256,
+  "E1": 128,
+  "E2": 64,
+  "E3": 256,
+  "E4": 128,
+  "E5": 256
+ },
+ "jobs": 14,
+ "runs": 264,
+ "ler_records": 23,
+ "noiseless_failures": 0,
+ "wall_s": 523.3,
+ "derived_means": {
+  "E1": {
+   "det_rate_mean": 0.10864368248456792,
+   "same_stab_lag1": 0.01875667600883667,
+   "same_stab_lag2": 0.018461438299042857,
+   "cross_stab_lag0": 0.007407758160844379
+  },
+  "E2": {
+   "det_rate_mean": 0.06088700020729971,
+   "same_stab_lag1": 0.013885259702622265,
+   "same_stab_lag2": 0.017014639389022843,
+   "cross_stab_lag0": 0.0013289563079394535
+  },
+  "E4": {
+   "det_rate_mean": 0.10770772298177084,
+   "same_stab_lag1": 0.01870185271209464,
+   "same_stab_lag2": 0.020544797592709284,
+   "cross_stab_lag0": 0.007626886105225237
+  },
+  "E5": {
+   "det_rate_mean": 0.10113824755056454,
+   "same_stab_lag1": 0.016225486598733286,
+   "same_stab_lag2": 0.015139874788885488,
+   "cross_stab_lag0": 0.0116962282484478
+  }
+ }
+}

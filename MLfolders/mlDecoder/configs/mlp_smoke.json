@@ -1,0 +1,17 @@
+{
+  "backend": "mlp",
+  "description": "CPU smoke: d=3, R=3, Z, uniform p=0.001. At most 50k distinct training shots and 60 s of training; must beat always-0; bit-reproducible from its seed.",
+  "grid": {"distance": 3, "rounds": 3, "basis": "Z", "noise": "uniform", "p": 0.001, "gate_basis": "cz", "no_reset": true},
+  "device": "cpu",
+  "seed": 1234,
+  "model": {"hidden_layers": 2, "width_factor": 8, "min_width": 128},
+  "train": {"pool_shots": 50000, "val_shots": 20000, "batch_size": 512, "max_train_shots": 1000000,
+            "lr": 0.003, "warmup_fraction": 0.03, "eval_every_steps": 100, "patience_evals": 8,
+            "min_progress_to_stop": 0.5, "max_wall_seconds": 60, "drop_trivial": true, "cpu_threads": 4},
+  "test": {"target_failures": 100, "safety": 1.25, "max_shots": 10000000,
+           "min_shots": 100000, "min_shots_leakage": 100000,
+           "pilot_target_failures": 30, "pilot_max_shots": 2000000, "pilot_max_shots_leakage": 200000},
+  "eval": {"batch_sizes": [1, 64, 4096, 65536], "min_seconds": 0.2, "max_cpu_call_seconds": 4},
+  "checks": {"max_train_shots": 50000, "max_train_seconds": 60, "beat_always_zero": true},
+  "workers": 1
+}

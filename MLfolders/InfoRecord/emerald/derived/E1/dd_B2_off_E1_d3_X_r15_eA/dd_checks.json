@@ -1,0 +1,247 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "emerald-dd",
+ "device": "emerald",
+ "job": "B2",
+ "dd": "off",
+ "compilation_options": {
+  "max_circuit_duration_over_t2": null,
+  "heralding_mode": "none",
+  "move_gate_validation": "strict",
+  "move_gate_frame_tracking": "full",
+  "active_reset_cycles": null,
+  "dd_mode": "disabled",
+  "dd_strategy": null
+ },
+ "job_id": "01a170c5-9852-70a7-ac60-456070979378",
+ "position_in_job": 5,
+ "circuit": "E1_d3_X_r15_eA",
+ "basis": "X",
+ "rounds": 15,
+ "delay_ns": 0.0,
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "decoders": {
+  "ramsey": {
+   "priors": "hardware_noise (79092cf)",
+   "note": "priors: hardware_noise (79092cf). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec): calibrated_noise with the depolarize idle over 360 ns per mid-circuit readout layer (readout window 360 ns from measure_ns (no compile data: probe only), plus a 0 ns delay), T2 ramsey, final readout measure_fidelity (unheralded)",
+   "prior": {
+    "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+    "family": "surface_memory",
+    "readout_window_ns": 360.0,
+    "readout_window_source": "measure_ns (no compile data: probe only)",
+    "delay_ns": 0.0,
+    "idle_ns": 360.0,
+    "idle_channel": "depolarize",
+    "idle_frame": null,
+    "t2": "ramsey",
+    "final_readout": "measure_fidelity (unheralded)",
+    "idle_after_last_round": false
+   },
+   "pm_failures": 745,
+   "shots": 2000,
+   "p_l": {
+    "k": 745,
+    "n": 2000,
+    "p": 0.3725,
+    "wilson95": [
+     0.3515746912837473,
+     0.39391415577297206
+    ]
+   }
+  },
+  "echo": {
+   "priors": "hardware_noise t2='echo' (79092cf)",
+   "note": "priors: hardware_noise t2='echo' (79092cf). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec, t2=echo): calibrated_noise with the depolarize idle over 360 ns per mid-circuit readout layer (readout window 360 ns from measure_ns (no compile data: probe only), plus a 0 ns delay), T2 echo, final readout measure_fidelity (unheralded)",
+   "prior": {
+    "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+    "family": "surface_memory",
+    "readout_window_ns": 360.0,
+    "readout_window_source": "measure_ns (no compile data: probe only)",
+    "delay_ns": 0.0,
+    "idle_ns": 360.0,
+    "idle_channel": "depolarize",
+    "idle_frame": null,
+    "t2": "echo",
+    "final_readout": "measure_fidelity (unheralded)",
+    "idle_after_last_round": false
+   },
+   "pm_failures": 738,
+   "shots": 2000,
+   "p_l": {
+    "k": 738,
+    "n": 2000,
+    "p": 0.369,
+    "wilson95": [
+     0.34812232726921355,
+     0.3903799391184746
+    ]
+   }
+  }
+ },
+ "obs_flips": {
+  "k": 982,
+  "n": 2000,
+  "p": 0.491,
+  "wilson95": [
+   0.469128744176061,
+   0.5129057626750014
+  ]
+ },
+ "detection_fraction": 0.18499166666666667,
+ "per_round_detection_rate": {
+  "0": 0.05475,
+  "1": 0.1535625,
+  "2": 0.162125,
+  "3": 0.17125,
+  "4": 0.177625,
+  "5": 0.1811875,
+  "6": 0.1865625,
+  "7": 0.1855625,
+  "8": 0.1950625,
+  "9": 0.19925,
+  "10": 0.204,
+  "11": 0.2131875,
+  "12": 0.214125,
+  "13": 0.2214375,
+  "14": 0.221375,
+  "15": 0.122375
+ },
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    2000,
+    129
+   ],
+   "band": [
+    2000,
+    129
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 0,
+   "band": "<= 16.7188",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": 0.5025,
+   "band": [
+    0.4,
+    0.6
+   ],
+   "pass": true,
+   "info": {
+    "columns": [
+     1,
+     3,
+     4,
+     6
+    ],
+    "x_type": [],
+    "z_type": [
+     1,
+     3,
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.05475,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "x_type": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "z_type": []
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.18499166666666667,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": 0.1281675,
+    "ratio_to_model": 1.4433586257566597
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ],
+   "band": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "model_with_idle": {
+  "shots": 20000,
+  "seed": 2026,
+  "idle_ns": 360.0,
+  "detection_fraction": 0.1281675,
+  "all_zero": 0.0,
+  "random_first_mean": 0.50005,
+  "deterministic_first_misread": 0.0542625
+ },
+ "numbers": {
+  "shots": 2000,
+  "det_rate": 0.18499166666666667,
+  "all_zero": 0,
+  "obs_flips": 982,
+  "pm_failures": 745
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T02:11:06Z",
+ "commit": "200f7362ca078d0c196bb8bdb09aba6126037609"
+}

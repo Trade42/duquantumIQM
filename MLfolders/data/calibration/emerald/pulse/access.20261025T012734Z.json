@@ -1,0 +1,37 @@
+{
+ "device": "emerald",
+ "utc": "2026-10-25T01:27:32Z",
+ "constructor": "ok",
+ "requests": [
+  {
+   "method": "GET",
+   "path": "quantum-computers",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/settings",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/chip-design-records",
+   "status": 200
+  },
+  {
+   "method": "GET",
+   "path": "quantum-computers/emerald/artifacts/duts",
+   "status": 200
+  }
+ ],
+ "schema": "dqiqm.pulla-check/1",
+ "versions": {
+  "iqm-pulla": "14.0.3",
+  "iqm-pulse": "14.0.3",
+  "iqm-client": "35.0.3",
+  "iqm-station-control-client": "13.0.3",
+  "iqm-exa-common": "28.0.3",
+  "qiskit": "2.1.2"
+ },
+ "dqiqm_commit": "9699986424eb0e653434f2044d968842411f2219"
+}

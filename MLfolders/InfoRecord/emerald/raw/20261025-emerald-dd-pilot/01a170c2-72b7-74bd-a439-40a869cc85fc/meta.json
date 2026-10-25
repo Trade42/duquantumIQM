@@ -1,0 +1,195 @@
+{
+  "job_id": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+  "task": "emerald-dd-pilot",
+  "device": "emerald",
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "qubit_mapping": [
+    {
+      "0": "QB13",
+      "1": "QB14",
+      "2": "QB22",
+      "3": "QB31",
+      "4": "QB20",
+      "5": "QB21",
+      "6": "QB29",
+      "7": "QB30",
+      "8": "QB38",
+      "9": "QB39",
+      "10": "QB19",
+      "11": "QB27",
+      "12": "QB28",
+      "13": "QB36",
+      "14": "QB37",
+      "15": "QB45",
+      "16": "QB44"
+    }
+  ],
+  "physical_qubits": [
+    [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+    ]
+  ],
+  "measured_qubits": [
+    {
+      "0": "QB14",
+      "1": "QB21",
+      "2": "QB30",
+      "3": "QB39",
+      "4": "QB19",
+      "5": "QB28",
+      "6": "QB37",
+      "7": "QB44",
+      "8": "QB14",
+      "9": "QB21",
+      "10": "QB30",
+      "11": "QB39",
+      "12": "QB19",
+      "13": "QB28",
+      "14": "QB37",
+      "15": "QB44",
+      "16": "QB14",
+      "17": "QB21",
+      "18": "QB30",
+      "19": "QB39",
+      "20": "QB19",
+      "21": "QB28",
+      "22": "QB37",
+      "23": "QB44",
+      "24": "QB13",
+      "25": "QB22",
+      "26": "QB31",
+      "27": "QB20",
+      "28": "QB29",
+      "29": "QB38",
+      "30": "QB27",
+      "31": "QB36",
+      "32": "QB45"
+    }
+  ],
+  "shots": 1000,
+  "circuits": 1,
+  "circuit_names": [
+    null
+  ],
+  "circuit_order": [
+    {
+      "position": 0,
+      "name": "E1_d3_X_r03_eA",
+      "native_sha256": "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458"
+    }
+  ],
+  "compilation_options": {
+    "max_circuit_duration_over_t2": null,
+    "heralding_mode": "none",
+    "move_gate_validation": "strict",
+    "move_gate_frame_tracking": "full",
+    "active_reset_cycles": null,
+    "dd_mode": "enabled",
+    "dd_strategy": {
+      "merge_contiguous_waits": true,
+      "target_qubits": null,
+      "skip_leading_wait": true,
+      "skip_trailing_wait": true,
+      "gate_sequences": [
+        [
+          9,
+          "XYXYYXYX",
+          "asap"
+        ],
+        [
+          5,
+          "YXYX",
+          "asap"
+        ],
+        [
+          2,
+          "XX",
+          "center"
+        ]
+      ]
+    }
+  },
+  "success": true,
+  "commit": "70513204e0f401f3c517eda429388464c4d7273d",
+  "purpose": "emerald-dd-pilot DDP E1 DD on (1 circuits x 1000 shots) [dd=ENABLED,dd_strategy=879fe63c]",
+  "saved_utc": "2026-10-25T01:52:39Z",
+  "timeline": [
+    {
+      "source": "iqm-server",
+      "status": "created",
+      "timestamp": "2026-10-25T01:52:33.981108Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "received",
+      "timestamp": "2026-10-25T01:52:34.658070Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_started",
+      "timestamp": "2026-10-25T01:52:34.753765Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_ended",
+      "timestamp": "2026-10-25T01:52:34.757295Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_started",
+      "timestamp": "2026-10-25T01:52:34.840379Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_ended",
+      "timestamp": "2026-10-25T01:52:35.023670Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_started",
+      "timestamp": "2026-10-25T01:52:35.308414Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_ended",
+      "timestamp": "2026-10-25T01:52:36.617543Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_started",
+      "timestamp": "2026-10-25T01:52:36.619225Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_ended",
+      "timestamp": "2026-10-25T01:52:36.638701Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "ready",
+      "timestamp": "2026-10-25T01:52:36.640330Z"
+    },
+    {
+      "source": "iqm-server",
+      "status": "completed",
+      "timestamp": "2026-10-25T01:52:37.054580Z"
+    }
+  ],
+  "memory": "memory.npz: c<i> uint8 (shots, clbits), column j = clbit j"
+}

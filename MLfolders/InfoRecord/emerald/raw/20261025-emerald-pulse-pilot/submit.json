@@ -1,0 +1,25 @@
+{
+ "utc": "2026-10-25T02:43:04Z",
+ "ledger_rows": [
+  {
+   "time": "2026-10-25T02:42:55Z",
+   "task": "emerald-pulse-pilot",
+   "device": "emerald",
+   "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "qubits": "QB1,QB2,QB3,QB4,QB5,QB6,QB7,QB8,QB9,QB10,QB11,QB12,QB13,QB14,QB15,QB16,QB17,QB18,QB19,QB20,QB21,QB22,QB23,QB24,QB25,QB26,QB27,QB28,QB29,QB30,QB31,QB32,QB33,QB34,QB35,QB36,QB37,QB38,QB39,QB40,QB41,QB42,QB43,QB44,QB45,QB46,QB47,QB48,QB49,QB50,QB51,QB52,QB53,QB54",
+   "circuits": 1,
+   "shots": 1000,
+   "job_id": "01a170f0-8c09-74b8-b7d7-ed83d24602bc",
+   "purpose": "emerald-pulse EP0 E1_d3_Z_r03_eA as a locally compiled Pulla playlist [pulse,playlist=2f20cfbb]"
+  }
+ ],
+ "job_id": "01a170f0-8c09-74b8-b7d7-ed83d24602bc",
+ "status": "completed",
+ "path": "InfoRecord/emerald/raw/20261025-emerald-pulse-pilot/01a170f0-8c09-74b8-b7d7-ed83d24602bc",
+ "purpose": "emerald-pulse EP0 E1_d3_Z_r03_eA as a locally compiled Pulla playlist [pulse,playlist=2f20cfbb]",
+ "ok": true,
+ "run_definition_submitted_gz_sha256": "7968d97c2e502aa21d157567ab3c46f5b2b497bf94cd72948d7a6b18918f50ff",
+ "playlist_sha256_after_submit": "2f20cfbb1782bce3f5276d3a321dddc70a2ee12128d6433d2329ba13013d0dc3",
+ "server_payload_matches_submitted": false,
+ "server_payload_playlist_sha256": "2f20cfbb1782bce3f5276d3a321dddc70a2ee12128d6433d2329ba13013d0dc3"
+}

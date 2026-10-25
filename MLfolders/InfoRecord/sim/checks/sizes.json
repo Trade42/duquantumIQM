@@ -1,0 +1,60 @@
+{
+ "E1_d3_Z_r20_pA": {
+  "measurements": 169,
+  "detectors": 160,
+  "per_shot": {
+   "raw_meas.npy": {
+    "uint8_bytes_per_shot": 169,
+    "packed_bytes_per_shot": 22
+   },
+   "det_events.npy": {
+    "uint8_bytes_per_shot": 160,
+    "packed_bytes_per_shot": 20
+   },
+   "obs_flips.npy": {
+    "uint8_bytes_per_shot": 1,
+    "packed_bytes_per_shot": 1
+   },
+   "shots.csv": {
+    "bytes_per_shot": 142.15625,
+    "gzip_bytes_per_shot": 20.9296875
+   }
+  },
+  "per_million_shots_MB": {
+   "uint8 npy (raw + dets + obs)": 330.0,
+   "bit-packed npy (raw + dets + obs)": 43.0,
+   "shots.csv": 142.15625,
+   "shots.csv.gz": 20.9296875,
+   "parquet": "not available: pyarrow is not in uv.lock (the brief forbids adding it)"
+  }
+ },
+ "E1_d3_Z_r03_pA": {
+  "measurements": 33,
+  "detectors": 24,
+  "per_shot": {
+   "raw_meas.npy": {
+    "uint8_bytes_per_shot": 33,
+    "packed_bytes_per_shot": 5
+   },
+   "det_events.npy": {
+    "uint8_bytes_per_shot": 24,
+    "packed_bytes_per_shot": 3
+   },
+   "obs_flips.npy": {
+    "uint8_bytes_per_shot": 1,
+    "packed_bytes_per_shot": 1
+   },
+   "shots.csv": {
+    "bytes_per_shot": 99.062,
+    "gzip_bytes_per_shot": 7.157
+   }
+  },
+  "per_million_shots_MB": {
+   "uint8 npy (raw + dets + obs)": 58.0,
+   "bit-packed npy (raw + dets + obs)": 9.0,
+   "shots.csv": 99.062,
+   "shots.csv.gz": 7.157,
+   "parquet": "not available: pyarrow is not in uv.lock (the brief forbids adding it)"
+  }
+ }
+}

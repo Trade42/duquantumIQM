@@ -1,0 +1,1843 @@
+{
+ "format": "dqiqm.batches/1",
+ "task": "emerald-b2",
+ "device": "emerald",
+ "label": "E-B2-5-E4",
+ "batch": 2,
+ "split": "finetune+validation",
+ "experiment": "E4",
+ "segment_position": 4,
+ "shots": 2000,
+ "circuits": 12,
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "purpose": "emerald-b2 E-B2-5-E4 E4 (12 circuits x 2000 shots)",
+ "order": [
+  {
+   "position": 0,
+   "circuit": "E4_d3_Z_r03_eA_t01000ns",
+   "native_sha256": "b27d19458ed9c8b819830a813c45adddc0f4aa0d18a167f0d9fca2ef1e1a7878",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 1,
+   "circuit": "E4_d3_Z_r02_eA_t01000ns",
+   "native_sha256": "81e39f7c650580ec308e86b4c7ee71cc80414316fb526215e3622f31f2a569aa",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 2,
+   "circuit": "E4_d3_Z_r03_eA_t05000ns",
+   "native_sha256": "bd43c7bc56393f2dc9e136f0e8fd2121fc9252d8c1c7476f346f6b331e17ebce",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 3,
+   "circuit": "E4_d3_Z_r05_eA_t01000ns",
+   "native_sha256": "ec74079be1c74e61505ae33785e6de4ec42aac2da4bed216d8d04ddb01edf9e1",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 4,
+   "circuit": "E4_d3_Z_r05_eA_t02000ns",
+   "native_sha256": "5b222817de53a7d069d9c33baef4e3bacafb66680e88a6ea9250ecc4cb92494b",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 5,
+   "circuit": "E4_d3_Z_r02_eA_t05000ns",
+   "native_sha256": "a9a17daf5717faf6f51dc97092e3135003432ce89bf2443bf61a3fb7d070e807",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 6,
+   "circuit": "E4_d3_Z_r08_eA_t01000ns",
+   "native_sha256": "ae39f7c86f24546d6c87a82fd5d0688490bd3fa8399b6f1830da19e958079d14",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 7,
+   "circuit": "E4_d3_Z_r08_eA_t02000ns",
+   "native_sha256": "1572a4ccb69693e3f4baa2bbb2a8a0d1c7a4799ab3c205961ffd6e004bb123a1",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 8,
+   "circuit": "E4_d3_Z_r03_eA_t02000ns",
+   "native_sha256": "3837c859087d20a4d5d53f53220925e1d5f150af7c80726061cb2a87cec0f241",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 9,
+   "circuit": "E4_d3_Z_r02_eA_t02000ns",
+   "native_sha256": "efee7ee674e0a1a14de7838c535f0a3bc7ac27f2a5c08177e9cca752ff7d3805",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 10,
+   "circuit": "E4_d3_Z_r08_eA_t05000ns",
+   "native_sha256": "80a06230cf659056d9e6e58e5cb81e5777cfa1c548f4f26447a3654d3205dd41",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  },
+  {
+   "position": 11,
+   "circuit": "E4_d3_Z_r05_eA_t05000ns",
+   "native_sha256": "d6a38c02d783e76e534967bb263816222e5ac2668e3a2f67c002fe5f97fadee3",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  }
+ ],
+ "qubit_index_to_name": {
+  "12": "QB13",
+  "13": "QB14",
+  "18": "QB19",
+  "19": "QB20",
+  "20": "QB21",
+  "21": "QB22",
+  "26": "QB27",
+  "27": "QB28",
+  "28": "QB29",
+  "29": "QB30",
+  "30": "QB31",
+  "35": "QB36",
+  "36": "QB37",
+  "37": "QB38",
+  "38": "QB39",
+  "43": "QB44",
+  "44": "QB45"
+ },
+ "note": "IQM returns circuit_names [null]: this file is the record of which circuit is c<i> in memory.npz",
+ "job_id": "01a17098-a0a2-7434-974d-2dc5b7093dc1",
+ "raw": "raw/20261025-emerald-b2/01a17098-a0a2-7434-974d-2dc5b7093dc1",
+ "written_utc": "2026-10-25T01:06:51Z",
+ "submitted_utc": "2026-10-25T01:06:53Z",
+ "ledger_rows": 1,
+ "ledger_check": {
+  "task": {
+   "want": "emerald-b2",
+   "got": "emerald-b2",
+   "ok": true
+  },
+  "device": {
+   "want": "emerald",
+   "got": "emerald",
+   "ok": true
+  },
+  "calibration_set_id": {
+   "want": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "got": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "ok": true
+  },
+  "qubits": {
+   "want": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "got": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "ok": true
+  },
+  "circuits x shots": {
+   "want": "12 x 2000",
+   "got": "12 x 2000",
+   "ok": true
+  },
+  "job id": {
+   "want": "01a17098-a0a2-7434-974d-2dc5b7093dc1",
+   "got": "01a17098-a0a2-7434-974d-2dc5b7093dc1",
+   "ok": true
+  },
+  "purpose": {
+   "want": "emerald-b2 E-B2-5-E4 E4 (12 circuits x 2000 shots)",
+   "got": "emerald-b2 E-B2-5-E4 E4 (12 circuits x 2000 shots)",
+   "ok": true
+  }
+ },
+ "meta_check": {
+  "qubit_mapping": true,
+  "physical_qubits": true,
+  "calibration_set_id": true,
+  "shots": true,
+  "circuits": true,
+  "success": true,
+  "timeline": true
+ },
+ "sanity": [
+  {
+   "position": 0,
+   "circuit": "E4_d3_Z_r03_eA_t01000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      33
+     ],
+     "band": [
+      2000,
+      33
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 16.7188",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.48925,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.086375,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.18141666666666667,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.16188333333333332,
+      "ratio_to_model": 1.1206630289302997
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 1,
+   "circuit": "E4_d3_Z_r02_eA_t01000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      25
+     ],
+     "band": [
+      2000,
+      25
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.48225,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.086125,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.15321875,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.13629375,
+      "ratio_to_model": 1.1241803090750677
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 2,
+   "circuit": "E4_d3_Z_r03_eA_t05000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      33
+     ],
+     "band": [
+      2000,
+      33
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 16.7188",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.497,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.085,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.3003125,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.28436875,
+      "ratio_to_model": 1.0560671663113474
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 3,
+   "circuit": "E4_d3_Z_r05_eA_t01000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      49
+     ],
+     "band": [
+      2000,
+      49
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.493125,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.084875,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.2110875,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.1828975,
+      "ratio_to_model": 1.154130045517298
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 4,
+   "circuit": "E4_d3_Z_r05_eA_t02000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      49
+     ],
+     "band": [
+      2000,
+      49
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.4965,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.084625,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.2488125,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.2335425,
+      "ratio_to_model": 1.0653842448376634
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 5,
+   "circuit": "E4_d3_Z_r02_eA_t05000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      25
+     ],
+     "band": [
+      2000,
+      25
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.486625,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.086,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.24396875,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.235946875,
+      "ratio_to_model": 1.0339986490603024
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 6,
+   "circuit": "E4_d3_Z_r08_eA_t01000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      73
+     ],
+     "band": [
+      2000,
+      73
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.499375,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.085,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.23284375,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.19464375,
+      "ratio_to_model": 1.1962559804771538
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 7,
+   "circuit": "E4_d3_Z_r08_eA_t02000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      73
+     ],
+     "band": [
+      2000,
+      73
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.485125,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.085125,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.2718984375,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.2488640625,
+      "ratio_to_model": 1.0925580606882521
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 8,
+   "circuit": "E4_d3_Z_r03_eA_t02000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      33
+     ],
+     "band": [
+      2000,
+      33
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 16.7188",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.499,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.086375,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.217625,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.20572708333333334,
+      "ratio_to_model": 1.0578334970480714
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 9,
+   "circuit": "E4_d3_Z_r02_eA_t02000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      25
+     ],
+     "band": [
+      2000,
+      25
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 1,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.482375,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.08925,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.178375,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.1711375,
+      "ratio_to_model": 1.0422905558396027
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 10,
+   "circuit": "E4_d3_Z_r08_eA_t05000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      73
+     ],
+     "band": [
+      2000,
+      73
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.496375,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.08175,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.3739609375,
+     "band": "< 0.48",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.3459609375,
+      "ratio_to_model": 1.0809339927285866
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  },
+  {
+   "position": 11,
+   "circuit": "E4_d3_Z_r05_eA_t05000ns",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      2000,
+      49
+     ],
+     "band": [
+      2000,
+      49
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 24.5312",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.4885,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.089375,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.3492875,
+     "band": "< 0.48",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.32362,
+      "ratio_to_model": 1.0793137012545577
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  }
+ ],
+ "ok": true,
+ "checked_utc": "2026-10-25T01:07:13Z"
+}

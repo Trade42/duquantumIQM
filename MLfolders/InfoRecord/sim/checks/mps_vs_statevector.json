@@ -1,0 +1,14 @@
+{
+ "circuit": "E1_d3_Z_r02_pA",
+ "shots": 200,
+ "seed": 2026,
+ "matrix_product_state": {
+  "seconds": 1.49,
+  "detection_fraction": 0.0884375
+ },
+ "statevector": {
+  "seconds": 12.81,
+  "detection_fraction": 0.0884375
+ },
+ "identical_records": true
+}

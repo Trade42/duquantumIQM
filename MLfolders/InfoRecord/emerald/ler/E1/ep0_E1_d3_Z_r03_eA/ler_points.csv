@@ -1,0 +1,2 @@
+experiment,run_id,circuit,dataset,rounds,shots,failures,p_l,wilson_lo,wilson_hi,eps_single,eps_single_lo,eps_single_hi,raw_failures,p_raw
+E1,ep0_E1_d3_Z_r03_eA,E1_d3_Z_r03_eA,datasets/E1/ep0_E1_d3_Z_r03_eA,3,1000,129,0.129,0.10963544529450506,0.1512040095017769,0.047340847371623196,0.03959843088230319,0.056557652962354044,336,0.336

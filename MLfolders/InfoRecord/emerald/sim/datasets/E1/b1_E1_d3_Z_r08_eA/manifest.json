@@ -1,0 +1,148 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "SIMULATED",
+ "simulated": true,
+ "experiment": "E1",
+ "circuit": "E1_d3_Z_r08_eA",
+ "run_id": "b1_E1_d3_Z_r08_eA",
+ "batch": 1,
+ "job_id": "sim-E-B1-1-E1",
+ "position_in_job": 10,
+ "split": {
+  "rule": "batch test_batch is the test set, never fine-tuned on; in every other job, a seeded draw of round(validation_fraction * shots) shot indices (numpy default_rng([seed, crc32(job label)]).permutation) is validation, the rest finetune; the same indices for every circuit of the job",
+  "test_batch": 3,
+  "validation_fraction": 0.2,
+  "seed": 2026,
+  "job": "E-B1-1-E1",
+  "role": "finetune+validation",
+  "counts": {
+   "finetune": 77,
+   "validation": 19
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 8,
+  "basis": "Z",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "0",
+  "patch": "eA",
+  "delay_ns": 0.0,
+  "barriers": true,
+  "orientation": 1
+ },
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "calibration": {
+  "before": "calibration/emerald/20261024T191321Z-23e12f6b-c23c-4736-8736-b0142989c0e6.json",
+  "after": "calibration/emerald/20261024T191321Z-23e12f6b-c23c-4736-8736-b0142989c0e6.json"
+ },
+ "shots": 96,
+ "num_measurements": 73,
+ "num_detectors": 64,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    96,
+    73
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "804b56c01fe352b615d2318382bc7c0b82e3b98bafa29c080b7924c29825ccdd"
+  },
+  "det_events.npy": {
+   "shape": [
+    96,
+    64
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "e53f781e901f7d1051bf50f9d94052d8ce28eb9124e2be8bbe440e1d540c0361"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    96,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "0eec5dbc476ce62d87a1092125db721a6a299e89857ebc0d3bb95a733ee6b3be"
+  }
+ },
+ "placement": {
+  "1": "QB13",
+  "2": "QB14",
+  "3": "QB22",
+  "5": "QB31",
+  "8": "QB20",
+  "9": "QB21",
+  "10": "QB29",
+  "11": "QB30",
+  "12": "QB38",
+  "13": "QB39",
+  "14": "QB19",
+  "15": "QB27",
+  "16": "QB28",
+  "17": "QB36",
+  "18": "QB37",
+  "19": "QB45",
+  "25": "QB44"
+ },
+ "circuit_files": {
+  "stim": "circuits/E1/E1_d3_Z_r08_eA.stim",
+  "qasm": "circuits/E1/E1_d3_Z_r08_eA.qasm"
+ },
+ "stim_sha256": "a017bc6b147f7e487f57e70525c479ad8e982a80574ce8f210845f246a29e473",
+ "qasm_sha256": "021cadafadfd1fea721e9bbc25a85c1f7a6f23ba4714cbc592484e87667119ff",
+ "native_sha256": "69c59e7736632f5af76a6d9a3377712490904fe4d6afe695b553097e598cf6c3",
+ "raw": {
+  "path": "raw/20261024-emerald-dryrun/sim-E-B1-1-E1/memory.npz",
+  "key": "c10",
+  "meta": "raw/20261024-emerald-dryrun/sim-E-B1-1-E1/meta.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "dqiqm.experiments.emerald.calibrated_noise(live Emerald calibration, idle_ns=0) = device.calibrated_noise(idle_ns=0): the stand-in's own noise (gate depolarizing + relaxation over gate durations, mean readout assignment error as record flips)",
+  "num_dem_errors": 1044
+ },
+ "duration_ns": 4928.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-24T21:39:51Z",
+ "job_timeline": [],
+ "commit": "8005ab29cd5d4e950ecc9a85c2eb8f4b562d0fbf",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": {
+  "aer_seed_simulator": 846891,
+  "circuit_index": 10
+ },
+ "simulator": {
+  "backend": "IQMFakeAphrodite+profile(23e12f6b)",
+  "aer_method": "matrix_product_state",
+  "noise": "IQMFakeAphrodite error profile from the live snapshot (dqiqm.experiments.emerald.error_profile: device.error_profile, Ramsey T2, the 5 CZ-less couplers padded at depolarizing 1.0 and never used); no noise on delay or idle qubits",
+  "threads": 4
+ }
+}

@@ -1,0 +1,22 @@
+# The bulk of the SIMULATED dry run stays on disk: it is regenerable, seeded, with
+#   flock /home/sal/duquantumIQM/dq/run/sim.lock nice -n 15 taskset -c 12-15 uv run python scripts/garnet_dryrun.py --clean
+# sim/FILES.json lists every file of the full tree with its hashes. Git keeps sim/README.md,
+# FILES.json, checks/, ler/, calibration/, architecture/, raw/ and the representative runs below.
+# Hardware data (raw/, datasets/, derived/, ler/ at the top level) is never ignored here.
+/sim/circuits/
+/sim/datasets/*/*
+/sim/derived/*/*
+!/sim/datasets/E1/p0_E1_d3_Z_r03_pA/
+!/sim/derived/E1/p0_E1_d3_Z_r03_pA/
+!/sim/datasets/E1/b1_E1_d3_Z_r08_pA/
+!/sim/derived/E1/b1_E1_d3_Z_r08_pA/
+!/sim/datasets/E1/b1_E1_d3_X_r08_pA/
+!/sim/derived/E1/b1_E1_d3_X_r08_pA/
+!/sim/datasets/E2/b1_E2_rep10_bit_1_r12/
+!/sim/derived/E2/b1_E2_rep10_bit_1_r12/
+!/sim/datasets/E3/b1_E3_repeat_all1_k15/
+!/sim/derived/E3/b1_E3_repeat_all1_k15/
+!/sim/datasets/E4/b2_E4_d3_Z_r05_pA_t02000ns/
+!/sim/derived/E4/b2_E4_d3_Z_r05_pA_t02000ns/
+!/sim/datasets/E5/b3_E5_stab_Z_r06/
+!/sim/derived/E5/b3_E5_stab_Z_r06/

@@ -1,0 +1,79 @@
+{
+  "backend": "mlp",
+  "description": "MLP on the team's SYNTHETIC calibration fixture (synthetic_snapshot(8, 8, seed=7), placement by rank_placements as experiment.main --synthetic-calibration chooses it): calibrated_pauli, calibrated_coherence and calibrated_leakage at p=0.001, d=3 only. Same model and 50 s budget as mlp_full's d=3. Timing is not measured.",
+  "grid": {
+    "distance": 3,
+    "rounds": [
+      1,
+      2,
+      3,
+      5,
+      8,
+      10
+    ],
+    "basis": [
+      "X",
+      "Z"
+    ],
+    "noise": [
+      "calibrated_pauli",
+      "calibrated_coherence",
+      "calibrated_leakage"
+    ],
+    "p": 0.001,
+    "gate_basis": "cz",
+    "no_reset": true,
+    "calibration": "synthetic:7"
+  },
+  "device": "cuda",
+  "seed": 1234,
+  "max_total_train_seconds": 2700,
+  "model": {
+    "hidden_layers": 3,
+    "width_factor": 6,
+    "min_width": 128
+  },
+  "train": {
+    "batch_size": 16384,
+    "lr": 0.002,
+    "warmup_fraction": 0.03,
+    "final_lr_fraction": 0.02,
+    "weight_decay": 0.0001,
+    "max_train_shots": 2000000000,
+    "anneal_by_time": true,
+    "time_budget_seconds": 50,
+    "max_wall_seconds": 2700,
+    "eval_every_steps": 1000000,
+    "eval_every_seconds": 2,
+    "patience_evals": 10,
+    "min_progress_to_stop": 0.5,
+    "checkpoint_seconds": 60,
+    "amp": true,
+    "drop_trivial": true,
+    "val_shots": 200000,
+    "leakage_val_shots": 50000,
+    "leakage_pool_shots": 2000000
+  },
+  "test": {
+    "target_failures": 100,
+    "safety": 1.25,
+    "max_shots": 10000000,
+    "min_shots": 100000,
+    "min_shots_leakage": 100000,
+    "pilot_target_failures": 30,
+    "pilot_max_shots": 2000000,
+    "pilot_max_shots_leakage": 200000
+  },
+  "eval": {
+    "batch_sizes": [
+      1,
+      64,
+      4096,
+      65536
+    ],
+    "min_seconds": 0.2,
+    "max_cpu_call_seconds": 4,
+    "benchmark": false
+  },
+  "workers": 4
+}

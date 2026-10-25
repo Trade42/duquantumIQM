@@ -1,0 +1,13 @@
+# Secrets: the IQM Resonance token lives in .env, never in git.
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Regenerable simulation caches
+data/sim/cache/

@@ -1,0 +1,13 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E3/b1_E3_repeat_all1_k15",
+ "shots": 256,
+ "det_rate_mean": 0.06778645833333333,
+ "same_stab_lag1": 0.03673050608748045,
+ "same_stab_lag2": -0.0006047632094819564,
+ "same_stab_lag3": -0.0011723467467227972,
+ "cross_stab_lag0": -0.00011334179499235746,
+ "cross_stab_lag1": -5.3395010398992385e-06,
+ "record_flip_mean": 0.03673050608748045,
+ "state_flip_mean": -0.0032987525595762845
+}

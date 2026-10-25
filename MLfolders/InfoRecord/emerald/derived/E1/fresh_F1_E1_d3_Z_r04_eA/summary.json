@@ -1,0 +1,16 @@
+{
+ "label": "HARDWARE",
+ "device": "emerald",
+ "batch": 4,
+ "split": "fresh",
+ "priors": "hardware_noise fallback 360 ns (windows=None; chosen on B1+B2 validation by emerald-redecode 47f0c07)",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E1/fresh_F1_E1_d3_Z_r04_eA",
+ "shots": 2000,
+ "det_rate_mean": 0.1438125,
+ "same_stab_lag1": 0.0481578593554986,
+ "same_stab_lag2": 0.026540248314448355,
+ "same_stab_lag3": 0.012268227313712889,
+ "cross_stab_lag0": 0.0181625733251236,
+ "cross_stab_lag1": 0.008034561900115353
+}

@@ -1,0 +1,162 @@
+{
+ "backend": "rnn_tf",
+ "description": "CPU smoke of rnn_tf mixture mode: one Garnet group (pA, Z), R in {1,2,3}, 40 s, small test sets; checks the pipeline end to end, not accuracy.",
+ "mode": "mixture",
+ "devices": [
+  {
+   "name": "garnet",
+   "calset": "a18a947f",
+   "window_ns": 1096,
+   "patches": [
+    "pA"
+   ]
+  }
+ ],
+ "bases": [
+  "Z"
+ ],
+ "distance": 3,
+ "rounds": [
+  1,
+  2,
+  3
+ ],
+ "mixture": [
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess"
+   },
+   "weight": 0.15,
+   "eval": true
+  },
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "echo",
+    "readout": "asym",
+    "qnd": "excess"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.003,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.25,
+   "eval": true
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.003,
+   "options": {
+    "t2": "echo",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.15
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "leakage",
+   "p": 0.003,
+   "weight": 0.15,
+   "eval": true
+  }
+ ],
+ "curriculum": {
+  "fraction": 0.15,
+  "max_rounds": 5
+ },
+ "device": "cpu",
+ "seed": 1234,
+ "workers": 2,
+ "test": {
+  "target_failures": 100,
+  "safety": 1.25,
+  "max_shots": 10000000,
+  "min_shots": 5000,
+  "min_shots_leakage": 5000,
+  "pilot_target_failures": 30,
+  "pilot_max_shots": 20000,
+  "pilot_max_shots_leakage": 10000,
+  "keep_raw": true
+ },
+ "max_total_train_seconds": 60,
+ "model": {
+  "d_model": 64,
+  "heads": 4,
+  "layers": 3,
+  "ff_mult": 2,
+  "aux_weight": 0.02
+ },
+ "train": {
+  "batch_size": 256,
+  "lr": 0.001,
+  "final_lr_fraction": 0.05,
+  "weight_decay": 0.0001,
+  "warmup_fraction": 0.03,
+  "anneal_by_time": true,
+  "time_budget_seconds": 20,
+  "max_wall_seconds": 40,
+  "eval_every_seconds": 5,
+  "patience_evals": 12,
+  "min_progress_to_stop": 0.6,
+  "checkpoint_seconds": 120,
+  "amp": true,
+  "grad_clip": 1.0,
+  "leakage_ahead": 2,
+  "reservoir_chunks": 16,
+  "cpu_threads": 4
+ },
+ "val": {
+  "rounds": [
+   2
+  ],
+  "shots": 3000
+ },
+ "eval": {
+  "rounds": [
+   1,
+   2,
+   3
+  ],
+  "speed_rounds": [
+   3
+  ],
+  "batch_sizes": [
+   1,
+   64
+  ],
+  "min_seconds": 0.05,
+  "max_cpu_call_seconds": 4
+ }
+}

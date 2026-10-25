@@ -1,0 +1,4106 @@
+{
+ "E2_rep10_bit_0_r01": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 668.0,
+  "native_sha256": "0a2e4b4be96fef747d26d486f11af3ec4af015ce24f5061c65ccf3375b999a36",
+  "num_detectors": 18,
+  "num_measurements": 19,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 3,
+   "cz": 18,
+   "measure": 19,
+   "r": 18
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "c6d955e7b47a4d089ef56a14bd9e6bfff3bdf7d8fb1ae5341b6c014cbf2bd0d6",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "8c7383f730e357cb48d9149a7bcc3757acf3100000f76693d96b421315647a15",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r02": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 1336.0,
+  "native_sha256": "0f44441b3ccdef9da9ae81d505bf046d89d1b2695e47f8656bff15b225da4351",
+  "num_detectors": 27,
+  "num_measurements": 28,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 7,
+   "cz": 36,
+   "measure": 28,
+   "r": 36
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 2
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "3a12ed798f0ad20df40073c90882b9004b56e3efbd64f9783c3d8dabd5e84411",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "804dff32d7e9375f5d1e7d1e2031d8408f83fd0fb55232a4d9ec10db1b529bb3",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r03": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 2004.0,
+  "native_sha256": "2e3c68d7acf38ee7014d650677be69231985e55471a8181c315d5e5564f39a7b",
+  "num_detectors": 36,
+  "num_measurements": 37,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 54,
+   "measure": 37,
+   "r": 54
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 3
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "38f8a26b0b5eb0ed227d02c3c891043ebefea2790cf53e3e701e70d2a85802bc",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "5b901bb74dd1900ab1277d6dd1d5bc505fb55281ef928b3d77b30415336f2ea8",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r05": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 3340.0,
+  "native_sha256": "3a59bf9c9e14beb40281b42fb0a5ae908e467fe720a1571b42c0eb474e9e618f",
+  "num_detectors": 54,
+  "num_measurements": 55,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 19,
+   "cz": 90,
+   "measure": 55,
+   "r": 90
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 5
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "07d1ad5498aa8fe91c83b9038d4f6a5d87b186963b9d31d98e9c2f4df1a07ce9",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "0e81705442d4e511cc2ccbea227d95205e0e0f012d260d751be347ec881cc8f6",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r08": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 5344.0,
+  "native_sha256": "09061b0e4b536b0f694fa3f8d46779b1a9484e300724c2696c42ee64d3527560",
+  "num_detectors": 81,
+  "num_measurements": 82,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 31,
+   "cz": 144,
+   "measure": 82,
+   "r": 144
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 8
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "0cdcf87e706233a3aeee8182e66050dece4ca50b2e5597b6a0f6f917d782ed22",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4e98139049e97e9172c8ac50585b74fc1eae90d60a87234701da2a0142a43d72",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r12": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8016.0,
+  "native_sha256": "b6b7bd25d2cda10cc7272e017c85ff35c6a829616f6f173253a840a3a2374257",
+  "num_detectors": 117,
+  "num_measurements": 118,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 216,
+   "measure": 118,
+   "r": 216
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 12
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "ce276d55ca6f033ff116f94f2e072576291a3627609b8d85420ba6bfc53661f6",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "d87cc48f84ec06985352b5efc025b9d53270485963c5ce35abcbd498a80cd2f8",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r20": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 13360.0,
+  "native_sha256": "d03021c6a2b1184a0e4e2ed9ab52bb2f5fde296bc51fb35e925d0ac13d46bc3f",
+  "num_detectors": 189,
+  "num_measurements": 190,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 79,
+   "cz": 360,
+   "measure": 190,
+   "r": 360
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 20
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "de387dba8c8d8db26675147121be60d1a9295add0d99f7bd154b70ac9e92b7ca",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "d42076518e3b01eaa386b8c39c9f5ba8f6161eef027b87f49fbf77665d62c955",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r30": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 20040.0,
+  "native_sha256": "d928681f6c8d8ee54ba8cdd7bd90a7429148622117858afba0bbe706f9dc403c",
+  "num_detectors": 279,
+  "num_measurements": 280,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 540,
+   "measure": 280,
+   "r": 540
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 30
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "6fae6277c23158c5ab798d00580869740bcb32d42c494852590613b8c518def0",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "3e914047149879eb300185fa495a219e767c8f9b412c4b3a27e2c043904952b8",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_0_r50": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 33400.0,
+  "native_sha256": "56aba62992f4966eb16ebcfb61fd65e2ca14da4b6cc38aa527c5e600a60bfd3c",
+  "num_detectors": 459,
+  "num_measurements": 460,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 199,
+   "cz": 900,
+   "measure": 460,
+   "r": 900
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "0",
+   "rounds": 50
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "31e350a771e9b9a4b8486018ed3ecf6cd4d19ac1216269403af731a712e53ee0",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "cb37c192b28007a331140cc72caad21e0371ea7fc2879a93f77059413d2cf9b1",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r01": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 684.0,
+  "native_sha256": "1361ac6fda147c5bf0e43e70181488e63ac6e6f4f48f3a938a6a5e5da1bf0485",
+  "num_detectors": 18,
+  "num_measurements": 19,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 4,
+   "cz": 18,
+   "measure": 19,
+   "r": 28
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "1da7e935835b9d937dc18551198706f17df3fa6837d2003ebd43561a75c43b01",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "745d9fa4fc5b3d42aaa1136a6bb89f00fac8e6236b61e776cfac0239b75268d9",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r02": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 1352.0,
+  "native_sha256": "2608f2c75c01c7d4b6f91aaae6f3ef79c51b63ee2148b09336dcd64cafb5c95f",
+  "num_detectors": 27,
+  "num_measurements": 28,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 8,
+   "cz": 36,
+   "measure": 28,
+   "r": 46
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 2
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "aa420ea89a21005d97ce3f187f4aff1cb3a869ba2bdeba9728857a2dd0b8bb40",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "d591b9766009d85f69d21a8419dc420e562a824fa04cf9ff33326459cd15275e",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r03": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 2020.0,
+  "native_sha256": "fd802557928a19bff67b81d9e828b117ca669aaf249c3cf8c84a59b198eb9c11",
+  "num_detectors": 36,
+  "num_measurements": 37,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 12,
+   "cz": 54,
+   "measure": 37,
+   "r": 64
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 3
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "c97720d7f379101e9006abf00b690110f240ae009b98faa74754628e92026e02",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "bc7475dd810f50e9fff3f2d39a9d00caca0295cce33c040568d7e47af7aa8c76",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r05": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 3356.0,
+  "native_sha256": "29efb146212f2b3a2ff8f3245e193d7d6c7aa9efa15b22b0591e03ab5a3479dd",
+  "num_detectors": 54,
+  "num_measurements": 55,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 20,
+   "cz": 90,
+   "measure": 55,
+   "r": 100
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 5
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "9fbf64938ac8ce7e0bbdb766d97dd9988782d429be72e9bcea2da9b0139b5fc6",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "7806ad87f6700087fc8edc5163daa9c6bbd67aa89f29db845cf1f6c71100c793",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r08": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 5360.0,
+  "native_sha256": "efd989f89c7727897cd83522e46062d3e60961eb9ddc6a5beb5b9f9e982f177b",
+  "num_detectors": 81,
+  "num_measurements": 82,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 32,
+   "cz": 144,
+   "measure": 82,
+   "r": 154
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 8
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "fc5c270b96ea1d1eb32ab4ed4bad98aa692bf28870f769c9f08e079dc609b487",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "15cb97295db61a517c540968486dc824b5455af40ac230cee3c58725c536babd",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r12": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8032.0,
+  "native_sha256": "8e31e3659c31db853bf82e7ee6eefdf0d616e1e8fab99ed3e101923904704c4f",
+  "num_detectors": 117,
+  "num_measurements": 118,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 48,
+   "cz": 216,
+   "measure": 118,
+   "r": 226
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 12
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "a361af803bc9c4006708a98ef4e0159e5c2e159d03b402fa9017f3cf2cacb248",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "17567b761c41e1bb8330967bad5f6bcf3b4edf88385ec5b645b0c3330a6df486",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r20": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 13376.0,
+  "native_sha256": "9b30166e9d5b93e6c965cd8b01fd3c77ada581ae50999d87381745b7616c9995",
+  "num_detectors": 189,
+  "num_measurements": 190,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 80,
+   "cz": 360,
+   "measure": 190,
+   "r": 370
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 20
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "6f907457076cba52c32ab9640e2085d3fe6eeedfc1ec22c826e90c17aa02c69d",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "dd56814d74aab3b6342925781a2053be3bd91fbd2a90fbfb7e8e9183c5b93bc1",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r30": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 20056.0,
+  "native_sha256": "46b98b00b8ec547e7c23b6d47fb11e2c20932eb6b8d8e162a9a4e51cdbf89d29",
+  "num_detectors": 279,
+  "num_measurements": 280,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 120,
+   "cz": 540,
+   "measure": 280,
+   "r": 550
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 30
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "3bd26a1e3cb8e961e14e023097c05814f7723956ea59fa92c44da62bedee5ed1",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "e78cae5d3de29384e8788dbd30ab78606b3122752e53dd5a9da2383c34fad615",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_bit_1_r50": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 33416.0,
+  "native_sha256": "85e23a2ca1b8fcd6d9a84e2b72a5bd8e9506104d21a87ea4def71ab3e9be7619",
+  "num_detectors": 459,
+  "num_measurements": 460,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 200,
+   "cz": 900,
+   "measure": 460,
+   "r": 910
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "Z",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "bit",
+   "patch": "line19",
+   "prep": "1",
+   "rounds": 50
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "da34124445663cdb3b8bb24e5d1ce98eea3169a6a39890a8a2a2c7206d2fbc38",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "ZZ(1)",
+    "pauli": "Z",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "ZZ(11)",
+    "pauli": "Z",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "ZZ(13)",
+    "pauli": "Z",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "ZZ(15)",
+    "pauli": "Z",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "ZZ(17)",
+    "pauli": "Z",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "ZZ(3)",
+    "pauli": "Z",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "ZZ(5)",
+    "pauli": "Z",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "ZZ(7)",
+    "pauli": "Z",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "ZZ(9)",
+    "pauli": "Z",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "79193b16e0419d2e5b9701025e9f101aa7e29ac07d314a956f554297c4cb2c1e",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r01": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 668.0,
+  "native_sha256": "0a2e4b4be96fef747d26d486f11af3ec4af015ce24f5061c65ccf3375b999a36",
+  "num_detectors": 18,
+  "num_measurements": 19,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 3,
+   "cz": 18,
+   "measure": 19,
+   "r": 18
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 1
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "c6d955e7b47a4d089ef56a14bd9e6bfff3bdf7d8fb1ae5341b6c014cbf2bd0d6",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "f2bb260dd686fede58c263d914997a18f646fceeed3ee2e674d74cf111211d71",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r02": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 1336.0,
+  "native_sha256": "0f44441b3ccdef9da9ae81d505bf046d89d1b2695e47f8656bff15b225da4351",
+  "num_detectors": 27,
+  "num_measurements": 28,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 7,
+   "cz": 36,
+   "measure": 28,
+   "r": 36
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 2
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "3a12ed798f0ad20df40073c90882b9004b56e3efbd64f9783c3d8dabd5e84411",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a25f87b5c1bff131120aeb9568fbde476aa6144660802aad6d782ae8ad204ef0",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r03": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 2004.0,
+  "native_sha256": "2e3c68d7acf38ee7014d650677be69231985e55471a8181c315d5e5564f39a7b",
+  "num_detectors": 36,
+  "num_measurements": 37,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 11,
+   "cz": 54,
+   "measure": 37,
+   "r": 54
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 3
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "38f8a26b0b5eb0ed227d02c3c891043ebefea2790cf53e3e701e70d2a85802bc",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "6fa38d892603ef5a1dfd58fbdad18be4c8bbd14a82c3c78f189d4854c54437c7",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r05": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 3340.0,
+  "native_sha256": "3a59bf9c9e14beb40281b42fb0a5ae908e467fe720a1571b42c0eb474e9e618f",
+  "num_detectors": 54,
+  "num_measurements": 55,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 19,
+   "cz": 90,
+   "measure": 55,
+   "r": 90
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 5
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "07d1ad5498aa8fe91c83b9038d4f6a5d87b186963b9d31d98e9c2f4df1a07ce9",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "4719abe00f306de996bcbdcbfef09a1f8de078d0ca149b0c1b491f4304c74cca",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r08": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 5344.0,
+  "native_sha256": "09061b0e4b536b0f694fa3f8d46779b1a9484e300724c2696c42ee64d3527560",
+  "num_detectors": 81,
+  "num_measurements": 82,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 31,
+   "cz": 144,
+   "measure": 82,
+   "r": 144
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 8
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "0cdcf87e706233a3aeee8182e66050dece4ca50b2e5597b6a0f6f917d782ed22",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "0b5b12503b02b8700f32ccd31bcf6437fc0f52244128a7d1c4957dea2547cd8f",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r12": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 8016.0,
+  "native_sha256": "b6b7bd25d2cda10cc7272e017c85ff35c6a829616f6f173253a840a3a2374257",
+  "num_detectors": 117,
+  "num_measurements": 118,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 47,
+   "cz": 216,
+   "measure": 118,
+   "r": 216
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 12
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "ce276d55ca6f033ff116f94f2e072576291a3627609b8d85420ba6bfc53661f6",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "2631452c030de5dc5de325c5bc16ecf7c42d98a056f57e6edd603128bfbbbbe1",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r20": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 13360.0,
+  "native_sha256": "d03021c6a2b1184a0e4e2ed9ab52bb2f5fde296bc51fb35e925d0ac13d46bc3f",
+  "num_detectors": 189,
+  "num_measurements": 190,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 79,
+   "cz": 360,
+   "measure": 190,
+   "r": 360
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 20
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "de387dba8c8d8db26675147121be60d1a9295add0d99f7bd154b70ac9e92b7ca",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "a1caa22fa3d633c8d163e404c4684339bbe9fc2cb67cbe71791485d138e2a726",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r30": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 20040.0,
+  "native_sha256": "d928681f6c8d8ee54ba8cdd7bd90a7429148622117858afba0bbe706f9dc403c",
+  "num_detectors": 279,
+  "num_measurements": 280,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 119,
+   "cz": 540,
+   "measure": 280,
+   "r": 540
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 30
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "6fae6277c23158c5ab798d00580869740bcb32d42c494852590613b8c518def0",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "adafb1056cad2e7f82864b690c662991d1d227af4eea6a9167248e301b181b07",
+  "swaps": 0,
+  "target": "hardware"
+ },
+ "E2_rep10_phase_p_r50": {
+  "checks": {
+   "swaps": 0
+  },
+  "duration_ns": 33400.0,
+  "native_sha256": "56aba62992f4966eb16ebcfb61fd65e2ca14da4b6cc38aa527c5e600a60bfd3c",
+  "num_detectors": 459,
+  "num_measurements": 460,
+  "num_observables": 1,
+  "ops": {
+   "barrier": 199,
+   "cz": 900,
+   "measure": 460,
+   "r": 900
+  },
+  "orientation": 0,
+  "origin": [
+   0,
+   0
+  ],
+  "params": {
+   "barriers": true,
+   "basis": "X",
+   "delay_ns": 0.0,
+   "distance": 10,
+   "family": "repetition",
+   "kind": "phase",
+   "patch": "line19",
+   "prep": "+",
+   "rounds": 50
+  },
+  "placement": {
+   "0": "QB13",
+   "1": "QB14",
+   "10": "QB11",
+   "11": "QB10",
+   "12": "QB15",
+   "13": "QB19",
+   "14": "QB20",
+   "15": "QB16",
+   "16": "QB17",
+   "17": "QB12",
+   "18": "QB7",
+   "2": "QB9",
+   "3": "QB8",
+   "4": "QB3",
+   "5": "QB4",
+   "6": "QB1",
+   "7": "QB2",
+   "8": "QB5",
+   "9": "QB6"
+  },
+  "qasm_sha256": "31e350a771e9b9a4b8486018ed3ecf6cd4d19ac1216269403af731a712e53ee0",
+  "roles": {
+   "0": "data",
+   "1": "ancilla",
+   "10": "data",
+   "11": "ancilla",
+   "12": "data",
+   "13": "ancilla",
+   "14": "data",
+   "15": "ancilla",
+   "16": "data",
+   "17": "ancilla",
+   "18": "data",
+   "2": "data",
+   "3": "ancilla",
+   "4": "data",
+   "5": "ancilla",
+   "6": "data",
+   "7": "ancilla",
+   "8": "data",
+   "9": "ancilla"
+  },
+  "stabilizers": {
+   "1": {
+    "label": "XX(1)",
+    "pauli": "X",
+    "support": [
+     0,
+     2
+    ]
+   },
+   "11": {
+    "label": "XX(11)",
+    "pauli": "X",
+    "support": [
+     10,
+     12
+    ]
+   },
+   "13": {
+    "label": "XX(13)",
+    "pauli": "X",
+    "support": [
+     12,
+     14
+    ]
+   },
+   "15": {
+    "label": "XX(15)",
+    "pauli": "X",
+    "support": [
+     14,
+     16
+    ]
+   },
+   "17": {
+    "label": "XX(17)",
+    "pauli": "X",
+    "support": [
+     16,
+     18
+    ]
+   },
+   "3": {
+    "label": "XX(3)",
+    "pauli": "X",
+    "support": [
+     2,
+     4
+    ]
+   },
+   "5": {
+    "label": "XX(5)",
+    "pauli": "X",
+    "support": [
+     4,
+     6
+    ]
+   },
+   "7": {
+    "label": "XX(7)",
+    "pauli": "X",
+    "support": [
+     6,
+     8
+    ]
+   },
+   "9": {
+    "label": "XX(9)",
+    "pauli": "X",
+    "support": [
+     8,
+     10
+    ]
+   }
+  },
+  "stim_sha256": "bce4017ae675396b0e6c42f9b3b4718a49fb971cacb879e510877a5625409f1c",
+  "swaps": 0,
+  "target": "hardware"
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E4/b2_E4_d3_Z_r05_pA_t02000ns",
+ "shots": 128,
+ "det_rate_mean": 0.1087890625,
+ "same_stab_lag1": 0.014279367941698172,
+ "same_stab_lag2": 0.027119256043763456,
+ "same_stab_lag3": 0.0016546721497143965,
+ "cross_stab_lag0": 0.0022684868889960522,
+ "cross_stab_lag1": 0.0017369364859937243
+}

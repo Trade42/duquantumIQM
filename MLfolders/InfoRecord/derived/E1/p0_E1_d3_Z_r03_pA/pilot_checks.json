@@ -1,0 +1,369 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "garnet-pilot",
+ "job_id": "01a17000-6394-755f-a58b-b4f9c01893b0",
+ "device": "garnet",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "circuit": "E1_d3_Z_r03_pA",
+ "run_id": "p0_E1_d3_Z_r03_pA",
+ "raw": "raw/20261024-garnet-pilot/01a17000-6394-755f-a58b-b4f9c01893b0",
+ "snapshots": {
+  "before": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "fetched_utc_end": "2026-10-24T22:17:52.611160Z"
+  },
+  "after": {
+   "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+   "fetched_utc_end": "2026-10-24T22:21:52.973934Z"
+  }
+ },
+ "verify": {
+  "native_sha256": "9c6dba2b8106c0da0c92d219b547fe822caceb1313cf8e9547ee4ee39c26be73",
+  "stim_sha256": "0f9ad36639de0de952861f506fb379c4020bf366f2805b5fc8f114ef207e17c5",
+  "qasm_sha256": "1d6dc5e411e38ac5d1c520b9edd08cbf7aa6561bf5fac604aa539b13aed4baa0",
+  "qiskit_ops": {
+   "r": 106,
+   "cz": 72,
+   "measure": 33,
+   "barrier": 17
+  },
+  "sent_ops": {
+   "prx": 106,
+   "cz": 72,
+   "barrier": 17,
+   "measure": 33
+  },
+  "cz": 72,
+  "couplers": 24,
+  "measurements": 33,
+  "swaps": 0,
+  "qubits": [
+   "QB1",
+   "QB2",
+   "QB4",
+   "QB5",
+   "QB6",
+   "QB7",
+   "QB8",
+   "QB9",
+   "QB10",
+   "QB11",
+   "QB12",
+   "QB13",
+   "QB14",
+   "QB15",
+   "QB16",
+   "QB19",
+   "QB20"
+  ],
+  "qubit_index_to_name": {
+   "0": "QB1",
+   "1": "QB2",
+   "3": "QB4",
+   "4": "QB5",
+   "5": "QB6",
+   "6": "QB7",
+   "7": "QB8",
+   "8": "QB9",
+   "9": "QB10",
+   "10": "QB11",
+   "11": "QB12",
+   "12": "QB13",
+   "13": "QB14",
+   "14": "QB15",
+   "15": "QB16",
+   "18": "QB19",
+   "19": "QB20"
+  },
+  "qubit_mapping": {
+   "0": "QB12",
+   "1": "QB7",
+   "2": "QB6",
+   "3": "QB2",
+   "4": "QB16",
+   "5": "QB11",
+   "6": "QB10",
+   "7": "QB5",
+   "8": "QB4",
+   "9": "QB1",
+   "10": "QB20",
+   "11": "QB19",
+   "12": "QB15",
+   "13": "QB14",
+   "14": "QB9",
+   "15": "QB8",
+   "16": "QB13"
+  }
+ },
+ "stop_go": [
+  {
+   "check": "memory shape",
+   "value": [
+    1000,
+    33
+   ],
+   "band": [
+    1000,
+    33
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 1,
+   "band": "<= 5",
+   "pass": true
+  },
+  {
+   "check": "X-type round-1 bits, pooled mean",
+   "value": 0.494,
+   "band": [
+    0.4,
+    0.6
+   ],
+   "pass": true
+  },
+  {
+   "check": "Z-type round-1 bits, pooled mean",
+   "value": 0.079,
+   "band": "< 0.3",
+   "pass": true
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.22133333333333333,
+   "band": [
+    0.051791666666666666,
+    0.34496333333333334
+   ],
+   "pass": true
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ]
+   ],
+   "band": [
+    [
+     "QB1",
+     "QB2",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB7",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB15",
+     "QB16",
+     "QB19",
+     "QB20"
+    ]
+   ],
+   "pass": true
+  },
+  {
+   "check": "qubit_mapping (meta.json)",
+   "value": [
+    {
+     "0": "QB12",
+     "1": "QB7",
+     "2": "QB6",
+     "3": "QB2",
+     "4": "QB16",
+     "5": "QB11",
+     "6": "QB10",
+     "7": "QB5",
+     "8": "QB4",
+     "9": "QB1",
+     "10": "QB20",
+     "11": "QB19",
+     "12": "QB15",
+     "13": "QB14",
+     "14": "QB9",
+     "15": "QB8",
+     "16": "QB13"
+    }
+   ],
+   "band": [
+    {
+     "0": "QB12",
+     "1": "QB7",
+     "2": "QB6",
+     "3": "QB2",
+     "4": "QB16",
+     "5": "QB11",
+     "6": "QB10",
+     "7": "QB5",
+     "8": "QB4",
+     "9": "QB1",
+     "10": "QB20",
+     "11": "QB19",
+     "12": "QB15",
+     "13": "QB14",
+     "14": "QB9",
+     "15": "QB8",
+     "16": "QB13"
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "stop_go_pass": true,
+ "detection_fraction_reference": 0.17248166666666667,
+ "timeline": [
+  {
+   "source": "iqm-server",
+   "status": "created",
+   "timestamp": "2026-10-24T22:20:36.123237Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "received",
+   "timestamp": "2026-10-24T22:20:36.248052Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_started",
+   "timestamp": "2026-10-24T22:20:36.273307Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_ended",
+   "timestamp": "2026-10-24T22:20:36.275994Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_started",
+   "timestamp": "2026-10-24T22:20:36.298700Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_ended",
+   "timestamp": "2026-10-24T22:20:36.383166Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_started",
+   "timestamp": "2026-10-24T22:21:06.572811Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_ended",
+   "timestamp": "2026-10-24T22:21:06.623474Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_started",
+   "timestamp": "2026-10-24T22:21:06.625575Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_ended",
+   "timestamp": "2026-10-24T22:21:06.654573Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "ready",
+   "timestamp": "2026-10-24T22:21:06.658897Z"
+  },
+  {
+   "source": "iqm-server",
+   "status": "completed",
+   "timestamp": "2026-10-24T22:21:06.884180Z"
+  }
+ ],
+ "timeline_numbers": {
+  "statuses": [
+   "created",
+   "received",
+   "validation_started",
+   "validation_ended",
+   "compilation_started",
+   "compilation_ended",
+   "execution_started",
+   "execution_ended",
+   "post_processing_started",
+   "post_processing_ended",
+   "ready",
+   "completed"
+  ],
+  "unparsed_entries": 0,
+  "total_s": 30.760943,
+  "queue_s": 30.324759,
+  "compile_s": 0.084466,
+  "execution_s": 0.050663,
+  "post_s": 0.260706,
+  "planned_per_shot_s": 0.00030034,
+  "planned_execution_s": 0.30034,
+  "per_shot_s": 5.0663e-05,
+  "per_shot_beyond_plan_s": -0.000249677,
+  "per_shot_beyond_reset_wait_s": -0.00024733700000000003,
+  "ratio_to_plan": 0.1686854897782513
+ },
+ "decoder": {
+  "noise": "dqiqm.experiments.device.calibrated_noise(the before snapshot, data/calibration/garnet/a18a947f-0408-4628-81ea-1715637e434f.20261024T221752Z.json, calibration set a18a947f-0408-4628-81ea-1715637e434f, idle_ns=556): gate depolarizing at the RB/IRB figures plus relaxation over each gate, the mean readout assignment error as record flips, and the T1/T2 twirl over each 556 ns readout window",
+  "idle_ns": 556.0,
+  "dem_errors": 294,
+  "graphlike_distance": 3
+ },
+ "decode": {
+  "rounds": 3,
+  "shots": 1000,
+  "pm_failures": 209,
+  "p_l": 0.209,
+  "p_l_wilson95": [
+   0.1849366933157235,
+   0.23529048012286963
+  ],
+  "raw_failures": 379,
+  "p_always_0": 0.379,
+  "p_always_0_wilson95": [
+   0.34944843375830026,
+   0.4094776417952041
+  ],
+  "eps_single_point": 0.08254371954331913,
+  "eps_single_point_95": [
+   0.07134034330630551,
+   0.09551428389477967
+  ],
+  "eps_note": "eps = (1 - (1 - 2 P_L)^(1/R)) / 2 from R = 3 alone: one point, not a fit (the fit needs the batches' round counts)"
+ },
+ "per_round_detection_rate": {
+  "0": 0.079,
+  "1": 0.26725,
+  "2": 0.284125,
+  "3": 0.14625
+ },
+ "record_problems": [],
+ "paths": {
+  "dataset": "datasets/E1/p0_E1_d3_Z_r03_pA",
+  "derived": "derived/E1/p0_E1_d3_Z_r03_pA",
+  "ler": "ler/E1/p0_E1_d3_Z_r03_pA"
+ },
+ "created_utc": "2026-10-24T22:22:35Z",
+ "commit": "556630f11519487e35c60648c2e6bd074356d0d7"
+}

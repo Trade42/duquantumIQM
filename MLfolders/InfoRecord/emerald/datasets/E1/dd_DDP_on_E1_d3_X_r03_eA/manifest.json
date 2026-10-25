@@ -1,0 +1,233 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "simulated": false,
+ "experiment": "E1",
+ "circuit": "E1_d3_X_r03_eA",
+ "run_id": "dd_DDP_on_E1_d3_X_r03_eA",
+ "batch": 0,
+ "job_id": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+ "position_in_job": 0,
+ "split": {
+  "rule": "the DD A/B (emerald-dd): not in the ML split; no shot is finetune, validation or test",
+  "job": "DDP",
+  "role": "dd_ab",
+  "counts": {
+   "dd_ab": 1000
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 3,
+  "basis": "X",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "+",
+  "patch": "eA",
+  "delay_ns": 0.0,
+  "barriers": true,
+  "orientation": 1
+ },
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "calibration": {
+  "before": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json",
+  "after": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015750Z.json",
+  "job": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json"
+ },
+ "shots": 1000,
+ "num_measurements": 33,
+ "num_detectors": 24,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    1000,
+    33
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "2b81181d09592ebf451eb827b743309282e45806e95f7f9297406622c9b25693"
+  },
+  "det_events.npy": {
+   "shape": [
+    1000,
+    24
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "25e1c0d1e259edb044a6dd064e03a1458b51cab3658c276b4d1124b38d7b4e4e"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    1000,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "03bc6cfb1833744cae9c87140d8e666dd41fb5f1116223e6e7bb5fdf320ccb95"
+  }
+ },
+ "placement": {
+  "1": "QB13",
+  "2": "QB14",
+  "3": "QB22",
+  "5": "QB31",
+  "8": "QB20",
+  "9": "QB21",
+  "10": "QB29",
+  "11": "QB30",
+  "12": "QB38",
+  "13": "QB39",
+  "14": "QB19",
+  "15": "QB27",
+  "16": "QB28",
+  "17": "QB36",
+  "18": "QB37",
+  "19": "QB45",
+  "25": "QB44"
+ },
+ "circuit_files": {
+  "stim": "circuits/E1/E1_d3_X_r03_eA.stim",
+  "qasm": "circuits/E1/E1_d3_X_r03_eA.qasm"
+ },
+ "stim_sha256": "af1fe0587be71db4b67d7955a2f4ecc0aefc5d9fb06090c728826fb5e927dd99",
+ "qasm_sha256": "cf53641c5e47307ebce08b2364e4bc7865ec787db5d5209fbe3e2483c71b7661",
+ "native_sha256": "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458",
+ "raw": {
+  "path": "raw/20261025-emerald-dd-pilot/01a170c2-72b7-74bd-a439-40a869cc85fc/memory.npz",
+  "key": "c0",
+  "meta": "raw/20261025-emerald-dd-pilot/01a170c2-72b7-74bd-a439-40a869cc85fc/meta.json",
+  "task": "emerald-dd-pilot",
+  "job": "DDP",
+  "dd": "on",
+  "compilation_options": {
+   "max_circuit_duration_over_t2": null,
+   "heralding_mode": "none",
+   "move_gate_validation": "strict",
+   "move_gate_frame_tracking": "full",
+   "active_reset_cycles": null,
+   "dd_mode": "enabled",
+   "dd_strategy": {
+    "merge_contiguous_waits": true,
+    "target_qubits": null,
+    "skip_leading_wait": true,
+    "skip_trailing_wait": true,
+    "gate_sequences": [
+     [
+      9,
+      "XYXYYXYX",
+      "asap"
+     ],
+     [
+      5,
+      "YXYX",
+      "asap"
+     ],
+     [
+      2,
+      "XX",
+      "center"
+     ]
+    ]
+   }
+  },
+  "manifest": "raw/20261025-emerald-dd-pilot/DDP.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "priors: hardware_noise (79092cf). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec): calibrated_noise with the depolarize idle over 360 ns per mid-circuit readout layer (readout window 360 ns from measure_ns (no compile data: probe only), plus a 0 ns delay), T2 ramsey, final readout measure_fidelity (unheralded). DD on (DDP; compilation options in raw.compilation_options)",
+  "num_dem_errors": 299
+ },
+ "duration_ns": 1848.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-25T02:11:01Z",
+ "job_timeline": [
+  {
+   "source": "iqm-server",
+   "status": "created",
+   "timestamp": "2026-10-25T01:52:33.981108Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "received",
+   "timestamp": "2026-10-25T01:52:34.658070Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_started",
+   "timestamp": "2026-10-25T01:52:34.753765Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_ended",
+   "timestamp": "2026-10-25T01:52:34.757295Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_started",
+   "timestamp": "2026-10-25T01:52:34.840379Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_ended",
+   "timestamp": "2026-10-25T01:52:35.023670Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_started",
+   "timestamp": "2026-10-25T01:52:35.308414Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_ended",
+   "timestamp": "2026-10-25T01:52:36.617543Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_started",
+   "timestamp": "2026-10-25T01:52:36.619225Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_ended",
+   "timestamp": "2026-10-25T01:52:36.638701Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "ready",
+   "timestamp": "2026-10-25T01:52:36.640330Z"
+  },
+  {
+   "source": "iqm-server",
+   "status": "completed",
+   "timestamp": "2026-10-25T01:52:37.054580Z"
+  }
+ ],
+ "commit": "200f7362ca078d0c196bb8bdb09aba6126037609",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": null,
+ "simulator": null
+}

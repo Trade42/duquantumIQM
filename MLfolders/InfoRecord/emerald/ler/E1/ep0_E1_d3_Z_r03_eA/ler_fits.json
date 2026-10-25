@@ -1,0 +1,11 @@
+{
+ "label": "HARDWARE",
+ "device": "emerald",
+ "decoder": "pymatching on the noisy copy of the circuit that ran",
+ "noise": "dqiqm.experiments.emerald.calibrated_noise(the before snapshot, data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261024T224404Z.json, calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec, idle_ns=360): device.calibrated_noise(idle_ns=0) (gate depolarizing at the RB/IRB figures plus relaxation over each gate, the mean readout assignment error as record flips) plus the T1/T2 twirl over the 360 ns readout window counted once (data p_xy + p_z, ancillas p_xy)",
+ "zero_failure_points": [],
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E1",
+ "run_id": "ep0_E1_d3_Z_r03_eA",
+ "points": "ler_points.csv"
+}

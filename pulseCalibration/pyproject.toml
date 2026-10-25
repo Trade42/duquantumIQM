@@ -1,0 +1,40 @@
+[project]
+name = "dqiqm"
+version = "0.1.0"
+description = "DuQuantum 2026, IQM track: a no-reset rotated surface-code memory experiment on IQM Emerald"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    # The challenge's pins (its requirements.txt, tested by the IQM mentors).
+    "iqm-client[qiskit,qrisp]==35.0.3",
+    "qrisp==0.9.9",
+    "qiskit==2.1.2",
+    "qiskit-aer==0.17.2",
+    "jax==0.7.1",
+    "jaxlib==0.7.1",
+    "stim==1.16.0",
+    "pymatching==2.4.0",
+    "numpy==2.4.6",
+    "matplotlib==3.11.2",
+    "iqm-qubit-selector",
+    # Ours.
+    "sinter>=1.16,<2",
+    "ldpc>=2.4",
+    "scipy",
+    "networkx",
+    "python-dotenv",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not hw' --strict-markers"
+markers = [
+    "hw: touches IQM Resonance (needs a token and a QPU allowance); deselected by default",
+]

@@ -1,0 +1,169 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "emerald-b3",
+ "device": "emerald",
+ "batch": 3,
+ "split": "test",
+ "job": "E-B3-2-E1",
+ "job_id": "01a170a1-17bf-77ad-a986-fadac8637f39",
+ "position_in_job": 1,
+ "circuit": "E1_d3_X_r02_eA",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "priors": "hardware_noise (79092cf)",
+ "prior": {
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "family": "surface_memory",
+  "readout_window_ns": 360.0,
+  "readout_window_source": "measure_ns (no compile data: probe only)",
+  "delay_ns": 0.0,
+  "idle_ns": 360.0,
+  "idle_channel": "depolarize",
+  "idle_frame": null,
+  "t2": "ramsey",
+  "final_readout": "measure_fidelity (unheralded)",
+  "idle_after_last_round": false
+ },
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    2000,
+    25
+   ],
+   "band": [
+    2000,
+    25
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 7,
+   "band": "<= 12.8125",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": 0.480875,
+   "band": [
+    0.4,
+    0.6
+   ],
+   "pass": true,
+   "info": {
+    "columns": [
+     1,
+     3,
+     4,
+     6
+    ],
+    "x_type": [],
+    "z_type": [
+     1,
+     3,
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.052,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "x_type": [
+     0,
+     2,
+     5,
+     7
+    ],
+    "z_type": []
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.1010625,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": 0.091525,
+    "ratio_to_model": 1.104206500956023
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ],
+   "band": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "per_round_detection_rate": {
+  "0": 0.052,
+  "1": 0.1495625,
+  "2": 0.053125
+ },
+ "model_with_idle": {
+  "shots": 20000,
+  "seed": 2026,
+  "idle_ns": 360.0,
+  "detection_fraction": 0.091525,
+  "all_zero": 0.00135,
+  "random_first_mean": 0.50005,
+  "deterministic_first_misread": 0.0542625
+ },
+ "numbers": {
+  "shots": 2000,
+  "det_rate": 0.1010625,
+  "all_zero": 7,
+  "obs_flips": 309,
+  "pm_failures": 82
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T01:19:04Z",
+ "commit": "9b6bbf4defb27a696b8c2d506feb5be9651cd09a"
+}

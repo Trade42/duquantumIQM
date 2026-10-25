@@ -1,0 +1,118 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E4",
+ "run_id": "X_pA_t1000ns_b2",
+ "points": "ler_points.csv",
+ "model": "2 P_L = 1 - A (1 - 2 eps_L)^R, maximum likelihood on the binomial counts (dqiqm.stats.fit_eps)",
+ "fixed_A": {
+  "form": "F = (1-2eps)^n",
+  "free_amplitude": false,
+  "eps": 0.01889096422750464,
+  "eps_se_curvature": 0.003109935164348081,
+  "eps_ci_curvature": [
+   0.012795603311127748,
+   0.024986325143881532
+  ],
+  "eps_ci_bootstrap": [
+   0.013368580437123223,
+   0.025738841244682516
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": NaN,
+  "amplitude_ci_bootstrap": [
+   NaN,
+   NaN
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   1,
+   6,
+   9,
+   24
+  ],
+  "n": [
+   128,
+   128,
+   128,
+   128
+  ],
+  "p_fit": [
+   0.037068191396119554,
+   0.054558647868339416,
+   0.08758205846146477,
+   0.13258398895543744
+  ],
+  "pearson_residuals": [
+   -1.7519305509748775,
+   -0.38275717639814083,
+   -0.691164997746115,
+   1.832081168840314
+  ],
+  "chi2": 7.049994174852094,
+  "dof": 3,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 2.349998058284031
+ },
+ "free_A": {
+  "form": "F = A(1-2eps)^n",
+  "free_amplitude": true,
+  "eps": 0.01889096422750464,
+  "eps_se_curvature": 0.006517491034063425,
+  "eps_ci_curvature": [
+   0.006116916531177612,
+   0.03166501192383167
+  ],
+  "eps_ci_bootstrap": [
+   0.013368580437123223,
+   0.02573884129768823
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": 0.051075634898944164,
+  "amplitude_ci_bootstrap": [
+   1.0,
+   1.0
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   1,
+   6,
+   9,
+   24
+  ],
+  "n": [
+   128,
+   128,
+   128,
+   128
+  ],
+  "p_fit": [
+   0.037068191396119554,
+   0.054558647868339416,
+   0.08758205846146477,
+   0.13258398895543744
+  ],
+  "pearson_residuals": [
+   -1.7519305509748775,
+   -0.38275717639814083,
+   -0.691164997746115,
+   1.832081168840314
+  ],
+  "chi2": 7.049994174852094,
+  "dof": 2,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 3.524997087426047
+ },
+ "plot": "ler.png"
+}

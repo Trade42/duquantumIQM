@@ -1,0 +1,252 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "device": "emerald",
+ "task": "emerald-redecode",
+ "priors": {
+  "fallback": "hardware_noise (79092cf)",
+  "compiled": "hardware_noise compiled-1036ns (53b2a19)"
+ },
+ "rule": "Per patch and basis: pool the validation shots of B1 and B2 (shots.csv split = validation, 20% per job, checked against suite.split) over every E1 round count; decode them under both priors; the prior with fewer failures is chosen; an exact tie chooses compiled. McNemar (exact binomial on the discordant shots) is reported beside it, for information, not as the rule. B3 is never opened.",
+ "fit_rule": "Per patch and basis, on B1+B2 (all shots, finetune and validation) decoded with the chosen prior: fit A = 1 on R >= 2, and the first-round model 2 P_L = 1 - (1 - 2 eps_1)(1 - 2 eps)^(R - 1) on every R; the one with the lower chi2/dof wins that pool; the model that wins more of the four pools is used for all (a 2-2 tie: the lower summed chi2/dof).",
+ "e4_rule": "E4 has no test batch and runs on eA only: it takes eA's per-basis E1 choice, and both priors are reported for it.",
+ "batches_opened": [
+  1,
+  2
+ ],
+ "runs_rebuilt": 112,
+ "rebuild_exact": true,
+ "choice": {
+  "eA_Z": "fallback",
+  "eA_X": "fallback",
+  "eB_Z": "fallback",
+  "eB_X": "fallback"
+ },
+ "validation": {
+  "eA_Z": {
+   "patch": "eA",
+   "basis": "Z",
+   "runs": 22,
+   "validation_shots": 8800,
+   "fallback": {
+    "failures": 2146,
+    "p_l": 0.24386363636363637,
+    "wilson95": [
+     0.23500484436211042,
+     0.25294595290226213
+    ]
+   },
+   "compiled": {
+    "failures": 2218,
+    "p_l": 0.2520454545454546,
+    "wilson95": [
+     0.2430833829175053,
+     0.2612239106188128
+    ]
+   },
+   "mcnemar": {
+    "compiled_only": 501,
+    "fallback_only": 429,
+    "p": 0.019853468765464895
+   },
+   "choice": "fallback"
+  },
+  "eA_X": {
+   "patch": "eA",
+   "basis": "X",
+   "runs": 22,
+   "validation_shots": 8800,
+   "fallback": {
+    "failures": 1937,
+    "p_l": 0.22011363636363637,
+    "wilson95": [
+     0.2115802179374009,
+     0.22889130542646313
+    ]
+   },
+   "compiled": {
+    "failures": 1938,
+    "p_l": 0.22022727272727272,
+    "wilson95": [
+     0.21169220253902946,
+     0.22900649438416712
+    ]
+   },
+   "mcnemar": {
+    "compiled_only": 282,
+    "fallback_only": 281,
+    "p": 1.0
+   },
+   "choice": "fallback"
+  },
+  "eB_Z": {
+   "patch": "eB",
+   "basis": "Z",
+   "runs": 22,
+   "validation_shots": 8800,
+   "fallback": {
+    "failures": 2044,
+    "p_l": 0.23227272727272727,
+    "wilson95": [
+     0.22356783947013975,
+     0.24121125474230992
+    ]
+   },
+   "compiled": {
+    "failures": 2111,
+    "p_l": 0.23988636363636365,
+    "wilson95": [
+     0.23107936166738988,
+     0.24892036102034246
+    ]
+   },
+   "mcnemar": {
+    "compiled_only": 526,
+    "fallback_only": 459,
+    "p": 0.03541819419153267
+   },
+   "choice": "fallback"
+  },
+  "eB_X": {
+   "patch": "eB",
+   "basis": "X",
+   "runs": 22,
+   "validation_shots": 8800,
+   "fallback": {
+    "failures": 2054,
+    "p_l": 0.2334090909090909,
+    "wilson95": [
+     0.22468871041637375,
+     0.2423621193894017
+    ]
+   },
+   "compiled": {
+    "failures": 2198,
+    "p_l": 0.24977272727272729,
+    "wilson95": [
+     0.24083891027686774,
+     0.2589249120727987
+    ]
+   },
+   "mcnemar": {
+    "compiled_only": 552,
+    "fallback_only": 408,
+    "p": 3.773107764586117e-06
+   },
+   "choice": "fallback"
+  }
+ },
+ "fit_model": "first_round",
+ "fit_model_pools": {
+  "eA_Z": {
+   "prior": "fallback",
+   "A1_R>=2": {
+    "form": "F = (1-2eps)^n on R >= 2",
+    "eps": 0.05086180284990983,
+    "eps_ci_bootstrap": [
+     null,
+     null
+    ],
+    "chi2": 29.6678262627826,
+    "dof": 9,
+    "chi2_per_dof": 3.2964251403091778,
+    "eps_se_curvature": 0.0006771024640444946
+   },
+   "first_round": {
+    "form": "F = (1-2eps_1)(1-2eps)^(n-1)",
+    "eps": 0.05799726324650465,
+    "eps_1": 0.017493355000371406,
+    "amplitude": 1.0916372340669969,
+    "chi2": 15.78738741963267,
+    "dof": 9,
+    "chi2_per_dof": 1.7541541577369635,
+    "bootstrap": 0,
+    "seed": 2026
+   },
+   "winner": "first_round"
+  },
+  "eA_X": {
+   "prior": "fallback",
+   "A1_R>=2": {
+    "form": "F = (1-2eps)^n on R >= 2",
+    "eps": 0.04091538938688463,
+    "eps_ci_bootstrap": [
+     null,
+     null
+    ],
+    "chi2": 169.22036788705321,
+    "dof": 9,
+    "chi2_per_dof": 18.80226309856147,
+    "eps_se_curvature": 0.0005469841140694096
+   },
+   "first_round": {
+    "form": "F = (1-2eps_1)(1-2eps)^(n-1)",
+    "eps": 0.04709859782539279,
+    "eps_1": 0.009433420720723718,
+    "amplitude": 1.0831641874452576,
+    "chi2": 43.78412133789205,
+    "dof": 9,
+    "chi2_per_dof": 4.864902370876894,
+    "bootstrap": 0,
+    "seed": 2026
+   },
+   "winner": "first_round"
+  },
+  "eB_Z": {
+   "prior": "fallback",
+   "A1_R>=2": {
+    "form": "F = (1-2eps)^n on R >= 2",
+    "eps": 0.04725305820478316,
+    "eps_ci_bootstrap": [
+     null,
+     null
+    ],
+    "chi2": 142.81945110813766,
+    "dof": 9,
+    "chi2_per_dof": 15.868827900904185,
+    "eps_se_curvature": 0.0006287669575824706
+   },
+   "first_round": {
+    "form": "F = (1-2eps_1)(1-2eps)^(n-1)",
+    "eps": 0.05546944929487999,
+    "eps_1": 0.007548242437036656,
+    "amplitude": 1.1078018300020778,
+    "chi2": 22.27364335952046,
+    "dof": 9,
+    "chi2_per_dof": 2.4748492621689397,
+    "bootstrap": 0,
+    "seed": 2026
+   },
+   "winner": "first_round"
+  },
+  "eB_X": {
+   "prior": "fallback",
+   "A1_R>=2": {
+    "form": "F = (1-2eps)^n on R >= 2",
+    "eps": 0.044659490510857144,
+    "eps_ci_bootstrap": [
+     null,
+     null
+    ],
+    "chi2": 228.65505963273532,
+    "dof": 9,
+    "chi2_per_dof": 25.40611773697059,
+    "eps_se_curvature": 0.0005948206379154906
+   },
+   "first_round": {
+    "form": "F = (1-2eps_1)(1-2eps)^(n-1)",
+    "eps": 0.05218632782547574,
+    "eps_1": 0.007440175378815889,
+    "amplitude": 1.0999213628949254,
+    "chi2": 66.08125417741505,
+    "dof": 9,
+    "chi2_per_dof": 7.342361575268338,
+    "bootstrap": 0,
+    "seed": 2026
+   },
+   "winner": "first_round"
+  }
+ },
+ "written_at_commit": "53b2a199fd39a8a98b13fa0981759004ec856f81",
+ "note": "Written by `scripts/emerald_redecode.py select` before any B3 number was computed; committed before `report`."
+}

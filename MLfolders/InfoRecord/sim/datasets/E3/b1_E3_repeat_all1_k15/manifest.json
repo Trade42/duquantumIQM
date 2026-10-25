@@ -1,0 +1,145 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "SIMULATED",
+ "simulated": true,
+ "experiment": "E3",
+ "circuit": "E3_repeat_all1_k15",
+ "run_id": "b1_E3_repeat_all1_k15",
+ "batch": 1,
+ "job_id": "sim-B1-1-E3",
+ "position_in_job": 0,
+ "split": {
+  "rule": "batch test_batch is the test set, never fine-tuned on; in every other job, a seeded draw of round(validation_fraction * shots) shot indices (numpy default_rng([seed, crc32(job label)]).permutation) is validation, the rest finetune; the same indices for every circuit of the job",
+  "test_batch": 3,
+  "validation_fraction": 0.2,
+  "seed": 2026,
+  "job": "B1-1-E3",
+  "role": "finetune+validation",
+  "counts": {
+   "finetune": 205,
+   "validation": 51
+  }
+ },
+ "spec": {
+  "family": "readout",
+  "d": null,
+  "rounds": 15,
+  "basis": "Z",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": "repeated",
+  "prep": "11111111111111111111",
+  "patch": "all20",
+  "delay_ns": 0.0,
+  "barriers": true,
+  "orientation": null
+ },
+ "device": "IQMFakeGarnet+profile(a18a947f)",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "calibration": {
+  "before": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json",
+  "after": "calibration/garnet/20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json"
+ },
+ "shots": 256,
+ "num_measurements": 300,
+ "num_detectors": 300,
+ "num_observables": 0,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    256,
+    300
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "932f30fff2a3793dbb4a1de66c17501ee417b135fee2195b03193ba055248bb2"
+  },
+  "det_events.npy": {
+   "shape": [
+    256,
+    300
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "72f3720d0f21f74697024f9b6711de6f1a81ad5ad1d788262bfea78ff443b1f3"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    256,
+    0
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "255de0ef3cff649e9a3f2955ee5d7e0e705c5f33ed26da708f3bcb108c5502b4"
+  }
+ },
+ "placement": {
+  "0": "QB1",
+  "1": "QB2",
+  "2": "QB3",
+  "3": "QB4",
+  "4": "QB5",
+  "5": "QB6",
+  "6": "QB7",
+  "7": "QB8",
+  "8": "QB9",
+  "9": "QB10",
+  "10": "QB11",
+  "11": "QB12",
+  "12": "QB13",
+  "13": "QB14",
+  "14": "QB15",
+  "15": "QB16",
+  "16": "QB17",
+  "17": "QB18",
+  "18": "QB19",
+  "19": "QB20"
+ },
+ "circuit_files": {
+  "stim": "circuits/E3/E3_repeat_all1_k15.stim",
+  "qasm": "circuits/E3/E3_repeat_all1_k15.qasm"
+ },
+ "stim_sha256": "71a5d4320c80539ec8edc9e563c5086c5c368c07554435c045fac4844b4a91d9",
+ "qasm_sha256": "3429f28fbfc46e7259b06f90587563eb2fa51b294e08de0636c3f7302c393e84",
+ "native_sha256": "52e93da7d73ae386f1c3a14bb468edb454adb864ca6b87359cff84dbae782d6f",
+ "raw": {
+  "path": "raw/20261024-garnet-dryrun/sim-B1-1-E3/memory.npz",
+  "key": "c0",
+  "meta": "raw/20261024-garnet-dryrun/sim-B1-1-E3/meta.json"
+ },
+ "decoder": null,
+ "duration_ns": 8356.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-24T20:07:51Z",
+ "job_timeline": [],
+ "commit": "830ca7bd02f8b415edf758cfbab94b8bb564b06b",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": {
+  "aer_seed_simulator": 533084,
+  "circuit_index": 0
+ },
+ "simulator": {
+  "backend": "IQMFakeGarnet+profile(a18a947f)",
+  "aer_method": "matrix_product_state",
+  "noise": "IQMFakeGarnet error profile from the live snapshot (dqiqm.experiments.device.error_profile, Ramsey T2)",
+  "threads": 4
+ }
+}

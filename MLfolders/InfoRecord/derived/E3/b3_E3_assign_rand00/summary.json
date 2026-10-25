@@ -1,0 +1,15 @@
+{
+ "label": "HARDWARE",
+ "device": "garnet",
+ "batch": 3,
+ "split": "test",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E3/b3_E3_assign_rand00",
+ "shots": 2000,
+ "det_rate_mean": 0.019475,
+ "same_stab_lag1": null,
+ "same_stab_lag2": null,
+ "same_stab_lag3": null,
+ "cross_stab_lag0": 7.34398728766166e-05,
+ "cross_stab_lag1": null
+}

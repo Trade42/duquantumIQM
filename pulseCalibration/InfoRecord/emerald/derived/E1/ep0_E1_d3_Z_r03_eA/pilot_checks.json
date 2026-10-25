@@ -1,0 +1,428 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "emerald-pilot",
+ "job_id": "01a17017-0aef-7503-a36d-6d3151635fdf",
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "circuit": "E1_d3_Z_r03_eA",
+ "run_id": "ep0_E1_d3_Z_r03_eA",
+ "raw": "raw/20261024-emerald-pilot/01a17017-0aef-7503-a36d-6d3151635fdf",
+ "snapshots": {
+  "before": {
+   "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "fetched_utc_end": "2026-10-24T22:44:04.328936Z"
+  },
+  "after": {
+   "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "fetched_utc_end": "2026-10-24T22:46:14.041823Z"
+  }
+ },
+ "frozen": {
+  "rebuilt_from": "InfoRecord/emerald/calibration/emerald/20261024T191321Z-23e12f6b-c23c-4736-8736-b0142989c0e6.json",
+  "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+  "native_sha256_equal": true
+ },
+ "verify": {
+  "native_sha256": "f70ccfd7a5e0d0428ddb25fa5fe3435e8562d2b0e628841d4ea39975a0fbd092",
+  "stim_sha256": "0f9ad36639de0de952861f506fb379c4020bf366f2805b5fc8f114ef207e17c5",
+  "qasm_sha256": "78863be378ebf15fa79f5b18988fadbff8e8ad0c28c8b7b7398fd6e9e6346383",
+  "qiskit_ops": {
+   "r": 106,
+   "cz": 72,
+   "measure": 33,
+   "barrier": 17
+  },
+  "sent_ops": {
+   "prx": 106,
+   "cz": 72,
+   "barrier": 17,
+   "measure": 33
+  },
+  "cz": 72,
+  "couplers": 24,
+  "cz_less_used": 0,
+  "measurements": 33,
+  "swaps": 0,
+  "qubits": [
+   "QB13",
+   "QB14",
+   "QB19",
+   "QB20",
+   "QB21",
+   "QB22",
+   "QB27",
+   "QB28",
+   "QB29",
+   "QB30",
+   "QB31",
+   "QB36",
+   "QB37",
+   "QB38",
+   "QB39",
+   "QB44",
+   "QB45"
+  ],
+  "qubit_index_to_name": {
+   "12": "QB13",
+   "13": "QB14",
+   "18": "QB19",
+   "19": "QB20",
+   "20": "QB21",
+   "21": "QB22",
+   "26": "QB27",
+   "27": "QB28",
+   "28": "QB29",
+   "29": "QB30",
+   "30": "QB31",
+   "35": "QB36",
+   "36": "QB37",
+   "37": "QB38",
+   "38": "QB39",
+   "43": "QB44",
+   "44": "QB45"
+  },
+  "qubit_mapping": {
+   "0": "QB13",
+   "1": "QB14",
+   "2": "QB22",
+   "3": "QB31",
+   "4": "QB20",
+   "5": "QB21",
+   "6": "QB29",
+   "7": "QB30",
+   "8": "QB38",
+   "9": "QB39",
+   "10": "QB19",
+   "11": "QB27",
+   "12": "QB28",
+   "13": "QB36",
+   "14": "QB37",
+   "15": "QB45",
+   "16": "QB44"
+  }
+ },
+ "stop_go": [
+  {
+   "check": "memory shape",
+   "value": [
+    1000,
+    33
+   ],
+   "band": [
+    1000,
+    33
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 0,
+   "band": "<= 5",
+   "pass": true
+  },
+  {
+   "check": "X-type round-1 bits, pooled mean",
+   "value": 0.4835,
+   "band": [
+    0.4,
+    0.6
+   ],
+   "pass": true
+  },
+  {
+   "check": "Z-type round-1 bits, pooled mean",
+   "value": 0.08525,
+   "band": "< 0.3",
+   "pass": true
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.13779166666666667,
+   "band": [
+    0.04020833333333333,
+    0.23187583333333334
+   ],
+   "pass": true
+  },
+  {
+   "check": "physical qubits (meta.json) = eA's 17",
+   "value": [
+    [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ]
+   ],
+   "band": [
+    [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ]
+   ],
+   "pass": true
+  },
+  {
+   "check": "qubit_mapping (meta.json) = the placement",
+   "value": [
+    {
+     "0": "QB13",
+     "1": "QB14",
+     "2": "QB22",
+     "3": "QB31",
+     "4": "QB20",
+     "5": "QB21",
+     "6": "QB29",
+     "7": "QB30",
+     "8": "QB38",
+     "9": "QB39",
+     "10": "QB19",
+     "11": "QB27",
+     "12": "QB28",
+     "13": "QB36",
+     "14": "QB37",
+     "15": "QB45",
+     "16": "QB44"
+    }
+   ],
+   "band": [
+    {
+     "0": "QB13",
+     "1": "QB14",
+     "2": "QB22",
+     "3": "QB31",
+     "4": "QB20",
+     "5": "QB21",
+     "6": "QB29",
+     "7": "QB30",
+     "8": "QB38",
+     "9": "QB39",
+     "10": "QB19",
+     "11": "QB27",
+     "12": "QB28",
+     "13": "QB36",
+     "14": "QB37",
+     "15": "QB45",
+     "16": "QB44"
+    }
+   ],
+   "pass": true
+  },
+  {
+   "check": "ledger row = eA's 17, 1 x 1000",
+   "value": {
+    "task": "emerald-pilot",
+    "device": "emerald",
+    "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+    "qubits": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+    "circuits x shots": "1 x 1000",
+    "job id": "01a17017-0aef-7503-a36d-6d3151635fdf"
+   },
+   "band": {
+    "task": "emerald-pilot",
+    "device": "emerald",
+    "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+    "qubits": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+    "circuits x shots": "1 x 1000",
+    "job id": "01a17017-0aef-7503-a36d-6d3151635fdf"
+   },
+   "pass": true
+  }
+ ],
+ "stop_go_pass": true,
+ "detection_fraction_reference": 0.11593791666666667,
+ "detection_fraction_reference_source": "job_plan.json: pilot.calibrated_stim_with_idle (calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, 100,000 shots, seed 2026)",
+ "detection_fraction_ratio": 1.1884952794419428,
+ "garnet_reference": {
+  "source": "InfoRecord/derived/E1/p0_E1_d3_Z_r03_pA/pilot_checks.json",
+  "job_id": "01a17000-6394-755f-a58b-b4f9c01893b0",
+  "detection_fraction": 0.22133333333333333,
+  "with_idle_prediction": 0.17248166666666667,
+  "ratio": 1.2832281691774003,
+  "per_shot_s": 5.0663e-05,
+  "planned_per_shot_s": 0.00030034
+ },
+ "timeline": [
+  {
+   "source": "iqm-server",
+   "status": "created",
+   "timestamp": "2026-10-24T22:45:20.758123Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "received",
+   "timestamp": "2026-10-24T22:45:20.891338Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_started",
+   "timestamp": "2026-10-24T22:45:20.987165Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_ended",
+   "timestamp": "2026-10-24T22:45:20.990166Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_started",
+   "timestamp": "2026-10-24T22:45:21.076892Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_ended",
+   "timestamp": "2026-10-24T22:45:21.236101Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_started",
+   "timestamp": "2026-10-24T22:45:21.522058Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_ended",
+   "timestamp": "2026-10-24T22:45:22.879782Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_started",
+   "timestamp": "2026-10-24T22:45:22.881353Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_ended",
+   "timestamp": "2026-10-24T22:45:22.900949Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "ready",
+   "timestamp": "2026-10-24T22:45:22.902312Z"
+  },
+  {
+   "source": "iqm-server",
+   "status": "completed",
+   "timestamp": "2026-10-24T22:45:23.309660Z"
+  }
+ ],
+ "timeline_numbers": {
+  "statuses": [
+   "created",
+   "received",
+   "validation_started",
+   "validation_ended",
+   "compilation_started",
+   "compilation_ended",
+   "execution_started",
+   "execution_ended",
+   "post_processing_started",
+   "post_processing_ended",
+   "ready",
+   "completed"
+  ],
+  "unparsed_entries": 0,
+  "total_s": 2.551537,
+  "queue_s": 0.63072,
+  "compile_s": 0.159209,
+  "execution_s": 1.357724,
+  "post_s": 0.429878,
+  "planned_per_shot_s": 0.000401848,
+  "planned_execution_s": 0.401848,
+  "per_shot_s": 0.0013577239999999998,
+  "per_shot_beyond_plan_s": 0.0009558759999999998,
+  "per_shot_beyond_reset_wait_s": 0.0009577239999999999,
+  "ratio_to_plan": 3.3787004041329056
+ },
+ "plan_per_shot": {
+  "circuit_ns": 1848.0,
+  "reset_wait_ns": 400000.0
+ },
+ "decoder": {
+  "noise": "dqiqm.experiments.emerald.calibrated_noise(the before snapshot, data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261024T224404Z.json, calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec, idle_ns=360): device.calibrated_noise(idle_ns=0) (gate depolarizing at the RB/IRB figures plus relaxation over each gate, the mean readout assignment error as record flips) plus the T1/T2 twirl over the 360 ns readout window counted once (data p_xy + p_z, ancillas p_xy)",
+  "idle_ns": 360.0,
+  "dem_errors": 294,
+  "graphlike_distance": 3
+ },
+ "decode": {
+  "rounds": 3,
+  "shots": 1000,
+  "pm_failures": 129,
+  "p_l": 0.129,
+  "p_l_wilson95": [
+   0.10963544529450506,
+   0.1512040095017769
+  ],
+  "raw_failures": 336,
+  "p_always_0": 0.336,
+  "p_always_0_wilson95": [
+   0.30740158982270954,
+   0.36585358696055253
+  ],
+  "eps_single_point": 0.047340847371623196,
+  "eps_single_point_95": [
+   0.03959843088230319,
+   0.056557652962354044
+  ],
+  "eps_note": "eps = (1 - (1 - 2 P_L)^(1/R)) / 2 from R = 3 alone: one point, not a fit (the fit needs the batches' round counts)"
+ },
+ "per_round_detection_rate": {
+  "0": 0.08525,
+  "1": 0.167375,
+  "2": 0.17225,
+  "3": 0.06225
+ },
+ "model": {
+  "shots": 100000,
+  "seed": 2026,
+  "detection_fraction": 0.11593791666666667,
+  "per_round_detection_rate": {
+   "0": 0.0612275,
+   "1": 0.12133,
+   "2": 0.13349125,
+   "3": 0.1247575
+  },
+  "p_l": 0.09154,
+  "p_l_wilson95": [
+   0.08976831866329772,
+   0.09334306177663361
+  ],
+  "p_always_0": 0.20706,
+  "all_zero_rows": 59
+ },
+ "record_problems": [],
+ "paths": {
+  "dataset": "datasets/E1/ep0_E1_d3_Z_r03_eA",
+  "derived": "derived/E1/ep0_E1_d3_Z_r03_eA",
+  "ler": "ler/E1/ep0_E1_d3_Z_r03_eA"
+ },
+ "created_utc": "2026-10-24T22:47:47Z",
+ "commit": "4419a9d9e0ce146dd9a18a0f791456e314a1325c"
+}

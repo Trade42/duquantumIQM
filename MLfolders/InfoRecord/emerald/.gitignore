@@ -1,0 +1,18 @@
+# The bulk of the SIMULATED Emerald dry run stays on disk: it is regenerable, seeded, with
+#   flock /home/sal/duquantumIQM/dq/run/sim.lock nice -n 15 taskset -c 12-15 uv run python scripts/emerald_dryrun.py --clean
+# sim/FILES.json lists every file of the full tree with its hashes. Git keeps sim/README.md,
+# FILES.json, checks/, ler/, calibration/, architecture/, raw/ and the representative runs below.
+# Hardware data (raw/, datasets/, derived/, ler/ at the top level) is never ignored here.
+/sim/circuits/
+/sim/datasets/*/*
+/sim/derived/*/*
+!/sim/datasets/E1/ep0_E1_d3_Z_r03_eA/
+!/sim/derived/E1/ep0_E1_d3_Z_r03_eA/
+!/sim/datasets/E1/b1_E1_d3_Z_r08_eA/
+!/sim/derived/E1/b1_E1_d3_Z_r08_eA/
+!/sim/datasets/E1/b1_E1_d3_X_r08_eB/
+!/sim/derived/E1/b1_E1_d3_X_r08_eB/
+!/sim/datasets/E1/b3_E1_d3_Z_r20_eB/
+!/sim/derived/E1/b3_E1_d3_Z_r20_eB/
+!/sim/datasets/E4/b2_E4_d3_Z_r05_eA_t02000ns/
+!/sim/derived/E4/b2_E4_d3_Z_r05_eA_t02000ns/

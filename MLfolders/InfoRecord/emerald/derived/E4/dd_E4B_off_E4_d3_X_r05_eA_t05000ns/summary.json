@@ -1,0 +1,17 @@
+{
+ "label": "HARDWARE",
+ "device": "emerald",
+ "task": "emerald-dd",
+ "job": "E4B",
+ "dd": "off",
+ "priors": "hardware_noise (79092cf)",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E4/dd_E4B_off_E4_d3_X_r05_eA_t05000ns",
+ "shots": 2000,
+ "det_rate_mean": 0.34265,
+ "same_stab_lag1": 0.16860425843653215,
+ "same_stab_lag2": 0.14196056791125966,
+ "same_stab_lag3": 0.1633106077555323,
+ "cross_stab_lag0": 0.11326930468864248,
+ "cross_stab_lag1": 0.11398408262836528
+}

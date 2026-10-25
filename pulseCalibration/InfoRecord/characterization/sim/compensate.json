@@ -1,0 +1,62 @@
+{
+ "label": "SIMULATED",
+ "device": "garnet",
+ "simulator": "Aer statevector, no noise",
+ "shots": 2000,
+ "phases": "injected world replica 1 (sim/derived/injected/r01): true and C2-measured local phases",
+ "max_abs_phase_error_rad": 0.013031770324604619,
+ "circuits": {
+  "E1_d3_Z_r03_pA": {
+   "ideal": {
+    "shots": 2000,
+    "detection_fraction": 0.0,
+    "shots_with_events": 0,
+    "observable_flips": 0
+   },
+   "plain": {
+    "shots": 2000,
+    "detection_fraction": 0.0030625,
+    "shots_with_events": 94,
+    "observable_flips": 14
+   },
+   "compensated_true": {
+    "shots": 2000,
+    "detection_fraction": 0.0,
+    "shots_with_events": 0,
+    "observable_flips": 0
+   },
+   "compensated_measured": {
+    "shots": 2000,
+    "detection_fraction": 4.1666666666666665e-05,
+    "shots_with_events": 2,
+    "observable_flips": 1
+   }
+  },
+  "E1_d3_X_r03_pA": {
+   "ideal": {
+    "shots": 2000,
+    "detection_fraction": 0.0,
+    "shots_with_events": 0,
+    "observable_flips": 0
+   },
+   "plain": {
+    "shots": 2000,
+    "detection_fraction": 0.0035,
+    "shots_with_events": 113,
+    "observable_flips": 7
+   },
+   "compensated_true": {
+    "shots": 2000,
+    "detection_fraction": 0.0,
+    "shots_with_events": 0,
+    "observable_flips": 0
+   },
+   "compensated_measured": {
+    "shots": 2000,
+    "detection_fraction": 0.0,
+    "shots_with_events": 0,
+    "observable_flips": 0
+   }
+  }
+ }
+}

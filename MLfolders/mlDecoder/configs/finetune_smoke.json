@@ -1,0 +1,68 @@
+{
+ "description": "CPU code check of the fine-tune pipeline (InfoRecord stand-in data). Then the two-layer cascade (Sal, 2026-10-25 ~00:00 UTC): the fine-tuned LSTM decides shots with confidence |2p - 1| >= tau, Relay-BP the rest, correlated MWPM where Relay-BP does not converge; tau tuned on the validation split only.",
+ "device": "cpu",
+ "seed": 1234,
+ "workers": 4,
+ "prior": {
+  "noise": "calibrated_coherence",
+  "p": 0.001,
+  "options": {
+   "t2": "ramsey",
+   "readout": "asym",
+   "qnd": "excess"
+  }
+ },
+ "finetune_batches": [
+  1,
+  2
+ ],
+ "finetune_on_pilot_phase": false,
+ "uniform_reference": true,
+ "train": {
+  "batch_size": 1024,
+  "lr": 0.0003,
+  "final_lr_fraction": 0.1,
+  "weight_decay": 0.0,
+  "warmup_fraction": 0.05,
+  "l2_to_init": 0.001,
+  "anneal_by_time": true,
+  "time_budget_seconds": 10,
+  "max_wall_seconds": 20,
+  "eval_every_seconds": 2,
+  "patience_evals": 15,
+  "min_progress_to_stop": 0.3,
+  "checkpoint_seconds": 60,
+  "amp": true,
+  "grad_clip": 1.0,
+  "cpu_threads": 2
+ },
+ "eval": {
+  "batch_sizes": [
+   1,
+   64,
+   4096
+  ],
+  "min_seconds": 0.2,
+  "speed_rounds": [
+   3,
+   20
+  ],
+  "max_cpu_call_seconds": 4,
+  "benchmark": false
+ },
+ "cascade": {
+  "enabled": true,
+  "relay": {
+   "gamma0": 0.1,
+   "pre_iter": 80,
+   "num_sets": 60,
+   "set_max_iter": 60,
+   "gamma_dist_interval": [
+    -0.24,
+    0.66
+   ],
+   "stop_nconv": 5,
+   "parallel": false
+  }
+ }
+}

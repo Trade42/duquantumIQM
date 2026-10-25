@@ -1,0 +1,120 @@
+{
+  "job_id": "01a17000-6394-755f-a58b-b4f9c01893b0",
+  "task": "garnet-pilot",
+  "device": "garnet",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "qubit_mapping": [
+    {
+      "0": "QB12",
+      "1": "QB7",
+      "2": "QB6",
+      "3": "QB2",
+      "4": "QB16",
+      "5": "QB11",
+      "6": "QB10",
+      "7": "QB5",
+      "8": "QB4",
+      "9": "QB1",
+      "10": "QB20",
+      "11": "QB19",
+      "12": "QB15",
+      "13": "QB14",
+      "14": "QB9",
+      "15": "QB8",
+      "16": "QB13"
+    }
+  ],
+  "physical_qubits": [
+    [
+      "QB1",
+      "QB2",
+      "QB4",
+      "QB5",
+      "QB6",
+      "QB7",
+      "QB8",
+      "QB9",
+      "QB10",
+      "QB11",
+      "QB12",
+      "QB13",
+      "QB14",
+      "QB15",
+      "QB16",
+      "QB19",
+      "QB20"
+    ]
+  ],
+  "shots": 1000,
+  "circuits": 1,
+  "circuit_names": [
+    null
+  ],
+  "success": true,
+  "commit": "f33ac048eb25852b455bde35dc0a87bf74ed96e9",
+  "purpose": "garnet-pilot P0 E1_d3_Z_r03_pA",
+  "saved_utc": "2026-10-24T22:21:09Z",
+  "timeline": [
+    {
+      "source": "iqm-server",
+      "status": "created",
+      "timestamp": "2026-10-24T22:20:36.123237Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "received",
+      "timestamp": "2026-10-24T22:20:36.248052Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_started",
+      "timestamp": "2026-10-24T22:20:36.273307Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "validation_ended",
+      "timestamp": "2026-10-24T22:20:36.275994Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_started",
+      "timestamp": "2026-10-24T22:20:36.298700Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "compilation_ended",
+      "timestamp": "2026-10-24T22:20:36.383166Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_started",
+      "timestamp": "2026-10-24T22:21:06.572811Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "execution_ended",
+      "timestamp": "2026-10-24T22:21:06.623474Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_started",
+      "timestamp": "2026-10-24T22:21:06.625575Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "post_processing_ended",
+      "timestamp": "2026-10-24T22:21:06.654573Z"
+    },
+    {
+      "source": "iqm-station-control",
+      "status": "ready",
+      "timestamp": "2026-10-24T22:21:06.658897Z"
+    },
+    {
+      "source": "iqm-server",
+      "status": "completed",
+      "timestamp": "2026-10-24T22:21:06.884180Z"
+    }
+  ],
+  "memory": "memory.npz: c<i> uint8 (shots, clbits), column j = clbit j"
+}

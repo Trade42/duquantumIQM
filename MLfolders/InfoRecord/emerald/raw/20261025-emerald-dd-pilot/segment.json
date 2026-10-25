@@ -1,0 +1,42 @@
+{
+ "format": "dqiqm.emerald-dd/1",
+ "task": "emerald-dd-pilot",
+ "device": "emerald",
+ "allowance": {
+  "jobs": 1,
+  "shots": 1000
+ },
+ "armed": {
+  "DQ_QPU": "run",
+  "DQ_QPU_TASK": "emerald-dd-pilot",
+  "DQ_QPU_MAX_JOBS": "1",
+  "DQ_QPU_MAX_SHOTS": "1000"
+ },
+ "calibration_sets": [
+  {
+   "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "snapshot": "data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json",
+   "from_job": "DDP"
+  }
+ ],
+ "before": "data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json",
+ "jobs": [
+  {
+   "label": "DDP",
+   "dd": "on",
+   "position": 0,
+   "job_id": "01a170c2-72b7-74bd-a439-40a869cc85fc",
+   "ledger_time": "2026-10-25T01:52:34Z",
+   "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "raw": "raw/20261025-emerald-dd-pilot/01a170c2-72b7-74bd-a439-40a869cc85fc",
+   "order": [
+    {
+     "position": 0,
+     "circuit": "E1_d3_X_r03_eA",
+     "native_sha256": "6bd0d5bcbe3443153101981d0e140922de65a79ce51ae37d90cad8103a7d3458"
+    }
+   ]
+  }
+ ],
+ "written_utc": "2026-10-25T01:52:41Z"
+}

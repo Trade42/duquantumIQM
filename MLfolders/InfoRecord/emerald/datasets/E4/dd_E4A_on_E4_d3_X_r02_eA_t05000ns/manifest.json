@@ -1,0 +1,233 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "simulated": false,
+ "experiment": "E4",
+ "circuit": "E4_d3_X_r02_eA_t05000ns",
+ "run_id": "dd_E4A_on_E4_d3_X_r02_eA_t05000ns",
+ "batch": 0,
+ "job_id": "01a170c6-2526-7766-b6ae-2900a4dfbc85",
+ "position_in_job": 1,
+ "split": {
+  "rule": "the DD A/B (emerald-dd): not in the ML split; no shot is finetune, validation or test",
+  "job": "E4A",
+  "role": "dd_ab",
+  "counts": {
+   "dd_ab": 2000
+  }
+ },
+ "spec": {
+  "family": "surface_memory",
+  "d": 3,
+  "rounds": 2,
+  "basis": "X",
+  "no_reset": true,
+  "gate_basis": "CX",
+  "kind": null,
+  "prep": "+",
+  "patch": "eA",
+  "delay_ns": 5000.0,
+  "barriers": true,
+  "orientation": 1
+ },
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "calibration": {
+  "before": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json",
+  "after": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015750Z.json",
+  "job": "../../data/calibration/emerald/23e12f6b-c23c-4736-8736-b0142989c0e6.20261025T015024Z.json"
+ },
+ "shots": 2000,
+ "num_measurements": 25,
+ "num_detectors": 16,
+ "num_observables": 1,
+ "arrays": {
+  "dets": "det_events.npy",
+  "obs": "obs_flips.npy",
+  "raw_meas": "raw_meas.npy"
+ },
+ "array_info": {
+  "raw_meas.npy": {
+   "shape": [
+    2000,
+    25
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "26218e8ec51f9bfee14b4b0f372115e10f3448f30418c1116f391bd5701d98dd"
+  },
+  "det_events.npy": {
+   "shape": [
+    2000,
+    16
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "97c2efbafcd2d1977cc6c44cfb1ff694829d5954a7a9ef009a41017543143c11"
+  },
+  "obs_flips.npy": {
+   "shape": [
+    2000,
+    1
+   ],
+   "dtype": "uint8",
+   "packed": false,
+   "bitorder": null,
+   "axis": null,
+   "sha256": "aec9aade2560befebf64130064cc4b08d6d5ba1f28f287b41a2845383aa54cb6"
+  }
+ },
+ "placement": {
+  "1": "QB13",
+  "2": "QB14",
+  "3": "QB22",
+  "5": "QB31",
+  "8": "QB20",
+  "9": "QB21",
+  "10": "QB29",
+  "11": "QB30",
+  "12": "QB38",
+  "13": "QB39",
+  "14": "QB19",
+  "15": "QB27",
+  "16": "QB28",
+  "17": "QB36",
+  "18": "QB37",
+  "19": "QB45",
+  "25": "QB44"
+ },
+ "circuit_files": {
+  "stim": "circuits/E4/E4_d3_X_r02_eA_t05000ns.stim",
+  "qasm": "circuits/E4/E4_d3_X_r02_eA_t05000ns.qasm"
+ },
+ "stim_sha256": "340200182795724d585b61ec629f64cec1a3efa9e4dffb04646c4a971dc2283c",
+ "qasm_sha256": "25b05229aefd866da0db194b211710be06d9d7d99afcb01420300cad6a8a17c5",
+ "native_sha256": "a547181e4021fe90eb12d5bf2f5621265a5fa75a3ad41df2f5b31067dfae1d94",
+ "raw": {
+  "path": "raw/20261025-emerald-dd/01a170c6-2526-7766-b6ae-2900a4dfbc85/memory.npz",
+  "key": "c1",
+  "meta": "raw/20261025-emerald-dd/01a170c6-2526-7766-b6ae-2900a4dfbc85/meta.json",
+  "task": "emerald-dd",
+  "job": "E4A",
+  "dd": "on",
+  "compilation_options": {
+   "max_circuit_duration_over_t2": null,
+   "heralding_mode": "none",
+   "move_gate_validation": "strict",
+   "move_gate_frame_tracking": "full",
+   "active_reset_cycles": null,
+   "dd_mode": "enabled",
+   "dd_strategy": {
+    "merge_contiguous_waits": true,
+    "target_qubits": null,
+    "skip_leading_wait": true,
+    "skip_trailing_wait": true,
+    "gate_sequences": [
+     [
+      9,
+      "XYXYYXYX",
+      "asap"
+     ],
+     [
+      5,
+      "YXYX",
+      "asap"
+     ],
+     [
+      2,
+      "XX",
+      "center"
+     ]
+    ]
+   }
+  },
+  "manifest": "raw/20261025-emerald-dd/E4A.json"
+ },
+ "decoder": {
+  "kind": "pymatching",
+  "via": "dqiqm.decode.decode",
+  "dem": "noisy copy of the circuit that ran (decompose_errors=True)",
+  "noise": "priors: hardware_noise (79092cf). dqiqm.experiments.device.hardware_noise(calibration set 23e12f6b-c23c-4736-8736-b0142989c0e6, spec): calibrated_noise with the depolarize idle over 5360 ns per mid-circuit readout layer (readout window 360 ns from measure_ns (no compile data: probe only), plus a 5000 ns delay), T2 ramsey, final readout measure_fidelity (unheralded). DD on (E4A; compilation options in raw.compilation_options)",
+  "num_dem_errors": 149
+ },
+ "duration_ns": 6232.0,
+ "n_buckets": 10,
+ "created_utc": "2026-10-25T02:11:07Z",
+ "job_timeline": [
+  {
+   "source": "iqm-server",
+   "status": "created",
+   "timestamp": "2026-10-25T01:56:36.276924Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "received",
+   "timestamp": "2026-10-25T01:56:36.528295Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_started",
+   "timestamp": "2026-10-25T01:56:36.623942Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "validation_ended",
+   "timestamp": "2026-10-25T01:56:36.654910Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_started",
+   "timestamp": "2026-10-25T01:56:36.710396Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "compilation_ended",
+   "timestamp": "2026-10-25T01:56:37.377487Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_started",
+   "timestamp": "2026-10-25T01:56:37.754418Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "execution_ended",
+   "timestamp": "2026-10-25T01:56:46.385248Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_started",
+   "timestamp": "2026-10-25T01:56:46.398878Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "post_processing_ended",
+   "timestamp": "2026-10-25T01:56:46.630768Z"
+  },
+  {
+   "source": "iqm-station-control",
+   "status": "ready",
+   "timestamp": "2026-10-25T01:56:46.632989Z"
+  },
+  {
+   "source": "iqm-server",
+   "status": "completed",
+   "timestamp": "2026-10-25T01:56:47.340693Z"
+  }
+ ],
+ "commit": "200f7362ca078d0c196bb8bdb09aba6126037609",
+ "versions": {
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.4.6",
+  "qiskit": "2.1.2",
+  "qiskit-aer": "0.17.2",
+  "iqm-client": "35.0.3"
+ },
+ "seeds": null,
+ "simulator": null
+}

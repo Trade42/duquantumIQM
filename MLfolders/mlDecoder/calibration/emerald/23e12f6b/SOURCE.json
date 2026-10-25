@@ -1,0 +1,21 @@
+{
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "source_directory": "InfoRecord/emerald/calibration/emerald",
+ "snapshot_json": "20261024T191321Z-23e12f6b-c23c-4736-8736-b0142989c0e6.json",
+ "source_sha256": {
+  "qubits.csv": "b15a56722f88f1f062f4697a526a1c795289385be17c74baecabc18957bfd37b",
+  "couplers.csv": "faaf5185f5ff94cf12c51615798305b0436bc8ed771c96d17d64f8caadef192d",
+  "durations.json": "d0bb81f53e3d799a43080de3ca8ea90327e67cbcbc1c6b8fe901acb3d3326df0",
+  "placement.json": "e775996fcc96a7a9922a456960f5243c6c498af3742791ce22e5fb4103e1853c",
+  "20261024T191321Z-23e12f6b-c23c-4736-8736-b0142989c0e6.json": "c3b9081adb61c33c6f7908084963f5b37d99997fe89685206e6dadf606d53ebd",
+  "README.md": "e7ef63e234a461ebbc095408c33735db9f27204e93015114741dbaa2a5ca8189"
+ },
+ "vendored_sha256": {
+  "qubits.csv": "b15a56722f88f1f062f4697a526a1c795289385be17c74baecabc18957bfd37b",
+  "couplers.csv": "faaf5185f5ff94cf12c51615798305b0436bc8ed771c96d17d64f8caadef192d",
+  "durations.json": "d0bb81f53e3d799a43080de3ca8ea90327e67cbcbc1c6b8fe901acb3d3326df0",
+  "placement.json": "e775996fcc96a7a9922a456960f5243c6c498af3742791ce22e5fb4103e1853c",
+  "metrics.json": "6e9e68ef6e15fc3a08cd194c05f87e6dd5cc3fde4e26b8cf6b6a045d2819bf82"
+ }
+}

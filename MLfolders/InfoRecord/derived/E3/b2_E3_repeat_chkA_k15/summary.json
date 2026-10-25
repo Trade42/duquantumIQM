@@ -1,0 +1,17 @@
+{
+ "label": "HARDWARE",
+ "device": "garnet",
+ "batch": 2,
+ "split": "finetune+validation",
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E3/b2_E3_repeat_chkA_k15",
+ "shots": 2000,
+ "det_rate_mean": 0.031168333333333333,
+ "same_stab_lag1": 0.002003648915089031,
+ "same_stab_lag2": -0.0007389240460954339,
+ "same_stab_lag3": -0.0006515917611346042,
+ "cross_stab_lag0": 0.00011155979461751306,
+ "cross_stab_lag1": 3.07931555736828e-05,
+ "record_flip_mean": 0.002003648915089031,
+ "state_flip_mean": 0.0289042406313604
+}

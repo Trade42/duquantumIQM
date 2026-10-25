@@ -1,0 +1,52 @@
+suite: 130 circuits built and checked in 17.3 s; calibration a18a947f-0408-4628-81ea-1715637e434f
+  E1: 45 circuits
+  E2: 27 circuits
+  E3: 22 circuits
+  E4: 24 circuits
+  E5: 12 circuits
+P0: 1 circuits x 1000 shots in 11.2 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-P0
+P1: 2 circuits x 256 shots in 5.1 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-P1
+B1-1-E3: 22 circuits x 256 shots in 1.8 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B1-1-E3
+B1-2-E1: 22 circuits x 128 shots in 73.0 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B1-2-E1
+B1-3-E1: 22 circuits x 128 shots in 34.4 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B1-3-E1
+B1-4-E2: 27 circuits x 64 shots in 7.5 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B1-4-E2
+B2-1-E3: 22 circuits x 256 shots in 1.8 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B2-1-E3
+B2-2-E1: 22 circuits x 128 shots in 72.1 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B2-2-E1
+B2-3-E1: 22 circuits x 128 shots in 34.5 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B2-3-E1
+B2-4-E4: 24 circuits x 128 shots in 43.7 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B2-4-E4
+B3-1-E3: 22 circuits x 256 shots in 1.8 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B3-1-E3
+B3-2-E1: 22 circuits x 128 shots in 74.1 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B3-2-E1
+B3-3-E1: 22 circuits x 128 shots in 34.1 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B3-3-E1
+B3-4-E5: 12 circuits x 256 shots in 5.3 s -> InfoRecord/sim/raw/20261024-garnet-dryrun/sim-B3-4-E5
+LER E1 X_pA_b1: eps(A=1) 0.0215, eps(free A) 0.0179, A 0.952
+LER E1 X_pA_b2: eps(A=1) 0.0247, eps(free A) 0.0198, A 0.938
+LER E1 X_pA_b3: eps(A=1) 0.0235, eps(free A) 0.0221, A 0.982
+LER E1 X_pB_b1: eps(A=1) 0.0248, eps(free A) 0.0248, A 1.000
+LER E1 X_pB_b2: eps(A=1) 0.0250, eps(free A) 0.0250, A 1.000
+LER E1 X_pB_b3: eps(A=1) 0.0249, eps(free A) 0.0199, A 0.937
+LER E1 Z_pA_b1: eps(A=1) 0.0236, eps(free A) 0.0236, A 1.000
+LER E1 Z_pA_b2: eps(A=1) 0.0239, eps(free A) 0.0238, A 0.998
+LER E1 Z_pA_b3: eps(A=1) 0.0201, eps(free A) 0.0193, A 0.989
+LER E1 Z_pB_b1: eps(A=1) 0.0219, eps(free A) 0.0200, A 0.974
+LER E1 Z_pB_b2: eps(A=1) 0.0232, eps(free A) 0.0227, A 0.993
+LER E1 Z_pB_b3: eps(A=1) 0.0232, eps(free A) 0.0224, A 0.988
+LER E2 bit_0_b1: eps(A=1) 0.0000, eps(free A) 0.0000, A 1.000
+LER E2 bit_1_b1: eps(A=1) 0.0000, eps(free A) 0.0000, A 1.000
+LER E2 phase_p_b1: eps(A=1) 0.0000, eps(free A) 0.0000, A 1.000
+LER E4 X_pA_t1000ns_b2: eps(A=1) 0.0189, eps(free A) 0.0189, A 1.000
+LER E4 X_pA_t2000ns_b2: eps(A=1) 0.0270, eps(free A) 0.0214, A 0.951
+LER E4 X_pA_t5000ns_b2: eps(A=1) 0.0293, eps(free A) 0.0275, A 0.984
+LER E4 Z_pA_t1000ns_b2: eps(A=1) 0.0139, eps(free A) 0.0139, A 1.000
+LER E4 Z_pA_t2000ns_b2: eps(A=1) 0.0195, eps(free A) 0.0101, A 0.920
+LER E4 Z_pA_t5000ns_b2: eps(A=1) 0.0232, eps(free A) 0.0232, A 1.000
+structure: 130 circuits in 2.0 s
+noiseless: 130 circuits, 0 detection events, 0 observable flips (34.8 s)
+MPS vs statevector: identical records True
+decode E1 pooled: PyMatching 0.1374 vs always-0 0.2722, better: True
+features E1 Z R=10, record_flips_0.03: {"same_stab_lag1": 0.00171, "same_stab_lag2": 0.02986, "same_stab_lag3": -1e-05, "cross_stab_lag0": 0.0003, "det_rate_mean": 0.05736, "shots": 40000}
+features E1 Z R=10, ancilla_state_flips_0.03: {"same_stab_lag1": 0.02848, "same_stab_lag2": 1e-05, "same_stab_lag3": 6e-05, "cross_stab_lag0": -1e-05, "det_rate_mean": 0.05132, "shots": 40000}
+features E1 Z R=10, none: {"same_stab_lag1": 0.0, "same_stab_lag2": 0.0, "same_stab_lag3": 0.0, "cross_stab_lag0": 0.0, "det_rate_mean": 0.0, "shots": 40000}
+features E3 repeat |1>, injected record 0.02, state 0.0: {"record_flip_mean": 0.02009, "state_flip_mean": -0.00083, "shots": 20000}
+features E3 repeat |1>, injected record 0.0, state 0.01: {"record_flip_mean": 1e-05, "state_flip_mean": 0.01006, "shots": 20000}
+features E3 repeat |1>, injected record 0.02, state 0.01: {"record_flip_mean": 0.01992, "state_flip_mean": 0.00847, "shots": 20000}
+sim/: 4479 files, 37.7 MB; FILES.json sha256 4e87b26fc174f70acc3fc3cbf05fce343b13b01fc1241624988445d63d3e69ea

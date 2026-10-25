@@ -1,0 +1,181 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "task": "garnet-b2",
+ "device": "garnet",
+ "batch": 2,
+ "split": "finetune+validation",
+ "job": "B2-1-E3",
+ "job_id": "01a1708d-4d23-74c6-8b3d-25acdb9e56e4",
+ "position_in_job": 8,
+ "circuit": "E3_repeat_all0_k15",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "priors": null,
+ "prior": null,
+ "sanity": [
+  {
+   "check": "measurement shape",
+   "value": [
+    2000,
+    300
+   ],
+   "band": [
+    2000,
+    300
+   ],
+   "pass": true
+  },
+  {
+   "check": "all-zero rows",
+   "value": 521,
+   "band": "any: the noiseless record is all zero",
+   "pass": true
+  },
+  {
+   "check": "first readouts, random",
+   "value": null,
+   "band": "none in this circuit",
+   "pass": true
+  },
+  {
+   "check": "first readouts, deterministic (misread)",
+   "value": 0.011375,
+   "band": "< 0.3",
+   "pass": true,
+   "info": {
+    "columns": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "x_type": [],
+    "z_type": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "check": "detection fraction",
+   "value": 0.008325,
+   "band": "< 0.45",
+   "pass": true,
+   "info": {
+    "model_with_idle": null,
+    "ratio_to_model": null
+   }
+  },
+  {
+   "check": "physical qubits (meta.json)",
+   "value": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20"
+   ],
+   "band": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB7",
+    "QB8",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20"
+   ],
+   "pass": true
+  }
+ ],
+ "sanity_pass": true,
+ "per_round_detection_rate": {
+  "0": 0.011375,
+  "1": 0.008625,
+  "2": 0.00805,
+  "3": 0.007575,
+  "4": 0.00735,
+  "5": 0.0077,
+  "6": 0.0076,
+  "7": 0.00815,
+  "8": 0.008175,
+  "9": 0.0089,
+  "10": 0.0096,
+  "11": 0.00825,
+  "12": 0.007925,
+  "13": 0.008325,
+  "14": 0.007275
+ },
+ "model_with_idle": null,
+ "numbers": {
+  "shots": 2000,
+  "det_rate": 0.008325,
+  "all_zero": 521,
+  "obs_flips": null,
+  "pm_failures": null
+ },
+ "record_problems": [],
+ "created_utc": "2026-10-25T01:00:48Z",
+ "commit": "f2c667e96738edfe498891b80de0de1f2fa6b6be"
+}

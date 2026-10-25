@@ -1,0 +1,312 @@
+{
+ "format": "dqiqm.batches/1",
+ "task": "emerald-fresh",
+ "device": "emerald",
+ "label": "F0",
+ "batch": 4,
+ "split": "fresh",
+ "experiment": "E1",
+ "segment_position": 0,
+ "shots": 1000,
+ "circuits": 1,
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "purpose": "emerald-fresh F0 E1 (1 circuits x 1000 shots)",
+ "order": [
+  {
+   "position": 0,
+   "circuit": "E1_d3_Z_r03_eA",
+   "native_sha256": "f70ccfd7a5e0d0428ddb25fa5fe3435e8562d2b0e628841d4ea39975a0fbd092",
+   "physical_qubits": [
+    "QB13",
+    "QB14",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB44",
+    "QB45"
+   ]
+  }
+ ],
+ "qubit_index_to_name": {
+  "12": "QB13",
+  "13": "QB14",
+  "18": "QB19",
+  "19": "QB20",
+  "20": "QB21",
+  "21": "QB22",
+  "26": "QB27",
+  "27": "QB28",
+  "28": "QB29",
+  "29": "QB30",
+  "30": "QB31",
+  "35": "QB36",
+  "36": "QB37",
+  "37": "QB38",
+  "38": "QB39",
+  "43": "QB44",
+  "44": "QB45"
+ },
+ "note": "IQM returns circuit_names [null]: this file is the record of which circuit is c<i> in memory.npz",
+ "job_id": "01a17100-951b-773e-827b-8dc870c96307",
+ "raw": "raw/20261025-emerald-fresh/01a17100-951b-773e-827b-8dc870c96307",
+ "written_utc": "2026-10-25T03:00:24Z",
+ "submitted_utc": "2026-10-25T03:00:26Z",
+ "ledger_rows": 1,
+ "ledger_check": {
+  "task": {
+   "want": "emerald-fresh",
+   "got": "emerald-fresh",
+   "ok": true
+  },
+  "device": {
+   "want": "emerald",
+   "got": "emerald",
+   "ok": true
+  },
+  "calibration_set_id": {
+   "want": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "got": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+   "ok": true
+  },
+  "qubits": {
+   "want": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "got": "QB13,QB14,QB19,QB20,QB21,QB22,QB27,QB28,QB29,QB30,QB31,QB36,QB37,QB38,QB39,QB44,QB45",
+   "ok": true
+  },
+  "circuits x shots": {
+   "want": "1 x 1000",
+   "got": "1 x 1000",
+   "ok": true
+  },
+  "job id": {
+   "want": "01a17100-951b-773e-827b-8dc870c96307",
+   "got": "01a17100-951b-773e-827b-8dc870c96307",
+   "ok": true
+  },
+  "purpose": {
+   "want": "emerald-fresh F0 E1 (1 circuits x 1000 shots)",
+   "got": "emerald-fresh F0 E1 (1 circuits x 1000 shots)",
+   "ok": true
+  }
+ },
+ "meta_check": {
+  "qubit_mapping": true,
+  "physical_qubits": true,
+  "calibration_set_id": true,
+  "shots": true,
+  "circuits": true,
+  "success": true,
+  "timeline": true
+ },
+ "sanity": [
+  {
+   "position": 0,
+   "circuit": "E1_d3_Z_r03_eA",
+   "pass": true,
+   "checks": [
+    {
+     "check": "measurement shape",
+     "value": [
+      1000,
+      33
+     ],
+     "band": [
+      1000,
+      33
+     ],
+     "pass": true
+    },
+    {
+     "check": "all-zero rows",
+     "value": 0,
+     "band": "<= 10.8594",
+     "pass": true
+    },
+    {
+     "check": "first readouts, random",
+     "value": 0.487,
+     "band": [
+      0.4,
+      0.6
+     ],
+     "pass": true,
+     "info": {
+      "columns": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "x_type": [
+       0,
+       2,
+       5,
+       7
+      ],
+      "z_type": []
+     }
+    },
+    {
+     "check": "first readouts, deterministic (misread)",
+     "value": 0.0865,
+     "band": "< 0.3",
+     "pass": true,
+     "info": {
+      "columns": [
+       1,
+       3,
+       4,
+       6
+      ],
+      "x_type": [],
+      "z_type": [
+       1,
+       3,
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "check": "detection fraction",
+     "value": 0.13591666666666666,
+     "band": "< 0.45",
+     "pass": true,
+     "info": {
+      "model_with_idle": 0.10844791666666667,
+      "ratio_to_model": 1.253289789645567
+     }
+    },
+    {
+     "check": "physical qubits (meta.json)",
+     "value": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "band": [
+      "QB13",
+      "QB14",
+      "QB19",
+      "QB20",
+      "QB21",
+      "QB22",
+      "QB27",
+      "QB28",
+      "QB29",
+      "QB30",
+      "QB31",
+      "QB36",
+      "QB37",
+      "QB38",
+      "QB39",
+      "QB44",
+      "QB45"
+     ],
+     "pass": true
+    }
+   ]
+  }
+ ],
+ "ok": true,
+ "checked_utc": "2026-10-25T03:00:30Z",
+ "pilot_checks": [
+  {
+   "check": "timeline: execution_started and execution_ended",
+   "value": [
+    "compilation_ended",
+    "compilation_started",
+    "completed",
+    "created",
+    "execution_ended",
+    "execution_started",
+    "post_processing_ended",
+    "post_processing_started",
+    "ready",
+    "received",
+    "validation_ended",
+    "validation_started"
+   ],
+   "band": [
+    "execution_started",
+    "execution_ended"
+   ],
+   "pass": true
+  },
+  {
+   "check": "detection fraction against the priors' own",
+   "value": 0.13591666666666666,
+   "band": [
+    0.054223958333333336,
+    0.21689583333333334
+   ],
+   "pass": true,
+   "info": {
+    "model": 0.10844791666666667,
+    "ratio": 1.253289789645567,
+    "idle_ns": 360.0
+   }
+  },
+  {
+   "check": "decoded P_L against the batch's worst P_L of the same circuit (B1-B3)",
+   "value": 0.134,
+   "band": "<= 2 x 0.1180",
+   "pass": true,
+   "info": {
+    "failures": 134,
+    "shots": 1000,
+    "wilson95": [
+     0.11428107599412643,
+     0.15652011121729995
+    ],
+    "obs_flips": 335,
+    "batch": [
+     {
+      "batch": 1,
+      "failures": 229,
+      "shots": 2000,
+      "run_id": "Z_eA_b1"
+     },
+     {
+      "batch": 2,
+      "failures": 236,
+      "shots": 2000,
+      "run_id": "Z_eA_b2"
+     },
+     {
+      "batch": 3,
+      "failures": 223,
+      "shots": 2000,
+      "run_id": "Z_eA_b3"
+     }
+    ]
+   }
+  }
+ ],
+ "pilot_pass": true,
+ "pilot_priors": "hardware_noise fallback 360 ns (windows=None; chosen on B1+B2 validation by emerald-redecode 47f0c07)"
+}

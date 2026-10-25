@@ -1,0 +1,126 @@
+{
+ "label": "SIMULATED",
+ "device": "emerald",
+ "stand_in": "IQMFakeAphrodite+profile(23e12f6b)",
+ "decoder": "pymatching on the noisy copy of the circuit that ran",
+ "noise": "dqiqm.experiments.emerald.calibrated_noise(live Emerald calibration, idle_ns=0) = device.calibrated_noise(idle_ns=0): the stand-in's own noise (gate depolarizing + relaxation over gate durations, mean readout assignment error as record flips)",
+ "zero_failure_points": [
+  2
+ ],
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E4",
+ "run_id": "Z_eA_t2000ns_b2",
+ "points": "ler_points.csv",
+ "model": "2 P_L = 1 - A (1 - 2 eps_L)^R, maximum likelihood on the binomial counts (dqiqm.stats.fit_eps)",
+ "fixed_A": {
+  "form": "F = (1-2eps)^n",
+  "free_amplitude": false,
+  "eps": 0.009678104155831434,
+  "eps_se_curvature": 0.0034882100196868926,
+  "eps_ci_curvature": [
+   0.0028413381467333717,
+   0.016514870164929498
+  ],
+  "eps_ci_bootstrap": [
+   0.0035298482086016272,
+   0.017556393729498836
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": null,
+  "amplitude_ci_bootstrap": [
+   null,
+   null
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   0,
+   2,
+   1,
+   5
+  ],
+  "n": [
+   48,
+   48,
+   48,
+   48
+  ],
+  "p_fit": [
+   0.019168876911560606,
+   0.02847594429279121,
+   0.04655311746217389,
+   0.0723777737959479
+  ],
+  "pearson_residuals": [
+   -0.968549528303937,
+   0.5494438946117182,
+   -0.8457953666939759,
+   0.8499782994776338
+  ],
+  "chi2": 2.677809694007759,
+  "dof": 3,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 0.8926032313359197
+ },
+ "free_A": {
+  "form": "F = A(1-2eps)^n",
+  "free_amplitude": true,
+  "eps": 0.009678103986398932,
+  "eps_se_curvature": 0.007266032043448632,
+  "eps_ci_curvature": [
+   0.0,
+   0.023919265102072224
+  ],
+  "eps_ci_bootstrap": [
+   0.001929134531102942,
+   0.017547221079977037
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": 0.05713682721478286,
+  "amplitude_ci_bootstrap": [
+   0.9479166666666549,
+   1.0
+  ],
+  "rounds": [
+   2,
+   3,
+   5,
+   8
+  ],
+  "k": [
+   0,
+   2,
+   1,
+   5
+  ],
+  "n": [
+   48,
+   48,
+   48,
+   48
+  ],
+  "p_fit": [
+   0.019168876579254812,
+   0.02847594380398083,
+   0.04655311667872303,
+   0.0723777726138169
+  ],
+  "pearson_residuals": [
+   -0.9685495197446254,
+   0.5494439195501148,
+   -0.8457953476997113,
+   0.8499783374853754
+  ],
+  "chi2": 2.677809737313016,
+  "dof": 2,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 1.338904868656508
+ },
+ "plot": "ler.png"
+}

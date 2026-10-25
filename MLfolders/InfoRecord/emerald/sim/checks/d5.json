@@ -1,0 +1,130 @@
+{
+ "device": "emerald",
+ "live_placements": 0,
+ "all_90_placements": 4,
+ "all_90_qubit_sets": [
+  {
+   "qubits": [
+    "QB1",
+    "QB2",
+    "QB3",
+    "QB4",
+    "QB5",
+    "QB6",
+    "QB9",
+    "QB10",
+    "QB11",
+    "QB12",
+    "QB13",
+    "QB14",
+    "QB15",
+    "QB16",
+    "QB17",
+    "QB18",
+    "QB19",
+    "QB20",
+    "QB21",
+    "QB22",
+    "QB23",
+    "QB24",
+    "QB25",
+    "QB26",
+    "QB27",
+    "QB28",
+    "QB29",
+    "QB30",
+    "QB31",
+    "QB32",
+    "QB33",
+    "QB34",
+    "QB35",
+    "QB36",
+    "QB37",
+    "QB38",
+    "QB39",
+    "QB40",
+    "QB41",
+    "QB42",
+    "QB43",
+    "QB44",
+    "QB45",
+    "QB48",
+    "QB49",
+    "QB50",
+    "QB51",
+    "QB52",
+    "QB53"
+   ],
+   "orientations": [
+    {
+     "orientation": 0,
+     "needs_cz_less": [
+      [
+       "QB15",
+       "QB23"
+      ],
+      [
+       "QB24",
+       "QB32"
+      ],
+      [
+       "QB49",
+       "QB50"
+      ]
+     ]
+    },
+    {
+     "orientation": 1,
+     "needs_cz_less": [
+      [
+       "QB15",
+       "QB23"
+      ],
+      [
+       "QB24",
+       "QB32"
+      ],
+      [
+       "QB49",
+       "QB50"
+      ]
+     ]
+    },
+    {
+     "orientation": 2,
+     "needs_cz_less": [
+      [
+       "QB15",
+       "QB23"
+      ],
+      [
+       "QB24",
+       "QB32"
+      ],
+      [
+       "QB49",
+       "QB50"
+      ]
+     ]
+    },
+    {
+     "orientation": 3,
+     "needs_cz_less": [
+      [
+       "QB15",
+       "QB23"
+      ],
+      [
+       "QB24",
+       "QB32"
+      ],
+      [
+       "QB49",
+       "QB50"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

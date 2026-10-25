@@ -1,0 +1,11 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "dataset": "datasets/E5/b3_E5_stab_Z_r06",
+ "shots": 256,
+ "det_rate_mean": 0.09794560185185185,
+ "same_stab_lag1": 0.011685846776121313,
+ "same_stab_lag2": 0.01867875379366575,
+ "same_stab_lag3": -0.0026500466340323575,
+ "cross_stab_lag0": 0.010505448269327528,
+ "cross_stab_lag1": 0.0033387639092182274
+}

@@ -1,0 +1,21 @@
+22:54:57 SIMULATED: stand-in IQMFakeGarnet+profile(a18a947f); jobs C1 32x1000, C2-L1 64x500, C2-L2 64x500, C2-L3 64x500, C2-L4 64x500
+22:55:14 noiseless-r01: simulated in 5 s, analysed in 13 s; coverage eps 17/17, eta 17/17, delta 23/24, phi 46/48
+22:56:27 none-r01: simulated in 59 s, analysed in 13 s; coverage eps 16/17, eta 17/17, delta 24/24, phi 48/48
+22:57:25 none-r02: simulated in 45 s, analysed in 14 s; coverage eps 17/17, eta 16/17, delta 21/24, phi 46/48
+22:58:29 none-r03: simulated in 49 s, analysed in 14 s; coverage eps 17/17, eta 16/17, delta 24/24, phi 44/48
+22:59:32 none-r04: simulated in 47 s, analysed in 16 s; coverage eps 17/17, eta 17/17, delta 22/24, phi 46/48
+23:00:38 none-r05: simulated in 53 s, analysed in 14 s; coverage eps 16/17, eta 15/17, delta 21/24, phi 45/48
+23:02:12 injected-r01: simulated in 74 s, analysed in 20 s; coverage eps 17/17, eta 17/17, delta 23/24, phi 47/48
+23:03:32 injected-r02: simulated in 65 s, analysed in 15 s; coverage eps 17/17, eta 17/17, delta 23/24, phi 45/48
+23:04:52 injected-r03: simulated in 64 s, analysed in 15 s; coverage eps 17/17, eta 16/17, delta 23/24, phi 45/48
+23:06:10 injected-r04: simulated in 64 s, analysed in 14 s; coverage eps 17/17, eta 16/17, delta 23/24, phi 47/48
+23:07:50 injected-r05: simulated in 82 s, analysed in 19 s; coverage eps 15/17, eta 16/17, delta 23/24, phi 46/48
+23:09:19 injected-r06: simulated in 73 s, analysed in 16 s; coverage eps 15/17, eta 17/17, delta 22/24, phi 47/48
+23:10:43 injected-r07: simulated in 64 s, analysed in 20 s; coverage eps 17/17, eta 16/17, delta 22/24, phi 47/48
+23:12:37 injected-r08: simulated in 97 s, analysed in 17 s; coverage eps 15/17, eta 17/17, delta 24/24, phi 47/48
+23:13:57 injected-r09: simulated in 67 s, analysed in 13 s; coverage eps 15/17, eta 16/17, delta 24/24, phi 48/48
+23:15:11 injected-r10: simulated in 58 s, analysed in 16 s; coverage eps 17/17, eta 16/17, delta 22/24, phi 48/48
+23:15:20 pilot dry run: stand-in D=0.0491 R=0.8119 -> GO; mock merged D=0.0000 R=1.0000 -> STOP
+23:15:20 coverage (injected): eps 162/170 (0.953), eta 164/170 (0.965), delta 229/240 (0.954), phi 467/480 (0.973)
+23:15:20 nothing injected, noiseless: eps max |est| 6.06e-04 rad, 17/17 hold 0, eta max |est| 1.89e-03 rad, 17/17 hold 0, delta max |est| 1.23e-02 rad, 23/24 hold 0, phi max |est| 1.09e-02 rad, 46/48 hold 0
+23:15:20 nothing injected, none: eps max |est| 1.00e-03 rad, 83/85 hold 0, eta max |est| 2.39e-03 rad, 81/85 hold 0, delta max |est| 1.52e-02 rad, 112/120 hold 0, phi max |est| 1.71e-02 rad, 229/240 hold 0

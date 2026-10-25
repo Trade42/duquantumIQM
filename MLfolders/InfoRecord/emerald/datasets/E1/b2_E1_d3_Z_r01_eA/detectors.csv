@@ -1,0 +1,9 @@
+index,round,x,y,t,stabilizer,type,ancilla_qb,ancilla_stim,data_qbs,record,boundary,grid_row,grid_col
+0,0,0.0,4.0,0.0,"Z(0,4)",Z,QB19,14,QB20;QB27,4,first,3,4
+1,0,2.0,2.0,0.0,"Z(2,2)",Z,QB21,9,QB13;QB22;QB20;QB29,1,first,3,6
+2,0,4.0,4.0,0.0,"Z(4,4)",Z,QB37,18,QB29;QB38;QB36;QB45,6,first,5,6
+3,0,6.0,2.0,0.0,"Z(6,2)",Z,QB39,13,QB31;QB38,3,first,5,8
+4,1,0.0,4.0,1.0,"Z(0,4)",Z,QB19,14,QB20;QB27,14;11;4,final,3,4
+5,1,2.0,2.0,1.0,"Z(2,2)",Z,QB21,9,QB13;QB22;QB20;QB29,12;11;9;8;1,final,3,6
+6,1,4.0,4.0,1.0,"Z(4,4)",Z,QB37,18,QB29;QB38;QB36;QB45,16;15;13;12;6,final,5,6
+7,1,6.0,2.0,1.0,"Z(6,2)",Z,QB39,13,QB31;QB38,13;10;3,final,5,8

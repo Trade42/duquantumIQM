@@ -1,0 +1,2133 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "device": "emerald",
+ "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6",
+ "shots": {
+  "P0": 1000,
+  "E1": 2000,
+  "E4": 2000
+ },
+ "split": {
+  "test_batch": 3,
+  "validation_fraction": 0.2,
+  "seed": 2026
+ },
+ "per_shot_overhead_s": 0.0004,
+ "per_circuit_overhead_s": 0.1,
+ "pessimistic_per_shot_s": 0.0019230769230769232,
+ "pessimistic_note": "Garnet's CLOPS bound (2,600 CLOPS), used for Emerald too: no Emerald CLOPS figure was checked",
+ "choices": {
+  "E1": {
+   "device": "emerald",
+   "cz_less_couplers_excluded": [
+    [
+     "QB6",
+     "QB7"
+    ],
+    [
+     "QB15",
+     "QB23"
+    ],
+    [
+     "QB24",
+     "QB32"
+    ],
+    [
+     "QB49",
+     "QB50"
+    ],
+    [
+     "QB50",
+     "QB54"
+    ]
+   ],
+   "rule": "eA: the lowest mean P_L(R=3, Z and X) under calibrated Stim noise over every zero-SWAP placement on the calibrated couplers; eB: the best placement on a different qubit set",
+   "rank_shots": 50000,
+   "placements": [
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB14",
+      "QB28",
+      "QB30",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.0464,
+      "X": 0.04866
+     },
+     "mean_p_l_r3": 0.04753,
+     "patch": "eA"
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB37",
+      "QB39"
+     ],
+     "p_l_r3": {
+      "Z": 0.0474,
+      "X": 0.04932
+     },
+     "mean_p_l_r3": 0.04836,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB14",
+      "QB28",
+      "QB30",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.04852,
+      "X": 0.04844
+     },
+     "mean_p_l_r3": 0.048479999999999995,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      4
+     ],
+     "qubit_set": 0,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB37",
+      "QB39"
+     ],
+     "p_l_r3": {
+      "Z": 0.0495,
+      "X": 0.04864
+     },
+     "mean_p_l_r3": 0.04907,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB8",
+      "QB10",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.053,
+      "X": 0.04768
+     },
+     "mean_p_l_r3": 0.050339999999999996,
+     "patch": "eB"
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB3",
+      "QB17",
+      "QB19",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.05008,
+      "X": 0.05292
+     },
+     "mean_p_l_r3": 0.051500000000000004,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB8",
+      "QB10",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.05476,
+      "X": 0.04962
+     },
+     "mean_p_l_r3": 0.05219,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB5",
+      "QB17",
+      "QB19",
+      "QB33"
+     ],
+     "p_l_r3": {
+      "Z": 0.04922,
+      "X": 0.05518
+     },
+     "mean_p_l_r3": 0.052199999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB10",
+      "QB12",
+      "QB24",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.05466,
+      "X": 0.05076
+     },
+     "mean_p_l_r3": 0.05271,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 1,
+     "x_ancillas": [
+      "QB5",
+      "QB17",
+      "QB19",
+      "QB33"
+     ],
+     "p_l_r3": {
+      "Z": 0.05162,
+      "X": 0.05458
+     },
+     "mean_p_l_r3": 0.053099999999999994,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB10",
+      "QB12",
+      "QB24",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.05428,
+      "X": 0.05214
+     },
+     "mean_p_l_r3": 0.05321,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      1
+     ],
+     "qubit_set": 2,
+     "x_ancillas": [
+      "QB3",
+      "QB17",
+      "QB19",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.05102,
+      "X": 0.05542
+     },
+     "mean_p_l_r3": 0.05322,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB6",
+      "QB18",
+      "QB20",
+      "QB34"
+     ],
+     "p_l_r3": {
+      "Z": 0.0567,
+      "X": 0.0535
+     },
+     "mean_p_l_r3": 0.055099999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB6",
+      "QB18",
+      "QB20",
+      "QB34"
+     ],
+     "p_l_r3": {
+      "Z": 0.05524,
+      "X": 0.0555
+     },
+     "mean_p_l_r3": 0.05537,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB11",
+      "QB27",
+      "QB29",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.05564,
+      "X": 0.05578
+     },
+     "mean_p_l_r3": 0.05571,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB4",
+      "QB18",
+      "QB20",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06388,
+      "X": 0.04816
+     },
+     "mean_p_l_r3": 0.05602,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB11",
+      "QB27",
+      "QB29",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.05676,
+      "X": 0.05552
+     },
+     "mean_p_l_r3": 0.056139999999999995,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB4",
+      "QB18",
+      "QB20",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06362,
+      "X": 0.0488
+     },
+     "mean_p_l_r3": 0.056209999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB26",
+      "QB28",
+      "QB40",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.0594,
+      "X": 0.05416
+     },
+     "mean_p_l_r3": 0.05678,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB26",
+      "QB28",
+      "QB40",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.06194,
+      "X": 0.05374
+     },
+     "mean_p_l_r3": 0.05784,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB9",
+      "QB11",
+      "QB27",
+      "QB29"
+     ],
+     "p_l_r3": {
+      "Z": 0.0612,
+      "X": 0.0551
+     },
+     "mean_p_l_r3": 0.05815,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 3,
+     "x_ancillas": [
+      "QB9",
+      "QB11",
+      "QB27",
+      "QB29"
+     ],
+     "p_l_r3": {
+      "Z": 0.05996,
+      "X": 0.05658
+     },
+     "mean_p_l_r3": 0.05827,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB11",
+      "QB13",
+      "QB25",
+      "QB27"
+     ],
+     "p_l_r3": {
+      "Z": 0.05694,
+      "X": 0.06052
+     },
+     "mean_p_l_r3": 0.05873,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB20",
+      "QB22",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.05112,
+      "X": 0.0669
+     },
+     "mean_p_l_r3": 0.05901,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      2
+     ],
+     "qubit_set": 5,
+     "x_ancillas": [
+      "QB11",
+      "QB13",
+      "QB25",
+      "QB27"
+     ],
+     "p_l_r3": {
+      "Z": 0.0568,
+      "X": 0.06198
+     },
+     "mean_p_l_r3": 0.05939,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB17",
+      "QB33",
+      "QB35",
+      "QB49"
+     ],
+     "p_l_r3": {
+      "Z": 0.05308,
+      "X": 0.0658
+     },
+     "mean_p_l_r3": 0.05944,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      3,
+      1
+     ],
+     "qubit_set": 6,
+     "x_ancillas": [
+      "QB17",
+      "QB33",
+      "QB35",
+      "QB49"
+     ],
+     "p_l_r3": {
+      "Z": 0.05244,
+      "X": 0.06744
+     },
+     "mean_p_l_r3": 0.05994,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 4,
+     "x_ancillas": [
+      "QB20",
+      "QB22",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.05238,
+      "X": 0.06762
+     },
+     "mean_p_l_r3": 0.06,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB2",
+      "QB10",
+      "QB12",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.06676,
+      "X": 0.05562
+     },
+     "mean_p_l_r3": 0.06119,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB11",
+      "QB25",
+      "QB27",
+      "QB41"
+     ],
+     "p_l_r3": {
+      "Z": 0.0586,
+      "X": 0.06504
+     },
+     "mean_p_l_r3": 0.06182,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB11",
+      "QB25",
+      "QB27",
+      "QB41"
+     ],
+     "p_l_r3": {
+      "Z": 0.05936,
+      "X": 0.0648
+     },
+     "mean_p_l_r3": 0.062079999999999996,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB12",
+      "QB14",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.06264,
+      "X": 0.06196
+     },
+     "mean_p_l_r3": 0.0623,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB5",
+      "QB19",
+      "QB21",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.06068,
+      "X": 0.06558
+     },
+     "mean_p_l_r3": 0.06312999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB12",
+      "QB14",
+      "QB26",
+      "QB28"
+     ],
+     "p_l_r3": {
+      "Z": 0.0667,
+      "X": 0.05966
+     },
+     "mean_p_l_r3": 0.06318,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB3",
+      "QB5",
+      "QB19",
+      "QB21"
+     ],
+     "p_l_r3": {
+      "Z": 0.05618,
+      "X": 0.0716
+     },
+     "mean_p_l_r3": 0.06389,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB2",
+      "QB10",
+      "QB12",
+      "QB26"
+     ],
+     "p_l_r3": {
+      "Z": 0.07136,
+      "X": 0.05726
+     },
+     "mean_p_l_r3": 0.06431,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      0,
+      2
+     ],
+     "qubit_set": 7,
+     "x_ancillas": [
+      "QB3",
+      "QB5",
+      "QB19",
+      "QB21"
+     ],
+     "p_l_r3": {
+      "Z": 0.0595,
+      "X": 0.06928
+     },
+     "mean_p_l_r3": 0.06439,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      1,
+      3
+     ],
+     "qubit_set": 9,
+     "x_ancillas": [
+      "QB5",
+      "QB19",
+      "QB21",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.06074,
+      "X": 0.07026
+     },
+     "mean_p_l_r3": 0.0655,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB16",
+      "QB18",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06016,
+      "X": 0.07114
+     },
+     "mean_p_l_r3": 0.06565,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      1
+     ],
+     "qubit_set": 8,
+     "x_ancillas": [
+      "QB16",
+      "QB18",
+      "QB34",
+      "QB36"
+     ],
+     "p_l_r3": {
+      "Z": 0.06116,
+      "X": 0.07066
+     },
+     "mean_p_l_r3": 0.06591,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB12",
+      "QB26",
+      "QB28",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.07848,
+      "X": 0.05602
+     },
+     "mean_p_l_r3": 0.06725,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB12",
+      "QB26",
+      "QB28",
+      "QB42"
+     ],
+     "p_l_r3": {
+      "Z": 0.081,
+      "X": 0.05966
+     },
+     "mean_p_l_r3": 0.07033,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB10",
+      "QB26",
+      "QB28",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.08054,
+      "X": 0.0618
+     },
+     "mean_p_l_r3": 0.07117,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB10",
+      "QB26",
+      "QB28",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.081,
+      "X": 0.0614
+     },
+     "mean_p_l_r3": 0.0712,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB13",
+      "QB27",
+      "QB29",
+      "QB43"
+     ],
+     "p_l_r3": {
+      "Z": 0.06384,
+      "X": 0.08214
+     },
+     "mean_p_l_r3": 0.07299,
+     "patch": null
+    },
+    {
+     "orientation": 3,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB20",
+      "QB34",
+      "QB36",
+      "QB48"
+     ],
+     "p_l_r3": {
+      "Z": 0.08106,
+      "X": 0.06794
+     },
+     "mean_p_l_r3": 0.0745,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB20",
+      "QB34",
+      "QB36",
+      "QB48"
+     ],
+     "p_l_r3": {
+      "Z": 0.08168,
+      "X": 0.07026
+     },
+     "mean_p_l_r3": 0.07597000000000001,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB18",
+      "QB20",
+      "QB36",
+      "QB38"
+     ],
+     "p_l_r3": {
+      "Z": 0.07652,
+      "X": 0.07582
+     },
+     "mean_p_l_r3": 0.07617,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB25",
+      "QB27",
+      "QB43",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.07796,
+      "X": 0.07478
+     },
+     "mean_p_l_r3": 0.07637,
+     "patch": null
+    },
+    {
+     "orientation": 1,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB13",
+      "QB27",
+      "QB29",
+      "QB43"
+     ],
+     "p_l_r3": {
+      "Z": 0.06872,
+      "X": 0.08526
+     },
+     "mean_p_l_r3": 0.07699,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      3
+     ],
+     "qubit_set": 12,
+     "x_ancillas": [
+      "QB18",
+      "QB20",
+      "QB36",
+      "QB38"
+     ],
+     "p_l_r3": {
+      "Z": 0.0754,
+      "X": 0.07932
+     },
+     "mean_p_l_r3": 0.07736,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB17",
+      "QB19",
+      "QB35",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.07268,
+      "X": 0.0847
+     },
+     "mean_p_l_r3": 0.07869,
+     "patch": null
+    },
+    {
+     "orientation": 2,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 10,
+     "x_ancillas": [
+      "QB17",
+      "QB19",
+      "QB35",
+      "QB37"
+     ],
+     "p_l_r3": {
+      "Z": 0.07368,
+      "X": 0.08594
+     },
+     "mean_p_l_r3": 0.07980999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB33",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.07232,
+      "X": 0.08776
+     },
+     "mean_p_l_r3": 0.08004,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      2,
+      2
+     ],
+     "qubit_set": 11,
+     "x_ancillas": [
+      "QB19",
+      "QB21",
+      "QB33",
+      "QB35"
+     ],
+     "p_l_r3": {
+      "Z": 0.0739,
+      "X": 0.08688
+     },
+     "mean_p_l_r3": 0.08038999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 0,
+     "origin": [
+      3,
+      2
+     ],
+     "qubit_set": 13,
+     "x_ancillas": [
+      "QB25",
+      "QB27",
+      "QB43",
+      "QB45"
+     ],
+     "p_l_r3": {
+      "Z": 0.08296,
+      "X": 0.07984
+     },
+     "mean_p_l_r3": 0.0814,
+     "patch": null
+    },
+    {
+     "orientation": 7,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB19",
+      "QB35",
+      "QB37",
+      "QB51"
+     ],
+     "p_l_r3": {
+      "Z": 0.07838,
+      "X": 0.0977
+     },
+     "mean_p_l_r3": 0.08804000000000001,
+     "patch": null
+    },
+    {
+     "orientation": 5,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB19",
+      "QB35",
+      "QB37",
+      "QB51"
+     ],
+     "p_l_r3": {
+      "Z": 0.08254,
+      "X": 0.09634
+     },
+     "mean_p_l_r3": 0.08943999999999999,
+     "patch": null
+    },
+    {
+     "orientation": 4,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB28",
+      "QB30",
+      "QB42",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.09546,
+      "X": 0.09038
+     },
+     "mean_p_l_r3": 0.09292,
+     "patch": null
+    },
+    {
+     "orientation": 6,
+     "origin": [
+      3,
+      3
+     ],
+     "qubit_set": 14,
+     "x_ancillas": [
+      "QB28",
+      "QB30",
+      "QB42",
+      "QB44"
+     ],
+     "p_l_r3": {
+      "Z": 0.09904,
+      "X": 0.08832
+     },
+     "mean_p_l_r3": 0.09368,
+     "patch": null
+    }
+   ],
+   "qubit_sets": [
+    [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ],
+    [
+     "QB4",
+     "QB5",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34"
+    ],
+    [
+     "QB3",
+     "QB4",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB24",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB34",
+     "QB35"
+    ],
+    [
+     "QB5",
+     "QB6",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB34",
+     "QB35"
+    ],
+    [
+     "QB11",
+     "QB12",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB44",
+     "QB45"
+    ],
+    [
+     "QB4",
+     "QB5",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB35",
+     "QB36"
+    ],
+    [
+     "QB17",
+     "QB18",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB32",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB40",
+     "QB41",
+     "QB42",
+     "QB43",
+     "QB48",
+     "QB49"
+    ],
+    [
+     "QB1",
+     "QB2",
+     "QB3",
+     "QB4",
+     "QB5",
+     "QB6",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27"
+    ],
+    [
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB24",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB41",
+     "QB42"
+    ],
+    [
+     "QB5",
+     "QB6",
+     "QB11",
+     "QB12",
+     "QB13",
+     "QB14",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB36",
+     "QB37"
+    ],
+    [
+     "QB11",
+     "QB12",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB42",
+     "QB43"
+    ],
+    [
+     "QB10",
+     "QB11",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB43",
+     "QB44"
+    ],
+    [
+     "QB12",
+     "QB13",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB43",
+     "QB44"
+    ],
+    [
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB42",
+     "QB43",
+     "QB44",
+     "QB45",
+     "QB48",
+     "QB49"
+    ],
+    [
+     "QB19",
+     "QB20",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB34",
+     "QB35",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB42",
+     "QB43",
+     "QB44",
+     "QB45",
+     "QB50",
+     "QB51"
+    ]
+   ],
+   "patches": {
+    "eA": [
+     "QB13",
+     "QB14",
+     "QB19",
+     "QB20",
+     "QB21",
+     "QB22",
+     "QB27",
+     "QB28",
+     "QB29",
+     "QB30",
+     "QB31",
+     "QB36",
+     "QB37",
+     "QB38",
+     "QB39",
+     "QB44",
+     "QB45"
+    ],
+    "eB": [
+     "QB4",
+     "QB5",
+     "QB8",
+     "QB9",
+     "QB10",
+     "QB11",
+     "QB16",
+     "QB17",
+     "QB18",
+     "QB19",
+     "QB20",
+     "QB25",
+     "QB26",
+     "QB27",
+     "QB28",
+     "QB33",
+     "QB34"
+    ]
+   }
+  }
+ },
+ "jobs": [
+  {
+   "label": "EP0",
+   "phase": "pilot",
+   "batch": null,
+   "experiment": "E1",
+   "circuits": 1,
+   "shots": 1000,
+   "total_shots": 1000,
+   "circuit_us_min": 1.848,
+   "circuit_us_max": 1.848,
+   "circuit_us_mean": 1.848,
+   "qpu_s_shots": 0.401848,
+   "qpu_s_per_circuit_overhead": 0.1,
+   "qpu_s": 0.501848,
+   "qpu_s_pessimistic": 2.0249249230769233,
+   "qpu_s_circuits_only": 0.001848,
+   "per_shot_overhead_s": 0.0004,
+   "note": "sanity checks before anything else",
+   "order": [
+    "E1_d3_Z_r03_eA"
+   ]
+  },
+  {
+   "label": "E-B1-1-E1",
+   "phase": "batch 1",
+   "batch": 1,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, Z basis",
+   "order": [
+    "E1_d3_Z_r01_eA",
+    "E1_d3_Z_r03_eA",
+    "E1_d3_Z_r15_eA",
+    "E1_d3_Z_r04_eA",
+    "E1_d3_Z_r05_eA",
+    "E1_d3_Z_r10_eA",
+    "E1_d3_Z_r12_eA",
+    "E1_d3_Z_r06_eA",
+    "E1_d3_Z_r02_eA",
+    "E1_d3_Z_r20_eA",
+    "E1_d3_Z_r08_eA"
+   ]
+  },
+  {
+   "label": "E-B1-2-E1",
+   "phase": "batch 1",
+   "batch": 1,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, X basis",
+   "order": [
+    "E1_d3_X_r01_eA",
+    "E1_d3_X_r03_eA",
+    "E1_d3_X_r15_eA",
+    "E1_d3_X_r04_eA",
+    "E1_d3_X_r05_eA",
+    "E1_d3_X_r10_eA",
+    "E1_d3_X_r12_eA",
+    "E1_d3_X_r06_eA",
+    "E1_d3_X_r02_eA",
+    "E1_d3_X_r20_eA",
+    "E1_d3_X_r08_eA"
+   ]
+  },
+  {
+   "label": "E-B1-3-E1",
+   "phase": "batch 1",
+   "batch": 1,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, Z basis",
+   "order": [
+    "E1_d3_Z_r01_eB",
+    "E1_d3_Z_r03_eB",
+    "E1_d3_Z_r15_eB",
+    "E1_d3_Z_r04_eB",
+    "E1_d3_Z_r05_eB",
+    "E1_d3_Z_r10_eB",
+    "E1_d3_Z_r12_eB",
+    "E1_d3_Z_r06_eB",
+    "E1_d3_Z_r02_eB",
+    "E1_d3_Z_r20_eB",
+    "E1_d3_Z_r08_eB"
+   ]
+  },
+  {
+   "label": "E-B1-4-E1",
+   "phase": "batch 1",
+   "batch": 1,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, X basis",
+   "order": [
+    "E1_d3_X_r01_eB",
+    "E1_d3_X_r03_eB",
+    "E1_d3_X_r15_eB",
+    "E1_d3_X_r04_eB",
+    "E1_d3_X_r05_eB",
+    "E1_d3_X_r10_eB",
+    "E1_d3_X_r12_eB",
+    "E1_d3_X_r06_eB",
+    "E1_d3_X_r02_eB",
+    "E1_d3_X_r20_eB",
+    "E1_d3_X_r08_eB"
+   ]
+  },
+  {
+   "label": "E-B2-1-E1",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, Z basis",
+   "order": [
+    "E1_d3_Z_r08_eA",
+    "E1_d3_Z_r15_eA",
+    "E1_d3_Z_r05_eA",
+    "E1_d3_Z_r01_eA",
+    "E1_d3_Z_r10_eA",
+    "E1_d3_Z_r06_eA",
+    "E1_d3_Z_r03_eA",
+    "E1_d3_Z_r04_eA",
+    "E1_d3_Z_r02_eA",
+    "E1_d3_Z_r20_eA",
+    "E1_d3_Z_r12_eA"
+   ]
+  },
+  {
+   "label": "E-B2-2-E1",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, X basis",
+   "order": [
+    "E1_d3_X_r08_eA",
+    "E1_d3_X_r15_eA",
+    "E1_d3_X_r05_eA",
+    "E1_d3_X_r01_eA",
+    "E1_d3_X_r10_eA",
+    "E1_d3_X_r06_eA",
+    "E1_d3_X_r03_eA",
+    "E1_d3_X_r04_eA",
+    "E1_d3_X_r02_eA",
+    "E1_d3_X_r20_eA",
+    "E1_d3_X_r12_eA"
+   ]
+  },
+  {
+   "label": "E-B2-3-E1",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, Z basis",
+   "order": [
+    "E1_d3_Z_r08_eB",
+    "E1_d3_Z_r15_eB",
+    "E1_d3_Z_r05_eB",
+    "E1_d3_Z_r01_eB",
+    "E1_d3_Z_r10_eB",
+    "E1_d3_Z_r06_eB",
+    "E1_d3_Z_r03_eB",
+    "E1_d3_Z_r04_eB",
+    "E1_d3_Z_r02_eB",
+    "E1_d3_Z_r20_eB",
+    "E1_d3_Z_r12_eB"
+   ]
+  },
+  {
+   "label": "E-B2-4-E1",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, X basis",
+   "order": [
+    "E1_d3_X_r08_eB",
+    "E1_d3_X_r15_eB",
+    "E1_d3_X_r05_eB",
+    "E1_d3_X_r01_eB",
+    "E1_d3_X_r10_eB",
+    "E1_d3_X_r06_eB",
+    "E1_d3_X_r03_eB",
+    "E1_d3_X_r04_eB",
+    "E1_d3_X_r02_eB",
+    "E1_d3_X_r20_eB",
+    "E1_d3_X_r12_eB"
+   ]
+  },
+  {
+   "label": "E-B2-5-E4",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E4",
+   "circuits": 12,
+   "shots": 2000,
+   "total_shots": 24000,
+   "circuit_us_min": 2.232,
+   "circuit_us_max": 39.928,
+   "circuit_us_mean": 12.105333333333334,
+   "qpu_s_shots": 9.890528,
+   "qpu_s_per_circuit_overhead": 1.2000000000000002,
+   "qpu_s": 11.090527999999999,
+   "qpu_s_pessimistic": 47.64437415384616,
+   "qpu_s_circuits_only": 0.290528,
+   "per_shot_overhead_s": 0.0004,
+   "note": "delay sweep, patch eA, Z basis",
+   "order": [
+    "E4_d3_Z_r03_eA_t01000ns",
+    "E4_d3_Z_r02_eA_t01000ns",
+    "E4_d3_Z_r03_eA_t05000ns",
+    "E4_d3_Z_r05_eA_t01000ns",
+    "E4_d3_Z_r05_eA_t02000ns",
+    "E4_d3_Z_r02_eA_t05000ns",
+    "E4_d3_Z_r08_eA_t01000ns",
+    "E4_d3_Z_r08_eA_t02000ns",
+    "E4_d3_Z_r03_eA_t02000ns",
+    "E4_d3_Z_r02_eA_t02000ns",
+    "E4_d3_Z_r08_eA_t05000ns",
+    "E4_d3_Z_r05_eA_t05000ns"
+   ]
+  },
+  {
+   "label": "E-B2-6-E4",
+   "phase": "batch 2",
+   "batch": 2,
+   "experiment": "E4",
+   "circuits": 12,
+   "shots": 2000,
+   "total_shots": 24000,
+   "circuit_us_min": 2.232,
+   "circuit_us_max": 39.928,
+   "circuit_us_mean": 12.105333333333334,
+   "qpu_s_shots": 9.890528,
+   "qpu_s_per_circuit_overhead": 1.2000000000000002,
+   "qpu_s": 11.090527999999999,
+   "qpu_s_pessimistic": 47.64437415384616,
+   "qpu_s_circuits_only": 0.290528,
+   "per_shot_overhead_s": 0.0004,
+   "note": "delay sweep, patch eA, X basis",
+   "order": [
+    "E4_d3_X_r03_eA_t01000ns",
+    "E4_d3_X_r02_eA_t01000ns",
+    "E4_d3_X_r03_eA_t05000ns",
+    "E4_d3_X_r05_eA_t01000ns",
+    "E4_d3_X_r05_eA_t02000ns",
+    "E4_d3_X_r02_eA_t05000ns",
+    "E4_d3_X_r08_eA_t01000ns",
+    "E4_d3_X_r08_eA_t02000ns",
+    "E4_d3_X_r03_eA_t02000ns",
+    "E4_d3_X_r02_eA_t02000ns",
+    "E4_d3_X_r08_eA_t05000ns",
+    "E4_d3_X_r05_eA_t05000ns"
+   ]
+  },
+  {
+   "label": "E-B3-1-E1",
+   "phase": "batch 3",
+   "batch": 3,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, Z basis",
+   "order": [
+    "E1_d3_Z_r10_eA",
+    "E1_d3_Z_r02_eA",
+    "E1_d3_Z_r06_eA",
+    "E1_d3_Z_r15_eA",
+    "E1_d3_Z_r20_eA",
+    "E1_d3_Z_r08_eA",
+    "E1_d3_Z_r04_eA",
+    "E1_d3_Z_r01_eA",
+    "E1_d3_Z_r05_eA",
+    "E1_d3_Z_r12_eA",
+    "E1_d3_Z_r03_eA"
+   ]
+  },
+  {
+   "label": "E-B3-2-E1",
+   "phase": "batch 3",
+   "batch": 3,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eA, X basis",
+   "order": [
+    "E1_d3_X_r10_eA",
+    "E1_d3_X_r02_eA",
+    "E1_d3_X_r06_eA",
+    "E1_d3_X_r15_eA",
+    "E1_d3_X_r20_eA",
+    "E1_d3_X_r08_eA",
+    "E1_d3_X_r04_eA",
+    "E1_d3_X_r01_eA",
+    "E1_d3_X_r05_eA",
+    "E1_d3_X_r12_eA",
+    "E1_d3_X_r03_eA"
+   ]
+  },
+  {
+   "label": "E-B3-3-E1",
+   "phase": "batch 3",
+   "batch": 3,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, Z basis",
+   "order": [
+    "E1_d3_Z_r10_eB",
+    "E1_d3_Z_r02_eB",
+    "E1_d3_Z_r06_eB",
+    "E1_d3_Z_r15_eB",
+    "E1_d3_Z_r20_eB",
+    "E1_d3_Z_r08_eB",
+    "E1_d3_Z_r04_eB",
+    "E1_d3_Z_r01_eB",
+    "E1_d3_Z_r05_eB",
+    "E1_d3_Z_r12_eB",
+    "E1_d3_Z_r03_eB"
+   ]
+  },
+  {
+   "label": "E-B3-4-E1",
+   "phase": "batch 3",
+   "batch": 3,
+   "experiment": "E1",
+   "circuits": 11,
+   "shots": 2000,
+   "total_shots": 22000,
+   "circuit_us_min": 0.616,
+   "circuit_us_max": 12.32,
+   "circuit_us_mean": 4.816,
+   "qpu_s_shots": 8.905952000000001,
+   "qpu_s_per_circuit_overhead": 1.1,
+   "qpu_s": 10.005952,
+   "qpu_s_pessimistic": 43.51364430769231,
+   "qpu_s_circuits_only": 0.105952,
+   "per_shot_overhead_s": 0.0004,
+   "note": "memory, patch eB, X basis",
+   "order": [
+    "E1_d3_X_r10_eB",
+    "E1_d3_X_r02_eB",
+    "E1_d3_X_r06_eB",
+    "E1_d3_X_r15_eB",
+    "E1_d3_X_r20_eB",
+    "E1_d3_X_r08_eB",
+    "E1_d3_X_r04_eB",
+    "E1_d3_X_r01_eB",
+    "E1_d3_X_r05_eB",
+    "E1_d3_X_r12_eB",
+    "E1_d3_X_r03_eB"
+   ]
+  }
+ ],
+ "pilot": {
+  "circuit": "E1_d3_Z_r03_eA",
+  "device": "emerald",
+  "x_cols": [
+   0,
+   2,
+   5,
+   7
+  ],
+  "z_cols": [
+   1,
+   3,
+   4,
+   6
+  ],
+  "x_qubits": [
+   "QB14",
+   "QB30",
+   "QB28",
+   "QB44"
+  ],
+  "z_qubits": [
+   "QB21",
+   "QB39",
+   "QB19",
+   "QB37"
+  ],
+  "stand_in": {
+   "shots": 1000,
+   "columns": 33,
+   "detection_fraction": 0.08041666666666666,
+   "detection_fraction_ci": [
+    0.077043018072664,
+    0.08392461143985502
+   ],
+   "x_ancilla_m1_one": 0.513,
+   "z_ancilla_m1_one": 0.05625,
+   "all_zero_rows": 1,
+   "source": "InfoRecord/emerald/sim/datasets/E1/ep0_E1_d3_Z_r03_eA"
+  },
+  "calibrated_stim_no_idle": {
+   "shots": 100000,
+   "columns": 33,
+   "detection_fraction": 0.08841041666666667,
+   "detection_fraction_ci": [
+    0.08805191026067309,
+    0.08877024065758081
+   ],
+   "x_ancilla_m1_one": 0.50024,
+   "z_ancilla_m1_one": 0.0612275,
+   "all_zero_rows": 119,
+   "idle_ns": 0.0
+  },
+  "calibrated_stim_with_idle": {
+   "shots": 100000,
+   "columns": 33,
+   "detection_fraction": 0.11593791666666667,
+   "detection_fraction_ci": [
+    0.11553349248342117,
+    0.11634357031350902
+   ],
+   "x_ancilla_m1_one": 0.50024,
+   "z_ancilla_m1_one": 0.0612275,
+   "all_zero_rows": 59,
+   "idle_ns": 360.0
+  },
+  "band": {
+   "columns": 33,
+   "shots": 1000,
+   "detection_fraction": [
+    0.04020833333333333,
+    0.23187583333333334
+   ],
+   "x_ancilla_m1_one": [
+    0.4,
+    0.6
+   ],
+   "z_ancilla_m1_one_max": 0.3,
+   "all_zero_rows_max_per_1000": 5,
+   "how": "memory.npz c0 is (shots, columns). x_ancilla_m1_one is the pooled mean of raw[:, x_cols] (all X-type round-1 bits of all shots together), z_ancilla_m1_one the pooled mean of raw[:, z_cols]. detection_fraction is the mean of decode.detection_events(<circuits/E1/<circuit>.stim>, raw)[0] over all shots and detectors. all_zero_rows counts shots whose 33 bits are all 0."
+  }
+ }
+}

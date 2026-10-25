@@ -1,0 +1,281 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "label": "HARDWARE",
+ "device": "garnet",
+ "batch": 1,
+ "runs": [
+  "b1_E3_assign_all0",
+  "b1_E3_assign_all1",
+  "b1_E3_assign_rand00",
+  "b1_E3_assign_rand01",
+  "b1_E3_assign_rand02",
+  "b1_E3_assign_rand03",
+  "b1_E3_assign_rand04",
+  "b1_E3_assign_rand05",
+  "b1_E3_assign_rand06",
+  "b1_E3_assign_rand07",
+  "b1_E3_assign_rand08",
+  "b1_E3_assign_rand09",
+  "b1_E3_assign_rand10",
+  "b1_E3_assign_rand11",
+  "b1_E3_assign_rand12",
+  "b1_E3_assign_rand13",
+  "b1_E3_assign_rand14",
+  "b1_E3_assign_rand15",
+  "b1_E3_repeat_all0_k15",
+  "b1_E3_repeat_all1_k15",
+  "b1_E3_repeat_chkA_k15",
+  "b1_E3_repeat_chkB_k15"
+ ],
+ "qubits": 20,
+ "assignment": "layer-0 readouts of every E3 circuit, pooled per (qubit, prepared bit)",
+ "flips": "derived/E3/<run>/readout_flips.csv of the repeat circuits (all0: prep 0, all1: prep 1; chkA/chkB mix both and are not pooled here)",
+ "median": {
+  "p1_given_0": 0.012524621212121213,
+  "p0_given_1": 0.02306818181818182,
+  "record_flip_prep0": 0.0022546654404705657,
+  "record_flip_prep1": 0.0008908938531664677,
+  "state_flip_prep0": 0.0003156749697439372,
+  "state_flip_prep1": 0.04663678550786987
+ },
+ "worst": {
+  "p1_given_0": [
+   0.03077777777777778,
+   "QB19"
+  ],
+  "p0_given_1": [
+   0.042444444444444444,
+   "QB8"
+  ],
+  "record_flip_prep1": [
+   0.01524130390374783,
+   "QB19"
+  ],
+  "state_flip_prep1": [
+   0.12187487516033926,
+   "QB18"
+  ]
+ },
+ "rows": [
+  {
+   "qb": "QB1",
+   "p1_given_0": 0.019045454545454546,
+   "p0_given_1": 0.023090909090909092,
+   "shots_prep0": 22000,
+   "shots_prep1": 22000,
+   "record_flip_prep0": 0.0022187642602541475,
+   "state_flip_prep0": 0.00025477917179939774,
+   "record_flip_prep1": 0.004274244828501016,
+   "state_flip_prep1": 0.07833612572761335
+  },
+  {
+   "qb": "QB2",
+   "p1_given_0": 0.016916666666666667,
+   "p0_given_1": 0.02703125,
+   "shots_prep0": 12000,
+   "shots_prep1": 32000,
+   "record_flip_prep0": 0.0012143369599927106,
+   "state_flip_prep0": 0.0012251722338607325,
+   "record_flip_prep1": -0.0025058990308955737,
+   "state_flip_prep1": 0.07920410575409885
+  },
+  {
+   "qb": "QB3",
+   "p1_given_0": 0.015454545454545455,
+   "p0_given_1": 0.015181818181818182,
+   "shots_prep0": 22000,
+   "shots_prep1": 22000,
+   "record_flip_prep0": 0.001914214763660311,
+   "state_flip_prep0": 0.004094647395756301,
+   "record_flip_prep1": 0.0008231679168040033,
+   "state_flip_prep1": 0.04558443339716122
+  },
+  {
+   "qb": "QB4",
+   "p1_given_0": 0.004153846153846154,
+   "p0_given_1": 0.019444444444444445,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.002684718792230276,
+   "state_flip_prep0": 0.00016902395400098576,
+   "record_flip_prep1": 0.000380725206003657,
+   "state_flip_prep1": 0.05189239574183884
+  },
+  {
+   "qb": "QB5",
+   "p1_given_0": 0.005923076923076923,
+   "p0_given_1": 0.015055555555555556,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.001466758345623233,
+   "state_flip_prep0": 6.648330875353402e-05,
+   "record_flip_prep1": -0.0011623936907553176,
+   "state_flip_prep1": 0.05347863353535679
+  },
+  {
+   "qb": "QB6",
+   "p1_given_0": 0.0175,
+   "p0_given_1": 0.016666666666666666,
+   "shots_prep0": 20000,
+   "shots_prep1": 24000,
+   "record_flip_prep0": 0.009922845307346955,
+   "state_flip_prep0": -0.00034569061469390955,
+   "record_flip_prep1": 0.004727979796300233,
+   "state_flip_prep1": 0.0473132711766303
+  },
+  {
+   "qb": "QB7",
+   "p1_given_0": 0.012458333333333333,
+   "p0_given_1": 0.0343,
+   "shots_prep0": 24000,
+   "shots_prep1": 20000,
+   "record_flip_prep0": 0.003909057904451503,
+   "state_flip_prep0": 0.0004895764987893018,
+   "record_flip_prep1": 0.0008111604333569071,
+   "state_flip_prep1": 0.06445460221020927
+  },
+  {
+   "qb": "QB8",
+   "p1_given_0": 0.005,
+   "p0_given_1": 0.042444444444444444,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.0006431962454685787,
+   "state_flip_prep0": 0.0002520690475243811,
+   "record_flip_prep1": -0.0054967564125542046,
+   "state_flip_prep1": 0.0971858205174161
+  },
+  {
+   "qb": "QB9",
+   "p1_given_0": 0.011,
+   "p0_given_1": 0.02627777777777778,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.007484791539232685,
+   "state_flip_prep0": 0.0003765707676884767,
+   "record_flip_prep1": 0.004512726631925824,
+   "state_flip_prep1": 0.0338207005823022
+  },
+  {
+   "qb": "QB10",
+   "p1_given_0": 0.007416666666666667,
+   "p0_given_1": 0.0129,
+   "shots_prep0": 24000,
+   "shots_prep1": 20000,
+   "record_flip_prep0": 0.0015017703855220682,
+   "state_flip_prep0": 0.0008041515366481711,
+   "record_flip_prep1": 0.0023731982160322567,
+   "state_flip_prep1": 0.0393689881833201
+  },
+  {
+   "qb": "QB11",
+   "p1_given_0": 0.012807692307692308,
+   "p0_given_1": 0.02722222222222222,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.0011446856831081004,
+   "state_flip_prep0": 0.00021062863378379934,
+   "record_flip_prep1": 0.001539080849676046,
+   "state_flip_prep1": 0.045960299839109445
+  },
+  {
+   "qb": "QB12",
+   "p1_given_0": 0.0113,
+   "p0_given_1": 0.018375,
+   "shots_prep0": 20000,
+   "shots_prep1": 24000,
+   "record_flip_prep0": 0.0022903485890914082,
+   "state_flip_prep0": 0.0004962258987402605,
+   "record_flip_prep1": 0.0009586197895289321,
+   "state_flip_prep1": 0.030967375805557522
+  },
+  {
+   "qb": "QB13",
+   "p1_given_0": 0.014115384615384615,
+   "p0_given_1": 0.024166666666666666,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.003621090400601022,
+   "state_flip_prep0": 0.00021935766033641738,
+   "record_flip_prep1": 0.0037876463182430725,
+   "state_flip_prep1": 0.03469393813274462
+  },
+  {
+   "qb": "QB14",
+   "p1_given_0": 0.0076,
+   "p0_given_1": 0.011291666666666667,
+   "shots_prep0": 20000,
+   "shots_prep1": 24000,
+   "record_flip_prep0": 0.00318923502373143,
+   "state_flip_prep0": 0.00023691456792175516,
+   "record_flip_prep1": 0.002294578455824207,
+   "state_flip_prep1": 0.03698776616527466
+  },
+  {
+   "qb": "QB15",
+   "p1_given_0": 0.014666666666666666,
+   "p0_given_1": 0.03661538461538461,
+   "shots_prep0": 18000,
+   "shots_prep1": 26000,
+   "record_flip_prep0": 0.0025054544416459163,
+   "state_flip_prep0": 0.0008737065013235523,
+   "record_flip_prep1": -0.0010411653204182858,
+   "state_flip_prep1": 0.06235156141006734
+  },
+  {
+   "qb": "QB16",
+   "p1_given_0": 0.01259090909090909,
+   "p0_given_1": 0.023045454545454546,
+   "shots_prep0": 22000,
+   "shots_prep1": 22000,
+   "record_flip_prep0": 0.003692473444536659,
+   "state_flip_prep0": 0.00019197618784975827,
+   "record_flip_prep1": 0.006062073815165404,
+   "state_flip_prep1": 0.036222006215823034
+  },
+  {
+   "qb": "QB17",
+   "p1_given_0": 0.008653846153846154,
+   "p0_given_1": 0.01988888888888889,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.002218982291849723,
+   "state_flip_prep0": 0.00021588157014670786,
+   "record_flip_prep1": 0.0005695560349424525,
+   "state_flip_prep1": 0.03289934946857663
+  },
+  {
+   "qb": "QB18",
+   "p1_given_0": 0.006115384615384615,
+   "p0_given_1": 0.0395,
+   "shots_prep0": 26000,
+   "shots_prep1": 18000,
+   "record_flip_prep0": 0.001537787275794971,
+   "state_flip_prep0": 0.0007321177561023656,
+   "record_flip_prep1": -0.008168206810938859,
+   "state_flip_prep1": 0.12187487516033926
+  },
+  {
+   "qb": "QB19",
+   "p1_given_0": 0.03077777777777778,
+   "p0_given_1": 0.025884615384615384,
+   "shots_prep0": 18000,
+   "shots_prep1": 26000,
+   "record_flip_prep0": 0.015965970936585798,
+   "state_flip_prep0": 0.0004911350499053266,
+   "record_flip_prep1": 0.01524130390374783,
+   "state_flip_prep1": 0.024632776807888956
+  },
+  {
+   "qb": "QB20",
+   "p1_given_0": 0.024545454545454544,
+   "p0_given_1": 0.022318181818181817,
+   "shots_prep0": 22000,
+   "shots_prep1": 22000,
+   "record_flip_prep0": 0.000979867643287379,
+   "state_flip_prep0": 0.0038864185595790884,
+   "record_flip_prep1": -0.0013632669644985465,
+   "state_flip_prep1": 0.06888038008284325
+  }
+ ]
+}

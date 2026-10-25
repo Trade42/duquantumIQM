@@ -1,0 +1,12 @@
+{
+  "backend": "mwpm",
+  "description": "Quick pipeline check: d=3, three round counts, both bases, uniform p=0.001.",
+  "grid": {"distance": 3, "rounds": [1, 2, 3], "basis": ["X", "Z"], "noise": "uniform", "p": 0.001,
+           "gate_basis": "cz", "no_reset": true},
+  "test": {"target_failures": 100, "safety": 1.25, "max_shots": 10000000,
+           "min_shots": 100000, "min_shots_leakage": 100000,
+           "pilot_target_failures": 30, "pilot_max_shots": 2000000, "pilot_max_shots_leakage": 200000},
+  "eval": {"batch_sizes": [1, 64, 4096, 65536], "min_seconds": 0.2},
+  "workers": 1,
+  "seed": 0
+}

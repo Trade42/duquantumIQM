@@ -1,0 +1,80 @@
+QUBIT_COORDS(0, 0) 0
+QUBIT_COORDS(1, 0) 1
+QUBIT_COORDS(2, 0) 2
+QUBIT_COORDS(3, 0) 3
+QUBIT_COORDS(4, 0) 4
+QUBIT_COORDS(5, 0) 5
+QUBIT_COORDS(6, 0) 6
+QUBIT_COORDS(7, 0) 7
+QUBIT_COORDS(8, 0) 8
+QUBIT_COORDS(9, 0) 9
+QUBIT_COORDS(10, 0) 10
+QUBIT_COORDS(11, 0) 11
+QUBIT_COORDS(12, 0) 12
+QUBIT_COORDS(13, 0) 13
+QUBIT_COORDS(14, 0) 14
+QUBIT_COORDS(15, 0) 15
+QUBIT_COORDS(16, 0) 16
+QUBIT_COORDS(17, 0) 17
+QUBIT_COORDS(18, 0) 18
+R 0 2 4 6 8 10 12 14 16 18 1 3 5 7 9 11 13 15 17
+X 0 2 4 6 8 10 12 14 16 18
+TICK
+CX 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+TICK
+CX 2 1 4 3 6 5 8 7 10 9 12 11 14 13 16 15 18 17
+TICK
+TICK
+M 1 3 5 7 9 11 13 15 17
+DETECTOR(1, 0, 0) rec[-9]
+DETECTOR(3, 0, 0) rec[-8]
+DETECTOR(5, 0, 0) rec[-7]
+DETECTOR(7, 0, 0) rec[-6]
+DETECTOR(9, 0, 0) rec[-5]
+DETECTOR(11, 0, 0) rec[-4]
+DETECTOR(13, 0, 0) rec[-3]
+DETECTOR(15, 0, 0) rec[-2]
+DETECTOR(17, 0, 0) rec[-1]
+TICK
+CX 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+TICK
+CX 2 1 4 3 6 5 8 7 10 9 12 11 14 13 16 15 18 17
+TICK
+TICK
+M 1 3 5 7 9 11 13 15 17
+DETECTOR(1, 0, 1) rec[-9]
+DETECTOR(3, 0, 1) rec[-8]
+DETECTOR(5, 0, 1) rec[-7]
+DETECTOR(7, 0, 1) rec[-6]
+DETECTOR(9, 0, 1) rec[-5]
+DETECTOR(11, 0, 1) rec[-4]
+DETECTOR(13, 0, 1) rec[-3]
+DETECTOR(15, 0, 1) rec[-2]
+DETECTOR(17, 0, 1) rec[-1]
+TICK
+CX 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+TICK
+CX 2 1 4 3 6 5 8 7 10 9 12 11 14 13 16 15 18 17
+TICK
+TICK
+M 1 3 5 7 9 11 13 15 17
+DETECTOR(1, 0, 2) rec[-9] rec[-27]
+DETECTOR(3, 0, 2) rec[-8] rec[-26]
+DETECTOR(5, 0, 2) rec[-7] rec[-25]
+DETECTOR(7, 0, 2) rec[-6] rec[-24]
+DETECTOR(9, 0, 2) rec[-5] rec[-23]
+DETECTOR(11, 0, 2) rec[-4] rec[-22]
+DETECTOR(13, 0, 2) rec[-3] rec[-21]
+DETECTOR(15, 0, 2) rec[-2] rec[-20]
+DETECTOR(17, 0, 2) rec[-1] rec[-19]
+M 0 2 4 6 8 10 12 14 16 18
+DETECTOR(1, 0, 3) rec[-9] rec[-10] rec[-19] rec[-28]
+DETECTOR(3, 0, 3) rec[-8] rec[-9] rec[-18] rec[-27]
+DETECTOR(5, 0, 3) rec[-7] rec[-8] rec[-17] rec[-26]
+DETECTOR(7, 0, 3) rec[-6] rec[-7] rec[-16] rec[-25]
+DETECTOR(9, 0, 3) rec[-5] rec[-6] rec[-15] rec[-24]
+DETECTOR(11, 0, 3) rec[-4] rec[-5] rec[-14] rec[-23]
+DETECTOR(13, 0, 3) rec[-3] rec[-4] rec[-13] rec[-22]
+DETECTOR(15, 0, 3) rec[-2] rec[-3] rec[-12] rec[-21]
+DETECTOR(17, 0, 3) rec[-1] rec[-2] rec[-11] rec[-20]
+OBSERVABLE_INCLUDE(0) rec[-10]

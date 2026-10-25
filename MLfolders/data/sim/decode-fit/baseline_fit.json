@@ -1,0 +1,1054 @@
+{
+  "what": "decode-fit simulation baseline: Stim stand-in (with reset), end to end from measurement records vs a direct detector-sampler estimate",
+  "circuit": "stim surface_code:rotated_memory_{z,x}, distance 3, uniform p = 0.003 (after_clifford_depolarization, before_measure_flip_probability, after_reset_flip_probability, before_round_data_depolarization)",
+  "decoder": "pymatching 2.4.0, MWPM, from the circuit's own detector error model (decompose_errors=True)",
+  "shots_per_point": 100000,
+  "rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "seed": 2026,
+  "bootstrap": 2000,
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "checks": [
+    {
+      "basis": "Z",
+      "rounds": 1,
+      "num_measurements": 17,
+      "num_detectors": 8,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 29,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 2,
+      "num_measurements": 25,
+      "num_detectors": 16,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 145,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 3,
+      "num_measurements": 33,
+      "num_detectors": 24,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 286,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 4,
+      "num_measurements": 41,
+      "num_detectors": 32,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 428,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 5,
+      "num_measurements": 49,
+      "num_detectors": 40,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 570,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 6,
+      "num_measurements": 57,
+      "num_detectors": 48,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 712,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 7,
+      "num_measurements": 65,
+      "num_detectors": 56,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 942,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 8,
+      "num_measurements": 73,
+      "num_detectors": 64,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1086,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 9,
+      "num_measurements": 81,
+      "num_detectors": 72,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1256,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "Z",
+      "rounds": 10,
+      "num_measurements": 89,
+      "num_detectors": 80,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1400,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 1,
+      "num_measurements": 17,
+      "num_detectors": 8,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 29,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 2,
+      "num_measurements": 25,
+      "num_detectors": 16,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 145,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 3,
+      "num_measurements": 33,
+      "num_detectors": 24,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 291,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 4,
+      "num_measurements": 41,
+      "num_detectors": 32,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 433,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 5,
+      "num_measurements": 49,
+      "num_detectors": 40,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 575,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 6,
+      "num_measurements": 57,
+      "num_detectors": 48,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 717,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 7,
+      "num_measurements": 65,
+      "num_detectors": 56,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 945,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 8,
+      "num_measurements": 73,
+      "num_detectors": 64,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1091,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 9,
+      "num_measurements": 81,
+      "num_detectors": 72,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1259,
+      "graphlike_distance": 3,
+      "ok": true
+    },
+    {
+      "basis": "X",
+      "rounds": 10,
+      "num_measurements": 89,
+      "num_detectors": 80,
+      "num_observables": 1,
+      "noiseless_shots": 1000,
+      "noiseless_detection_events": 0,
+      "noiseless_observable_flips": 0,
+      "dem_errors": 1405,
+      "graphlike_distance": 3,
+      "ok": true
+    }
+  ],
+  "fits": {
+    "Z, e2e, A = 1": {
+      "form": "F = (1-2eps)^n",
+      "free_amplitude": false,
+      "eps": 0.0021174060274429204,
+      "eps_se_curvature": 1.98523929702969e-05,
+      "eps_ci_curvature": [
+        0.002078496052214202,
+        0.0021563160026716387
+      ],
+      "eps_ci_bootstrap": [
+        0.0020801144408569444,
+        0.0021562068504520156
+      ],
+      "amplitude": 1.0,
+      "amplitude_se_curvature": NaN,
+      "amplitude_ci_bootstrap": [
+        NaN,
+        NaN
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        254,
+        496,
+        660,
+        847,
+        1028,
+        1204,
+        1454,
+        1651,
+        1914,
+        1991
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.002117406027442925,
+        0.004225845238315762,
+        0.006325355605401373,
+        0.008415974940675086,
+        0.010497740895985652,
+        0.0125706909637332,
+        0.014634862477544641,
+        0.016690292612946078,
+        0.0187370183880321,
+        0.020775076664132808
+      ],
+      "pearson_residuals": [
+        2.9072441297346963,
+        3.578906899516771,
+        1.0954843118782216,
+        0.18701578945749103,
+        -0.6755907364023436,
+        -1.506291796711528,
+        -0.24980523984285435,
+        -0.4450417905388262,
+        0.9398148015121899,
+        -1.9179710605426148
+      ],
+      "chi2": 30.043371331715722,
+      "dof": 9,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "Z, e2e, free A": {
+      "form": "F = A(1-2eps)^n",
+      "free_amplitude": true,
+      "eps": 0.002003122815673038,
+      "eps_se_curvature": 3.305123886607638e-05,
+      "eps_ci_curvature": [
+        0.001938343577851098,
+        0.0020679020534949783
+      ],
+      "eps_ci_bootstrap": [
+        0.0019382020282808965,
+        0.0020696969322143454
+      ],
+      "amplitude": 0.998746349502228,
+      "amplitude_se_curvature": 0.0002984107147709592,
+      "amplitude_ci_bootstrap": [
+        0.9981651124068823,
+        0.9993236736865959
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        254,
+        496,
+        660,
+        847,
+        1028,
+        1204,
+        1454,
+        1651,
+        1914,
+        1991
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.0026274368486440824,
+        0.00462003350692064,
+        0.006604647333539937,
+        0.008581310309686396,
+        0.010550054288420097,
+        0.012510910995189639,
+        0.014463912028344073,
+        0.016409088859641374,
+        0.018346472834756156,
+        0.020276095173784314
+      ],
+      "pearson_residuals": [
+        -0.5401316731263831,
+        1.5853279074418458,
+        -0.0181433703093022,
+        -0.38161904182054707,
+        -0.83584705473457,
+        -1.3397637124124493,
+        0.20152867761976068,
+        0.25118264370097615,
+        1.869848378212167,
+        -0.821391095961307
+      ],
+      "chi2": 9.719298995827073,
+      "dof": 8,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "Z, direct, A = 1": {
+      "form": "F = (1-2eps)^n",
+      "free_amplitude": false,
+      "eps": 0.0021215104618593494,
+      "eps_se_curvature": 1.987207955385241e-05,
+      "eps_ci_curvature": [
+        0.002082561901635884,
+        0.0021604590220828147
+      ],
+      "eps_ci_bootstrap": [
+        0.002082901076826489,
+        0.002161430297012148
+      ],
+      "amplitude": 1.0,
+      "amplitude_se_curvature": NaN,
+      "amplitude_ci_bootstrap": [
+        NaN,
+        NaN
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        263,
+        445,
+        653,
+        920,
+        1088,
+        1258,
+        1403,
+        1614,
+        1803,
+        2074
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.002121510461859377,
+        0.004234019310439208,
+        0.006337564739772927,
+        0.00843218478183605,
+        0.010517917307233449,
+        0.012594800025884256,
+        0.01466287048770376,
+        0.01672216608328203,
+        0.018772724044560152,
+        0.020814581445503244
+      ],
+      "pearson_residuals": [
+        3.4947861236203903,
+        1.051864658939937,
+        0.7668386803216417,
+        2.655372463143289,
+        1.1223774256367363,
+        -0.041968082961867194,
+        -1.664994949690432,
+        -1.4356960625879631,
+        -1.73052959004159,
+        -0.1652016902651773
+      ],
+      "chi2": 30.07594182290121,
+      "dof": 9,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "Z, direct, free A": {
+      "form": "F = A(1-2eps)^n",
+      "free_amplitude": true,
+      "eps": 0.002006223471748252,
+      "eps_se_curvature": 3.308933145905445e-05,
+      "eps_ci_curvature": [
+        0.0019413695738159972,
+        0.002071077369680507
+      ],
+      "eps_ci_bootstrap": [
+        0.0019425984268862865,
+        0.0020734615512047884
+      ],
+      "amplitude": 0.9987353513660148,
+      "amplitude_se_curvature": 0.00029883177475035073,
+      "amplitude_ci_bootstrap": [
+        0.9981605992550991,
+        0.999339058733662
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        263,
+        445,
+        653,
+        920,
+        1088,
+        1258,
+        1403,
+        1614,
+        1803,
+        2074
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.002636010620967799,
+        0.0046316572399569544,
+        0.006619296432769373,
+        0.008598960328777827,
+        0.010570680928437604,
+        0.012534490103803808,
+        0.014490419599046789,
+        0.01643850103096478,
+        0.01837876588949572,
+        0.020311245538225386
+      ],
+      "pearson_residuals": [
+        -0.03706968728110154,
+        -0.8460433049431265,
+        -0.34823332924041384,
+        2.058521847405956,
+        0.956451226149307,
+        0.1293574784242831,
+        -1.2183803785867178,
+        -0.7423589840565629,
+        -0.8211147579764914,
+        0.9611613813188067
+      ],
+      "chi2": 9.641082643462576,
+      "dof": 8,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "X, e2e, A = 1": {
+      "form": "F = (1-2eps)^n",
+      "free_amplitude": false,
+      "eps": 0.002413903592431527,
+      "eps_se_curvature": 2.123192040555755e-05,
+      "eps_ci_curvature": [
+        0.002372289793114013,
+        0.0024555173917490407
+      ],
+      "eps_ci_bootstrap": [
+        0.0023734875327903956,
+        0.0024562216093294647
+      ],
+      "amplitude": 1.0,
+      "amplitude_se_curvature": NaN,
+      "amplitude_ci_bootstrap": [
+        NaN,
+        NaN
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        289,
+        482,
+        734,
+        934,
+        1252,
+        1473,
+        1612,
+        1870,
+        2099,
+        2341
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.0024139035924315433,
+        0.004816153323755956,
+        0.007206805456567711,
+        0.009585915981836113,
+        0.011953540620217029,
+        0.014309734823357734,
+        0.01665455377519559,
+        0.018988052393250576,
+        0.021310285329911416,
+        0.023621306973715728
+      ],
+      "pearson_residuals": [
+        3.068031046798648,
+        0.017570488018046636,
+        0.4979498873006928,
+        -0.7981077741320152,
+        1.6482831104751183,
+        1.1190187899843165,
+        -1.3209057934223774,
+        -0.6674121811848351,
+        -0.7013259402110797,
+        -0.4400000457875234
+      ],
+      "chi2": 17.14278284957451,
+      "dof": 9,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "X, e2e, free A": {
+      "form": "F = A(1-2eps)^n",
+      "free_amplitude": true,
+      "eps": 0.0023363780816882157,
+      "eps_se_curvature": 3.4978110820704904e-05,
+      "eps_ci_curvature": [
+        0.0022678222442323835,
+        0.002404933919144048
+      ],
+      "eps_ci_bootstrap": [
+        0.0022668911428355082,
+        0.002406475137527897
+      ],
+      "amplitude": 0.9991496853282665,
+      "amplitude_se_curvature": 0.0003104308477386877,
+      "amplitude_ci_bootstrap": [
+        0.9985369685484375,
+        0.9997730007628239
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        289,
+        482,
+        734,
+        934,
+        1252,
+        1473,
+        1612,
+        1870,
+        2099,
+        2341
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.00275954876099338,
+        0.005083032144200583,
+        0.007395658456108345,
+        0.009697478429163575,
+        0.011988542558752757,
+        0.014268901104309673,
+        0.01653860409041813,
+        0.018797701307909198,
+        0.02104624231495361,
+        0.023284276438148732
+      ],
+      "pearson_residuals": [
+        0.7863741501391386,
+        -1.1696447570002302,
+        -0.2054256391793842,
+        -1.153550169464587,
+        1.5442026987616582,
+        1.2294746792201265,
+        -1.0379474917152574,
+        -0.2274933609041682,
+        -0.12390670726564311,
+        0.26363387520285364
+      ],
+      "chi2": 8.469444727068794,
+      "dof": 8,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "X, direct, A = 1": {
+      "form": "F = (1-2eps)^n",
+      "free_amplitude": false,
+      "eps": 0.002412783528482797,
+      "eps_se_curvature": 2.1226861181064173e-05,
+      "eps_ci_curvature": [
+        0.00237117964506308,
+        0.002454387411902514
+      ],
+      "eps_ci_bootstrap": [
+        0.002372356848629031,
+        0.002453967578580503
+      ],
+      "amplitude": 1.0,
+      "amplitude_se_curvature": NaN,
+      "amplitude_ci_bootstrap": [
+        NaN,
+        NaN
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        289,
+        505,
+        765,
+        1032,
+        1210,
+        1396,
+        1583,
+        1898,
+        2046,
+        2356
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.002412783528482787,
+        0.004813924008254922,
+        0.007203477623628773,
+        0.009581500287795364,
+        0.011948047644133042,
+        0.014303175067509277,
+        0.01664693766557629,
+        0.018979390280060682,
+        0.02130058748804675,
+        0.023610583603253188
+      ],
+      "pearson_residuals": [
+        3.0759608810792214,
+        1.0785742859478678,
+        1.6697136518176738,
+        2.397310016732573,
+        0.44225125557909145,
+        -0.913961331729605,
+        -2.0191426669930133,
+        0.0014130261653143707,
+        -1.8410367874432458,
+        -0.10535250582972809
+      ],
+      "chi2": 27.66826302610704,
+      "dof": 9,
+      "bootstrap": 2000,
+      "seed": 2026
+    },
+    "X, direct, free A": {
+      "form": "F = A(1-2eps)^n",
+      "free_amplitude": true,
+      "eps": 0.00229745104494208,
+      "eps_se_curvature": 3.52298371949969e-05,
+      "eps_ci_curvature": [
+        0.002228401832858676,
+        0.0023665002570254835
+      ],
+      "eps_ci_bootstrap": [
+        0.0022247497772951747,
+        0.002369176450787675
+      ],
+      "amplitude": 0.9987352477702434,
+      "amplitude_se_curvature": 0.00031645222433929345,
+      "amplitude_ci_bootstrap": [
+        0.9980810431229807,
+        0.999379956863613
+      ],
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "k": [
+        289,
+        505,
+        765,
+        1032,
+        1210,
+        1396,
+        1583,
+        1898,
+        2046,
+        2356
+      ],
+      "n": [
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000,
+        100000
+      ],
+      "p_fit": [
+        0.0029269214534885513,
+        0.005210923580927063,
+        0.0074844309422168465,
+        0.009747491759780902,
+        0.012000154034464805,
+        0.014242465546555005,
+        0.01647447385679207,
+        0.01869622630737977,
+        0.02090777002298916,
+        0.023109151911757775
+      ],
+      "pearson_residuals": [
+        -0.21612736592968174,
+        -0.7068004740414704,
+        0.607478791801379,
+        1.8427326379959672,
+        0.2899737415199208,
+        -0.7538550376996627,
+        -1.6010566916798246,
+        0.6625114963792208,
+        -0.9896676084109796,
+        0.948888554524862
+      ],
+      "chi2": 9.84548967152278,
+      "dof": 8,
+      "bootstrap": 2000,
+      "seed": 2026
+    }
+  },
+  "comparisons": {
+    "Z, A = 1": {
+      "eps_e2e": 0.0021174060274429204,
+      "eps_direct": 0.0021215104618593494,
+      "diff": -4.104434416429045e-06,
+      "sigma_diff": 2.8089447350236934e-05,
+      "z": -0.1461201555606406,
+      "e2e_in_direct_bootstrap_ci": true,
+      "direct_in_e2e_bootstrap_ci": true,
+      "agree": true
+    },
+    "Z, free A": {
+      "eps_e2e": 0.002003122815673038,
+      "eps_direct": 0.002006223471748252,
+      "diff": -3.1006560752139256e-06,
+      "sigma_diff": 4.676845354498701e-05,
+      "z": -0.06629802442005861,
+      "e2e_in_direct_bootstrap_ci": true,
+      "direct_in_e2e_bootstrap_ci": true,
+      "agree": true
+    },
+    "Z, per point": {
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "z": [
+        -0.3963321381849282,
+        1.6664774954740342,
+        0.19381882153477034,
+        -1.7443418740971461,
+        -1.3113030648244872,
+        -1.0950637612416196,
+        0.9610353731660317,
+        0.6528814272817539,
+        1.8378089090451748,
+        -1.3152454395932969
+      ],
+      "max_abs_z": 1.8378089090451748
+    },
+    "X, A = 1": {
+      "eps_e2e": 0.002413903592431527,
+      "eps_direct": 0.002412783528482797,
+      "diff": 1.1200639487298457e-06,
+      "sigma_diff": 3.0022892593954036e-05,
+      "z": 0.03730699649358245,
+      "e2e_in_direct_bootstrap_ci": true,
+      "direct_in_e2e_bootstrap_ci": true,
+      "agree": true
+    },
+    "X, free A": {
+      "eps_e2e": 0.0023363780816882157,
+      "eps_direct": 0.00229745104494208,
+      "diff": 3.892703674613588e-05,
+      "sigma_diff": 4.96448352336021e-05,
+      "z": 0.7841105033981083,
+      "e2e_in_direct_bootstrap_ci": true,
+      "direct_in_e2e_bootstrap_ci": true,
+      "agree": true
+    },
+    "X, per point": {
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "z": [
+        0.0,
+        -0.733911231915802,
+        -0.8037010315675853,
+        -2.2211579189726436,
+        0.8517162587434843,
+        1.4479814106861795,
+        0.5172011722554882,
+        -0.46050321546743145,
+        0.8318811210504029,
+        -0.22148357228332285
+      ],
+      "max_abs_z": 2.2211579189726436
+    }
+  }
+}

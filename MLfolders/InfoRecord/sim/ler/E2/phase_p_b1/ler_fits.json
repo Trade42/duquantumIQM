@@ -1,0 +1,168 @@
+{
+ "format": "dqiqm.inforecord/1",
+ "experiment": "E2",
+ "run_id": "phase_p_b1",
+ "points": "ler_points.csv",
+ "model": "2 P_L = 1 - A (1 - 2 eps_L)^R, maximum likelihood on the binomial counts (dqiqm.stats.fit_eps)",
+ "fixed_A": {
+  "form": "F = (1-2eps)^n",
+  "free_amplitude": false,
+  "eps": 0.0,
+  "eps_se_curvature": 6.21360169779243e-11,
+  "eps_ci_curvature": [
+   0.0,
+   1.2178435541950096e-10
+  ],
+  "eps_ci_bootstrap": [
+   0.0,
+   0.0
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": NaN,
+  "amplitude_ci_bootstrap": [
+   NaN,
+   NaN
+  ],
+  "rounds": [
+   1,
+   2,
+   3,
+   5,
+   8,
+   12,
+   20,
+   30,
+   50
+  ],
+  "k": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "n": [
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64
+  ],
+  "p_fit": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "pearson_residuals": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "chi2": 0.0,
+  "dof": 8,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 0.0
+ },
+ "free_A": {
+  "form": "F = A(1-2eps)^n",
+  "free_amplitude": true,
+  "eps": 0.0,
+  "eps_se_curvature": 8.54438046586329e-11,
+  "eps_ci_curvature": [
+   0.0,
+   1.6746677983299616e-10
+  ],
+  "eps_ci_bootstrap": [
+   0.0,
+   0.0
+  ],
+  "amplitude": 1.0,
+  "amplitude_se_curvature": 3.62373075248479e-09,
+  "amplitude_ci_bootstrap": [
+   1.0,
+   1.0
+  ],
+  "rounds": [
+   1,
+   2,
+   3,
+   5,
+   8,
+   12,
+   20,
+   30,
+   50
+  ],
+  "k": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "n": [
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64,
+   64
+  ],
+  "p_fit": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "pearson_residuals": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "chi2": 0.0,
+  "dof": 7,
+  "bootstrap": 1000,
+  "seed": 2026,
+  "chi2_per_dof": 0.0
+ },
+ "plot": "ler.png"
+}
