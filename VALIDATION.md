@@ -1,5 +1,9 @@
 # Local validation — 24 October 2026
 
+> Historical validation log; test counts below belong to earlier implementation
+> stages. Current hardware evidence is summarized in [results](docs/RESULTS.md),
+> with current verification commands in [reproducibility](docs/REPRODUCIBILITY.md).
+
 Later transversal-gate extension: **215 tests passed**, including Pauli/H
 logical semantics, code-frame changes, scheduled corrections, circuit distance,
 Qiskit execution and a regression test for SPAM fits near the amplitude boundary.

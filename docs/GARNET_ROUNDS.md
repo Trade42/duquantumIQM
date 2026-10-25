@@ -1,5 +1,9 @@
 # Bounded Garnet improvement study
 
+> Completed follow-up. Hardware access has ended; use the
+> [offline reproduction guide](REPRODUCIBILITY.md). Submission commands below
+> describe the completed protocol, not the current quickstart.
+
 **Outcome: no new method qualified for release.** The current native/XY4 policy
 remains: correlated MWPM for X and the frozen Bayesian ML posterior for Z.
 All 96,000 newly requested physical shots returned, across 82 completed jobs.

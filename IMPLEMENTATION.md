@@ -1,5 +1,11 @@
 # Surface-code memory for the IQM challenge
 
+> Historical implementation guide. Some statements below describe the initial
+> Emerald/simulation stage, before audited native Garnet execution was added.
+> For the current retained policies, measured evidence and offline entry point,
+> start with [the winning pipeline](docs/WINNING_PIPELINE.md) and
+> [reproducibility guide](docs/REPRODUCIBILITY.md). Hardware acquisition is complete.
+
 Implemented track: **Stim → Qiskit → IQM → syndrome extraction → correlated
 PyMatching → logical-error probability versus rounds → fitted per-round LER**.
 Local simulation needs no IQM account. No job is submitted during imports,

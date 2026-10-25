@@ -1,5 +1,10 @@
 # Garnet headline selection
 
+> Completed acquisition study. Live commands below are historical protocol
+> documentation. For the retained winners and credential-free use, see
+> [winning pipeline](WINNING_PIPELINE.md), [results](RESULTS.md) and
+> [offline reproduction](REPRODUCIBILITY.md).
+
 This study optimizes the IQM challenge's **fitted per-round logical error rate**:
 
 `P_L(r) = [1 - (1 - 2 epsilon_L)^r] / 2`.
