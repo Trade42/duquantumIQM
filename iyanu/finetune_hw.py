@@ -15,6 +15,7 @@ For each (basis, rounds) circuit in the jobs: training shots (all --train jobs) 
   conv_sim, conv_ft 3D conv decoder, likewise
   pre_sim           conv pre-decoder (simulation labels) + calibrated PyMatching
   uf, bposd, belief_find   ldpc Union-Find, BP+OSD, BP+Union-Find on the calibrated DEM
+  ens_ft            mean of mlp_ft and conv_ft flip probabilities (no extra fitting)
 
 Lookup tables answer unseen syndromes with calibrated PyMatching and report how often.
 Fine-tuning keeps the checkpoint with the fewest validation failures. Reports P_L with 95%
@@ -211,6 +212,19 @@ def main(argv=None):
             info["conv_ft"] = finetune(conv.model, conv.logits, *fit, val, steps=a.ft_steps, batch=2048,
                                        lr=a.ft_lr, device=conv.device)
             dec["conv_ft"] = conv.decode_batch
+        if "mlp_ft" in dec and "conv_ft" in dec:
+            import torch
+
+            def ensemble(d, mlp=mlp, conv=conv):
+                # Mean of the two fine-tuned decoders' flip probabilities; no extra fitting.
+                out = []
+                with torch.inference_mode():
+                    for i in range(0, len(d), 4096):
+                        x = torch.from_numpy(np.asarray(d[i:i+4096], dtype=np.float32)).to(conv.device)
+                        p = (torch.sigmoid(mlp.model(x.to(mlp.device))).to(conv.device) + torch.sigmoid(conv.logits(x)))/2
+                        out.append((p > 0.5).cpu().numpy())
+                return np.concatenate(out)
+            dec["ens_ft"] = ensemble
         if "pre" not in a.skip:
             pre = ConvPredecoder(calibrated, ConvConfig(channels=a.channels, steps=a.sim_steps, batch=2048,
                                                         seed=rounds, device=a.device)).train()

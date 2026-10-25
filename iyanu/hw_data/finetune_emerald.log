@@ -1,0 +1,39 @@
+X r1 (20000 test shots): conv_ft 0.0991  lookup_hw 0.1002  mlp_ft 0.1006  lookup_sim 0.1030  pm_calibrated 0.1055  mlp_sim 0.1085  conv_sim 0.1090  bposd 0.1109  pm_uniform 0.1112  pm_coherence 0.1119  belief_find 0.1119  pre_sim 0.1120  uf 0.1144
+X r2 (20000 test shots): mlp_ft 0.1789  lookup_hw 0.1840  conv_ft 0.1852  mlp_sim 0.1924  lookup_sim 0.1925  bposd 0.1955  pm_uniform 0.1963  belief_find 0.1974  pm_coherence 0.1981  pre_sim 0.1996  pm_calibrated 0.2004  conv_sim 0.2023  uf 0.2368
+X r3 (20000 test shots): mlp_ft 0.2383  conv_ft 0.2479  mlp_sim 0.2493  pm_uniform 0.2542  bposd 0.2554  pm_coherence 0.2556  lookup_sim 0.2562  pre_sim 0.2574  lookup_hw 0.2581  belief_find 0.2621  pm_calibrated 0.2641  conv_sim 0.2686  uf 0.3258
+X r4 (20000 test shots): mlp_ft 0.2950  conv_ft 0.2996  pre_sim 0.3069  mlp_sim 0.3070  bposd 0.3076  pm_uniform 0.3107  pm_coherence 0.3112  belief_find 0.3144  conv_sim 0.3154  lookup_sim 0.3155  pm_calibrated 0.3177  lookup_hw 0.3195  uf 0.3747
+Z r1 (20000 test shots): mlp_ft 0.0426  lookup_hw 0.0427  pm_calibrated 0.0432  mlp_sim 0.0435  conv_ft 0.0435  pre_sim 0.0445  bposd 0.0445  conv_sim 0.0460  pm_coherence 0.0472  pm_uniform 0.0502  lookup_sim 0.0502  belief_find 0.0635  uf 0.0744
+Z r2 (20000 test shots): mlp_ft 0.0874  conv_ft 0.0882  lookup_hw 0.0917  mlp_sim 0.0987  pre_sim 0.1002  bposd 0.1007  pm_coherence 0.1042  conv_sim 0.1077  pm_calibrated 0.1081  lookup_sim 0.1094  pm_uniform 0.1119  belief_find 0.1144  uf 0.1918
+Z r3 (20000 test shots): mlp_ft 0.1323  conv_ft 0.1461  bposd 0.1530  mlp_sim 0.1541  pre_sim 0.1555  pm_coherence 0.1577  lookup_hw 0.1585  pm_calibrated 0.1627  pm_uniform 0.1708  lookup_sim 0.1757  belief_find 0.1759  conv_sim 0.1850  uf 0.2760
+Z r4 (20000 test shots): conv_ft 0.1759  mlp_ft 0.1807  bposd 0.1905  pm_coherence 0.1961  pre_sim 0.1963  mlp_sim 0.1998  conv_sim 0.2034  lookup_hw 0.2074  pm_calibrated 0.2077  pm_uniform 0.2097  lookup_sim 0.2175  belief_find 0.2180  uf 0.3310
+
+P_L on held-out test shots, 95% Wilson; eps_L fit over the rounds:
+[X]
+  mlp_ft         r1 0.1006  r2 0.1789  r3 0.2383  r4 0.2950   eps_L 0.0990 [0.0974, 0.1007]
+  conv_ft        r1 0.0991  r2 0.1852  r3 0.2479  r4 0.2996   eps_L 0.1019 [0.1002, 0.1036]
+  mlp_sim        r1 0.1085  r2 0.1924  r3 0.2493  r4 0.3070   eps_L 0.1059 [0.1042, 0.1077]
+  lookup_hw      r1 0.1002  r2 0.1840  r3 0.2581  r4 0.3195   eps_L 0.1063 [0.1046, 0.1081]
+  lookup_sim     r1 0.1030  r2 0.1925  r3 0.2562  r4 0.3155   eps_L 0.1073 [0.1056, 0.1091]
+  bposd          r1 0.1109  r2 0.1955  r3 0.2554  r4 0.3076   eps_L 0.1079 [0.1061, 0.1097]
+  pm_uniform     r1 0.1112  r2 0.1963  r3 0.2542  r4 0.3107   eps_L 0.1083 [0.1066, 0.1101]
+  pre_sim        r1 0.1120  r2 0.1996  r3 0.2574  r4 0.3069   eps_L 0.1089 [0.1072, 0.1107]
+  pm_coherence   r1 0.1119  r2 0.1981  r3 0.2556  r4 0.3112   eps_L 0.1090 [0.1073, 0.1108]
+  belief_find    r1 0.1119  r2 0.1974  r3 0.2621  r4 0.3144   eps_L 0.1104 [0.1086, 0.1122]
+  pm_calibrated  r1 0.1055  r2 0.2004  r3 0.2641  r4 0.3177   eps_L 0.1106 [0.1088, 0.1124]
+  conv_sim       r1 0.1090  r2 0.2023  r3 0.2686  r4 0.3154   eps_L 0.1119 [0.1101, 0.1137]
+  uf             r1 0.1144  r2 0.2368  r3 0.3258  r4 0.3747   eps_L 0.1377 [0.1356, 0.1398]
+[Z]
+  mlp_ft         r1 0.0426  r2 0.0874  r3 0.1323  r4 0.1807   eps_L 0.0488 [0.0478, 0.0499]
+  conv_ft        r1 0.0435  r2 0.0882  r3 0.1461  r4 0.1759   eps_L 0.0501 [0.0491, 0.0512]
+  bposd          r1 0.0445  r2 0.1007  r3 0.1530  r4 0.1905   eps_L 0.0545 [0.0533, 0.0556]
+  mlp_sim        r1 0.0435  r2 0.0987  r3 0.1541  r4 0.1998   eps_L 0.0554 [0.0542, 0.0565]
+  pre_sim        r1 0.0445  r2 0.1002  r3 0.1555  r4 0.1963   eps_L 0.0554 [0.0543, 0.0566]
+  lookup_hw      r1 0.0427  r2 0.0917  r3 0.1585  r4 0.2074   eps_L 0.0559 [0.0547, 0.0570]
+  pm_coherence   r1 0.0472  r2 0.1042  r3 0.1577  r4 0.1961   eps_L 0.0565 [0.0554, 0.0577]
+  pm_calibrated  r1 0.0432  r2 0.1081  r3 0.1627  r4 0.2077   eps_L 0.0586 [0.0574, 0.0598]
+  conv_sim       r1 0.0460  r2 0.1077  r3 0.1850  r4 0.2034   eps_L 0.0612 [0.0600, 0.0624]
+  pm_uniform     r1 0.0502  r2 0.1119  r3 0.1708  r4 0.2097   eps_L 0.0613 [0.0601, 0.0625]
+  lookup_sim     r1 0.0502  r2 0.1094  r3 0.1757  r4 0.2175   eps_L 0.0626 [0.0614, 0.0638]
+  belief_find    r1 0.0635  r2 0.1144  r3 0.1759  r4 0.2180   eps_L 0.0651 [0.0638, 0.0664]
+  uf             r1 0.0744  r2 0.1918  r3 0.2760  r4 0.3310   eps_L 0.1077 [0.1060, 0.1095]
+wrote iyanu/hw_data/decoder_eval_emerald-20261025T000127.json

@@ -1,0 +1,41 @@
+X r1 (20000 test shots): lookup_hw 0.0991  conv_ft 0.0995  ens_ft 0.0995  mlp_ft 0.0995  mlp_sim 0.1008  conv_sim 0.1014  pm_coherence 0.1017  pre_sim 0.1017  pm_calibrated 0.1017  belief_find 0.1018  bposd 0.1020  lookup_sim 0.1024  pm_uniform 0.1036  uf 0.1119
+X r2 (20000 test shots): ens_ft 0.1489  mlp_ft 0.1502  mlp_sim 0.1528  conv_ft 0.1528  lookup_sim 0.1560  lookup_hw 0.1565  pm_uniform 0.1583  pm_coherence 0.1609  conv_sim 0.1611  pm_calibrated 0.1615  pre_sim 0.1646  bposd 0.1663  belief_find 0.1664  uf 0.2224
+X r3 (20000 test shots): mlp_ft 0.2171  pm_uniform 0.2189  ens_ft 0.2196  lookup_sim 0.2203  mlp_sim 0.2230  pm_calibrated 0.2264  pm_coherence 0.2269  conv_ft 0.2278  pre_sim 0.2293  conv_sim 0.2303  lookup_hw 0.2309  bposd 0.2343  belief_find 0.2367  uf 0.2902
+X r4 (20000 test shots): ens_ft 0.2606  pm_uniform 0.2637  mlp_ft 0.2653  pm_coherence 0.2695  lookup_sim 0.2697  mlp_sim 0.2718  pm_calibrated 0.2727  conv_ft 0.2742  pre_sim 0.2767  bposd 0.2802  lookup_hw 0.2803  conv_sim 0.2807  belief_find 0.2837  uf 0.3421
+Z r1 (20000 test shots): lookup_hw 0.0228  mlp_ft 0.0230  pm_uniform 0.0231  ens_ft 0.0231  mlp_sim 0.0231  conv_sim 0.0231  conv_ft 0.0231  lookup_sim 0.0232  bposd 0.0235  belief_find 0.0236  pre_sim 0.0255  pm_calibrated 0.0258  pm_coherence 0.0258  uf 0.0273
+Z r2 (20000 test shots): ens_ft 0.0827  mlp_ft 0.0834  conv_ft 0.0839  mlp_sim 0.0867  conv_sim 0.0882  lookup_hw 0.0894  pm_coherence 0.0916  bposd 0.0934  pre_sim 0.0941  pm_calibrated 0.0946  lookup_sim 0.1009  pm_uniform 0.1056  belief_find 0.1090  uf 0.1489
+Z r3 (20000 test shots): ens_ft 0.1544  conv_ft 0.1562  mlp_ft 0.1593  conv_sim 0.1620  mlp_sim 0.1635  pm_coherence 0.1694  pm_calibrated 0.1734  bposd 0.1762  pre_sim 0.1773  lookup_hw 0.1789  pm_uniform 0.1885  belief_find 0.1935  lookup_sim 0.1945  uf 0.2535
+Z r4 (20000 test shots): ens_ft 0.2298  conv_ft 0.2317  mlp_ft 0.2358  mlp_sim 0.2398  conv_sim 0.2407  pm_coherence 0.2437  bposd 0.2485  pre_sim 0.2513  pm_calibrated 0.2535  lookup_hw 0.2553  pm_uniform 0.2722  belief_find 0.2723  lookup_sim 0.2802  uf 0.3466
+
+P_L on held-out test shots, 95% Wilson; eps_L fit over the rounds:
+[X]
+  ens_ft         r1 0.0995  r2 0.1489  r3 0.2196  r4 0.2606   eps_L 0.0867 [0.0852, 0.0882]
+  mlp_ft         r1 0.0995  r2 0.1502  r3 0.2171  r4 0.2653   eps_L 0.0872 [0.0857, 0.0887]
+  pm_uniform     r1 0.1036  r2 0.1583  r3 0.2189  r4 0.2637   eps_L 0.0891 [0.0875, 0.0906]
+  mlp_sim        r1 0.1008  r2 0.1528  r3 0.2230  r4 0.2718   eps_L 0.0895 [0.0880, 0.0911]
+  lookup_sim     r1 0.1024  r2 0.1560  r3 0.2203  r4 0.2697   eps_L 0.0895 [0.0880, 0.0911]
+  conv_ft        r1 0.0995  r2 0.1528  r3 0.2278  r4 0.2742   eps_L 0.0903 [0.0888, 0.0919]
+  pm_coherence   r1 0.1017  r2 0.1609  r3 0.2269  r4 0.2695   eps_L 0.0911 [0.0896, 0.0927]
+  pm_calibrated  r1 0.1017  r2 0.1615  r3 0.2264  r4 0.2727   eps_L 0.0916 [0.0900, 0.0932]
+  lookup_hw      r1 0.0991  r2 0.1565  r3 0.2309  r4 0.2803   eps_L 0.0922 [0.0906, 0.0937]
+  pre_sim        r1 0.1017  r2 0.1646  r3 0.2293  r4 0.2767   eps_L 0.0930 [0.0915, 0.0946]
+  conv_sim       r1 0.1014  r2 0.1611  r3 0.2303  r4 0.2807   eps_L 0.0932 [0.0916, 0.0948]
+  bposd          r1 0.1020  r2 0.1663  r3 0.2343  r4 0.2802   eps_L 0.0946 [0.0930, 0.0962]
+  belief_find    r1 0.1018  r2 0.1664  r3 0.2367  r4 0.2837   eps_L 0.0954 [0.0938, 0.0971]
+  uf             r1 0.1119  r2 0.2224  r3 0.2902  r4 0.3421   eps_L 0.1235 [0.1215, 0.1254]
+[Z]
+  ens_ft         r1 0.0231  r2 0.0827  r3 0.1544  r4 0.2298   eps_L 0.0545 [0.0533, 0.0556]
+  conv_ft        r1 0.0231  r2 0.0839  r3 0.1562  r4 0.2317   eps_L 0.0551 [0.0540, 0.0562]
+  mlp_ft         r1 0.0230  r2 0.0834  r3 0.1593  r4 0.2358   eps_L 0.0559 [0.0548, 0.0570]
+  mlp_sim        r1 0.0231  r2 0.0867  r3 0.1635  r4 0.2398   eps_L 0.0573 [0.0562, 0.0585]
+  conv_sim       r1 0.0231  r2 0.0882  r3 0.1620  r4 0.2407   eps_L 0.0575 [0.0563, 0.0586]
+  pm_coherence   r1 0.0258  r2 0.0916  r3 0.1694  r4 0.2437   eps_L 0.0595 [0.0584, 0.0607]
+  bposd          r1 0.0235  r2 0.0934  r3 0.1762  r4 0.2485   eps_L 0.0609 [0.0598, 0.0621]
+  lookup_hw      r1 0.0228  r2 0.0894  r3 0.1789  r4 0.2553   eps_L 0.0615 [0.0603, 0.0627]
+  pm_calibrated  r1 0.0258  r2 0.0946  r3 0.1734  r4 0.2535   eps_L 0.0617 [0.0605, 0.0629]
+  pre_sim        r1 0.0255  r2 0.0941  r3 0.1773  r4 0.2513   eps_L 0.0618 [0.0606, 0.0630]
+  pm_uniform     r1 0.0231  r2 0.1056  r3 0.1885  r4 0.2722   eps_L 0.0671 [0.0658, 0.0683]
+  belief_find    r1 0.0236  r2 0.1090  r3 0.1935  r4 0.2723   eps_L 0.0683 [0.0670, 0.0695]
+  lookup_sim     r1 0.0232  r2 0.1009  r3 0.1945  r4 0.2802   eps_L 0.0683 [0.0670, 0.0696]
+  uf             r1 0.0273  r2 0.1489  r3 0.2535  r4 0.3466   eps_L 0.0925 [0.0909, 0.0940]
+wrote iyanu/hw_data/decoder_eval_final_garnet-20261025T010252.json

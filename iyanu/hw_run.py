@@ -17,7 +17,7 @@ from pathlib import Path
 import numpy as np
 
 
-def prepare(device, rounds_list, *, bases=("Z",), distance=3, measure_ns):
+def prepare(device, rounds_list, *, bases=("Z",), distance=3, measure_ns, variant="ours"):
     from challenge.run_on_hardware import prepare_qiskit
     from iyanu import qpu
     from iyanu.garnet_sim import NATIVE, grid_from_couplings
@@ -27,12 +27,17 @@ def prepare(device, rounds_list, *, bases=("Z",), distance=3, measure_ns):
     prepared = []
     for basis in bases:
         for r in rounds_list:
-            p = prepare_qiskit(b, distance, r, basis, calibration=cal, grid=grid, rows=len(grid), cols=len(grid[0]))
-            extra = set(p["circuit"].count_ops())-NATIVE
+            if variant == "ours":
+                p = prepare_qiskit(b, distance, r, basis, calibration=cal, grid=grid, rows=len(grid), cols=len(grid[0]))
+            else:
+                from iyanu.circuits import prepare as prepare_variant
+                p = prepare_variant(b, variant, distance, r, basis, calibration=cal, grid=grid)
+            p["variant"] = variant
+            extra = set(p["circuit"].count_ops())-NATIVE-{"delay"}
             if extra:
                 raise qpu.QPUGuardError(f"{basis} rounds={r}: non-native operations {extra}")
             p["rounds"], p["basis"] = r, basis
-            p["circuit"].name = f"d{distance}_r{r}_{basis}_noreset"
+            p["circuit"].name = f"d{distance}_r{r}_{basis}_noreset" + ("" if variant == "ours" else f"_{variant}")
             prepared.append(p)
     sent = qpu.check_request(b.create_run_request([p["circuit"] for p in prepared], shots=1), prepared, b)
     return b, cal, prepared, sent
@@ -117,6 +122,8 @@ def main(argv=None):
         s.add_argument("--device", default="garnet")
         s.add_argument("--rounds", type=int, nargs="+", default=[1, 2, 3, 4])
         s.add_argument("--bases", nargs="+", default=["Z"], choices=["Z", "X"])
+        s.add_argument("--variant", default="ours", choices=["ours", "ours-iqm", "vanilla"],
+                       help="circuit construction/compilation (see iyanu.circuits)")
         s.add_argument("--measure-ns", type=float, default=1500., help="readout duration assumed by the noise model")
         if name == "run":
             s.add_argument("--shots", type=int, required=True)
@@ -132,7 +139,7 @@ def main(argv=None):
     a = ap.parse_args(argv)
     if a.cmd == "decode":
         return decode(a.dirs, a.steps, a.device)
-    b, cal, prepared, sent = prepare(a.device, a.rounds, bases=a.bases, measure_ns=a.measure_ns)
+    b, cal, prepared, sent = prepare(a.device, a.rounds, bases=a.bases, measure_ns=a.measure_ns, variant=a.variant)
     report(b, cal, prepared, sent)
     if a.cmd == "run":
         from iyanu import qpu

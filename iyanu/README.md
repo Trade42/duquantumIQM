@@ -40,7 +40,38 @@ records two jobs IQM declined before execution (over the 20,000-shot limit).
 All Garnet jobs on 2026-10-24 used calibration set `a18a947f-0408-4628-81ea-1715637e434f`; the placement
 is the only 17-qubit footprint on Garnet (QB3, QB17, QB18 unused), 0 SWAPs, every CZ checked in the request.
 
-## Results so far (Garnet, d=3, no reset, 20,000 shots per point, calibrated PyMatching unless stated)
+## Final results (headline)
+
+d=3 rotated surface code, no reset, on real IQM hardware; GPU decoders (MLP + 3D conv, ensembled) pre-trained on a
+coherence-aware calibrated simulation and fine-tuned on separate hardware training jobs (9-10 jobs, 180-200k shots per
+round count), scored once on a held-out test job (20,000 shots per round count, no post-selection). eps_L is the
+per-round logical error rate fitted over rounds 1-4 with 2 P_L = 1 - (1 - 2 eps_L)^r, 95% profile interval.
+Configuration: **Z memory on the vanilla circuit** (canonical Stim schedule, literal H-CZ-H, IQM scheduling;
+`circuits.py`), **X memory on our circuit with dynamical decoupling**.
+
+| Device | Basis | **GPU ensemble eps_L** | Calibrated PyMatching | Lookup-table baseline* | P_L at 1 / 2 / 3 / 4 rounds (GPU) |
+|---|---|---|---|---|---|
+| **Emerald** | **Z** | **0.0400 [0.0391, 0.0410]** | 0.0455 | 0.0672 | 1.73% / 7.27% / 11.96% / 16.05% |
+| **Emerald** | **X** | **0.0620 [0.0608, 0.0632]** | 0.0717 | 0.1852 | 6.64% / 11.63% / 15.62% / 20.87% |
+| Garnet | Z | 0.0545 [0.0533, 0.0556] | 0.0617 | 0.0672 | 2.31% / 8.27% / 15.44% / 22.98% |
+| Garnet | X | 0.0867 [0.0852, 0.0882] | 0.0916 | 0.1852 | 9.95% / 14.89% / 21.96% / 26.05% |
+
+*Team baseline (`ethan/docs/VANILLA_LUT_BASELINE.md`): vanilla circuit, DD off, uniform full-history lookup table,
+Garnet, 3,000 shots per point, rounds 1-3. On the same test shots the GPU ensemble beats calibrated PyMatching at
+every round count in all four rows except Emerald Z at 1 round (22 vs 35 one-sided failures, p = 0.1);
+exact McNemar p from 1e-4 to 1e-37 elsewhere. Sources: `hw_data/decoder_eval_final_emerald-20261025T013312.json`,
+`hw_data/decoder_eval_final_garnet-20261025T010252.json` and the matching `finetune_final_*.log`.
+
+What moved the numbers (each measured against bracketing baselines on the same calibration set):
+- **Circuit construction (Z):** the vanilla H-CZ-H construction cuts 1-round Z failures from about 6% to 1.8-2.6%
+  versus the repo's H-cancelled/ASAP circuit; our shallower circuit stays better for X.
+- **Dynamical decoupling (X):** -31% (Emerald) to -44% (Garnet) X eps_L; it hurts Z, so it is X-only.
+- **Device:** Emerald (readout 0.3%, T2 about 15 us) beats Garnet (readout about 1%, T2 about 9 us) in both bases.
+- **GPU decoders:** -5% to -17% eps_L versus calibrated PyMatching; fine-tuning on hardware shots is what makes the
+  difference (simulation-only networks tie or lose). Heralding helped Garnet Z (-7.5%, 84% kept) but not Emerald;
+  active reset hurt everywhere.
+
+## Earlier results (Garnet, d=3, no reset, 20,000 shots per point, calibrated PyMatching unless stated)
 
 eps_L is the per-round logical error rate fitted over rounds 1-4 with 2 P_L = 1 - (1 - 2 eps_L)^r, 95% profile interval.
 

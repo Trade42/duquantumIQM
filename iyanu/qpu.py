@@ -163,6 +163,7 @@ def submit(b, prepared_list, *, shots, task, purpose, calibration_snapshot=None,
                 submitted_utc=now.isoformat(), sent=sent,
                 rounds=[p["rounds"] for p in prepared_list],
                 bases=[p.get("basis", "Z") for p in prepared_list],
+                variants=[p.get("variant", "ours") for p in prepared_list],
                 stim_to_physical=[{str(k): v for k, v in p["placement"].stim_to_physical.items()} for p in prepared_list])
     if calibration_snapshot is not None:
         calibration_snapshot.save(out/"calibration.json")

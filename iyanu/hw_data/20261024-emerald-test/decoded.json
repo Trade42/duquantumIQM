@@ -1,0 +1,202 @@
+{
+  "rows": [
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "Z",
+      "rounds": 1,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.12056875,
+      "raw_flip_rate": 0.23655,
+      "errors": {
+        "pymatching_uniform": 1004,
+        "pymatching_calibrated": 864
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "Z",
+      "rounds": 2,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.160203125,
+      "raw_flip_rate": 0.30895,
+      "errors": {
+        "pymatching_uniform": 2237,
+        "pymatching_calibrated": 2162
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "Z",
+      "rounds": 3,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.17955416666666665,
+      "raw_flip_rate": 0.37,
+      "errors": {
+        "pymatching_uniform": 3415,
+        "pymatching_calibrated": 3254
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "Z",
+      "rounds": 4,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.1894109375,
+      "raw_flip_rate": 0.4102,
+      "errors": {
+        "pymatching_uniform": 4193,
+        "pymatching_calibrated": 4153
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "X",
+      "rounds": 1,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.1535625,
+      "raw_flip_rate": 0.22145,
+      "errors": {
+        "pymatching_uniform": 2224,
+        "pymatching_calibrated": 2109
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "X",
+      "rounds": 2,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.177321875,
+      "raw_flip_rate": 0.3432,
+      "errors": {
+        "pymatching_uniform": 3926,
+        "pymatching_calibrated": 4008
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "X",
+      "rounds": 3,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.185675,
+      "raw_flip_rate": 0.38905,
+      "errors": {
+        "pymatching_uniform": 5084,
+        "pymatching_calibrated": 5281
+      }
+    },
+    {
+      "job": "01a17004-8c19-7764-aed1-ef20acdcf0c5",
+      "basis": "X",
+      "rounds": 4,
+      "shots": 20000,
+      "requested_shots": 20000,
+      "kept_fraction": 1.0,
+      "options": null,
+      "detection_rate": 0.193253125,
+      "raw_flip_rate": 0.42995,
+      "errors": {
+        "pymatching_uniform": 6214,
+        "pymatching_calibrated": 6354
+      }
+    }
+  ],
+  "fits": {
+    "X": {
+      "pymatching_uniform": {
+        "epsilon_per_round": 0.10832012143692535,
+        "ci95_profile": [
+          0.10655609940447434,
+          0.11010880162262582
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.10832012143692538,
+          0.19317374545763022,
+          0.2596446597617632,
+          0.3117152990470018
+        ],
+        "negative_log_likelihood": 40619.25593368073,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations"
+      },
+      "pymatching_calibrated": {
+        "epsilon_per_round": 0.11060457844354364,
+        "ci95_profile": [
+          0.10881493525796643,
+          0.11241919821165741
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.11060457844354366,
+          0.1967424113417393,
+          0.2638257668484443,
+          0.3160696698423543
+        ],
+        "negative_log_likelihood": 40808.228346996926,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations"
+      }
+    },
+    "Z": {
+      "pymatching_uniform": {
+        "epsilon_per_round": 0.06126049252059027,
+        "ci95_profile": [
+          0.06006392564053813,
+          0.06247463539794488
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.06126049252059029,
+          0.11501528915345,
+          0.16218399515216336,
+          0.20357354482879653
+        ],
+        "negative_log_likelihood": 30431.88074918802,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations"
+      },
+      "pymatching_calibrated": {
+        "epsilon_per_round": 0.058580723841106304,
+        "ci95_profile": [
+          0.05741723590954658,
+          0.05976147013641277
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.0585807238411063,
+          0.11029804527071668,
+          0.15595609045138759,
+          0.19626477296035122
+        ],
+        "negative_log_likelihood": 29568.07613787506,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations"
+      }
+    }
+  }
+}
