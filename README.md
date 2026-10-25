@@ -37,27 +37,37 @@ preservation.
 
 ## What the improved pipeline changes
 
-The improvements work across physical execution and classical inference:
+The standout changes connect native control, readout and logical inference:
 
-- **Choose a better patch.** Rank legal placements using calibrated gate and
-  readout quality.
-- **Simplify native execution.** Cancel redundant rotations and schedule gates
-  around their dependencies. X memory fuses terminal readout; Z memory preserves
-  measurement boundaries while simplifying the gates between them.
-- **Protect idle data qubits.** Apply XY4 dynamical decoupling during eligible
-  waits. One, two and three rounds add 0, 72 and 144 compiled pulse instructions.
-- **Model the hardware.** Build decoder priors from the executed native gates
-  and readout calibration. X also models disturbance following ancilla readout.
-- **Decode X with correlations.** Correlated minimum-weight perfect matching
-  (MWPM) uses the calibrated fault probabilities and relationships between faults.
-- **Learn Z from hardware.** Use 6,000 independent training shots per round count
-  to select correlation weights and update modeled logical probabilities with
-  observed counts. Model probabilities support rare and unseen histories.
+- **Compile gates and readout together.** Cancel redundant native rotations.
+  X memory moves eligible final basis rotations so ancilla and data readout form
+  one terminal group; Z memory preserves measurement boundaries while optimizing
+  between them. Both expose terminal readout to the hardware compiler's
+  fidelity-readout treatment.
+- **Correct Z model bias with hardware data.** Use 6,000 independent training
+  shots per round count to update modeled logical-class probabilities.
+  Bayesian shrinkage lets common histories correct the model while keeping rare
+  histories close to its prior and retaining its decisions for unseen histories.
+  Correlation-weight fitting is used only when it wins a training-only check;
+  the decoder is frozen before evaluation.
+- **Decode X with calibrated fault correlations.** Build the prior for the
+  executed native gates and readout, including a proxy for disturbance after
+  intermediate ancilla measurements. Correlated minimum-weight perfect matching
+  (MWPM) uses those probabilities and fault relationships, with no labeled
+  hardware training.
+- **Use idle time to protect data.** Insert XY4 dynamical-decoupling pulses into
+  eligible data-qubit waits while ancillas are measured, preserving wait duration.
+  Pulse audits verify actual insertion: none at one round, then 72 and 144 added
+  compiled pulse instructions at two and three rounds.
+- **Choose the physical patch by calibration.** Rank legal native placements
+  using gate and readout quality to select a favorable set of qubits and couplers.
 
-Both versions use 17 qubits and 24 CZ gates per round, with zero routing SWAPs.
-The savings come from simpler control operations and better use of the hardware;
-decoupling adds pulses to protect the remaining waits. Measurement order and
-logical frames stay aligned through compilation and decoding.
+Both versions use **17 qubits, 24 CZ gates per round and zero routing SWAPs**;
+placement improves which native patch runs the code. Vanilla already uses a
+complete modeled logical-class lookup; Z adds a native prior and hardware
+training. Explicit measurement maps preserve the detector and logical frames
+through compilation. The headline LER reductions measure the combined pipeline;
+they do not isolate each technique's contribution.
 
 See [every retained improvement](improvements.md), the [methods](docs/METHODS.md)
 and the [native routing audit](docs/GARNET_ROUTING_PROOF.md).
@@ -82,6 +92,17 @@ At three rounds, failure probability falls from **40.667% to 18.200% for X** and
 physical execution. Calibrated priors and better inference improve the logical
 decision. The measured gain belongs to that combined pipeline.
 
+**LUT versus MWPM.** On improved three-round X memory, MWPM has 728 failures
+versus 789 for the original model-only LUT in 4,000 shots. The [decoder audit](docs/LUT_MWPM_AUDIT.md)
+reproduced all 16.8 million LUT decisions; the difference comes from the noise
+prior's conditional weights. With identical vanilla records and priors, the LUT
+wins 10 of 12 cases.
+
+The new [hardware-calibrated LUT](docs/LUT_IMPROVEMENT.md) learns corrections from
+independent development records. On the same benchmark shots, fitted LUT error
+falls from **6.039% to 5.620% in X** and **4.283% to 4.162% in Z**. The corrected
+policies are included and still decode with one table lookup.
+
 The [evaluation](docs/EVALUATION.md) contains the counts and fit diagnostics;
 [error analysis](docs/ERROR_ANALYSIS.md) follows the remaining error pathways.
 
@@ -95,6 +116,38 @@ deliver decisions in time for adaptive operations.
 Throughput tells us how much work a decoder can handle. Latency tells us how long
 a computation waits for its next decision. A practical decoder needs both,
 including predictable response times on difficult cases.
+
+## Choosing surface codes for their logical gates
+
+Code choice can target the computation as well as memory performance. A
+**transversal gate** acts independently on data positions within a block, or
+between corresponding positions in separate blocks, limiting fault propagation
+within each block. Which logical gates have such implementations depends on the
+code's stabilizers, boundaries and layout.
+
+| Surface-code construction | Logical-gate options | What the hardware and decoder must support |
+|---|---|---|
+| Standard rotated CSS patch | Logical Pauli strings; a physical H layer exchanges the X/Z checks and boundary frame. Compatible CSS blocks admit transversal CNOT. | Track the changed frame or reorient the patch after H. CNOT needs pairwise inter-block connectivity and decoding that accounts for propagated errors. |
+| Folded surface-code constructions | Enable logical H and S through fold-based operations, extending the available Clifford gates. | Interactions between paired sites across the fold and the corresponding syndrome schedule. These are distinct from independent single-qubit gates on the original planar patch. |
+| Rotated patches with mid-cycle protocols | A fold-transversal S inside syndrome extraction can complement H and CNOT to supply a full logical Clifford generating set. | The specified intermediate code state, extra interactions or qubit rearrangement, and detectors spanning the gate boundary. |
+
+See [Moussa's folded constructions](https://arxiv.org/abs/1603.02286) and
+[Chen et al.'s rotated-patch protocols](https://arxiv.org/abs/2412.01391) for the
+constructions and their connectivity requirements.
+
+[Clifford-deformed variants such as XY and XZZX](https://www.nist.gov/publications/clifford-deformed-surface-codes)
+also let code design follow the hardware's noise bias. A local basis change
+conjugates both stabilizers and gate implementations; it preserves the abstract
+logical gate capabilities while changing their physical realization. Choosing
+a variant therefore means assessing gate cost, syndrome extraction and decoding
+together. The useful target is lower qubit-time cost for the whole computation.
+
+**Current scope:** the retained runner implements X/Z identity memory. Selecting
+gate-capable variants and validating their logical-gate circuits and decoders
+is an extension beyond the measured pipeline. Universal computation also needs
+an additional resource, such as magic states or code switching: a fixed code
+cannot supply a universal transversal unitary gate set
+([Eastin–Knill](https://arxiv.org/abs/0811.4262)).
 
 ## ML telescoping for real-time decoding
 
@@ -150,11 +203,14 @@ models, raw measurements, training records and decoder API.
 
 ## Scaling to larger quantum computers
 
-The work points to four priorities:
+The work points to five priorities:
 
 - **Design around the device.** Connectivity, readout behavior and calibration
   determine how well a patch runs. Native scheduling and physical error
   characterization become more valuable as circuits grow.
+- **Choose codes for the workload.** Compare surface-code constructions by
+  their logical-gate implementations as well as memory LER. Include the cost of
+  connectivity, frame changes and decoding across gates in that comparison.
 - **Make inference scale.** Full lookup grows exponentially with detector count.
   The telescope replaces history-indexed tables with shared recurrent weights.
   Carry that approach into larger spatial layouts and train across code distances.

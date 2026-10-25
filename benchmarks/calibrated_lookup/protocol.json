@@ -1,0 +1,32 @@
+{
+  "algorithm": "regularized conditional logical-posterior calibration compiled to a complete LUT",
+  "archive_commit": "be265ab341fac550468b8125a1127469b518ece8",
+  "training": "first 6000 pilot_ethan shots plus earlier confirmation_b0_ethan (3000)",
+  "validation": "last 2000 pilot_ethan shots plus earlier confirmation_b1_ethan (3000) and 800 pilot_baseline shots",
+  "evaluation": "published confirm0/confirm1 records; opened for scoring after all policies are frozen",
+  "orders": [
+    0,
+    1,
+    2
+  ],
+  "penalties": [
+    0.1,
+    0.01,
+    0.001
+  ],
+  "alphas": [
+    0.0,
+    10.0
+  ],
+  "matching_feature": true,
+  "seed": 20261025,
+  "selection": "fewest validation failures; ties prefer fewer parameters, no count update and stronger regularization",
+  "circuit_changes": false,
+  "physical_oracle_inputs": false,
+  "versions": {
+    "python": "3.12.5",
+    "numpy": "2.5.4",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "source_dependencies": {
+    "challenge/decoders/calibrated_lookup.py": "cdc522a425a2a5656dca9050a246b26c4df72e25c0e55b9cbf3d4290f37539b3",
+    "challenge/improve_lookup.py": "a13f64937b4deef2f89909fff70be7dff771d539b84e39f73dac2f1ad2711e83",
+    "challenge/decoders/hybrid.py": "88c141b11056317aa19fadde4361fbbac3dee3b5387d1aaab5aef0b1045f9d9e",
+    "ethan/src/iqm_surface_code/decoders/lookup_table.py": "bdea07b246f1ae049045a28eced3e813d43c5df31d8a2c059f5ef0d947a6fb24"
+  },
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "frozen_selection.json": "c963de328f72277094bf5938f4b1e385411ca407cb54e04507ed0a29455f00fb",
+    "latency.json": "10df85f407bf683e5b6d4fa6414fc6a951780a5dff4892e01fe1deb845e601e5",
+    "protocol.json": "40a19199a980364b4ba474281c0704a06dc99c616f749792f4031faac0d17384",
+    "report.json": "defc72a4716f17b1e1d67ad46fd7d35d7f958b81edefa01afa0811f9a82c532f",
+    "X_r1.npz": "c1304d2470481bdf5c700f4692aa17e01926e506f92844c322c10465abbde4cc",
+    "X_r2.npz": "2650cfb22780fc8f8aea12b815e1fab1f01520ace908c385ede16e2c27c5ee47",
+    "X_r3.npz": "1b5223dcc7a3ac786a4b562b77d188565ab26795b225f8043d60937e68130561",
+    "Z_r1.npz": "1fd889b909d5f76e2747c250250e1b16f3197156ff7a4723e6d590c47d981ae1",
+    "Z_r2.npz": "179210982debef9e8480d5d2488b01e9432062b50c6baed43ef4853393380a9b",
+    "Z_r3.npz": "8995b61f1cc7cdde9e4aa0d4db4646aac0dcdab00c0324d69a4f61c472fe844c"
+  },
+  "versions": {
+    "python": "3.12.5",
+    "numpy": "2.5.4",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "scipy": "1.18.1"
+  },
+  "archive_commit": "be265ab341fac550468b8125a1127469b518ece8",
+  "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel"
+}

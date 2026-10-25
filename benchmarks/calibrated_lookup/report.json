@@ -1,0 +1,663 @@
+{
+  "protocol": {
+    "algorithm": "regularized conditional logical-posterior calibration compiled to a complete LUT",
+    "archive_commit": "be265ab341fac550468b8125a1127469b518ece8",
+    "training": "first 6000 pilot_ethan shots plus earlier confirmation_b0_ethan (3000)",
+    "validation": "last 2000 pilot_ethan shots plus earlier confirmation_b1_ethan (3000) and 800 pilot_baseline shots",
+    "evaluation": "published confirm0/confirm1 records; opened for scoring after all policies are frozen",
+    "orders": [
+      0,
+      1,
+      2
+    ],
+    "penalties": [
+      0.1,
+      0.01,
+      0.001
+    ],
+    "alphas": [
+      0.0,
+      10.0
+    ],
+    "matching_feature": true,
+    "seed": 20261025,
+    "selection": "fewest validation failures; ties prefer fewer parameters, no count update and stronger regularization",
+    "circuit_changes": false,
+    "physical_oracle_inputs": false,
+    "versions": {
+      "python": "3.12.5",
+      "numpy": "2.5.4",
+      "stim": "1.16.0",
+      "pymatching": "2.4.0"
+    }
+  },
+  "frozen_selection_sha256": "c963de328f72277094bf5938f4b1e385411ca407cb54e04507ed0a29455f00fb",
+  "scores": [
+    {
+      "basis": "X",
+      "rounds": 1,
+      "shots": 4000,
+      "failures": {
+        "calibrated": 121,
+        "lut": 150,
+        "mwpm": 159,
+        "published": 159
+      },
+      "median_batch_decode_seconds": 7.239999831654131e-05,
+      "mean_us_per_shot_per_round": 0.02335161327444498,
+      "table_bytes": 256,
+      "build_seconds": 0.10473150000325404
+    },
+    {
+      "basis": "X",
+      "rounds": 2,
+      "shots": 4000,
+      "failures": {
+        "calibrated": 380,
+        "lut": 400,
+        "mwpm": 404,
+        "published": 404
+      },
+      "median_batch_decode_seconds": 0.0001162000116892159,
+      "mean_us_per_shot_per_round": 0.014888709565932533,
+      "table_bytes": 65536,
+      "build_seconds": 0.6551622999832034
+    },
+    {
+      "basis": "X",
+      "rounds": 3,
+      "shots": 4000,
+      "failures": {
+        "calibrated": 752,
+        "lut": 789,
+        "mwpm": 728,
+        "published": 728
+      },
+      "median_batch_decode_seconds": 0.0001720000000204891,
+      "mean_us_per_shot_per_round": 0.014879301009494411,
+      "table_bytes": 16777216,
+      "build_seconds": 197.99243319997913
+    },
+    {
+      "basis": "Z",
+      "rounds": 1,
+      "shots": 8000,
+      "failures": {
+        "calibrated": 148,
+        "lut": 148,
+        "mwpm": 148,
+        "published": 145
+      },
+      "median_batch_decode_seconds": 0.0001399999891873449,
+      "mean_us_per_shot_per_round": 0.01967258046328601,
+      "table_bytes": 256,
+      "build_seconds": 0.10155890000169165
+    },
+    {
+      "basis": "Z",
+      "rounds": 2,
+      "shots": 8000,
+      "failures": {
+        "calibrated": 634,
+        "lut": 643,
+        "mwpm": 1037,
+        "published": 639
+      },
+      "median_batch_decode_seconds": 0.00023790000705048442,
+      "mean_us_per_shot_per_round": 0.015053427388568618,
+      "table_bytes": 65536,
+      "build_seconds": 0.7833321999933105
+    },
+    {
+      "basis": "Z",
+      "rounds": 3,
+      "shots": 8000,
+      "failures": {
+        "calibrated": 1109,
+        "lut": 1152,
+        "mwpm": 1451,
+        "published": 1147
+      },
+      "median_batch_decode_seconds": 0.00036249999538995326,
+      "mean_us_per_shot_per_round": 0.015565188282722686,
+      "table_bytes": 16777216,
+      "build_seconds": 206.7013089999964
+    }
+  ],
+  "fits": {
+    "X": {
+      "calibrated": {
+        "epsilon_per_round": 0.05619654013034493,
+        "ci95_profile": [
+          0.05309903577480862,
+          0.05941720919872295
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05619654013034492,
+          0.10607697801544691,
+          0.15035119984189027
+        ],
+        "negative_log_likelihood": 3785.272499405835,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 107.53791210531347,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.45081034322149e-24,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          121,
+          380,
+          752
+        ],
+        "shots": [
+          4000,
+          4000,
+          4000
+        ],
+        "probabilities": [
+          0.03025,
+          0.095,
+          0.188
+        ],
+        "wilson_ci95": [
+          [
+            0.025376382748749815,
+            0.03602501422192473
+          ],
+          [
+            0.08629796800695028,
+            0.10447918105770793
+          ],
+          [
+            0.17619338153509262,
+            0.20040531107768111
+          ]
+        ]
+      },
+      "lut": {
+        "epsilon_per_round": 0.060391945359315705,
+        "ci95_profile": [
+          0.05716463964568263,
+          0.06374416429987415
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.06039194535931569,
+          0.11348951659006623,
+          0.16017375657985705
+        ],
+        "negative_log_likelihood": 3970.5065855934454,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 88.49054645947808,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 6.088663686511629e-20,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          150,
+          400,
+          789
+        ],
+        "shots": [
+          4000,
+          4000,
+          4000
+        ],
+        "probabilities": [
+          0.0375,
+          0.1,
+          0.19725
+        ],
+        "wilson_ci95": [
+          [
+            0.03204231780680671,
+            0.04384516723616717
+          ],
+          [
+            0.09108339124317813,
+            0.10968416338858308
+          ],
+          [
+            0.18521144218350108,
+            0.20986950072841318
+          ]
+        ]
+      },
+      "mwpm": {
+        "epsilon_per_round": 0.05807829637056261,
+        "ci95_profile": [
+          0.054920348154939895,
+          0.06136044103692753
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05807829637056261,
+          0.10941041572251142,
+          0.15477997099235707
+        ],
+        "negative_log_likelihood": 3901.3921299461326,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 52.09507406094775,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.871900393207587e-12,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          159,
+          404,
+          728
+        ],
+        "shots": [
+          4000,
+          4000,
+          4000
+        ],
+        "probabilities": [
+          0.03975,
+          0.101,
+          0.182
+        ],
+        "wilson_ci95": [
+          [
+            0.034123891739032956,
+            0.04625927580913727
+          ],
+          [
+            0.09204134899531147,
+            0.11072428674987034
+          ],
+          [
+            0.17034972062102471,
+            0.19426048531122542
+          ]
+        ]
+      },
+      "published": {
+        "epsilon_per_round": 0.05807829637056261,
+        "ci95_profile": [
+          0.054920348154939895,
+          0.06136044103692753
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05807829637056261,
+          0.10941041572251142,
+          0.15477997099235707
+        ],
+        "negative_log_likelihood": 3901.3921299461326,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 52.09507406094775,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.871900393207587e-12,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          159,
+          404,
+          728
+        ],
+        "shots": [
+          4000,
+          4000,
+          4000
+        ],
+        "probabilities": [
+          0.03975,
+          0.101,
+          0.182
+        ],
+        "wilson_ci95": [
+          [
+            0.034123891739032956,
+            0.04625927580913727
+          ],
+          [
+            0.09204134899531147,
+            0.11072428674987034
+          ],
+          [
+            0.17034972062102471,
+            0.19426048531122542
+          ]
+        ]
+      }
+    },
+    "Z": {
+      "calibrated": {
+        "epsilon_per_round": 0.04161771319537776,
+        "ci95_profile": [
+          0.039752276868498325,
+          0.04354214906373488
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.04161771319537777,
+          0.07977135828753013,
+          0.11474926846207556
+        ],
+        "negative_log_likelihood": 6260.684607810732,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 176.79495195761808,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.068777752973306e-39,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          148,
+          634,
+          1109
+        ],
+        "shots": [
+          8000,
+          8000,
+          8000
+        ],
+        "probabilities": [
+          0.0185,
+          0.07925,
+          0.138625
+        ],
+        "wilson_ci95": [
+          [
+            0.01576997337438066,
+            0.0216922202939174
+          ],
+          [
+            0.07353057175862306,
+            0.08537330775526354
+          ],
+          [
+            0.1312261094264907,
+            0.14637077580067692
+          ]
+        ]
+      },
+      "lut": {
+        "epsilon_per_round": 0.04282708593894082,
+        "ci95_profile": [
+          0.0409322744238484,
+          0.04478108940935899
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.0428270859389408,
+          0.08198585329783875,
+          0.11779050886685172
+        ],
+        "negative_log_likelihood": 6369.774285079755,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 195.77986975399085,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 3.068608255218891e-43,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          148,
+          643,
+          1152
+        ],
+        "shots": [
+          8000,
+          8000,
+          8000
+        ],
+        "probabilities": [
+          0.0185,
+          0.080375,
+          0.144
+        ],
+        "wilson_ci95": [
+          [
+            0.01576997337438066,
+            0.0216922202939174
+          ],
+          [
+            0.07461685803304546,
+            0.08653594158909278
+          ],
+          [
+            0.1364773601807418,
+            0.1518643655636281
+          ]
+        ]
+      },
+      "mwpm": {
+        "epsilon_per_round": 0.059370913529572016,
+        "ci95_profile": [
+          0.05709798610209568,
+          0.0617061068748016
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05937091352957202,
+          0.11169201631247222,
+          0.15780041575718157
+        ],
+        "negative_log_likelihood": 7800.202318257309,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 379.79949629232567,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 3.3696691765272876e-83,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          148,
+          1037,
+          1451
+        ],
+        "shots": [
+          8000,
+          8000,
+          8000
+        ],
+        "probabilities": [
+          0.0185,
+          0.129625,
+          0.181375
+        ],
+        "wilson_ci95": [
+          [
+            0.01576997337438066,
+            0.0216922202939174
+          ],
+          [
+            0.12244199429933422,
+            0.13716353006182025
+          ],
+          [
+            0.17308483667486468,
+            0.1899710126658653
+          ]
+        ]
+      },
+      "published": {
+        "epsilon_per_round": 0.04254665187232082,
+        "ci95_profile": [
+          0.04065867001551191,
+          0.044493777910905204
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.04254665187232082,
+          0.08147286857355274,
+          0.11708672489339694
+        ],
+        "negative_log_likelihood": 6340.682669898701,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 198.86204437302445,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 6.571367180062767e-44,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          145,
+          639,
+          1147
+        ],
+        "shots": [
+          8000,
+          8000,
+          8000
+        ],
+        "probabilities": [
+          0.018125,
+          0.079875,
+          0.143375
+        ],
+        "wilson_ci95": [
+          [
+            0.015424563111793608,
+            0.02128799052042057
+          ],
+          [
+            0.07413402124593418,
+            0.08601925832809224
+          ],
+          [
+            0.13586655867332906,
+            0.15122576701090104
+          ]
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "X": {
+      "lut": {
+        "absolute_ler_reduction": 0.004195405228970772,
+        "ci": [
+          0.0021850104683733104,
+          0.006243524363185807
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.06946961559210008
+      },
+      "mwpm": {
+        "absolute_ler_reduction": 0.0018817562402176774,
+        "ci": [
+          -0.00021785132784588903,
+          0.003993193576462488
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.03240033468287917
+      },
+      "published": {
+        "absolute_ler_reduction": 0.0018817562402176774,
+        "ci": [
+          -0.00021785132784588903,
+          0.003993193576462488
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.03240033468287917
+      }
+    },
+    "Z": {
+      "lut": {
+        "absolute_ler_reduction": 0.0012093727435630586,
+        "ci": [
+          0.0002537164223475892,
+          0.002169678775252222
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.02823850180437859
+      },
+      "mwpm": {
+        "absolute_ler_reduction": 0.017753200334194252,
+        "ci": [
+          0.015999021131380124,
+          0.01954185053156116
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.2990218488949403
+      },
+      "published": {
+        "absolute_ler_reduction": 0.0009289386769430544,
+        "ci": [
+          -2.5865599461704486e-05,
+          0.0018992241860777933
+        ],
+        "confidence": 0.95,
+        "paired": true,
+        "draws": 10000,
+        "seed": 20261025,
+        "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+        "excludes": "calibration drift between blocks and model-selection uncertainty",
+        "relative_ler_reduction": 0.02183341428911323
+      }
+    }
+  }
+}
