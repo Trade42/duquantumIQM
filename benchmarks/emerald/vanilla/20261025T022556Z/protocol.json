@@ -1,0 +1,28 @@
+{
+  "device": "emerald",
+  "distance": 3,
+  "bases": [
+    "X",
+    "Z"
+  ],
+  "rounds": [
+    1,
+    2,
+    3
+  ],
+  "shots_per_point": 3000,
+  "total_physical_shots": 18000,
+  "shot_limit": 18000,
+  "no_reset": true,
+  "dd": "disabled",
+  "heralding": "none",
+  "uniform_decoder_p": 0.003,
+  "decoder": "complete logical-class ML lookup",
+  "training_shots": 0,
+  "qiskit_optimization_level": 0,
+  "custom_optimization": false,
+  "layout": "fixed deterministic native graph embedding; no calibration ranking",
+  "fit": "P_L(r) = (1 - (1 - 2*epsilon_L)**r) / 2; amplitude=1; R=1,2,3",
+  "acquisition_order_seed": 8193,
+  "local_validation_shots": 20000
+}

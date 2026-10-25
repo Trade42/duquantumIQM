@@ -14,3 +14,13 @@ python -m examples.reproduce
 
 See [Methods](../docs/METHODS.md), [Evaluation](../docs/EVALUATION.md) and
 [Reproduction](../docs/REPRODUCIBILITY.md).
+
+## Emerald
+
+[`emerald/`](emerald/README.md) contains the **18,000-shot vanilla surface-code
+baseline**: X/Z memory at rounds 1–3, fixed native layout, DD off, uniform-prior
+lookup. [Methods and measurements](../docs/EMERALD_BASELINE.md).
+
+```powershell
+python -m examples.replay_emerald
+```

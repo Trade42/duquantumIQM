@@ -90,6 +90,18 @@ are observable flips relative to the ideal logical reference.
 - [Reproduction](docs/REPRODUCIBILITY.md): environment, data schema and verification.
 - [References](docs/REFERENCES.md): scientific and software foundations.
 
+## Emerald vanilla baseline
+
+The [Emerald baseline](docs/EMERALD_BASELINE.md) measures the same distance-three
+no-reset memory definition on a fixed native seventeen-qubit patch, with DD off
+and a uniform-prior full-history lookup. Six jobs returned all **18,000 shots**.
+Challenge R1–3 LER is **X 12.352%, Z 4.749%**; raw failures, intervals and fit
+diagnostics accompany the measurement bundle.
+
+```powershell
+python -m examples.replay_emerald
+```
+
 The implementation is organized into [`challenge/`](challenge/) for circuit,
 evaluation and submission interfaces, [`ethan/src/iqm_surface_code/`](ethan/src/iqm_surface_code/)
 for native compilation and full-history lookup, and [`darawork/decoders/`](darawork/decoders/)

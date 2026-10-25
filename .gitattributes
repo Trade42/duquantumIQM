@@ -9,3 +9,5 @@ darawork/decoders/dem_fit.py text eol=crlf
 darawork/decoders/ensemble_decoder.py text eol=crlf
 ethan/src/iqm_surface_code/hardware_optimization.py -text
 ethan/src/iqm_surface_code/decoders/lookup_table.py -text
+# Emerald baseline source is included in its recorded inference seal.
+challenge/benchmark_emerald.py -text

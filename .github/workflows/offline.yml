@@ -28,5 +28,7 @@ jobs:
         run: python -m pip install -e ".[test]" -e ./ethan
       - name: Reproduce Garnet and vanilla surface-code comparison
         run: python -m examples.reproduce
+      - name: Reproduce Emerald vanilla surface-code baseline
+        run: python -m examples.replay_emerald
       - name: Check inference and raw-record invariants
-        run: python -m pytest -q tests/test_submission.py tests/test_rounds_replay.py
+        run: python -m pytest -q tests/test_submission.py tests/test_rounds_replay.py tests/test_emerald_baseline.py

@@ -10,6 +10,7 @@ logical-error metric into one surface-code memory pipeline on Garnet.
 | [Error analysis](ERROR_ANALYSIS.md) | Remaining physical and model error pathways |
 | [Reproduction](REPRODUCIBILITY.md) | Installation, offline evaluation and inference interface |
 | [References](REFERENCES.md) | Primary literature and software documentation |
+| [Emerald vanilla baseline](EMERALD_BASELINE.md) | Native d3 X/Z reference, 18,000 measured shots and offline replay |
 
 The [challenge brief](../challenge/README.md) specifies the memory experiment,
 compilation and decoding task. Our implementation uses Garnet's native
