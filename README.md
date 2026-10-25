@@ -1,129 +1,98 @@
-# duquantumIQM
+# Surface-code memory on IQM Garnet
 
-**A measured, reproducible surface-code memory experiment on IQM Garnet.**
+**IQM challenge submission: reduce logical error through native compilation,
+idle protection and inference from the complete syndrome record.**
 
-This project stores one logical qubit in a distance-three rotated surface code:
-9 data qubits and 8 check ancillas, with native connectivity and no mid-circuit
-reset. It preserves the complete chain from circuit construction to physical
-pulse compilation, measured syndromes, decoding and logical-error statistics.
+We encode one logical qubit in a distance-three rotated surface code on Garnet:
+nine data qubits and eight check ancillas. The experiment prepares logical X or
+Z memory, repeats syndrome extraction without ancilla resets, and decodes the
+final logical observable. We evaluate the complete pipeline against a vanilla
+surface-code implementation using the challenge's per-round logical error rate
+(LER).
 
-**Hardware acquisition is complete.** The supported starting point is offline
-replay of the retained winning policies. No IQM account, API key or QPU access
-is needed for the quickstart below.
+| Memory | Vanilla surface code | Our pipeline | Relative LER reduction |
+|---|---:|---:|---:|
+| X | 18.517% (17.748–19.314%) | **5.808% (5.492–6.136%)** | **68.6%** |
+| Z | 6.722% (6.326–7.135%) | **4.255% (4.066–4.449%)** | **36.7%** |
 
-[Winning pipeline](docs/WINNING_PIPELINE.md) · [Techniques](docs/TECHNIQUES.md) ·
-[Remaining errors](docs/ERROR_ANALYSIS.md) · [Results](docs/RESULTS.md) ·
-[Reproduction](docs/REPRODUCIBILITY.md)
+LER follows the challenge fit over rounds 1, 2 and 3; parentheses give 95%
+profile intervals. The comparison uses 54,000 measured shots on one Garnet
+calibration. Each implementation has its own fixed native layout and acquisition
+window. [Evaluation](docs/EVALUATION.md) gives the baseline definition, raw
+failures, comparison intervals and fit diagnostics.
 
-## The retained policies
+![Garnet surface-code memory compared with vanilla surface code](docs/assets/garnet_comparison.png)
 
-| | X memory | Z memory |
-|---|---|---|
-| Stored/read observable | Logical X | Logical Z |
-| Native compiler | Terminal-readout fusion | Measurement-fenced optimization |
-| Idle protection | Data-qubit XY4 | Data-qubit XY4 |
-| Decoder | Native calibrated, correlated MWPM | Exact modeled posterior + training counts, `alpha=10` |
-| Qualified hardware scope | Distance 3, rounds 1–3 | Distance 3, rounds 1–3 |
+The figure shows decoded failure probability at each circuit length, with 95%
+Wilson intervals. Per-round LER is obtained by fitting these points.
 
-These choices follow held-out hardware comparisons. A more elaborate decoder
-did not establish an X improvement; the posterior hybrid did establish a Z
-improvement. X and Z labels name the stored observable: X memory is sensitive
-to logical phase flips, while Z memory is sensitive to logical bit flips.
-[Why the policies differ](docs/WINNING_PIPELINE.md#why-x-and-z-use-different-techniques)
-separates the physical explanation from what the data actually proves.
+## How the pipeline answers the challenge
 
 ```mermaid
 flowchart LR
-    A[Annotated no-reset memory] --> B[Native layout and Clifford compilation]
-    B --> C[Audited XY4 and readout]
-    C --> D[Saved hardware records]
-    D --> E[Reference-correct detector events]
+    A[Rotated surface-code memory] --> B[Native layout and CZ compilation]
+    B --> C[Readout scheduling and data XY4]
+    C --> D[Measured syndrome record]
+    D --> E[Native-frame detector events]
     E --> X[X: correlated MWPM]
-    E --> Z[Z: posterior plus training counts]
-    X --> F[All-shot failures and challenge LER fit]
+    E --> Z[Z: modeled posterior plus training counts]
+    X --> F[Logical failures and challenge LER]
     Z --> F
 ```
 
-## Hardware evidence
+| Challenge requirement | Implementation |
+|---|---|
+| Generate and execute encoded memory | Annotated Stim circuit, native Qiskit circuit, IQM pulse compilation |
+| Reduce physical error exposure | Native embedding, local gate cancellation, measurement-aware scheduling, data-qubit XY4 |
+| Interpret reused ancillas correctly | Generated no-reset detector equations and source/native measurement alignment |
+| Use hardware noise information | Native gate/readout calibration and training-only detector-correlation fitting |
+| Decode the logical observable | Correlated matching for X; exact modeled posterior with empirical shrinkage for Z |
+| Evaluate the improvement | All-shot scoring, R1–3 binomial LER fit and vanilla surface-code comparison |
 
-The same retained policy was evaluated in two studies. Values below are the
-challenge's fitted per-round LER over **R=1,2,3**, followed by conditional 95%
-profile intervals; they are not single-round failure probabilities.
+X uses terminal-readout fusion with correlated minimum-weight perfect matching
+(MWPM). Z uses measurement fences and a complete posterior lookup with
+`alpha=10` training-count regularization. Both use data-qubit XY4. The
+[methods](docs/METHODS.md) explain every step and the physical and statistical
+reasons for using different X/Z policies.
 
-| Retained policy | Selection study: 300,000 total study shots | Later validation: 96,000 new study shots |
-|---|---:|---:|
-| X | **5.220%** (4.976–5.471%) | **5.808%** (5.492–6.136%) |
-| Z | **3.763%** (3.559–3.974%) | **4.255%** (4.066–4.449%) |
+## Reproduce the comparison
 
-The original Z hybrid improved over native model-only ML by 0.157 percentage
-points, with a multiplicity-adjusted gain interval of **+0.037 to +0.274 points**.
-The follow-up retained both policies: adaptive DD, additional fitting and
-recurrent decoding did not meet the frozen promotion rules. Techniques are
-combined only when the measured evidence justifies the combination.
-
-**The stationary fit is rejected in both studies.** These are descriptive fits
-to the requested challenge equation, not established stationary cycle rates.
-The later values are reported separately, without pooling sessions or selecting
-the lower number. [Results and raw counts](docs/RESULTS.md) explain the fit,
-uncertainty, selection rules and limits of the claim.
-
-## Offline quickstart
-
-From a Git checkout, use Python 3.11+ and a virtual environment. In PowerShell:
+Use Python 3.11+ from a Git checkout. In PowerShell:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -e ".[test]" -e ./ethan
-python -m examples.replay_winners
+python -m examples.reproduce
 ```
 
-The example reloads the frozen X/Z winners, decodes all **36,000 retained-policy
-confirmation shots** from the later study and reproduces their failure counts
-and LER fits. It writes no artifacts, blocks network connections during replay
-and never reads credentials. Add `--json` for structured output. This path needs
-neither Qiskit, the IQM SDK nor PyTorch.
+The command verifies the measurement and decoder hashes, reconstructs detector
+frames, decodes all **54,000 shots**, and recomputes the fits and comparison
+intervals. Reproduction runs offline. Add `--json` for structured output.
 
-To decode your own detection events in the published circuit/frame:
+To use the decoder with the bundled circuit's detector definitions:
 
 ```python
-from challenge.benchmark_rounds import load_adopted
+from challenge.submission import load_policy
 
-policy, decoder = load_adopted(
-    "results/decoders/history/20261025T004600Z", basis="Z", rounds=3
-)
-predictions = decoder.decode_batch(detection_events)  # (shots, 1), binary
+decoder = load_policy("Z", rounds=3)
+predicted_logical_flips = decoder.decode_batch(detection_events)
 ```
 
-Run from the repository root. Input must match the saved native/source detector
-definitions, not just their array width. Observable truth is used only for
-scoring; it is never passed to this inference API. Larger-distance simulation
-and R1–7 diagnostics are separate from the qualified winner policy.
+Input has shape `(shots, 8 * rounds)`; output has shape `(shots, 1)`. Predictions
+are observable flips relative to the ideal logical reference.
 
-[Reproducibility guide](docs/REPRODUCIBILITY.md) covers full evidence replay,
-optional research dependencies, tests, expected outputs and hash verification.
+## Read the submission
 
-## Repository map
+- [Methods](docs/METHODS.md): code, compiler, pulse control, priors, decoders and X/Z rationale.
+- [Evaluation](docs/EVALUATION.md): vanilla baseline, measurements, LER and uncertainty.
+- [Error analysis](docs/ERROR_ANALYSIS.md): residual physical channels and inference limits.
+- [Reproduction](docs/REPRODUCIBILITY.md): environment, data schema and verification.
+- [References](docs/REFERENCES.md): scientific and software foundations.
 
-| Location | Role |
-|---|---|
-| [`docs/`](docs/README.md) | Current explanation, methods, errors, results and reproduction |
-| [`examples/replay_winners.py`](examples/replay_winners.py) | Small, offline entry point for the retained policies |
-| [`challenge/`](challenge/) | Shared circuit/statistics tools and explicit selection/validation runners |
-| [`ethan/`](ethan/) | Native compiler, layout, pulse audit and complete ML lookup implementation (`iqm_surface_code`) |
-| [`darawork/`](darawork/) | Matching, training-only DEM fitting, posterior/empirical and other research decoders |
-| [`iyanu/`](iyanu/) | Neural, coherence-aware and LDPC decoder experiments |
-| [`results/decoders/hybrid/20261024T234900Z/`](results/decoders/hybrid/20261024T234900Z/) | Immutable headline-selection evidence and winning decoder states |
-| [`results/decoders/history/20261025T004600Z/`](results/decoders/history/20261025T004600Z/) | Immutable bounded follow-up and independent validation |
-| [`tests/`](tests/) / [`ethan/tests/`](ethan/tests/) | Shared and isolated-package regressions |
-
-The original [IQM challenge brief](challenge/README.md),
-[implementation history](IMPLEMENTATION.md) and
-[transversal-gate extension](TRANSVERSAL_GATES.md) remain available. The brief
-targets Emerald; the hardware results presented here were acquired on Garnet.
-Folder names preserve the contributions and provenance of the independent
-implementations. Research modules are not all active in the retained policy.
-
-See [documentation navigation](docs/README.md), [references](docs/REFERENCES.md)
-and [contribution guidance](CONTRIBUTING.md). Offline CI checks the winner replay
-and raw-record validation; the broader research suites are described separately.
+The implementation is organized into [`challenge/`](challenge/) for circuit,
+evaluation and submission interfaces, [`ethan/src/iqm_surface_code/`](ethan/src/iqm_surface_code/)
+for native compilation and full-history lookup, and [`darawork/decoders/`](darawork/decoders/)
+for matching and detector-model fitting. [`benchmarks/garnet/`](benchmarks/garnet/)
+contains the reproducible comparison. See [Contributing](CONTRIBUTING.md) for
+development and testing.
