@@ -1,0 +1,8 @@
+{
+  "family": "mwpm",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "train_shots": 0,
+  "dem_sha256": "c12158c7a517c9ad9f2b68c5ebee3aee3ecf12ef434e803562d64aa7fb50375c"
+}

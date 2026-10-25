@@ -1,0 +1,8 @@
+{
+  "measured_process_peak_working_set_bytes": 829558784,
+  "samples": 105,
+  "interval_seconds": 0.2,
+  "scope": "Full acquisition/compilation/retrieval/decode/report process; not isolated decoder memory",
+  "method": "Windows peak_wset queried while process alive; initial earlier peak retained",
+  "last_sample_unix": 1792887083.3182313
+}

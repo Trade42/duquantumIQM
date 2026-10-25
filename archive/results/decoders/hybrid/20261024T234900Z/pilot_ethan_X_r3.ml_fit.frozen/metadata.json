@@ -1,0 +1,32 @@
+{
+  "family": "ml_fit",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "weight_choice": "model",
+  "training_cv_errors": {
+    "model": 461,
+    "fit": 474
+  },
+  "train_shots": 6000,
+  "algorithm": "complete logical ML lookup via independent-DEM XOR convolution",
+  "num_observables": 1,
+  "detector_bits": 24,
+  "entries": 16777216,
+  "table_bytes": 16777216,
+  "transform_array_bytes": 268435456,
+  "estimated_transform_peak_bytes": 536870912,
+  "build_s": 5.3677327999903355,
+  "fault_terms": 315,
+  "circuit_sha256": null,
+  "dem_sha256": "f2fffa2853d7c623188a1acfbfa976e7d91b21d661c4d22f46d6bbaece511edd",
+  "table_sha256": "c496ea9eced44f021bd757fdaa930d3ed0b984895339c8301617f795675cdac9",
+  "model_bayes_failure": 0.03452825507465576,
+  "probability_mass": 1.0000000000000002,
+  "minimum_probability_before_clip": 7.331504014717253e-18,
+  "joint_dem_faults": true,
+  "tie_break": "logical 0",
+  "training_shots": 0,
+  "unseen_syndrome_fallback": null,
+  "limitation": "Exponential preprocessing; exact for supplied independent DEM, with circuit-to-DEM approximation."
+}

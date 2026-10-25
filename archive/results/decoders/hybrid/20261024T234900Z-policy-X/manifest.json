@@ -1,0 +1,5817 @@
+{
+  "created_utc": "2026-10-25T00:15:57.038894+00:00",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "selection_sha256": "af38c8280ba1c60d8bbb22ec1706030fc3455fbe536cba6e42f394815c4924a1",
+  "inference_artifacts_sha256": "fe1b329de5e126c0a999a5a3de92009d8117708137a866c36c329b4c74fa7df4",
+  "policy": {
+    "arm": "ethan",
+    "profile": "ethan",
+    "family": "mwpm",
+    "promoted": false,
+    "rule": "Fresh adjusted LER gain over all standalone references; otherwise retain pilot-best standalone",
+    "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+    "rounds": [
+      1,
+      2,
+      3
+    ],
+    "fit": {
+      "basis": "X",
+      "arm": "ethan",
+      "epsilon_per_round": 0.05219547146500511,
+      "ci95_profile": [
+        0.049759180637358756,
+        0.05471299363594308
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.05219547146500514,
+        0.09894220844710194,
+        0.14080900947673647
+      ],
+      "negative_log_likelihood": 5455.803617041964,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 103.79969266125772,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 2.885247856017139e-23,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        176,
+        585,
+        993
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.029333333333333333,
+        0.0975,
+        0.1655
+      ],
+      "wilson_ci95": [
+        [
+          0.025355626863179,
+          0.033913336393320836
+        ],
+        [
+          0.09024969233049697,
+          0.10526537362716841
+        ],
+        [
+          0.15631120294629053,
+          0.17511684565703634
+        ]
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "selected_X_r3",
+      "phase": "policy",
+      "profile": "ethan",
+      "basis": "X",
+      "rounds": 3,
+      "shots": 2,
+      "transport": "pulse",
+      "source_sha256": "51397fab7b821f975963ae955ccf49a4085a9b0c1d4fbaa9e10206bf0cb47afc",
+      "native_sha256": "b45a87c8bb60524afc09c0f136c08a72a0e59de482a425046e3b332b29672c17",
+      "native_measurement_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "optimization": {
+        "before": {
+          "r": 141,
+          "cz": 72,
+          "measure": 33,
+          "barrier": 30
+        },
+        "after": {
+          "r": 112,
+          "cz": 72,
+          "measure": 33,
+          "barrier": 5
+        },
+        "depth_before": 31,
+        "depth_after": 27,
+        "mode": "fused"
+      },
+      "pulse_audit": {
+        "before": {
+          "QB1__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "Wait": 9,
+              "VirtualRZ": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB2__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 8,
+              "VirtualRZ": 6,
+              "IQPulse": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB2__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB3__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 6
+            },
+            "events": [],
+            "duration_ns": 301900.0
+          },
+          "QB4__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 7,
+              "VirtualRZ": 9,
+              "IQPulse": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB4__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB5__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 7
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB6__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 10,
+              "VirtualRZ": 9,
+              "IQPulse": 10
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB6__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB7__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 4
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB8__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 8
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB8__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB9__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB10__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 8,
+              "VirtualRZ": 12,
+              "Wait": 7
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB10__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 12
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB11__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB12__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 12,
+              "VirtualRZ": 6,
+              "IQPulse": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB12__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB13__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "Wait": 9,
+              "VirtualRZ": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB14__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 8,
+              "VirtualRZ": 9,
+              "IQPulse": 10
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB14__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB15__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB16__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "Wait": 10,
+              "VirtualRZ": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB16__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB17__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 6
+            },
+            "events": [],
+            "duration_ns": 301900.0
+          },
+          "QB18__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "Wait": 6
+            },
+            "events": [],
+            "duration_ns": 301900.0
+          },
+          "QB19__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 7
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB19__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB20__drive.awg": {
+            "instructions": {
+              "Block": 9,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-4-5__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-6-7__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-8-9__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-4-9__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-1-4__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-10-11__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-6-11__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-5-10__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-2-5__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-1-2__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-5-6__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-7-12__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-8-13__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-14-15__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-9-14__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-13-14__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-19-20__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-16-20__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-11-16__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-11-12__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-15-19__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-10-15__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-9-10__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-15-16__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-1__readout": {
+            "instructions": {
+              "Wait": 5,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1096.0,
+                "labels": [
+                  "QB7__c_33_0_0",
+                  "QB5__c_33_0_2",
+                  "QB1__c_33_0_3"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1096.0,
+                "labels": [
+                  "QB7__c_33_0_8",
+                  "QB5__c_33_0_10",
+                  "QB1__c_33_0_11"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 984.0,
+                "labels": [
+                  "QB7__c_33_0_16",
+                  "QB5__c_33_0_18",
+                  "QB1__c_33_0_19",
+                  "QB12__c_33_0_24",
+                  "QB6__c_33_0_25",
+                  "QB2__c_33_0_26",
+                  "QB17____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-2__readout": {
+            "instructions": {
+              "Wait": 5,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1068.0,
+                "labels": [
+                  "QB11__c_33_0_1",
+                  "QB20__c_33_0_4",
+                  "QB9__c_33_0_6"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1068.0,
+                "labels": [
+                  "QB11__c_33_0_9",
+                  "QB20__c_33_0_12",
+                  "QB9__c_33_0_14"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 844.0,
+                "labels": [
+                  "QB11__c_33_0_17",
+                  "QB20__c_33_0_20",
+                  "QB9__c_33_0_22",
+                  "QB16__c_33_0_27",
+                  "QB10__c_33_0_28",
+                  "QB4__c_33_0_29",
+                  "QB3____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-3__readout": {
+            "instructions": {
+              "Wait": 4,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1032.0,
+                "labels": [
+                  "QB15__c_33_0_5",
+                  "QB13__c_33_0_7"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1032.0,
+                "labels": [
+                  "QB15__c_33_0_13",
+                  "QB13__c_33_0_15"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 1036.0,
+                "labels": [
+                  "QB15__c_33_0_21",
+                  "QB13__c_33_0_23",
+                  "QB19__c_33_0_30",
+                  "QB14__c_33_0_31",
+                  "QB8__c_33_0_32",
+                  "QB18____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          }
+        },
+        "after": {
+          "QB1__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "Wait": 9,
+              "VirtualRZ": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB2__drive.awg": {
+            "instructions": {
+              "Block": 3,
+              "Wait": 14,
+              "VirtualRZ": 6,
+              "IQPulse": 22
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298224.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298488.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298504.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298764.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298780.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299040.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299544.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299808.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299824.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300084.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300100.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300360.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB2__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB4__drive.awg": {
+            "instructions": {
+              "Block": 2,
+              "Wait": 13,
+              "VirtualRZ": 9,
+              "IQPulse": 22
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298444.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298460.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298752.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299028.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299044.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299764.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299780.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300072.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300348.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300364.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB4__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB5__drive.awg": {
+            "instructions": {
+              "Block": 6,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 7
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB6__drive.awg": {
+            "instructions": {
+              "Block": 2,
+              "Wait": 16,
+              "VirtualRZ": 9,
+              "IQPulse": 26
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298224.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298488.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298504.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298764.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298780.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299040.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299544.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299808.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299824.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300084.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300100.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300360.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB6__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB7__drive.awg": {
+            "instructions": {
+              "Block": 6,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 4
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB8__drive.awg": {
+            "instructions": {
+              "Block": 2,
+              "IQPulse": 22,
+              "VirtualRZ": 6,
+              "Wait": 12
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298128.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298144.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298448.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298732.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298748.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299032.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299048.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299448.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299464.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299752.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299768.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300052.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300068.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300352.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300368.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB8__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB9__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB10__drive.awg": {
+            "instructions": {
+              "Block": 3,
+              "IQPulse": 24,
+              "VirtualRZ": 12,
+              "Wait": 11
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298224.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298492.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298508.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298772.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298788.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299052.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299068.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299544.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299812.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299828.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300092.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300108.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300372.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300388.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB10__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 12
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB11__drive.awg": {
+            "instructions": {
+              "Block": 4,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB12__drive.awg": {
+            "instructions": {
+              "Block": 2,
+              "Wait": 18,
+              "VirtualRZ": 6,
+              "IQPulse": 22
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298192.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298476.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298492.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298756.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298772.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299036.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299052.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299796.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299812.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300076.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300092.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300356.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300372.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB12__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB13__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "Wait": 9,
+              "VirtualRZ": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB14__drive.awg": {
+            "instructions": {
+              "Block": 4,
+              "Wait": 16,
+              "VirtualRZ": 9,
+              "IQPulse": 26
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298224.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298240.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298500.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298516.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298772.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298788.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299044.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299060.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299544.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299560.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299820.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299836.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300092.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300108.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300364.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300380.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB14__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB15__drive.awg": {
+            "instructions": {
+              "Block": 7,
+              "IQPulse": 6,
+              "VirtualRZ": 12,
+              "Wait": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB16__drive.awg": {
+            "instructions": {
+              "Block": 4,
+              "IQPulse": 22,
+              "Wait": 16,
+              "VirtualRZ": 9
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298208.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298224.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298240.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298512.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298800.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298816.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299088.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299104.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299528.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299544.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299560.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299832.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299848.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300120.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300136.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300408.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300424.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB16__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 15,
+              "FluxPulse": 9
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB19__drive.awg": {
+            "instructions": {
+              "Block": 2,
+              "IQPulse": 22,
+              "VirtualRZ": 6,
+              "Wait": 11
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298128.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298144.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298448.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298732.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298748.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299032.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299048.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299448.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299464.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299752.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299768.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300052.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300068.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300352.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300368.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB19__flux.awg": {
+            "instructions": {
+              "Block": 6,
+              "Wait": 12,
+              "FluxPulse": 6
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "QB20__drive.awg": {
+            "instructions": {
+              "Block": 4,
+              "IQPulse": 6,
+              "VirtualRZ": 6,
+              "Wait": 6
+            },
+            "events": [
+              {
+                "kind": "IQPulse",
+                "start_ns": 298000.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 298096.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299320.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 299416.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300640.0,
+                "duration_ns": 16.0,
+                "labels": []
+              },
+              {
+                "kind": "IQPulse",
+                "start_ns": 300736.0,
+                "duration_ns": 16.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-4-5__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-6-7__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-8-9__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-4-9__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-1-4__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-10-11__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-6-11__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-5-10__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-2-5__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-1-2__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-5-6__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-7-12__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-8-13__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-14-15__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-9-14__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-13-14__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-19-20__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298016.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299336.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300656.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-16-20__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298056.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299376.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300696.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-11-16__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-11-12__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298152.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299472.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300792.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-15-19__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298072.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299392.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300712.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-10-15__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298112.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299432.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300752.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-9-10__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "TC-15-16__flux.awg": {
+            "instructions": {
+              "Wait": 5,
+              "FluxPulse": 3
+            },
+            "events": [
+              {
+                "kind": "FluxPulse",
+                "start_ns": 298168.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 299488.0,
+                "duration_ns": 40.0,
+                "labels": []
+              },
+              {
+                "kind": "FluxPulse",
+                "start_ns": 300808.0,
+                "duration_ns": 40.0,
+                "labels": []
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-1__readout": {
+            "instructions": {
+              "Wait": 5,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1096.0,
+                "labels": [
+                  "QB7__c_33_0_0",
+                  "QB5__c_33_0_2",
+                  "QB1__c_33_0_3"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1096.0,
+                "labels": [
+                  "QB7__c_33_0_8",
+                  "QB5__c_33_0_10",
+                  "QB1__c_33_0_11"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 984.0,
+                "labels": [
+                  "QB7__c_33_0_16",
+                  "QB5__c_33_0_18",
+                  "QB1__c_33_0_19",
+                  "QB12__c_33_0_24",
+                  "QB6__c_33_0_25",
+                  "QB2__c_33_0_26",
+                  "QB17____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-2__readout": {
+            "instructions": {
+              "Wait": 5,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1068.0,
+                "labels": [
+                  "QB11__c_33_0_1",
+                  "QB20__c_33_0_4",
+                  "QB9__c_33_0_6"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1068.0,
+                "labels": [
+                  "QB11__c_33_0_9",
+                  "QB20__c_33_0_12",
+                  "QB9__c_33_0_14"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 844.0,
+                "labels": [
+                  "QB11__c_33_0_17",
+                  "QB20__c_33_0_20",
+                  "QB9__c_33_0_22",
+                  "QB16__c_33_0_27",
+                  "QB10__c_33_0_28",
+                  "QB4__c_33_0_29",
+                  "QB3____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          },
+          "PL-3__readout": {
+            "instructions": {
+              "Wait": 4,
+              "ReadoutTrigger": 3
+            },
+            "events": [
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 298224.0,
+                "duration_ns": 1032.0,
+                "labels": [
+                  "QB15__c_33_0_5",
+                  "QB13__c_33_0_7"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 299544.0,
+                "duration_ns": 1032.0,
+                "labels": [
+                  "QB15__c_33_0_13",
+                  "QB13__c_33_0_15"
+                ]
+              },
+              {
+                "kind": "ReadoutTrigger",
+                "start_ns": 300864.0,
+                "duration_ns": 1036.0,
+                "labels": [
+                  "QB15__c_33_0_21",
+                  "QB13__c_33_0_23",
+                  "QB19__c_33_0_30",
+                  "QB14__c_33_0_31",
+                  "QB8__c_33_0_32",
+                  "QB18____ONLY_PROBE"
+                ]
+              }
+            ],
+            "duration_ns": 301900.0
+          }
+        },
+        "dd_added_iq_pulses": {
+          "QB1__drive.awg": 0,
+          "QB2__drive.awg": 16,
+          "QB2__flux.awg": 0,
+          "QB4__drive.awg": 16,
+          "QB4__flux.awg": 0,
+          "QB5__drive.awg": 0,
+          "QB6__drive.awg": 16,
+          "QB6__flux.awg": 0,
+          "QB7__drive.awg": 0,
+          "QB8__drive.awg": 16,
+          "QB8__flux.awg": 0,
+          "QB9__drive.awg": 0,
+          "QB10__drive.awg": 16,
+          "QB10__flux.awg": 0,
+          "QB11__drive.awg": 0,
+          "QB12__drive.awg": 16,
+          "QB12__flux.awg": 0,
+          "QB13__drive.awg": 0,
+          "QB14__drive.awg": 16,
+          "QB14__flux.awg": 0,
+          "QB15__drive.awg": 0,
+          "QB16__drive.awg": 16,
+          "QB16__flux.awg": 0,
+          "QB19__drive.awg": 16,
+          "QB19__flux.awg": 0,
+          "QB20__drive.awg": 0,
+          "TC-4-5__flux.awg": 0,
+          "TC-6-7__flux.awg": 0,
+          "TC-8-9__flux.awg": 0,
+          "TC-4-9__flux.awg": 0,
+          "TC-1-4__flux.awg": 0,
+          "TC-10-11__flux.awg": 0,
+          "TC-6-11__flux.awg": 0,
+          "TC-5-10__flux.awg": 0,
+          "TC-2-5__flux.awg": 0,
+          "TC-1-2__flux.awg": 0,
+          "TC-5-6__flux.awg": 0,
+          "TC-7-12__flux.awg": 0,
+          "TC-8-13__flux.awg": 0,
+          "TC-14-15__flux.awg": 0,
+          "TC-9-14__flux.awg": 0,
+          "TC-13-14__flux.awg": 0,
+          "TC-19-20__flux.awg": 0,
+          "TC-16-20__flux.awg": 0,
+          "TC-11-16__flux.awg": 0,
+          "TC-11-12__flux.awg": 0,
+          "TC-15-19__flux.awg": 0,
+          "TC-10-15__flux.awg": 0,
+          "TC-9-10__flux.awg": 0,
+          "TC-15-16__flux.awg": 0,
+          "PL-1__readout": 0,
+          "PL-2__readout": 0,
+          "PL-3__readout": 0
+        },
+        "total_dd_added_iq_pulses": 144,
+        "dd_strategy": {
+          "merge_contiguous_waits": true,
+          "target_qubits": [
+            "QB16",
+            "QB14",
+            "QB2",
+            "QB10",
+            "QB8",
+            "QB4",
+            "QB12",
+            "QB19",
+            "QB6"
+          ],
+          "skip_leading_wait": true,
+          "skip_trailing_wait": true,
+          "gate_sequences": [
+            [
+              5,
+              "YXYX",
+              "asap"
+            ]
+          ]
+        },
+        "schedule_duration_ns": 301900.0,
+        "measurement_implementation": "standard IQM defaults",
+        "measurement_operations": [
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB7"
+            ],
+            "key": "c_33_0_0"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB11"
+            ],
+            "key": "c_33_0_1"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB5"
+            ],
+            "key": "c_33_0_2"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB1"
+            ],
+            "key": "c_33_0_3"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB20"
+            ],
+            "key": "c_33_0_4"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB15"
+            ],
+            "key": "c_33_0_5"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB9"
+            ],
+            "key": "c_33_0_6"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB13"
+            ],
+            "key": "c_33_0_7"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB7"
+            ],
+            "key": "c_33_0_8"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB11"
+            ],
+            "key": "c_33_0_9"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB5"
+            ],
+            "key": "c_33_0_10"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB1"
+            ],
+            "key": "c_33_0_11"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB20"
+            ],
+            "key": "c_33_0_12"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB15"
+            ],
+            "key": "c_33_0_13"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB9"
+            ],
+            "key": "c_33_0_14"
+          },
+          {
+            "gate": "measure",
+            "implementation": "constant",
+            "locus": [
+              "QB13"
+            ],
+            "key": "c_33_0_15"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB7"
+            ],
+            "key": "c_33_0_16"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB11"
+            ],
+            "key": "c_33_0_17"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB5"
+            ],
+            "key": "c_33_0_18"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB1"
+            ],
+            "key": "c_33_0_19"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB20"
+            ],
+            "key": "c_33_0_20"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB15"
+            ],
+            "key": "c_33_0_21"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB9"
+            ],
+            "key": "c_33_0_22"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB13"
+            ],
+            "key": "c_33_0_23"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB12"
+            ],
+            "key": "c_33_0_24"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB6"
+            ],
+            "key": "c_33_0_25"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB2"
+            ],
+            "key": "c_33_0_26"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB16"
+            ],
+            "key": "c_33_0_27"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB10"
+            ],
+            "key": "c_33_0_28"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB4"
+            ],
+            "key": "c_33_0_29"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB19"
+            ],
+            "key": "c_33_0_30"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB14"
+            ],
+            "key": "c_33_0_31"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "constant",
+            "locus": [
+              "QB8"
+            ],
+            "key": "c_33_0_32"
+          },
+          {
+            "gate": "measure_fidelity",
+            "implementation": "default_aggregator",
+            "locus": [
+              "QB17",
+              "QB3",
+              "QB18"
+            ],
+            "key": "__ONLY_PROBE"
+          }
+        ],
+        "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+        "readout_mapping": [
+          {
+            "c_33_0_0": [
+              "QB7__c_33_0_0"
+            ],
+            "c_33_0_2": [
+              "QB5__c_33_0_2"
+            ],
+            "c_33_0_3": [
+              "QB1__c_33_0_3"
+            ],
+            "c_33_0_8": [
+              "QB7__c_33_0_8"
+            ],
+            "c_33_0_10": [
+              "QB5__c_33_0_10"
+            ],
+            "c_33_0_11": [
+              "QB1__c_33_0_11"
+            ],
+            "c_33_0_16": [
+              "QB7__c_33_0_16"
+            ],
+            "c_33_0_18": [
+              "QB5__c_33_0_18"
+            ],
+            "c_33_0_19": [
+              "QB1__c_33_0_19"
+            ],
+            "c_33_0_24": [
+              "QB12__c_33_0_24"
+            ],
+            "c_33_0_25": [
+              "QB6__c_33_0_25"
+            ],
+            "c_33_0_26": [
+              "QB2__c_33_0_26"
+            ],
+            "c_33_0_1": [
+              "QB11__c_33_0_1"
+            ],
+            "c_33_0_4": [
+              "QB20__c_33_0_4"
+            ],
+            "c_33_0_6": [
+              "QB9__c_33_0_6"
+            ],
+            "c_33_0_9": [
+              "QB11__c_33_0_9"
+            ],
+            "c_33_0_12": [
+              "QB20__c_33_0_12"
+            ],
+            "c_33_0_14": [
+              "QB9__c_33_0_14"
+            ],
+            "c_33_0_17": [
+              "QB11__c_33_0_17"
+            ],
+            "c_33_0_20": [
+              "QB20__c_33_0_20"
+            ],
+            "c_33_0_22": [
+              "QB9__c_33_0_22"
+            ],
+            "c_33_0_27": [
+              "QB16__c_33_0_27"
+            ],
+            "c_33_0_28": [
+              "QB10__c_33_0_28"
+            ],
+            "c_33_0_29": [
+              "QB4__c_33_0_29"
+            ],
+            "c_33_0_5": [
+              "QB15__c_33_0_5"
+            ],
+            "c_33_0_7": [
+              "QB13__c_33_0_7"
+            ],
+            "c_33_0_13": [
+              "QB15__c_33_0_13"
+            ],
+            "c_33_0_15": [
+              "QB13__c_33_0_15"
+            ],
+            "c_33_0_21": [
+              "QB15__c_33_0_21"
+            ],
+            "c_33_0_23": [
+              "QB13__c_33_0_23"
+            ],
+            "c_33_0_30": [
+              "QB19__c_33_0_30"
+            ],
+            "c_33_0_31": [
+              "QB14__c_33_0_31"
+            ],
+            "c_33_0_32": [
+              "QB8__c_33_0_32"
+            ]
+          }
+        ],
+        "mapped_readout_keys": {},
+        "heralding": false,
+        "all_requested_shots_retained": true
+      },
+      "model_frame": "native",
+      "model_sha256": "1b66df7200dede74a524a767f3f8ed6dc8351b3ede66f10b1c2d77fb4f43d511",
+      "status": "completed",
+      "job_id": "01a1706a-1342-70ba-9d7e-a1172db667df",
+      "data_file": "selected_X_r3.shots.npz",
+      "dataset_sha256": "09a66ccbf6f7d32160a80a96b049542b5edc74ac5c95239e32007819fd490bb0",
+      "returned_shots": 2,
+      "collected_utc": "2026-10-25T00:16:11.755200+00:00"
+    }
+  ]
+}

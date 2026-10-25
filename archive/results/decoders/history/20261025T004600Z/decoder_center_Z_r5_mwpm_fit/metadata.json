@@ -1,0 +1,13 @@
+{
+  "family": "mwpm_fit",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "weight_choice": "model",
+  "training_cv_errors": {
+    "model": 251,
+    "fit": 261
+  },
+  "train_shots": 1800,
+  "dem_sha256": "5631822a2c9cf375c790790598b1c2879a6737bad1aea16321325976ec423706"
+}

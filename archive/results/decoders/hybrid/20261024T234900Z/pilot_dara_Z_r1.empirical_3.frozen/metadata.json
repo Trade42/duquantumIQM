@@ -1,0 +1,16 @@
+{
+  "family": "empirical_3",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "weight_choice": "model",
+  "training_cv_errors": {
+    "model": 175,
+    "fit": 179
+  },
+  "train_shots": 6000,
+  "min_count": 3,
+  "fallback": "correlated MWPM",
+  "table_entries": 136,
+  "dem_sha256": "a949a7dd73b621acc7cc430024069ec05d246953b273e85ca51948d38a5dc6fb"
+}

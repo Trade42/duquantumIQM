@@ -1,83 +1,17 @@
-# iyanu: GPU decoders, guarded IQM hardware runs, Garnet/Emerald results
+# Decoder research modules
 
-d=3 rotated surface-code memory without reset (the repo's `challenge.surface_code` circuits), run on
-IQM Garnet and Emerald through IQM Resonance, decoded offline by classical and GPU-trained decoders.
+These modules provide optional inference and characterization tools alongside
+the [surface-code submission](../README.md).
 
-## Modules
-
-| File | What |
+| Module | Function |
 |---|---|
-| `neural_gpu.py` | MLP decoder (detection events → logical flip), CUDA / Apple MPS / CPU; timing and paired-comparison helpers |
-| `conv_decoders.py` | 3D space-time convolutional decoder, and a convolutional pre-decoder that applies confident local DEM edges before PyMatching |
-| `ldpc_decoders.py` | Union-Find, BP+OSD, BP+Union-Find (ldpc 2.x) on the Stim detector error model |
-| `compare_decoders.py` | simulation benchmark of all decoders on the same shots at d = 3, 5, 7 |
-| `garnet_sim.py` | offline Garnet rehearsal: IQMFakeGarnet layout/noise, Stim and Aer shots, network blocked |
-| `qpu.py` | the guarded path to Resonance: read-only backend; `submit` refuses unless `DQ_QPU=run` and within `DQ_QPU_MAX_SHOTS`, checks every CZ in the serialized request against the couplers and the placement, logs the job id before waiting, saves raw data |
-| `hw_run.py` | `prepare` (read-only), `run` (submit; `--dd`, `--heralding`, `--active-reset`), `decode` |
-| `finetune_hw.py` | decoders pre-trained on simulation, fine-tuned on hardware training shots, scored on held-out hardware test shots |
+| `neural_gpu.py` | Detector-vector MLP and accelerated training |
+| `conv_decoders.py` | Space/time convolutions and local predecoding |
+| `ldpc_decoders.py` | Union-find and belief-propagation/OSD adapters |
+| `compare_decoders.py` | Common-shot simulation comparisons |
+| `garnet_sim.py` | Offline native-layout and noise rehearsal |
+| `finetune_hw.py` | Simulation pretraining and independent hardware-label fine-tuning |
 
-Needs PyTorch (and `ldpc` for `ldpc_decoders.py`) on top of the package: `pip install -e '.[test,qiskit,hardware]' torch ldpc`.
-
-```
-python -m pytest -q iyanu                                                    # 16 tests
-python -m iyanu.hw_run prepare --device garnet --rounds 1 2 3 4 --bases Z X   # read-only
-DQ_QPU=run DQ_QPU_MAX_SHOTS=1000 python -m iyanu.hw_run run --device garnet --rounds 2 --shots 1000 --task pilot
-python -m iyanu.hw_run decode iyanu/hw_data/<date>-<task>/<job id>
-python -m iyanu.finetune_hw --train iyanu/hw_data/*-garnet-train2/*/ --test iyanu/hw_data/*-garnet-test/*/ --device cuda
-```
-
-The IQM token is read from `IQM_TOKEN` or the repo's `.env` (git-ignored) and is never printed.
-
-## Hardware data (`hw_data/`)
-
-One directory per job, `<YYYYMMDD>-<task>/<job id>/`: `meta.json` (device, calibration set, options, qubit
-map per circuit, qubits sent, shots requested and returned), `calibration.json` (the live calibration
-used), one `.stim` circuit per round count, and `measurements.npz` (per-circuit shot arrays in Stim
-measurement order, rebuilt from the returned counts, so shot order is not preserved). `counts.json` is
-kept locally only (git-ignored; same data). `ledger.jsonl` lists every submitted job; `NOTES.txt`
-records two jobs IQM declined before execution (over the 20,000-shot limit).
-
-All Garnet jobs on 2026-10-24 used calibration set `a18a947f-0408-4628-81ea-1715637e434f`; the placement
-is the only 17-qubit footprint on Garnet (QB3, QB17, QB18 unused), 0 SWAPs, every CZ checked in the request.
-
-## Results so far (Garnet, d=3, no reset, 20,000 shots per point, calibrated PyMatching unless stated)
-
-eps_L is the per-round logical error rate fitted over rounds 1-4 with 2 P_L = 1 - (1 - 2 eps_L)^r, 95% profile interval.
-
-| Hardware setting | Z eps_L | X eps_L | Shots kept |
-|---|---|---|---|
-| baseline (bracketing runs) | 0.068 to 0.078 | 0.159 to 0.251 (drifts) | 100% |
-| dynamical decoupling | worse (+30%) | **0.0891 [0.0876, 0.0906]**, about -44% vs bracketing baselines | 100% |
-| zeros heralding | **0.0629 [0.0616, 0.0642]**, about -7.5% | no gain with DD | about 84% (post-selected) |
-| active reset (2 cycles) | much worse | much worse | 100% |
-
-### GPU decoders on Garnet hardware shots
-
-Held-out test job `01a16ffd-9995-728f-9388-fe89b1376a5b` (baseline settings, 20,000 shots per round count);
-training: 10 separate jobs (task `garnet-train2`, 200,000 shots per round count, 90% fit / 10% validation).
-`_sim` = trained only on the coherence-aware calibrated simulation; `_ft` = then fine-tuned on Garnet training
-shots (checkpoint chosen on validation). Source: `hw_data/decoder_eval_garnet-20261024T233359.json`,
-log `hw_data/finetune_garnet.log` (Colab NVIDIA L4).
-
-| Decoder | Z eps_L (95%) | X eps_L (95%) |
-|---|---|---|
-| **3D conv, fine-tuned (GPU)** | **0.0653 [0.0641, 0.0666]** | **0.1970 [0.1940, 0.2001]** |
-| **MLP, fine-tuned (GPU)** | 0.0659 [0.0646, 0.0672] | 0.1978 [0.1947, 0.2009] |
-| MLP, simulation only (GPU) | 0.0673 [0.0660, 0.0686] | 0.2101 [0.2069, 0.2133] |
-| PyMatching, coherence-aware calibration | 0.0686 [0.0673, 0.0699] | 0.2040 [0.2009, 0.2072] |
-| conv pre-decoder + PyMatching | 0.0699 [0.0686, 0.0712] | 0.2034 [0.2003, 0.2066] |
-| PyMatching, calibrated (Pauli) | 0.0707 [0.0694, 0.0720] | 0.2137 [0.2104, 0.2170] |
-| lookup table from Garnet training shots | 0.0719 [0.0706, 0.0733] | 0.2065 [0.2034, 0.2098] |
-| BP+OSD | 0.0722 [0.0709, 0.0736] | 0.2044 [0.2013, 0.2076] |
-| PyMatching, uniform | 0.0745 [0.0732, 0.0759] | 0.2130 [0.2097, 0.2163] |
-| lookup table from uniform simulation | 0.0752 [0.0739, 0.0766] | 0.2142 [0.2109, 0.2175] |
-| BP+Union-Find | 0.0797 [0.0782, 0.0811] | 0.2041 [0.2010, 0.2073] |
-| Union-Find | 0.1027 [0.1010, 0.1044] | 0.2544 [0.2504, 0.2584] |
-
-The fine-tuned conv decoder lowers eps_L by 7.6% (Z) and 7.8% (X) relative to calibrated PyMatching; on the
-same shots it fails less at 2, 3 and 4 rounds in both bases (exact McNemar p from 1e-4 to 1e-14), and ties
-at 1 round. These are baseline-setting shots; the DD (X) and heralded (Z) runs are separate datasets.
-
-Simulation (uniform noise, rounds = d): PyMatching scales with distance (P_L 0.030, 0.024, 0.016 at
-d = 3, 5, 7, p = 0.003); the MLP beats PyMatching at d = 3 but the learned decoders fall behind it at
-d >= 5 with this training budget. The pre-decoder leaves 95.5% of d = 3 shots with no matching to do.
+The challenge's evaluated X/Z pipeline and canonical inference interface are
+described in [Methods](../docs/METHODS.md) and
+[Reproduction](../docs/REPRODUCIBILITY.md).

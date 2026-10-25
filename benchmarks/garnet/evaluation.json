@@ -1,0 +1,263 @@
+{
+  "device": "IQM Garnet",
+  "distance": 3,
+  "rounds": [
+    1,
+    2,
+    3
+  ],
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "physical_shots": 54000,
+  "measurements": {
+    "vanilla": {
+      "X": {
+        "epsilon_per_round": 0.18516611070321576,
+        "ci95_profile": [
+          0.17748469116308208,
+          0.19313522324411675
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.18516611070321576,
+          0.30175924430052037,
+          0.3751741837319984
+        ],
+        "negative_log_likelihood": 5167.25119772812,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 61.03339021969191,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 5.581715643174539e-14,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          423,
+          972,
+          1220
+        ],
+        "shots": [
+          3000,
+          3000,
+          3000
+        ],
+        "probabilities": [
+          0.141,
+          0.324,
+          0.4066666666666667
+        ],
+        "wilson_ci95": [
+          [
+            0.12900504479605657,
+            0.15391316858872744
+          ],
+          [
+            0.30748741854770817,
+            0.34096273620360656
+          ],
+          [
+            0.3892194031375169,
+            0.4243526486245439
+          ]
+        ]
+      },
+      "Z": {
+        "epsilon_per_round": 0.0672189392825523,
+        "ci95_profile": [
+          0.06326367155095788,
+          0.07134511408166745
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.06721893928255229,
+          0.12540110696856166,
+          0.17576138746054482
+        ],
+        "negative_log_likelihood": 3188.3928240751125,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 56.9400913870017,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.321318289979522e-13,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          115,
+          409,
+          583
+        ],
+        "shots": [
+          3000,
+          3000,
+          3000
+        ],
+        "probabilities": [
+          0.03833333333333333,
+          0.13633333333333333,
+          0.19433333333333333
+        ],
+        "wilson_ci95": [
+          [
+            0.03203229760214456,
+            0.045815172720906405
+          ],
+          [
+            0.12451849239566237,
+            0.14907832357722473
+          ],
+          [
+            0.18056868994365366,
+            0.20887977957709558
+          ]
+        ]
+      }
+    },
+    "optimized": {
+      "X": {
+        "epsilon_per_round": 0.05807829637056261,
+        "ci95_profile": [
+          0.054920348154939895,
+          0.06136044103692753
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05807829637056261,
+          0.10941041572251142,
+          0.15477997099235707
+        ],
+        "negative_log_likelihood": 3901.3921299461326,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 52.09507406094775,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 4.871900393207587e-12,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          159,
+          404,
+          728
+        ],
+        "shots": [
+          4000,
+          4000,
+          4000
+        ],
+        "probabilities": [
+          0.03975,
+          0.101,
+          0.182
+        ],
+        "wilson_ci95": [
+          [
+            0.034123891739032956,
+            0.04625927580913727
+          ],
+          [
+            0.09204134899531147,
+            0.11072428674987034
+          ],
+          [
+            0.17034972062102471,
+            0.19426048531122542
+          ]
+        ]
+      },
+      "Z": {
+        "epsilon_per_round": 0.04254665187232082,
+        "ci95_profile": [
+          0.04065867001551191,
+          0.044493777910905204
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.04254665187232082,
+          0.08147286857355274,
+          0.11708672489339694
+        ],
+        "negative_log_likelihood": 6340.682669898701,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 198.86204437302445,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 6.571367180062767e-44,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          145,
+          639,
+          1147
+        ],
+        "shots": [
+          8000,
+          8000,
+          8000
+        ],
+        "probabilities": [
+          0.018125,
+          0.079875,
+          0.143375
+        ],
+        "wilson_ci95": [
+          [
+            0.015424563111793608,
+            0.02128799052042057
+          ],
+          [
+            0.07413402124593418,
+            0.08601925832809224
+          ],
+          [
+            0.13586655867332906,
+            0.15122576701090104
+          ]
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "X": {
+      "absolute_ler_reduction": 0.12708781433265315,
+      "relative_ler_reduction": 0.6863448924320148,
+      "ci975_absolute": [
+        0.11790618919555546,
+        0.1365315292843039
+      ],
+      "draws": 20000,
+      "seed": 20261025,
+      "paired": false,
+      "method": "independent binomial bootstrap stratified by rounds and acquisition block; two-basis Bonferroni intervals"
+    },
+    "Z": {
+      "absolute_ler_reduction": 0.02467228741023149,
+      "relative_ler_reduction": 0.36704368848372404,
+      "ci975_absolute": [
+        0.019628999307671032,
+        0.02974291321754656
+      ],
+      "draws": 20000,
+      "seed": 20261025,
+      "paired": false,
+      "method": "independent binomial bootstrap stratified by rounds and acquisition block; two-basis Bonferroni intervals"
+    }
+  }
+}
