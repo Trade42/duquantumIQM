@@ -2,7 +2,7 @@
 
     python -m iyanu.hw_run prepare --device garnet --rounds 1 2 3 4           # read-only
     DQ_QPU=run DQ_QPU_MAX_SHOTS=1000 python -m iyanu.hw_run run --device garnet --rounds 2 --shots 1000 --task garnet-pilot
-    python -m iyanu.hw_run decode iyanu/hw_data/<date>-<task>/<job id> [...]
+    python -m iyanu.hw_run decode archive/iyanu/hw_data/<date>-<task>/<job id> [...]
 
 `prepare` and `run` share one preparation: live calibration, a placement ranked on it over
 the device's coupler grid, native compilation with zero SWAPs, and a check of the serialized

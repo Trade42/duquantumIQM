@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-25T00:39:42.978076+00:00",
+  "primary_rounds": [
+    1,
+    2,
+    3
+  ],
+  "diagnostic_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "equation": "P_L(r)=(1-(1-2*epsilon_L)**r)/2; binomial MLE, amplitude fixed to one",
+  "pilot": {
+    "profiles": [
+      "baseline",
+      "center",
+      "adaptive",
+      "fast"
+    ],
+    "rounds": [
+      1,
+      2,
+      3,
+      5,
+      7
+    ],
+    "shots_per_case": 800,
+    "train": 600,
+    "validation": 200,
+    "physical_shots": 32000
+  },
+  "confirmation": {
+    "blocks": 2,
+    "primary_shots_per_physical_arm_per_block": 2000,
+    "diagnostic_shots_per_physical_arm_per_block": 500,
+    "physical_shots": 64000,
+    "deduplication": "Identical physical arms share shots; double shots for the remaining physical case",
+    "acquisition": "Finish block zero before submitting block one; no confirmation scoring between blocks"
+  },
+  "total_planned_physical_shots": 96000,
+  "hard_limit": 99999,
+  "previous_evidence": "Archived evidence may train/tune; it is never counted as fresh confirmation",
+  "selection": "Minimum pilot validation primary LER, one physical profile and decoder family per basis; ties prefer released",
+  "promotion": "For each basis, candidate adjusted 97.5% CI for LER reduction over released policy must be strictly positive; otherwise retain released",
+  "diagnostics": "R1..7 correlated MWPM, fitted MWPM and recurrent history decoder are each evaluated consistently; no alternate fit window promotion",
+  "physical": {
+    "baseline": "Released fused X/fenced Z + data XY4 ASAP",
+    "center": "Same circuit/readout; data XY4 centered in eligible waits",
+    "adaptive": "Same circuit/readout; centered XY8, XY4 or XX according to eligible wait length",
+    "fast": "Released circuit/DD; calibrated fast_constant ancilla pulse, fidelity data; standard-readout fidelity prior proxy when fast SSRO metric absent"
+  },
+  "qnd": "No calibrated QND implementation in active Garnet architecture; not attempted",
+  "model_limits": "Pauli priors and data-conditioned inference do not model or observe hidden qutrit leakage"
+}

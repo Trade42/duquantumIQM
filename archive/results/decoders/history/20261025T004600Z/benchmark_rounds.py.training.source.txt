@@ -1,0 +1,580 @@
+"""Bounded Garnet improvement study: explicit submission, frozen confirmation.
+
+Primary: IQM challenge A=1 LER on R=1,2,3. R=1..7 are a predeclared diagnostic
+window, not an alternative headline chosen after seeing results. New physical
+shots are charged before submission, including failed/ambiguous attempts.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import importlib.metadata
+import json
+from pathlib import Path
+import random
+import subprocess
+import time
+
+import numpy as np
+import stim
+
+from .benchmark_headline import arrays, challenge_fit, collect, digest, fit_many, utc, write_json
+from .decoders.hybrid import build_decoder, load_decoder, save_decoder
+
+PROFILES = ("baseline", "center", "adaptive", "fast")
+PILOT_ROUNDS = (1, 2, 3, 5, 7)
+PRIMARY = (1, 2, 3)
+DIAGNOSTIC = tuple(range(1, 8))
+OLD = Path("results/decoders/hybrid/20261024T234900Z")
+OLD_LONG = Path("results/bias/20261024T220813Z")
+LIMIT = 99999
+
+
+def template_id(profile, basis, rounds):
+    return f"template_{profile}_{basis}_r{rounds}"
+
+
+def artifact_paths():
+    """Deterministic exact output inventory, also usable for agent file claims."""
+    names = ["manifest.json", "architecture.json", "quality_metrics.json", "pulse_calibration.json", "calibration.json",
+             "protocol.json", "frozen_selection.json", "frozen_artifacts.json", "report.json", "report.md", "ler.png"]
+    for profile in PROFILES:
+        for basis in ("X", "Z"):
+            names += [f"gru_{profile}_{basis}.npz", f"gru_{profile}_{basis}.json"]
+            for r in DIAGNOSTIC:
+                key = template_id(profile, basis, r)
+                names += [f"{key}.{s}" for s in ("source.stim", "native.stim", "decoder.stim", "qpy", "fit.dem")]
+                for family in ("mwpm", "mwpm_fit", "posterior_10"):
+                    for f in ("metadata.json", "model.dem", "table.npz"):
+                        names.append(f"decoder_{profile}_{basis}_r{r}_{family}/{f}")
+    for phase in ("pilot", "confirm0", "confirm1"):
+        for profile in PROFILES:
+            for basis in ("X", "Z"):
+                for r in DIAGNOSTIC:
+                    key = f"{phase}_{profile}_{basis}_r{r}"
+                    names += [f"{key}.{s}" for s in ("source.stim", "native.stim", "decoder.stim", "qpy", "job.json", "shots.npz", "counts.json", "predictions.npz")]
+    names += ["benchmark_rounds.py.source.txt", "history.py.source.txt", "rounds_hardware.py.source.txt"]
+    return sorted(set(names))
+
+
+def charge(manifest, case):
+    """Reserve before contacting the server; ambiguous submissions stay charged."""
+    if case.get("submit_intent_utc") or case.get("job_id"):
+        raise ValueError("Submission already attempted; retrieve its ID, never resubmit automatically.")
+    shots = case["shots"]
+    if not isinstance(shots, int) or shots <= 0:
+        raise ValueError("Shots must be a positive integer.")
+    used = sum(c["shots"] for c in manifest["cases"] if c.get("submit_intent_utc"))
+    if used+shots > manifest["shot_limit"] or manifest["shot_limit"] >= 100000:
+        raise ValueError("Hard physical-shot budget exceeded.")
+    case.update(submit_intent_utc=utc(), status="submission_intent")
+    manifest["charged_shots"] = used+shots
+
+
+def compare(first, second, *, paired, rounds=PRIMARY, draws=12000, alpha=.025, seed=7321):
+    """Reference minus candidate, preserving acquisition block and round strata."""
+    rng = np.random.default_rng(seed)
+    a = np.zeros((draws, len(rounds)), int)
+    b = np.zeros_like(a)
+    na, nb = np.zeros(len(rounds), int), np.zeros(len(rounds), int)
+    for j, r in enumerate(rounds):
+        for block in (0, 1):
+            fa, fb = np.asarray(first[r][block], bool), np.asarray(second[r][block], bool)
+            na[j] += len(fa); nb[j] += len(fb)
+            if paired:
+                if len(fa) != len(fb):
+                    raise ValueError("Paired comparisons require identical shots.")
+                cells = np.bincount(2*fa.astype(int)+fb, minlength=4)
+                sample = rng.multinomial(len(fa), cells/len(fa), draws)
+                a[:, j] += sample[:, 2]+sample[:, 3]
+                b[:, j] += sample[:, 1]+sample[:, 3]
+            else:
+                a[:, j] += rng.binomial(len(fa), fa.mean(), draws)
+                b[:, j] += rng.binomial(len(fb), fb.mean(), draws)
+    delta = fit_many(a, na, rounds)-fit_many(b, nb, rounds)
+    value = fit_many(np.array([[sum(v.sum() for v in first[r].values()) for r in rounds]]), na, rounds)[0] \
+        -fit_many(np.array([[sum(v.sum() for v in second[r].values()) for r in rounds]]), nb, rounds)[0]
+    return dict(absolute_ler_reduction=float(value), ci=np.quantile(delta, [alpha/2, 1-alpha/2]).tolist(),
+                confidence=1-alpha, paired=paired, draws=draws, seed=seed,
+                method="round/block-stratified failure bootstrap; refit challenge A=1 equation",
+                excludes="calibration drift outside the two acquisition blocks")
+
+
+def protocol():
+    return dict(created_utc=utc(), primary_rounds=list(PRIMARY), diagnostic_rounds=list(DIAGNOSTIC),
+                equation="P_L(r)=(1-(1-2*epsilon_L)**r)/2; binomial MLE, amplitude fixed to one",
+                pilot=dict(profiles=list(PROFILES), rounds=list(PILOT_ROUNDS), shots_per_case=800,
+                           train=600, validation=200, physical_shots=32000),
+                confirmation=dict(blocks=2, primary_shots_per_physical_arm_per_block=2000,
+                                  diagnostic_shots_per_physical_arm_per_block=500, physical_shots=64000,
+                                  deduplication="Identical physical arms share shots; double shots for the remaining physical case",
+                                  acquisition="Finish block zero before submitting block one; no confirmation scoring between blocks"),
+                total_planned_physical_shots=96000, hard_limit=LIMIT,
+                previous_evidence="Archived evidence may train/tune; it is never counted as fresh confirmation",
+                selection="Minimum pilot validation primary LER, one physical profile and decoder family per basis; ties prefer released",
+                promotion="For each basis, candidate adjusted 97.5% CI for LER reduction over released policy must be strictly positive; otherwise retain released",
+                diagnostics="R1..7 correlated MWPM, fitted MWPM and recurrent history decoder are each evaluated consistently; no alternate fit window promotion",
+                physical=dict(baseline="Released fused X/fenced Z + data XY4 ASAP",
+                              center="Same circuit/readout; data XY4 centered in eligible waits",
+                              adaptive="Same circuit/readout; centered XY8, XY4 or XX according to eligible wait length",
+                              fast="Released circuit/DD; calibrated fast_constant ancilla pulse, fidelity data; standard-readout fidelity prior proxy when fast SSRO metric absent"),
+                qnd="No calibrated QND implementation in active Garnet architecture; not attempted",
+                model_limits="Pauli priors and data-conditioned inference do not model or observe hidden qutrit leakage")
+
+
+def initialize(output, backend, executor):
+    from iqm_surface_code.benchmark_garnet import calibration_from_observations
+    from .rounds_hardware import prepare
+    existing = json.loads((output/"manifest.json").read_text()) if (output/"manifest.json").exists() else None
+    if existing and (existing["cases"] or existing["charged_shots"]):
+        raise ValueError("Preflight initialization may resume only before any physical shots.")
+    output.mkdir(parents=True, exist_ok=existing is not None)
+    calid = backend.architecture.calibration_set_id
+    architecture = backend.architecture.model_dump(mode="json")
+    quality = backend.client.get_quality_metric_set(calid).model_dump(mode="json")
+    pulse = backend.client.get_calibration_set(calid).model_dump(mode="json")
+    cal = calibration_from_observations(architecture, quality, pulse)
+    cal.save(output/"calibration.json")
+    write_json(output/"architecture.json", architecture)
+    write_json(output/"quality_metrics.json", quality)
+    write_json(output/"pulse_calibration.json", pulse)
+    old = json.loads((OLD/"manifest.json").read_text())
+    if str(calid) != old["calibration_set_id"]:
+        raise ValueError("Calibration changed; archived released policy requires requalification.")
+    mapping = {int(q): p for q, p in old["placement"].items()}
+    plan = json.loads((output/"protocol.json").read_text()) if existing else protocol()
+    plan["physical"]["fast"] = protocol()["physical"]["fast"]
+    write_json(output/"protocol.json", plan)
+    manifest = existing or dict(created_utc=utc(), calibration_set_id=str(calid), placement=mapping, cases=[], templates=[],
+                    shot_limit=LIMIT, charged_shots=0, protocol_sha256=digest(output/"protocol.json"),
+                    base_commit=subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+                    versions={p: importlib.metadata.version(p) for p in ("stim", "numpy", "scipy", "pymatching", "qiskit", "iqm-client", "iqm-pulla", "torch")},
+                    archived_source=str(OLD), archived_manifest_sha256=digest(OLD/"manifest.json"))
+    if existing and existing["calibration_set_id"] != str(calid):
+        raise ValueError("Preflight calibration changed.")
+    manifest["protocol_sha256"] = digest(output/"protocol.json")
+    dependencies = ["challenge/benchmark_headline.py", "challenge/decoders/hybrid.py", "darawork/decoders/dem_fit.py",
+                    "darawork/decoders/ensemble_decoder.py", "ethan/src/iqm_surface_code/hardware_optimization.py",
+                    "ethan/src/iqm_surface_code/decoders/lookup_table.py"]
+    manifest["source_dependencies"] = {p: digest(p) for p in dependencies}
+    sources = (Path(__file__), Path(__file__).parent/"rounds_hardware.py", Path(__file__).parent/"decoders"/"history.py")
+    manifest.setdefault("preflight_revisions", []).append(dict(utc=utc(), source_hashes={p.name: digest(p) for p in sources}))
+    for path in sources:
+        (output/(path.name+".source.txt")).write_bytes(path.read_bytes())
+    write_json(output/"manifest.json", manifest)
+    for profile in PROFILES:
+        for basis in ("X", "Z"):
+            for r in DIAGNOSTIC:
+                if any(c["id"] == template_id(profile, basis, r) for c in manifest["templates"]):
+                    continue
+                case = dict(id=template_id(profile, basis, r), profile=profile, basis=basis, rounds=r, shots=800)
+                prepare(output, case, backend, executor, cal, quality, mapping)
+                source = stim.Circuit.from_file(output/f"{case['id']}.source.stim")
+                native = stim.Circuit.from_file(output/f"{case['id']}.native.stim")
+                raw = np.random.default_rng(7319).integers(0, 2, (32, source.num_measurements), dtype=np.uint8).astype(bool)
+                a = source.compile_m2d_converter().convert(measurements=raw, separate_observables=True)
+                b = native.compile_m2d_converter().convert(measurements=raw[:, case["native_measurement_columns"]], separate_observables=True)
+                ideal = native.compile_m2d_converter().convert(measurements=native.compile_sampler(seed=7319).sample(32), separate_observables=True)
+                if any(not np.array_equal(x, y) for x, y in zip(a, b)) or any(v.any() for v in ideal):
+                    raise ValueError("Source/native detector frame verification failed.")
+                manifest["templates"].append(case)
+                write_json(output/"manifest.json", manifest)
+            print("COMPILED", profile, basis, flush=True)
+    return manifest
+
+
+def template(manifest, profile, basis, r):
+    return next(c for c in manifest["templates"] if c["profile"] == profile and c["basis"] == basis and c["rounds"] == r)
+
+
+def get_model(output, manifest, profile, basis, r):
+    c = template(manifest, profile, basis, r)
+    return stim.Circuit.from_file(output/f"{c['id']}.decoder.stim")
+
+
+def archived_records(output, manifest, profile, basis, r):
+    old = json.loads((OLD/"manifest.json").read_text())
+    if digest(OLD/"manifest.json") != manifest["archived_manifest_sha256"]:
+        raise ValueError("Archived evidence manifest changed.")
+    t = template(manifest, profile, basis, r)
+    records = [c for c in old["cases"] if c["profile"] == "ethan" and c["basis"] == basis and c["rounds"] == r]
+    # DD/readout are physical domain shifts, explicitly recorded. Both detector
+    # definitions and logical frame must still agree exactly with the native prior.
+    if any(c["native_sha256"] != t["native_sha256"] or c["source_sha256"] != t["source_sha256"] for c in records):
+        raise ValueError("Archived and new detector frames differ.")
+    return [arrays(OLD, c) for c in records]
+
+
+def stage_long_training(output, manifest):
+    """Archive only compatible, previously collected controls, never fresh tests."""
+    if (output/"archived_long.json").exists():
+        return json.loads((output/"archived_long.json").read_text())
+    previous = json.loads((OLD_LONG/"manifest.json").read_text())
+    if previous["calibration_set_id"] != manifest["calibration_set_id"] or previous["placement"] != {str(k): v for k, v in manifest["placement"].items()}:
+        raise ValueError("Long-history training calibration or layout mismatch.")
+    records = []
+    for c in previous["cases"]:
+        if c.get("condition") != "control" or c["rounds"] not in (4, 5, 7):
+            continue
+        native = stim.Circuit.from_file(OLD_LONG/f"{c['id']}.native.stim")
+        t = template(manifest, "baseline", c["basis"], c["rounds"])
+        if hashlib.sha256(str(native).encode()).hexdigest() != t["native_sha256"]:
+            raise ValueError("Archived long-history native frame mismatch.")
+        arrays(OLD_LONG, c)  # Verify the immutable source dataset before copying.
+        filename = f"archived_{c['id']}.shots.npz"
+        (output/filename).write_bytes((OLD_LONG/c["data_file"]).read_bytes())
+        records.append(dict(id=c["id"], basis=c["basis"], rounds=c["rounds"], shots=c["shots"],
+                            data_file=filename, dataset_sha256=c["dataset_sha256"],
+                            native_sha256=t["native_sha256"], job_id=c["job_id"],
+                            original_directory=str(OLD_LONG), purpose="archived development only"))
+    write_json(output/"archived_long.json", records)
+    return records
+
+
+def snapshot_development_sources(output, manifest):
+    """Preserve the pre-pilot sources and seal the final development revision."""
+    for path in (Path(__file__), Path(__file__).parent/"rounds_hardware.py", Path(__file__).parent/"decoders"/"history.py"):
+        prior = output/(path.name+".source.txt")
+        saved = output/(path.name+".prepilot.source.txt")
+        if not saved.exists():
+            saved.write_bytes(prior.read_bytes())
+        prior.write_bytes(path.read_bytes())
+    manifest["development_sources_recorded_utc"] = utc()
+    write_json(output/"manifest.json", manifest)
+
+
+def released(basis, r):
+    if r not in PRIMARY:
+        raise ValueError("Released posterior policy is qualified only for R1..3.")
+    old = json.loads((OLD/"manifest.json").read_text())
+    family = "mwpm" if basis == "X" else "posterior_10"
+    c = next(c for c in old["cases"] if c["phase"] == "pilot" and c["profile"] == "ethan" and c["basis"] == basis and c["rounds"] == r)
+    return load_decoder(OLD/c["validation"][family]["decoder_dir"])
+
+
+def decoder(output, manifest, profile, basis, r, family, modules=None):
+    if family == "released":
+        return released(basis, r)
+    if family.startswith("gru_"):
+        from .decoders.history import HistoryDecoder, load
+        key = (profile, basis)
+        module, meta = modules[key] if modules and key in modules else load(output/f"gru_{profile}_{basis}")
+        c = template(manifest, profile, basis, r)
+        native = stim.Circuit.from_file(output/f"{c['id']}.native.stim")
+        dem = stim.DetectorErrorModel.from_file(output/f"{c['id']}.fit.dem")
+        return HistoryDecoder(module, native, dem, threshold=float(family.split("_")[1]), metadata=meta)
+    return load_decoder(output/f"decoder_{profile}_{basis}_r{r}_{family}")
+
+
+def develop(output, manifest, *, steps=1200):
+    from .decoders.history import save, train
+    from darawork.decoders.dem_fit import choose_dem
+    pilot = [c for c in manifest["cases"] if c["phase"] == "pilot"]
+    if len(pilot) != 40 or any(not c.get("data_file") for c in pilot):
+        raise ValueError("All 32000 pilot shots required before development.")
+    if any(c["phase"].startswith("confirm") for c in manifest["cases"]):
+        raise ValueError("Development must precede every confirmation submission.")
+    if (output/"frozen_selection.json").exists():
+        raise ValueError("Selection already frozen.")
+    snapshot_development_sources(output, manifest)
+    long_records = stage_long_training(output, manifest)
+    scores, modules = [], {}
+    for profile in PROFILES:
+        for basis in ("X", "Z"):
+            training, tuning = [], []
+            for r in DIAGNOSTIC:
+                started = time.perf_counter()
+                model = get_model(output, manifest, profile, basis, r)
+                c = template(manifest, profile, basis, r)
+                native = stim.Circuit.from_file(output/f"{c['id']}.native.stim")
+                previous = archived_records(output, manifest, profile, basis, r) if r in PRIMARY else [
+                    arrays(output, v) for v in long_records if v["basis"] == basis and v["rounds"] == r]
+                case = next((v for v in pilot if v["profile"] == profile and v["basis"] == basis and v["rounds"] == r), None)
+                current = arrays(output, case) if case else None
+                chunks = previous+([(current[0][:600], current[1][:600])] if current else [])
+                # R6 has no archived/current hardware training here. Synthetic
+                # training remains labeled synthetic, with the identical prior.
+                if chunks:
+                    d, o = map(np.concatenate, zip(*chunks))
+                else:
+                    d, o = model.compile_detector_sampler(seed=7319+r).sample(12000, separate_observables=True)
+                fitted, choice, cv = choose_dem(model, d, o)
+                fitted.to_file(output/f"{c['id']}.fit.dem")
+                # Reserve an internal, deterministic development split from
+                # archived/synthetic training; pilot validation remains untouched.
+                order = np.random.default_rng(7319+r).permutation(len(d))
+                split = max(1, int(.9*len(d)))
+                training.append((native, fitted, d[order[:split]], o[order[:split]]))
+                tuning.append((native, fitted, d[order[split:]], o[order[split:]]))
+                if current:
+                    # Replay archived data while giving the current physical
+                    # domain its own equally sampled record. The extra records
+                    # reuse only their existing internal fit/tuning partition;
+                    # the 200-shot pilot validation never enters training.
+                    fresh_offset = len(d)-600
+                    fresh_fit = order[:split][order[:split] >= fresh_offset]
+                    fresh_tune = order[split:][order[split:] >= fresh_offset]
+                    if len(fresh_fit) and len(fresh_tune):
+                        training.append((native, fitted, d[fresh_fit], o[fresh_fit]))
+                        tuning.append((native, fitted, d[fresh_tune], o[fresh_tune]))
+                for family in ("mwpm", "mwpm_fit") + (("posterior_10",) if r in PRIMARY else ()):
+                    adapter, dem = build_decoder(model, family, train_dets=d, train_obs=o)
+                    save_decoder(adapter, dem, output/f"decoder_{profile}_{basis}_r{r}_{family}")
+                c["training"] = dict(shots=len(d), archived_shots=sum(len(v[0]) for v in previous),
+                                     current_hardware_shots=600 if current else 0, synthetic=not chunks,
+                                     fitted_choice=choice, fitted_cv=cv, setup_seconds=time.perf_counter()-started)
+            module, metadata = train(training, tuning, steps=steps)
+            metadata["sampling"] = "Balanced round records plus current-domain replay; counts include reused training exposure"
+            save(module, metadata, output/f"gru_{profile}_{basis}")
+            modules[profile, basis] = (module, metadata)
+            families = ["mwpm", "mwpm_fit", "posterior_10", "gru_0.5", "gru_0.6", "gru_0.7", "gru_0.8"]
+            if profile == "baseline":
+                families.append("released")
+            for family in families:
+                errors = []
+                for r in PRIMARY:
+                    case = next(c for c in pilot if c["profile"] == profile and c["basis"] == basis and c["rounds"] == r)
+                    d, o = arrays(output, case)
+                    pred = decoder(output, manifest, profile, basis, r, family, modules).decode_batch(d[600:])
+                    errors.append(int(np.any(pred != o[600:], axis=1).sum()))
+                scores.append(dict(profile=profile, basis=basis, family=family, fit=challenge_fit(PRIMARY, errors, [200]*3)))
+            print("DEVELOPED", profile, basis, flush=True)
+            write_json(output/"manifest.json", manifest)
+    arms = {b: min((v for v in scores if v["basis"] == b), key=lambda v: (v["fit"]["epsilon_per_round"], v["family"] != "released", v["profile"], v["family"])) for b in ("X", "Z")}
+    frozen = dict(created_utc=utc(), primary_rounds=list(PRIMARY), scores=scores, candidate=arms,
+                  protocol_sha256=manifest["protocol_sha256"], selection="minimum fresh pilot R1..3 validation LER")
+    write_json(output/"frozen_selection.json", frozen)
+    files = [p for p in output.rglob("*") if p.is_file() and
+             (p.parent.name.startswith("decoder_") or p.suffix == ".dem" or p.name.startswith("gru_") or p.name.endswith("source.txt") or
+              p.name in {"protocol.json", "frozen_selection.json"} or p.name.startswith("template_"))]
+    # Also seal the released policy's exact inference files, outside this run.
+    sealed = {p.resolve().relative_to(Path.cwd()).as_posix(): digest(p) for p in files}
+    old = json.loads((OLD/"manifest.json").read_text())
+    for b in ("X", "Z"):
+        family = "mwpm" if b == "X" else "posterior_10"
+        for r in PRIMARY:
+            c = next(c for c in old["cases"] if c["phase"] == "pilot" and c["profile"] == "ethan" and c["basis"] == b and c["rounds"] == r)
+            for p in (OLD/c["validation"][family]["decoder_dir"]).iterdir():
+                if p.is_file():
+                    sealed[p.resolve().relative_to(Path.cwd()).as_posix()] = digest(p)
+    write_json(output/"frozen_artifacts.json", sealed)
+    manifest.update(selection_sha256=digest(output/"frozen_selection.json"),
+                    frozen_artifacts_sha256=digest(output/"frozen_artifacts.json"), selection_frozen_utc=utc())
+    write_json(output/"manifest.json", manifest)
+    print("FROZEN", {b: (v["profile"], v["family"], v["fit"]["epsilon_per_round"]) for b, v in arms.items()}, flush=True)
+
+
+def verify(output, manifest):
+    if digest(output/"protocol.json") != manifest["protocol_sha256"]:
+        raise ValueError("Predeclared protocol changed.")
+    if digest(output/"frozen_artifacts.json") != manifest["frozen_artifacts_sha256"]:
+        raise ValueError("Inference seal changed.")
+    for name, expected in json.loads((output/"frozen_artifacts.json").read_text()).items():
+        if digest(name) != expected:
+            raise ValueError(f"Frozen inference artifact changed: {name}")
+    for name, expected in manifest.get("source_dependencies", {}).items():
+        if digest(name) != expected:
+            raise ValueError("Shared source dependency changed after preflight.")
+    for p in (Path(__file__), Path(__file__).parent/"rounds_hardware.py", Path(__file__).parent/"decoders"/"history.py"):
+        if p.read_bytes() != (output/(p.name+".source.txt")).read_bytes():
+            raise ValueError("Inference/submission source changed after initialization.")
+
+
+def planned_cases(manifest, phase, selection=None):
+    cases = []
+    for basis in ("X", "Z"):
+        profiles = PROFILES if phase == "pilot" else sorted({"baseline", selection["candidate"][basis]["profile"]})
+        for profile in profiles:
+            for r in PILOT_ROUNDS if phase == "pilot" else DIAGNOSTIC:
+                shots = 800 if phase == "pilot" else (2000 if r in PRIMARY else 500)*(2 if len(profiles) == 1 else 1)
+                cases.append(dict(id=f"{phase}_{profile}_{basis}_r{r}", phase=phase, profile=profile, basis=basis, rounds=r, shots=shots))
+    random.Random(7320+len(phase)).shuffle(cases)
+    return cases
+
+
+def submit(output, manifest, phase, backend, executor, cal, quality, mapping):
+    from .rounds_hardware import prepare
+    selection = None
+    if phase.startswith("confirm"):
+        verify(output, manifest)
+        selection = json.loads((output/"frozen_selection.json").read_text())
+        if phase == "confirm1":
+            zero = [c for c in manifest["cases"] if c["phase"] == "confirm0"]
+            if not zero or any(not c.get("data_file") for c in zero):
+                raise ValueError("Block zero must finish before block one submission.")
+    if any(c["phase"] == phase for c in manifest["cases"]):
+        raise ValueError("Phase already attempted; use collect, never automatic resubmission.")
+    cases = planned_cases(manifest, phase, selection)
+    planned = sum(c["shots"] for c in cases)
+    if manifest["charged_shots"]+planned > manifest["shot_limit"]:
+        raise ValueError("Entire phase would exceed the hard shot limit.")
+    for case in cases:
+        _, run, context = prepare(output, case, backend, executor, cal, quality, mapping)
+        t = template(manifest, case["profile"], case["basis"], case["rounds"])
+        for key in ("source_sha256", "native_sha256", "model_sha256", "native_measurement_columns"):
+            if case[key] != t[key]:
+                raise ValueError("Compiled physical/decoder frame differs from frozen template.")
+        if case["pulse_audit"]["after"] != t["pulse_audit"]["after"]:
+            raise ValueError("Actual pulse schedule changed from compiled template.")
+        manifest["cases"].append(case)
+        charge(manifest, case)
+        write_json(output/"manifest.json", manifest)
+        job = executor.submit(run, context)
+        case.update(job_id=str(job.job_id), submitted_utc=utc(), status="submitted")
+        write_json(output/"manifest.json", manifest)
+        print("SUBMITTED", case["id"], case["shots"], "TOTAL", manifest["charged_shots"], flush=True)
+
+
+def analyze(output, manifest):
+    import psutil
+    import torch
+    verify(output, manifest)
+    cases = [c for c in manifest["cases"] if c["phase"].startswith("confirm")]
+    if {c["phase"] for c in cases} != {"confirm0", "confirm1"} or any(not c.get("data_file") for c in cases):
+        raise ValueError("Both complete confirmation blocks required; no interim tuning/scoring.")
+    selection = json.loads((output/"frozen_selection.json").read_text())
+    series, times = {}, []
+    for c in cases:
+        basis, profile, r = c["basis"], c["profile"], c["rounds"]
+        d, o = arrays(output, c)
+        families = ["mwpm", "mwpm_fit", "gru_0.5"]
+        if r in PRIMARY:
+            if profile == "baseline":
+                families.append("released")
+            if profile == selection["candidate"][basis]["profile"]:
+                families.append(selection["candidate"][basis]["family"])
+        predictions = {}
+        for family in sorted(set(families)):
+            dec = decoder(output, manifest, profile, basis, r, family)
+            dec.decode_batch(d[:32])
+            start = time.perf_counter()
+            pred = dec.decode_batch(d)
+            elapsed = time.perf_counter()-start
+            failures = np.any(pred != o, axis=1)
+            key = (basis, profile, family)
+            series.setdefault(key, {}).setdefault(r, {})[int(c["phase"][-1])] = failures
+            predictions[family] = pred
+            times.append(dict(case=c["id"], family=family, seconds=elapsed, shots=len(d), shots_per_second=len(d)/elapsed))
+        np.savez_compressed(output/f"{c['id']}.predictions.npz", **predictions)
+    reports = []
+    for (basis, profile, family), values in sorted(series.items()):
+        for rounds, window in ((PRIMARY, "headline"), (DIAGNOSTIC, "diagnostic")):
+            if not all(r in values for r in rounds):
+                continue
+            errors = [sum(v.sum() for v in values[r].values()) for r in rounds]
+            shots = [sum(len(v) for v in values[r].values()) for r in rounds]
+            blocks = {str(block): challenge_fit(rounds, [values[r][block].sum() for r in rounds], [len(values[r][block]) for r in rounds]) for block in (0, 1)}
+            reports.append(dict(basis=basis, profile=profile, family=family, window=window, fit=challenge_fit(rounds, errors, shots), blocks=blocks))
+    comparisons, adopted = {}, {}
+    for basis in ("X", "Z"):
+        chosen = selection["candidate"][basis]
+        first = series[basis, "baseline", "released"]
+        second = series[basis, chosen["profile"], chosen["family"]]
+        comparison = compare(first, second, paired=chosen["profile"] == "baseline")
+        promoted = comparison["ci"][0] > 0
+        comparisons[basis] = comparison
+        adopted[basis] = dict(profile=chosen["profile"] if promoted else "baseline", family=chosen["family"] if promoted else "released", promoted=promoted)
+    report = dict(created_utc=utc(), calibration_set_id=manifest["calibration_set_id"], charged_shots=manifest["charged_shots"],
+                  returned_shots=sum(c.get("returned_shots", 0) for c in manifest["cases"]), primary_rounds=list(PRIMARY),
+                  diagnostic_rounds=list(DIAGNOSTIC), results=reports, comparisons=comparisons, adopted=adopted,
+                  runtime=dict(device="cpu", torch_threads=torch.get_num_threads(), versions=manifest["versions"],
+                               process_memory=psutil.Process().memory_info()._asdict(),
+                               memory_note="Measured analysis-process peak working set on Windows; includes imports and decoder setup, not earlier training"),
+                  decode_timings=times, acquisition_blocks={phase: dict(first=min(c["submitted_utc"] for c in cases if c["phase"] == phase), last=max(c["collected_utc"] for c in cases if c["phase"] == phase)) for phase in ("confirm0", "confirm1")},
+                  limitations=["One calibration and two successive acquisition windows, not separate days/calibrations",
+                               "Challenge stationary equation is descriptive whenever lack-of-fit rejects it",
+                               "Native Pauli priors omit explicit inserted-DD pulse errors and idle decoherence; fitting/learning is empirical model-mismatch compensation",
+                               "QND implementation unavailable; no leakage herald or qutrit oracle input",
+                               "Old confirmation data was development only, fresh confirmation remained frozen"])
+    write_json(output/"report.json", report)
+    lines = ["# Garnet bounded improvement confirmation", "", f"New shots: {report['charged_shots']:,}; returned: {report['returned_shots']:,}.",
+             "Primary challenge A=1 fit: R=1,2,3. R=1..7 is diagnostic only.", "",
+             "| Basis | Physical profile | Decoder | Window | LER | 95% profile CI | Deviance |", "|---|---|---|---|---:|---|---:|"]
+    for row in reports:
+        f = row["fit"]
+        lines.append(f"| {row['basis']} | {row['profile']} | {row['family']} | {row['window']} | {f['epsilon_per_round']:.6f} | {f['ci95_profile']} | {f['deviance']:.2f} |")
+    lines += ["", "Promotion uses a 97.5% interval per basis (two-comparison Bonferroni adjustment).", "", json.dumps(dict(comparisons=comparisons, adopted=adopted), indent=2), ""]+report["limitations"]
+    (output/"report.md").write_text("\n".join(lines)+"\n", encoding="utf8")
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharey=True)
+    for ax, basis in zip(axes, ("X", "Z")):
+        for row in reports:
+            if row["basis"] == basis and row["window"] == "diagnostic":
+                f = row["fit"]
+                ax.plot(DIAGNOSTIC, f["probabilities"], "o-", label=f"{row['profile']} {row['family']}")
+        ax.set(title=basis, xlabel="Syndrome rounds", ylabel="Logical failure probability")
+        ax.legend(fontsize=7)
+    fig.tight_layout(); fig.savefig(output/"ler.png", dpi=160); plt.close(fig)
+    print(json.dumps(dict(shots=manifest["charged_shots"], comparisons=comparisons, adopted=adopted), indent=2))
+    return report
+
+
+def load_adopted(run, basis, rounds):
+    """Load the confirmed policy for inference, without credentials or networking.
+
+    Returns (physical/qualification metadata, binary detection-event adapter).
+    Physical execution uses TrialExecutor and the returned explicit profile.
+    Longer histories remain diagnostics, not a silently extended release.
+    """
+    if basis not in {"X", "Z"} or rounds not in PRIMARY:
+        raise ValueError("Confirmed policy is qualified for X/Z memory R1..3 only.")
+    output = Path(run)
+    manifest = json.loads((output/"manifest.json").read_text())
+    verify(output, manifest)
+    report = json.loads((output/"report.json").read_text())
+    selected = report["adopted"][basis]
+    metadata = dict(basis=basis, rounds=rounds, calibration_set_id=manifest["calibration_set_id"],
+                    placement=manifest["placement"], **selected,
+                    qualification="fresh fixed R1..3 challenge LER comparison; two acquisition blocks")
+    return metadata, decoder(output, manifest, selected["profile"], basis, rounds, selected["family"])
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run", type=Path, required=True)
+    parser.add_argument("--action", choices=("init", "pilot", "collect", "develop", "confirm0", "confirm1", "analyze"), required=True)
+    parser.add_argument("--submit", action="store_true")
+    parser.add_argument("--token-file", type=Path, default=Path("apikey.jom"))
+    parser.add_argument("--runtime", type=Path)
+    parser.add_argument("--steps", type=int, default=1200)
+    args = parser.parse_args(argv)
+    if args.runtime:
+        import sys
+        sys.path.insert(0, str(args.runtime.resolve()))
+    if args.action in {"develop", "analyze", "init"}:
+        import torch
+        torch.set_num_threads(2)
+    output = args.run
+    if args.action in {"develop", "analyze"}:
+        manifest = json.loads((output/"manifest.json").read_text())
+        return develop(output, manifest, steps=args.steps) if args.action == "develop" else analyze(output, manifest)
+    if args.action in {"pilot", "confirm0", "confirm1"} and not args.submit:
+        parser.error("Live acquisition requires explicit --submit.")
+    from iqm_surface_code.benchmark_garnet import read_token
+    from iqm_surface_code.run_on_hardware import connect_backend
+    from iqm_surface_code.calibration import CalibrationSnapshot
+    from .rounds_hardware import TrialExecutor
+    secret = read_token(args.token_file)
+    try:
+        backend = connect_backend(secret, "garnet")
+        executor = TrialExecutor(backend, secret)
+        if args.action == "init":
+            return initialize(output, backend, executor)
+        manifest = json.loads((output/"manifest.json").read_text())
+        if str(backend.architecture.calibration_set_id) != manifest["calibration_set_id"]:
+            raise ValueError("Active calibration changed; do not submit frozen experiment.")
+        if args.action != "collect":
+            cal = CalibrationSnapshot.load(output/"calibration.json")
+            quality = json.loads((output/"quality_metrics.json").read_text())
+            mapping = {int(q): p for q, p in manifest["placement"].items()}
+            submit(output, manifest, args.action, backend, executor, cal, quality, mapping)
+        collect(output, manifest, backend, executor, secret)
+        print("BUDGET", manifest["charged_shots"], "RETURNED", sum(c.get("returned_shots", 0) for c in manifest["cases"]), flush=True)
+    except Exception as exc:
+        raise RuntimeError(str(exc).replace(secret, "[REDACTED]")) from None
+
+
+if __name__ == "__main__":
+    main()

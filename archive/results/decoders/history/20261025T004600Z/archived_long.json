@@ -1,0 +1,98 @@
+[
+  {
+    "id": "pilot_control_Z_r7_s0",
+    "basis": "Z",
+    "rounds": 7,
+    "shots": 500,
+    "data_file": "archived_pilot_control_Z_r7_s0.shots.npz",
+    "dataset_sha256": "a81cba23dd37910f4c0ceac79dc647c3c75fee9c6337a6bbac7bbd22eeec7e5d",
+    "native_sha256": "5005e1a8d5f7f2d2cabe0feea9520ff1a0490b29b230c5e9a9ac04a81c1c72be",
+    "job_id": "01a16ff5-bd32-7487-b589-1c215e5ba003",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "pilot_control_X_r7_s0",
+    "basis": "X",
+    "rounds": 7,
+    "shots": 500,
+    "data_file": "archived_pilot_control_X_r7_s0.shots.npz",
+    "dataset_sha256": "52b72605bc689843f7e14501ec922dc5a19650d614aabaf7a83722bb5b8ae3ff",
+    "native_sha256": "e7295e9719f902d1fa62990a97d34a9d33f6ce4eed7461a04509c0b7c70d51a2",
+    "job_id": "01a16ff8-a36a-7560-b76a-e10cf18a170b",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_Z_r7_s0",
+    "basis": "Z",
+    "rounds": 7,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_Z_r7_s0.shots.npz",
+    "dataset_sha256": "43287cec6cf50d311255f3a4538e7a4e533d928c3d8f29aef33008647860e8de",
+    "native_sha256": "5005e1a8d5f7f2d2cabe0feea9520ff1a0490b29b230c5e9a9ac04a81c1c72be",
+    "job_id": "01a16ff9-a01f-734d-9dff-3e8d35782a6c",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_Z_r4_s0",
+    "basis": "Z",
+    "rounds": 4,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_Z_r4_s0.shots.npz",
+    "dataset_sha256": "4ae4b96dd52c856dd9ba334fe780e024d6ca8587eef8f2548991cde8ce8beed5",
+    "native_sha256": "f9111fa608631a4d6a84915ac6c5d30037561cc7b58b727200ca50ee5c95b6ff",
+    "job_id": "01a16ffa-d3e5-7691-a579-f131082ba143",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_Z_r5_s0",
+    "basis": "Z",
+    "rounds": 5,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_Z_r5_s0.shots.npz",
+    "dataset_sha256": "54c508b0ac7012e76d8f4e3505b9ce48ead310e7512a5e7837099ec337216495",
+    "native_sha256": "c9e0fbcdca4d64c1ae818a482a128b2b194a9b89352346bf05552635b561e5cd",
+    "job_id": "01a16ffc-a7ea-7794-8904-8a87da7bc344",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_X_r7_s0",
+    "basis": "X",
+    "rounds": 7,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_X_r7_s0.shots.npz",
+    "dataset_sha256": "fe6c249640449f33f0dbc0b24db7f66a6b28023bf5f45053e68a5d586b037017",
+    "native_sha256": "e7295e9719f902d1fa62990a97d34a9d33f6ce4eed7461a04509c0b7c70d51a2",
+    "job_id": "01a16ffc-f727-76f6-a03e-1ac673d2d5c2",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_X_r5_s0",
+    "basis": "X",
+    "rounds": 5,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_X_r5_s0.shots.npz",
+    "dataset_sha256": "45c4be0789361b58a9257c059244157b9ae4b3c9f28b7fc8e5f051b158f68a84",
+    "native_sha256": "77767a0f493884d33b7874647c8d58c0b9f264d97e420170215441fb989d81f0",
+    "job_id": "01a16fff-1985-7744-a03f-b8af7c196b60",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  },
+  {
+    "id": "confirmation_control_X_r4_s0",
+    "basis": "X",
+    "rounds": 4,
+    "shots": 1200,
+    "data_file": "archived_confirmation_control_X_r4_s0.shots.npz",
+    "dataset_sha256": "8dad11537ab9df962b6ba72f87a19ab7a483197226e7b09ac8ae4b795ffcb60e",
+    "native_sha256": "1edca334214815e0e64a2bd77360c7b8acec3bf9e20a7ca0448c1660496cb890",
+    "job_id": "01a16fff-6924-726e-894e-8d7f85eab166",
+    "original_directory": "results\\bias\\20261024T220813Z",
+    "purpose": "archived development only"
+  }
+]

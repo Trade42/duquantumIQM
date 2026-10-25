@@ -1,1 +1,0 @@
-2026-10-24: jobs 01a16ffd-5738-7757-a34e-8230a9ddd27f and 01a16ffd-7b80-73f8-88a4-109f708cb2d8 (task garnet-train) were declined by IQM before execution: 'Job shot count exceeds the maximum allowed value: 20000'. They ran no shots; their ledger rows overstate usage. Training data is task garnet-train2 (10 jobs x 8 circuits x 20000 shots).

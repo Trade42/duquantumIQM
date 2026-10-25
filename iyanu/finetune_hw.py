@@ -1,6 +1,6 @@
 """Decoders pre-trained on simulation, fine-tuned on hardware shots, scored on held-out hardware shots.
 
-    python -m iyanu.finetune_hw --train iyanu/hw_data/<date>-garnet-train/* --test iyanu/hw_data/<date>-garnet-test/*
+    python -m iyanu.finetune_hw --train archive/iyanu/hw_data/<date>-garnet-train/* --test archive/iyanu/hw_data/<date>-garnet-test/*
 
 For each (basis, rounds) circuit in the jobs: training shots (all --train jobs) are split
 90/10 into fit and validation; the test shots (--test jobs) are only ever scored. Decoders:
@@ -146,7 +146,7 @@ def main(argv=None):
     ap.add_argument("--device-tag", default="hw", help="name prefix for exported files (e.g. emerald)")
     ap.add_argument("--cover-sim-shots", type=int, default=20_000_000,
                     help="simulated shots added to the training syndromes for sparse tables")
-    ap.add_argument("--output", default="iyanu/hw_data/decoder_eval")
+    ap.add_argument("--output", default="archive/iyanu/hw_data/decoder_eval")
     a = ap.parse_args(argv)
     device = pick_device(a.device)
     train, test = load(a.train), load(a.test)

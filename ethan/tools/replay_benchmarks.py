@@ -74,7 +74,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--bundle", type=Path,
-        default=Path(__file__).resolve().parents[1] / "benchmarks",
+        default=Path(__file__).resolve().parents[2] / "archive/ethan/benchmarks",
     )
     args = parser.parse_args()
     replay(args.bundle)

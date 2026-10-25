@@ -7,7 +7,7 @@ Submitting: `submit(...)` refuses, before any network call, unless DQ_QPU=run an
 DQ_QPU_MAX_SHOTS is set; shots are total (circuits x shots) summed over the ledger. It builds
 the run request once, checks every CZ in that request against the intended physical pairs
 and the device couplers, submits that same request, appends the ledger line as soon as the
-job id returns, then saves the raw result under iyanu/hw_data/<YYYYMMDD>-<task>/<job id>/.
+job id returns, then saves the raw result under archive/iyanu/hw_data/<YYYYMMDD>-<task>/<job id>/.
 The token is IQM_TOKEN from the environment or .env, and is never printed.
 """
 from __future__ import annotations
@@ -21,7 +21,7 @@ import numpy as np
 
 SERVER_URL = "https://resonance.iqm.tech"
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT/"iyanu"/"hw_data"
+DATA = ROOT/"archive"/"iyanu"/"hw_data"
 LEDGER = DATA/"ledger.jsonl"
 
 
