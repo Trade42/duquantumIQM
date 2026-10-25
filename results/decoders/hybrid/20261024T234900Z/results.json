@@ -1,0 +1,2603 @@
+{
+  "written_utc": "2026-10-25T00:19:15.399517+00:00",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "primary_rounds": [
+    1,
+    2,
+    3
+  ],
+  "selection_sha256": "af38c8280ba1c60d8bbb22ec1706030fc3455fbe536cba6e42f394815c4924a1",
+  "points": [
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 1,
+      "block": 0,
+      "errors": 75,
+      "shots": 3000,
+      "probability": 0.025,
+      "ci95": [
+        0.019991321290431362,
+        0.031223584998628307
+      ],
+      "decode_seconds": 0.001212499977555126,
+      "shots_per_second": 2474226.849924709,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r1",
+      "dataset_sha256": "b64149e37bcb92689163eacd3df995e637b6d2dbd977b5c1cec0dc3460cf9dfe"
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 1,
+      "block": 1,
+      "errors": 101,
+      "shots": 3000,
+      "probability": 0.033666666666666664,
+      "ci95": [
+        0.027785326467104215,
+        0.04074074644404979
+      ],
+      "decode_seconds": 0.0012291000166442245,
+      "shots_per_second": 2440810.3159829183,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r1",
+      "dataset_sha256": "7311c66064d9c50c86c153a9dea11f4ec4fa4c05572705b506af8564591173d3"
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 2,
+      "block": 0,
+      "errors": 287,
+      "shots": 3000,
+      "probability": 0.09566666666666666,
+      "ci95": [
+        0.08565253698168951,
+        0.10671495868752406
+      ],
+      "decode_seconds": 0.004562899994198233,
+      "shots_per_second": 657476.6056268001,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r2",
+      "dataset_sha256": "76193324929c106bafcc7ec4f860384d00dfecde197fb38efda9842fdc2b2017"
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 2,
+      "block": 1,
+      "errors": 298,
+      "shots": 3000,
+      "probability": 0.09933333333333333,
+      "ci95": [
+        0.08913702285967337,
+        0.11055442791888781
+      ],
+      "decode_seconds": 0.004586100025335327,
+      "shots_per_second": 654150.5818510022,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r2",
+      "dataset_sha256": "e6761ac9e98c322118b8c0b7bfcaf4d1dd8698c475ead1169be867951a9c0a0f"
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 3,
+      "block": 0,
+      "errors": 523,
+      "shots": 3000,
+      "probability": 0.17433333333333334,
+      "ci95": [
+        0.16117584758214723,
+        0.1883237758876151
+      ],
+      "decode_seconds": 0.009773700003279373,
+      "shots_per_second": 306946.19222949434,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r3",
+      "dataset_sha256": "8d2e234214a128d141a54b94732e353191f3a8068c1ef13cc5cb066740f58cd9"
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "rounds": 3,
+      "block": 1,
+      "errors": 470,
+      "shots": 3000,
+      "probability": 0.15666666666666668,
+      "ci95": [
+        0.14409969642139211,
+        0.17011177970333172
+      ],
+      "decode_seconds": 0.009417699999175966,
+      "shots_per_second": 318549.1149922481,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r3",
+      "dataset_sha256": "f13205355589d42cdeada93351bc73ca8469ec67e8eef6cbc39501cb5a6bf474"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 1,
+      "block": 0,
+      "errors": 280,
+      "shots": 3000,
+      "probability": 0.09333333333333334,
+      "ci95": [
+        0.08343756972048183,
+        0.10426922724278329
+      ],
+      "decode_seconds": 0.00011049999739043415,
+      "shots_per_second": 27149321.908126187,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_X_r1",
+      "dataset_sha256": "96862af2e72d0cb191e9c236c6418f4a2d5fce310550d770150aa66f5f125b50"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 1,
+      "block": 1,
+      "errors": 262,
+      "shots": 3000,
+      "probability": 0.08733333333333333,
+      "ci95": [
+        0.07775114040012965,
+        0.09797100274783938
+      ],
+      "decode_seconds": 9.879999561235309e-05,
+      "shots_per_second": 30364373.818098694,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_X_r1",
+      "dataset_sha256": "dc8fc8ca5116efc7bee5a6e467f1e34168a4937aed7cefcd27e95eb4d7bf00ea"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 2,
+      "block": 0,
+      "errors": 374,
+      "shots": 3000,
+      "probability": 0.12466666666666666,
+      "ci95": [
+        0.1133236066319313,
+        0.13696971581121337
+      ],
+      "decode_seconds": 0.00016510000568814576,
+      "shots_per_second": 18170804.946346536,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_X_r2",
+      "dataset_sha256": "b38b2c8e174349f9bd4902f94c0884fcfb3774487f4590753bc04694f529c95b"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 2,
+      "block": 1,
+      "errors": 378,
+      "shots": 3000,
+      "probability": 0.126,
+      "ci95": [
+        0.11460139177278211,
+        0.1383551870737617
+      ],
+      "decode_seconds": 0.00014280001050792634,
+      "shots_per_second": 21008401.815443005,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_X_r2",
+      "dataset_sha256": "34c6a18f555eecc388c78f6cbbd990f153a0cecdb8f3c605c6955e8552bc7355"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 3,
+      "block": 0,
+      "errors": 566,
+      "shots": 3000,
+      "probability": 0.18866666666666668,
+      "ci95": [
+        0.17506789075089216,
+        0.20306173905541083
+      ],
+      "decode_seconds": 0.0002379999787081033,
+      "shots_per_second": 12605043.144475952,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_X_r3",
+      "dataset_sha256": "600101d5bc5c30314d8313057331f0225d8c3834dd489ce1939a6792ed95bdca"
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "ml",
+      "rounds": 3,
+      "block": 1,
+      "errors": 545,
+      "shots": 3000,
+      "probability": 0.18166666666666667,
+      "ci95": [
+        0.16827940729540855,
+        0.19586812639304899
+      ],
+      "decode_seconds": 0.00023110001347959042,
+      "shots_per_second": 12981392.579040004,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_X_r3",
+      "dataset_sha256": "39477d37d5d1c18a001848512b34962c1c1a6f5b912991b8a56bf078e2dfd6f4"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 1,
+      "block": 0,
+      "errors": 358,
+      "shots": 3000,
+      "probability": 0.11933333333333333,
+      "ci95": [
+        0.10821692059145281,
+        0.13142337623809533
+      ],
+      "decode_seconds": 0.0018393000063952059,
+      "shots_per_second": 1631055.2871032816,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_X_r1",
+      "dataset_sha256": "277b10b7a0ee877e92aaf9203e4a4dcf598f90ff2a8d00714327e17ca2716464"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 1,
+      "block": 1,
+      "errors": 288,
+      "shots": 3000,
+      "probability": 0.096,
+      "ci95": [
+        0.08596911772942444,
+        0.10706419204063893
+      ],
+      "decode_seconds": 0.001709500007564202,
+      "shots_per_second": 1754899.085537051,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_X_r1",
+      "dataset_sha256": "e028a9168f0c700f3027d132d28f39b443416ac5d4771ef833e1023bb6641d2f"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 2,
+      "block": 0,
+      "errors": 494,
+      "shots": 3000,
+      "probability": 0.16466666666666666,
+      "ci95": [
+        0.15182555867604663,
+        0.17836545586907193
+      ],
+      "decode_seconds": 0.005039400013629347,
+      "shots_per_second": 595308.9637429708,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_X_r2",
+      "dataset_sha256": "bc1bbcbfe6aa92b7db55c23838c0616683d2ab64005216e0e39e178bb9f5917b"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 2,
+      "block": 1,
+      "errors": 546,
+      "shots": 3000,
+      "probability": 0.182,
+      "ci95": [
+        0.1686024982043699,
+        0.1962108495849374
+      ],
+      "decode_seconds": 0.005377900000894442,
+      "shots_per_second": 557838.5614275173,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_X_r2",
+      "dataset_sha256": "9196397946a9d3ad13ab60ba462fd8892db38a58fd70179fd8e0f91657559722"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 3,
+      "block": 0,
+      "errors": 757,
+      "shots": 3000,
+      "probability": 0.25233333333333335,
+      "ci95": [
+        0.23711399123610555,
+        0.26818613183250595
+      ],
+      "decode_seconds": 0.010303199989721179,
+      "shots_per_second": 291171.6751099563,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_X_r3",
+      "dataset_sha256": "3d132bec297a74c6edf051b403c145cbb1427ac58b483360e3b6ba2a99c30f6d"
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 3,
+      "block": 1,
+      "errors": 670,
+      "shots": 3000,
+      "probability": 0.22333333333333333,
+      "ci95": [
+        0.20878920865741274,
+        0.2385850876372676
+      ],
+      "decode_seconds": 0.009717300010379404,
+      "shots_per_second": 308727.7326824931,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_X_r3",
+      "dataset_sha256": "1b88164e7a3d9408f3a7f8db89bd8fa058af9f5060334c3b16e014800c51d00f"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 1,
+      "block": 0,
+      "errors": 61,
+      "shots": 3000,
+      "probability": 0.02033333333333333,
+      "ci95": [
+        0.01586238525779264,
+        0.026031123619370065
+      ],
+      "decode_seconds": 9.940000018104911e-05,
+      "shots_per_second": 30181086.464142267,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r1",
+      "dataset_sha256": "b64149e37bcb92689163eacd3df995e637b6d2dbd977b5c1cec0dc3460cf9dfe"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 1,
+      "block": 1,
+      "errors": 82,
+      "shots": 3000,
+      "probability": 0.027333333333333334,
+      "ci95": [
+        0.022075623775343264,
+        0.03379998121966488
+      ],
+      "decode_seconds": 9.889999637380242e-05,
+      "shots_per_second": 30333671.48630825,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r1",
+      "dataset_sha256": "7311c66064d9c50c86c153a9dea11f4ec4fa4c05572705b506af8564591173d3"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 2,
+      "block": 0,
+      "errors": 270,
+      "shots": 3000,
+      "probability": 0.09,
+      "ci95": [
+        0.08027676092797803,
+        0.10077189502678924
+      ],
+      "decode_seconds": 0.0001582999830134213,
+      "shots_per_second": 18951360.21426893,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r2",
+      "dataset_sha256": "76193324929c106bafcc7ec4f860384d00dfecde197fb38efda9842fdc2b2017"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 2,
+      "block": 1,
+      "errors": 287,
+      "shots": 3000,
+      "probability": 0.09566666666666666,
+      "ci95": [
+        0.08565253698168951,
+        0.10671495868752406
+      ],
+      "decode_seconds": 0.00016769999638199806,
+      "shots_per_second": 17889088.042473197,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r2",
+      "dataset_sha256": "e6761ac9e98c322118b8c0b7bfcaf4d1dd8698c475ead1169be867951a9c0a0f"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 3,
+      "block": 0,
+      "errors": 528,
+      "shots": 3000,
+      "probability": 0.176,
+      "ci95": [
+        0.16278953722806536,
+        0.19003915674594582
+      ],
+      "decode_seconds": 0.0002928999892901629,
+      "shots_per_second": 10242403.9252116,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_X_r3",
+      "dataset_sha256": "8d2e234214a128d141a54b94732e353191f3a8068c1ef13cc5cb066740f58cd9"
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "ml_fit",
+      "rounds": 3,
+      "block": 1,
+      "errors": 478,
+      "shots": 3000,
+      "probability": 0.15933333333333333,
+      "ci95": [
+        0.14667369927346297,
+        0.1728642896580591
+      ],
+      "decode_seconds": 0.00023299999884329736,
+      "shots_per_second": 12875536.544605868,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_X_r3",
+      "dataset_sha256": "f13205355589d42cdeada93351bc73ca8469ec67e8eef6cbc39501cb5a6bf474"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 1,
+      "block": 0,
+      "errors": 40,
+      "shots": 3000,
+      "probability": 0.013333333333333334,
+      "ci95": [
+        0.009807054350147202,
+        0.01810435840917007
+      ],
+      "decode_seconds": 9.439999121241271e-05,
+      "shots_per_second": 31779663.975281473,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r1",
+      "dataset_sha256": "a97bc75c7b78ba226dd0003b9a35d0c6cc712b56716ba28b093097bfafdc0e21"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 1,
+      "block": 1,
+      "errors": 46,
+      "shots": 3000,
+      "probability": 0.015333333333333332,
+      "ci95": [
+        0.011515523944774946,
+        0.020390773419641017
+      ],
+      "decode_seconds": 9.430001955479383e-05,
+      "shots_per_second": 31813355.014808074,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r1",
+      "dataset_sha256": "0b421d44d28af39cdf10bba8877f5fdc49f8149ae59e01041b2c13b746e1504f"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 2,
+      "block": 0,
+      "errors": 257,
+      "shots": 3000,
+      "probability": 0.08566666666666667,
+      "ci95": [
+        0.07617404747354878,
+        0.09621902517017134
+      ],
+      "decode_seconds": 0.00016689999029040337,
+      "shots_per_second": 17974836.276383523,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r2",
+      "dataset_sha256": "6562c3683276727629657a2a18bc3822c9b8d8ffe203f3c95ed3cde4054df833"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 2,
+      "block": 1,
+      "errors": 241,
+      "shots": 3000,
+      "probability": 0.08033333333333334,
+      "ci95": [
+        0.07113507420425678,
+        0.09060497282586681
+      ],
+      "decode_seconds": 0.00015729997539892793,
+      "shots_per_second": 19071840.23641269,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r2",
+      "dataset_sha256": "b2ce40d9927963b75fa6d4df9d1c2dc45e9b71f0c36dc40237e6ed2bdb5f5f25"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 3,
+      "block": 0,
+      "errors": 394,
+      "shots": 3000,
+      "probability": 0.13133333333333333,
+      "ci95": [
+        0.11971680828338488,
+        0.14389279617675543
+      ],
+      "decode_seconds": 0.00022499999613501132,
+      "shots_per_second": 13333333.562369704,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r3",
+      "dataset_sha256": "b28ecb11bde898af51bd1995d6f9392279e0ec2fa300d1125297807bdf47955e"
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "ml",
+      "rounds": 3,
+      "block": 1,
+      "errors": 362,
+      "shots": 3000,
+      "probability": 0.12066666666666667,
+      "ci95": [
+        0.10949291137574615,
+        0.13281064185720115
+      ],
+      "decode_seconds": 0.00023070001043379307,
+      "shots_per_second": 13003900.582227968,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r3",
+      "dataset_sha256": "903a7c76f5e53e97858889d1375fe10ab6c9c77d1aff14cfc8e3aa3fd3bb382e"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 1,
+      "block": 0,
+      "errors": 177,
+      "shots": 3000,
+      "probability": 0.059,
+      "ci95": [
+        0.051118946111304464,
+        0.06800899846443303
+      ],
+      "decode_seconds": 0.0011103999859187752,
+      "shots_per_second": 2701729.1408894593,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_Z_r1",
+      "dataset_sha256": "09de54434887675aa5d7e32cbe01dce77ddd485fc23cee050de5bdc4f41bb1fc"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 1,
+      "block": 1,
+      "errors": 161,
+      "shots": 3000,
+      "probability": 0.05366666666666667,
+      "ci95": [
+        0.04615821902958661,
+        0.06231669993255437
+      ],
+      "decode_seconds": 0.0010762999881990254,
+      "shots_per_second": 2787326.984012984,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_Z_r1",
+      "dataset_sha256": "b76b69d1e164ee50dff78455af7e02712b6234f7ab37ee1993ab887d4f07e615"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 2,
+      "block": 0,
+      "errors": 380,
+      "shots": 3000,
+      "probability": 0.12666666666666668,
+      "ci95": [
+        0.11524044720203012,
+        0.1390477598462133
+      ],
+      "decode_seconds": 0.005158500018296763,
+      "shots_per_second": 581564.4061954549,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_Z_r2",
+      "dataset_sha256": "c4bf9ff718b2871607e4dd18d3fd72116868060c6b33ee248725ce599e1fd96d"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 2,
+      "block": 1,
+      "errors": 391,
+      "shots": 3000,
+      "probability": 0.13033333333333333,
+      "ci95": [
+        0.11875715629178026,
+        0.14285500586581074
+      ],
+      "decode_seconds": 0.005289300024742261,
+      "shots_per_second": 567182.8003642478,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_Z_r2",
+      "dataset_sha256": "e9f898a3756d5d93747b003fbcc48ac8815fb5ff456b2db40a329e47d2529376"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 3,
+      "block": 0,
+      "errors": 542,
+      "shots": 3000,
+      "probability": 0.18066666666666667,
+      "ci95": [
+        0.1673102384283093,
+        0.1948398529575989
+      ],
+      "decode_seconds": 0.0163196999928914,
+      "shots_per_second": 183826.90866295042,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_dara_Z_r3",
+      "dataset_sha256": "7a315c19ca81bee8728d0a474729aa6b55aa30865d6938432480d3208faa1f21"
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "profile": "dara",
+      "family": "empirical_3",
+      "rounds": 3,
+      "block": 1,
+      "errors": 572,
+      "shots": 3000,
+      "probability": 0.19066666666666668,
+      "ci95": [
+        0.17700881160928228,
+        0.20511570280211938
+      ],
+      "decode_seconds": 0.01603550001163967,
+      "shots_per_second": 187084.9052304196,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_dara_Z_r3",
+      "dataset_sha256": "5fc37ff944a730bdcb9fb09165e5f0fe40059eafd241959e4d5edf1f1e76cdc0"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 1,
+      "block": 0,
+      "errors": 196,
+      "shots": 3000,
+      "probability": 0.06533333333333333,
+      "ci95": [
+        0.0570347299761277,
+        0.07474368251575565
+      ],
+      "decode_seconds": 0.001601299998583272,
+      "shots_per_second": 1873477.800945612,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_Z_r1",
+      "dataset_sha256": "fc687627ccc6ed076d6ce4207c02b4fe26047703a3af3edc957e2aea8d57c995"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 1,
+      "block": 1,
+      "errors": 205,
+      "shots": 3000,
+      "probability": 0.06833333333333333,
+      "ci95": [
+        0.059845390313466564,
+        0.07792534908606481
+      ],
+      "decode_seconds": 0.0019546000112313777,
+      "shots_per_second": 1534840.8793418717,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_Z_r1",
+      "dataset_sha256": "79767d95ea78797e8111cf077235bf2322d92f41e2e8e851a27e11b36d8f7b68"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 2,
+      "block": 0,
+      "errors": 450,
+      "shots": 3000,
+      "probability": 0.15,
+      "ci95": [
+        0.1376705255739948,
+        0.16322466853373332
+      ],
+      "decode_seconds": 0.005985900002997369,
+      "shots_per_second": 501177.7675032636,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_Z_r2",
+      "dataset_sha256": "4c42c78c2e68cca6905554ea93864ebcdb3143c00e54894bfa77b4744806fc4b"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 2,
+      "block": 1,
+      "errors": 450,
+      "shots": 3000,
+      "probability": 0.15,
+      "ci95": [
+        0.1376705255739948,
+        0.16322466853373332
+      ],
+      "decode_seconds": 0.005580900004133582,
+      "shots_per_second": 537547.7069608849,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_Z_r2",
+      "dataset_sha256": "d8ac2bf04f51b167a1713621e81bc456614689ec525045b61f6110351146e947"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 3,
+      "block": 0,
+      "errors": 585,
+      "shots": 3000,
+      "probability": 0.195,
+      "ci95": [
+        0.18121614972329536,
+        0.20956394799915345
+      ],
+      "decode_seconds": 0.011216000013519078,
+      "shots_per_second": 267475.0353409401,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_iyanu_Z_r3",
+      "dataset_sha256": "a3c4f2f25f56436ced41d33891484191a5991ce539dcb8c10a61c7a4fbc64cee"
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "profile": "iyanu",
+      "family": "coherence",
+      "rounds": 3,
+      "block": 1,
+      "errors": 647,
+      "shots": 3000,
+      "probability": 0.21566666666666667,
+      "ci95": [
+        0.20131786583431505,
+        0.23074270614082032
+      ],
+      "decode_seconds": 0.011467100004665554,
+      "shots_per_second": 261618.02014279173,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_iyanu_Z_r3",
+      "dataset_sha256": "8981c923af9b69e32aadcffd071d7a4cfc9aa359158e2eb8f84c6122aabbfd89"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 1,
+      "block": 0,
+      "errors": 37,
+      "shots": 3000,
+      "probability": 0.012333333333333333,
+      "ci95": [
+        0.008961127098019293,
+        0.01695284335874863
+      ],
+      "decode_seconds": 0.00010370000381954014,
+      "shots_per_second": 28929603.56318436,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r1",
+      "dataset_sha256": "a97bc75c7b78ba226dd0003b9a35d0c6cc712b56716ba28b093097bfafdc0e21"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 1,
+      "block": 1,
+      "errors": 43,
+      "shots": 3000,
+      "probability": 0.014333333333333333,
+      "ci95": [
+        0.01065870981448653,
+        0.019250145247380092
+      ],
+      "decode_seconds": 0.00010069998097606003,
+      "shots_per_second": 29791465.409642994,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r1",
+      "dataset_sha256": "0b421d44d28af39cdf10bba8877f5fdc49f8149ae59e01041b2c13b746e1504f"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 2,
+      "block": 0,
+      "errors": 233,
+      "shots": 3000,
+      "probability": 0.07766666666666666,
+      "ci95": [
+        0.06862024174778868,
+        0.08779329247553662
+      ],
+      "decode_seconds": 0.00015189999248832464,
+      "shots_per_second": 19749836.394696243,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r2",
+      "dataset_sha256": "6562c3683276727629657a2a18bc3822c9b8d8ffe203f3c95ed3cde4054df833"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 2,
+      "block": 1,
+      "errors": 223,
+      "shots": 3000,
+      "probability": 0.07433333333333333,
+      "ci95": [
+        0.06548135623617912,
+        0.08427403697864838
+      ],
+      "decode_seconds": 0.00016150000737980008,
+      "shots_per_second": 18575850.54435874,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r2",
+      "dataset_sha256": "b2ce40d9927963b75fa6d4df9d1c2dc45e9b71f0c36dc40237e6ed2bdb5f5f25"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 3,
+      "block": 0,
+      "errors": 393,
+      "shots": 3000,
+      "probability": 0.131,
+      "ci95": [
+        0.119396898488012,
+        0.14354689187127856
+      ],
+      "decode_seconds": 0.00022119999630376697,
+      "shots_per_second": 13562387.206734827,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b0_ethan_Z_r3",
+      "dataset_sha256": "b28ecb11bde898af51bd1995d6f9392279e0ec2fa300d1125297807bdf47955e"
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "rounds": 3,
+      "block": 1,
+      "errors": 360,
+      "shots": 3000,
+      "probability": 0.12,
+      "ci95": [
+        0.10885485831348496,
+        0.13211706671776274
+      ],
+      "decode_seconds": 0.00023460001102648675,
+      "shots_per_second": 12787723.18412762,
+      "timing_scope": "warmed batch; load/build/conversion excluded",
+      "case_id": "confirmation_b1_ethan_Z_r3",
+      "dataset_sha256": "903a7c76f5e53e97858889d1375fe10ab6c9c77d1aff14cfc8e3aa3fd3bb382e"
+    }
+  ],
+  "fits": [
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "epsilon_per_round": 0.05219547146500511,
+      "ci95_profile": [
+        0.049759180637358756,
+        0.05471299363594308
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.05219547146500514,
+        0.09894220844710194,
+        0.14080900947673647
+      ],
+      "negative_log_likelihood": 5455.803617041964,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 103.79969266125772,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 2.885247856017139e-23,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        176,
+        585,
+        993
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.029333333333333333,
+        0.0975,
+        0.1655
+      ],
+      "wilson_ci95": [
+        [
+          0.025355626863179,
+          0.033913336393320836
+        ],
+        [
+          0.09024969233049697,
+          0.10526537362716841
+        ],
+        [
+          0.15631120294629053,
+          0.17511684565703634
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "epsilon_per_round": 0.07386520824460654,
+      "ci95_profile": [
+        0.07088228026713608,
+        0.07693661481531573
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.07386520824460652,
+        0.13681827851117484,
+        0.19047126548798837
+      ],
+      "negative_log_likelihood": 6974.333994012341,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 30.2899889854599,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 2.646137840439409e-07,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        542,
+        752,
+        1111
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.09033333333333333,
+        0.12533333333333332,
+        0.18516666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.0833397033430679,
+          0.09785120022792237
+        ],
+        [
+          0.1171945647456046,
+          0.13395155048124083
+        ],
+        [
+          0.17554066450591585,
+          0.19519555064689156
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "epsilon_per_round": 0.09894128074169323,
+      "ci95_profile": [
+        0.09537542072389774,
+        0.10260532582404329
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.09894128074169323,
+        0.17830380741377333,
+        0.24196187402218866
+      ],
+      "negative_log_likelihood": 8111.153114050382,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 6.57437298215018,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.0373588110199737,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        646,
+        1040,
+        1427
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.10766666666666666,
+        0.17333333333333334,
+        0.23783333333333334
+      ],
+      "wilson_ci95": [
+        [
+          0.10007328691664734,
+          0.11576210242676645
+        ],
+        [
+          0.16396504349797922,
+          0.18311964771403907
+        ],
+        [
+          0.2272302879271666,
+          0.24877186476492763
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "epsilon_per_round": 0.05064920708432265,
+      "ci95_profile": [
+        0.048254303731425315,
+        0.05312486340462011
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.050649207084322634,
+        0.09616772981210409,
+        0.1370752983722618
+      ],
+      "negative_log_likelihood": 5321.031728010992,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 156.2719185132048,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 1.1640832940312509e-34,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        143,
+        557,
+        1006
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.023833333333333335,
+        0.09283333333333334,
+        0.16766666666666666
+      ],
+      "wilson_ci95": [
+        [
+          0.020267762501438687,
+          0.028008238923426767
+        ],
+        [
+          0.08574867400385927,
+          0.1004390303996921
+        ],
+        [
+          0.158427485105636,
+          0.17733112421924377
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "epsilon_per_round": 0.03920122324305708,
+      "ci95_profile": [
+        0.03712138068339316,
+        0.04135922221179528
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.03920122324305708,
+        0.07532897467861016,
+        0.10862422201557365
+      ],
+      "negative_log_likelihood": 4514.9536839498405,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 152.00756250126665,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 9.816964015399304e-34,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        86,
+        498,
+        756
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.014333333333333333,
+        0.083,
+        0.126
+      ],
+      "wilson_ci95": [
+        [
+          0.011621487630994104,
+          0.017666670630139228
+        ],
+        [
+          0.07628329035852519,
+          0.09025033077028591
+        ],
+        [
+          0.11784178104331938,
+          0.13463681440554237
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "epsilon_per_round": 0.06758930808217949,
+      "ci95_profile": [
+        0.06476303646921693,
+        0.07050145960084031
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.0675893080821795,
+        0.12604198703030345,
+        0.17659311372712044
+      ],
+      "negative_log_likelihood": 6489.173829771535,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 16.421229172743892,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.00027175365386392065,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        338,
+        771,
+        1114
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.05633333333333333,
+        0.1285,
+        0.18566666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.050778194146076386,
+          0.06245621810208314
+        ],
+        [
+          0.12026952165001513,
+          0.1372058746314077
+        ],
+        [
+          0.17603011570595287,
+          0.19570545961336674
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "epsilon_per_round": 0.0781335273209997,
+      "ci95_profile": [
+        0.07505458844216473,
+        0.08130188358795429
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.07813352732099971,
+        0.1440573584587566,
+        0.19967946667389969
+      ],
+      "negative_log_likelihood": 7061.735923918085,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 14.034769588835388,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.000896166089504115,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        401,
+        900,
+        1232
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.06683333333333333,
+        0.15,
+        0.20533333333333334
+      ],
+      "wilson_ci95": [
+        [
+          0.06078742858757501,
+          0.07343354715734106
+        ],
+        [
+          0.14118906930399186,
+          0.15925881413745627
+        ],
+        [
+          0.19530237134170358,
+          0.21574137052709658
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "epsilon_per_round": 0.03762776160401173,
+      "ci95_profile": [
+        0.03559406950950939,
+        0.03973924255453377
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.03762776160401171,
+        0.07242382632136674,
+        0.10460129498283699
+      ],
+      "negative_log_likelihood": 4383.050002024853,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 156.79455674252432,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 8.963850549769413e-35,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        80,
+        456,
+        753
+      ],
+      "shots": [
+        6000,
+        6000,
+        6000
+      ],
+      "probabilities": [
+        0.013333333333333334,
+        0.076,
+        0.1255
+      ],
+      "wilson_ci95": [
+        [
+          0.010726787161243551,
+          0.01656265076686535
+        ],
+        [
+          0.06956269306396771,
+          0.08297988573367233
+        ],
+        [
+          0.11735636159475774,
+          0.13412287368759176
+        ]
+      ]
+    }
+  ],
+  "block_fits": [
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "block": 0,
+      "epsilon_per_round": 0.05268658269213326,
+      "ci95_profile": [
+        0.04924785136833923,
+        0.056287807938136473
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.05268658269213328,
+        0.09982141339271655,
+        0.1419894977825279
+      ],
+      "negative_log_likelihood": 2725.9530460483047,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 81.58213490404484,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 1.9260364181046492e-18,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        75,
+        287,
+        523
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.025,
+        0.09566666666666666,
+        0.17433333333333334
+      ],
+      "wilson_ci95": [
+        [
+          0.019991321290431362,
+          0.031223584998628307
+        ],
+        [
+          0.08565253698168951,
+          0.10671495868752406
+        ],
+        [
+          0.16117584758214723,
+          0.1883237758876151
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "ethan",
+      "block": 1,
+      "epsilon_per_round": 0.051704221367397496,
+      "ci95_profile": [
+        0.048299113754663864,
+        0.055271750996744695
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.051704221367397496,
+        0.09806178972037732,
+        0.13962559412100367
+      ],
+      "negative_log_likelihood": 2729.775023277861,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 29.657903314035025,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 3.6296781990252314e-07,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        101,
+        298,
+        470
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.033666666666666664,
+        0.09933333333333333,
+        0.15666666666666668
+      ],
+      "wilson_ci95": [
+        [
+          0.027785326467104215,
+          0.04074074644404979
+        ],
+        [
+          0.08913702285967337,
+          0.11055442791888781
+        ],
+        [
+          0.14409969642139211,
+          0.17011177970333172
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "block": 0,
+      "epsilon_per_round": 0.07506504070557139,
+      "ci95_profile": [
+        0.07083152975281397,
+        0.07947637472398217
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.0750650407055714,
+        0.13886056073888464,
+        0.19307845415593033
+      ],
+      "negative_log_likelihood": 3521.2852755989716,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 19.044382566403613,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 7.320906665926732e-05,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        280,
+        374,
+        566
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.09333333333333334,
+        0.12466666666666666,
+        0.18866666666666668
+      ],
+      "wilson_ci95": [
+        [
+          0.08343756972048183,
+          0.10426922724278329
+        ],
+        [
+          0.1133236066319313,
+          0.13696971581121337
+        ],
+        [
+          0.17506789075089216,
+          0.20306173905541083
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "dara",
+      "block": 1,
+      "epsilon_per_round": 0.07266964345300946,
+      "ci95_profile": [
+        0.06851720805112926,
+        0.07699821648230795
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.07266964345300947,
+        0.1347775327468439,
+        0.18785870569947444
+      ],
+      "negative_log_likelihood": 3452.74798707231,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 11.812893743868528,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.002721840775329369,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        262,
+        378,
+        545
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.08733333333333333,
+        0.126,
+        0.18166666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.07775114040012965,
+          0.09797100274783938
+        ],
+        [
+          0.11460139177278211,
+          0.1383551870737617
+        ],
+        [
+          0.16827940729540855,
+          0.19586812639304899
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "block": 0,
+      "epsilon_per_round": 0.10280992676420635,
+      "ci95_profile": [
+        0.09767192888995087,
+        0.10814769821790632
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.10280992676420636,
+        0.18448009144588978,
+        0.24935724882808408
+      ],
+      "negative_log_likelihood": 4141.7645617951475,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 16.689714772635057,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.00023761534569154055,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        358,
+        494,
+        757
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.11933333333333333,
+        0.16466666666666666,
+        0.25233333333333335
+      ],
+      "wilson_ci95": [
+        [
+          0.10821692059145281,
+          0.13142337623809533
+        ],
+        [
+          0.15182555867604663,
+          0.17836545586907193
+        ],
+        [
+          0.23711399123610555,
+          0.26818613183250595
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "iyanu",
+      "block": 1,
+      "epsilon_per_round": 0.0951140014762238,
+      "ci95_profile": [
+        0.09022201058397267,
+        0.10019915673894213
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.09511400147622379,
+        0.17213465639880937,
+        0.2345038259493819
+      ],
+      "negative_log_likelihood": 3967.2116176183345,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 4.155002500659407,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.12524277186667881,
+      "stationary_model_rejected_5pct": false,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        288,
+        546,
+        670
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.096,
+        0.182,
+        0.22333333333333333
+      ],
+      "wilson_ci95": [
+        [
+          0.08596911772942444,
+          0.10706419204063893
+        ],
+        [
+          0.1686024982043699,
+          0.1962108495849374
+        ],
+        [
+          0.20878920865741274,
+          0.2385850876372676
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "block": 0,
+      "epsilon_per_round": 0.05101329423827571,
+      "ci95_profile": [
+        0.04763734407627083,
+        0.05455074621031995
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.05101329423827572,
+        0.09682187609846965,
+        0.13795676462851914
+      ],
+      "negative_log_likelihood": 2656.6707178657225,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 110.47161662441113,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 1.0265810578725183e-24,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        61,
+        270,
+        528
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.02033333333333333,
+        0.09,
+        0.176
+      ],
+      "wilson_ci95": [
+        [
+          0.01586238525779264,
+          0.026031123619370065
+        ],
+        [
+          0.08027676092797803,
+          0.10077189502678924
+        ],
+        [
+          0.16278953722806536,
+          0.19003915674594582
+        ]
+      ]
+    },
+    {
+      "basis": "X",
+      "arm": "candidate",
+      "block": 1,
+      "epsilon_per_round": 0.05028494717939489,
+      "ci95_profile": [
+        0.04693381800064282,
+        0.053797596848015
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.05028494717939491,
+        0.09551274253312075,
+        0.13619198328604143
+      ],
+      "negative_log_likelihood": 2664.3180492461634,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 52.44352221267786,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 4.09292555751777e-12,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        82,
+        287,
+        478
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.027333333333333334,
+        0.09566666666666666,
+        0.15933333333333333
+      ],
+      "wilson_ci95": [
+        [
+          0.022075623775343264,
+          0.03379998121966488
+        ],
+        [
+          0.08565253698168951,
+          0.10671495868752406
+        ],
+        [
+          0.14667369927346297,
+          0.1728642896580591
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "block": 0,
+      "epsilon_per_round": 0.040495890865685495,
+      "ci95_profile": [
+        0.037524705298704615,
+        0.04362392646374885
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.0404958908656855,
+        0.07771194737735998,
+        0.11191380916313853
+      ],
+      "negative_log_likelihood": 2301.2641342293446,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 89.8096477062845,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 3.148348427906663e-20,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        40,
+        257,
+        394
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.013333333333333334,
+        0.08566666666666667,
+        0.13133333333333333
+      ],
+      "wilson_ci95": [
+        [
+          0.009807054350147202,
+          0.01810435840917007
+        ],
+        [
+          0.07617404747354878,
+          0.09621902517017134
+        ],
+        [
+          0.11971680828338488,
+          0.14389279617675543
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "ethan",
+      "block": 1,
+      "epsilon_per_round": 0.037910639778052264,
+      "ci95_profile": [
+        0.035044816616274094,
+        0.04093224717400989
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.03791063977805226,
+        0.07294684633934206,
+        0.10532656288836284
+      ],
+      "negative_log_likelihood": 2212.9744945526127,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 63.30368402749153,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 1.7938233437127795e-14,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        46,
+        241,
+        362
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.015333333333333332,
+        0.08033333333333334,
+        0.12066666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.011515523944774946,
+          0.020390773419641017
+        ],
+        [
+          0.07113507420425678,
+          0.09060497282586681
+        ],
+        [
+          0.10949291137574615,
+          0.13281064185720115
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "block": 0,
+      "epsilon_per_round": 0.06677181266134745,
+      "ci95_profile": [
+        0.06282667744284816,
+        0.07088837189106174
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.06677181266134746,
+        0.12462667539053074,
+        0.17475539000831208
+      ],
+      "negative_log_likelihood": 3231.7588194330365,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 3.8537332963375093,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.14560371212671624,
+      "stationary_model_rejected_5pct": false,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        177,
+        380,
+        542
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.059,
+        0.12666666666666668,
+        0.18066666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.051118946111304464,
+          0.06800899846443303
+        ],
+        [
+          0.11524044720203012,
+          0.1390477598462133
+        ],
+        [
+          0.1673102384283093,
+          0.1948398529575989
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "dara",
+      "block": 1,
+      "epsilon_per_round": 0.06840774863567388,
+      "ci95_profile": [
+        0.06440866989756765,
+        0.07257893763832757
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.06840774863567389,
+        0.12745625712454473,
+        0.17842601456137924
+      ],
+      "negative_log_likelihood": 3257.258873998596,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 14.230399144885325,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.0008126585109056097,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        161,
+        391,
+        572
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.05366666666666667,
+        0.13033333333333333,
+        0.19066666666666668
+      ],
+      "wilson_ci95": [
+        [
+          0.04615821902958661,
+          0.06231669993255437
+        ],
+        [
+          0.11875715629178026,
+          0.14285500586581074
+        ],
+        [
+          0.17700881160928228,
+          0.20511570280211938
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "block": 0,
+      "epsilon_per_round": 0.07571864817702345,
+      "ci95_profile": [
+        0.07146909342200737,
+        0.0801455923401936
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.07571864817702345,
+        0.13997066899053517,
+        0.19449253748676476
+      ],
+      "negative_log_likelihood": 3476.142655172125,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 7.295341233936824,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.026051742642149135,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        196,
+        450,
+        585
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.06533333333333333,
+        0.15,
+        0.195
+      ],
+      "wilson_ci95": [
+        [
+          0.0570347299761277,
+          0.07474368251575565
+        ],
+        [
+          0.1376705255739948,
+          0.16322466853373332
+        ],
+        [
+          0.18121614972329536,
+          0.20956394799915345
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "iyanu",
+      "block": 1,
+      "epsilon_per_round": 0.08056152219190897,
+      "ci95_profile": [
+        0.07615438893906619,
+        0.08514895814983593
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.08056152219190899,
+        0.1481427266680631,
+        0.20483504173589395
+      ],
+      "negative_log_likelihood": 3584.438702643324,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 8.57445397324716,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 0.013742981979995645,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        205,
+        450,
+        647
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.06833333333333333,
+        0.15,
+        0.21566666666666667
+      ],
+      "wilson_ci95": [
+        [
+          0.059845390313466564,
+          0.07792534908606481
+        ],
+        [
+          0.1376705255739948,
+          0.16322466853373332
+        ],
+        [
+          0.20131786583431505,
+          0.23074270614082032
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "block": 0,
+      "epsilon_per_round": 0.03876238795331039,
+      "ci95_profile": [
+        0.0358621449114982,
+        0.04181865511144669
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.038762387953310384,
+        0.07451973046693489,
+        0.10750499301517435
+      ],
+      "negative_log_likelihood": 2229.6930046946964,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 92.68198082255387,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 7.48796108064259e-21,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        37,
+        233,
+        393
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.012333333333333333,
+        0.07766666666666666,
+        0.131
+      ],
+      "wilson_ci95": [
+        [
+          0.008961127098019293,
+          0.01695284335874863
+        ],
+        [
+          0.06862024174778868,
+          0.08779329247553662
+        ],
+        [
+          0.119396898488012,
+          0.14354689187127856
+        ]
+      ]
+    },
+    {
+      "basis": "Z",
+      "arm": "candidate",
+      "block": 1,
+      "epsilon_per_round": 0.03649618051429449,
+      "ci95_profile": [
+        0.03368965039196801,
+        0.039457835708293774
+      ],
+      "amplitude": 1.0,
+      "fit_spam": false,
+      "fitted_probabilities": [
+        0.036496180514294485,
+        0.07032841864432504,
+        0.10169116183436322
+      ],
+      "negative_log_likelihood": 2152.782707884703,
+      "boundary_fit": false,
+      "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+      "deviance": 65.31208126056231,
+      "nominal_df": 2,
+      "goodness_of_fit_p": 6.571458255924817e-15,
+      "stationary_model_rejected_5pct": true,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "errors": [
+        43,
+        223,
+        360
+      ],
+      "shots": [
+        3000,
+        3000,
+        3000
+      ],
+      "probabilities": [
+        0.014333333333333333,
+        0.07433333333333333,
+        0.12
+      ],
+      "wilson_ci95": [
+        [
+          0.01065870981448653,
+          0.019250145247380092
+        ],
+        [
+          0.06548135623617912,
+          0.08427403697864838
+        ],
+        [
+          0.10885485831348496,
+          0.13211706671776274
+        ]
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "basis": "X",
+      "baseline": "ethan",
+      "absolute_ler_reduction": 0.0015462643806824633,
+      "ci": [
+        -0.0007761161600216354,
+        0.003807577234668647
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": true,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    },
+    {
+      "basis": "X",
+      "baseline": "dara",
+      "absolute_ler_reduction": 0.023216001160283897,
+      "ci": [
+        0.018034055572918418,
+        0.028371581110263284
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": false,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    },
+    {
+      "basis": "X",
+      "baseline": "iyanu",
+      "absolute_ler_reduction": 0.04829207365737058,
+      "ci": [
+        0.04254391982750091,
+        0.05406187625954256
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": false,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    },
+    {
+      "basis": "Z",
+      "baseline": "ethan",
+      "absolute_ler_reduction": 0.0015734616390453496,
+      "ci": [
+        0.0003693420467234886,
+        0.0027397470160589006
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": true,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    },
+    {
+      "basis": "Z",
+      "baseline": "dara",
+      "absolute_ler_reduction": 0.029961546478167754,
+      "ci": [
+        0.025239616905027344,
+        0.034758458387107546
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": false,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    },
+    {
+      "basis": "Z",
+      "baseline": "iyanu",
+      "absolute_ler_reduction": 0.04050576571698796,
+      "ci": [
+        0.03548230177114208,
+        0.04552591926415895
+      ],
+      "confidence": 0.9916666666666667,
+      "paired": false,
+      "draws": 10000,
+      "seed": 2203,
+      "method": "stratified nonparametric bootstrap of fixed-shot failures; refit challenge equation",
+      "excludes": "calibration drift between blocks and model-selection uncertainty"
+    }
+  ],
+  "adopted_policy": {
+    "X": {
+      "arm": "ethan",
+      "profile": "ethan",
+      "family": "mwpm",
+      "promoted": false,
+      "rule": "Fresh adjusted LER gain over all standalone references; otherwise retain pilot-best standalone",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "fit": {
+        "basis": "X",
+        "arm": "ethan",
+        "epsilon_per_round": 0.05219547146500511,
+        "ci95_profile": [
+          0.049759180637358756,
+          0.05471299363594308
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.05219547146500514,
+          0.09894220844710194,
+          0.14080900947673647
+        ],
+        "negative_log_likelihood": 5455.803617041964,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 103.79969266125772,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 2.885247856017139e-23,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          176,
+          585,
+          993
+        ],
+        "shots": [
+          6000,
+          6000,
+          6000
+        ],
+        "probabilities": [
+          0.029333333333333333,
+          0.0975,
+          0.1655
+        ],
+        "wilson_ci95": [
+          [
+            0.025355626863179,
+            0.033913336393320836
+          ],
+          [
+            0.09024969233049697,
+            0.10526537362716841
+          ],
+          [
+            0.15631120294629053,
+            0.17511684565703634
+          ]
+        ]
+      }
+    },
+    "Z": {
+      "arm": "candidate",
+      "profile": "ethan",
+      "family": "posterior_10",
+      "promoted": true,
+      "rule": "Fresh adjusted LER gain over all standalone references; otherwise retain pilot-best standalone",
+      "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "fit": {
+        "basis": "Z",
+        "arm": "candidate",
+        "epsilon_per_round": 0.03762776160401173,
+        "ci95_profile": [
+          0.03559406950950939,
+          0.03973924255453377
+        ],
+        "amplitude": 1.0,
+        "fit_spam": false,
+        "fitted_probabilities": [
+          0.03762776160401171,
+          0.07242382632136674,
+          0.10460129498283699
+        ],
+        "negative_log_likelihood": 4383.050002024853,
+        "boundary_fit": false,
+        "uncertainty_method": "asymptotic profile likelihood; fixed-shot binomial observations",
+        "deviance": 156.79455674252432,
+        "nominal_df": 2,
+        "goodness_of_fit_p": 8.963850549769413e-35,
+        "stationary_model_rejected_5pct": true,
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "errors": [
+          80,
+          456,
+          753
+        ],
+        "shots": [
+          6000,
+          6000,
+          6000
+        ],
+        "probabilities": [
+          0.013333333333333334,
+          0.076,
+          0.1255
+        ],
+        "wilson_ci95": [
+          [
+            0.010726787161243551,
+            0.01656265076686535
+          ],
+          [
+            0.06956269306396771,
+            0.08297988573367233
+          ],
+          [
+            0.11735636159475774,
+            0.13412287368759176
+          ]
+        ]
+      }
+    }
+  },
+  "outperforms_all_standalones_both_bases": false,
+  "uncertainty": "Six predeclared comparisons; Bonferroni 95% family confidence; conditional fixed-shot inference",
+  "limits": [
+    "Distance 3, one Garnet calibration; no distance-scaling or bare-qubit claim",
+    "R1-3 fixed before acquisition because released exact LUT supports <=24 detectors",
+    "Rejected stationary fits remain descriptive challenge-equation estimates",
+    "Dara uses its median/assumed logical prior; native profiles use measured native-gate priors",
+    "No postselection, hidden leakage flags, or confirmation-label training"
+  ]
+}

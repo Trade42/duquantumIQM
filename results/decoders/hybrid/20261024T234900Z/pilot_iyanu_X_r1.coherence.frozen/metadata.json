@@ -1,0 +1,15 @@
+{
+  "family": "coherence",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "train_shots": 6000,
+  "measure_ns": 300,
+  "training_cv_errors": {
+    "300": 414,
+    "800": 450,
+    "1500": 459,
+    "3000": 491
+  },
+  "dem_sha256": "f1ad84c321b1a65d39d1cb32c84c6cc87ce30dae6e68c38b47c6397d90dca471"
+}

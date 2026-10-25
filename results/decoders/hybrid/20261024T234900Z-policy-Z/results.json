@@ -1,0 +1,18 @@
+{
+  "job_id": "01a17068-def4-7616-8fd4-bd7c361cabf6",
+  "basis": "Z",
+  "rounds": 3,
+  "shots": 2,
+  "errors": 0,
+  "failure_probability": 0.0,
+  "ci95": [
+    0.0,
+    0.6576197724933469
+  ],
+  "profile": "ethan",
+  "family": "posterior_10",
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "metric": "Single-count logical failure probability; not a fitted per-round LER",
+  "source_and_native_frames_verified": true,
+  "all_shots_retained": true
+}
