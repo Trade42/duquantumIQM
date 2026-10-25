@@ -1,2 +1,3 @@
 # counts.json duplicates measurements.npz (same shots, uncompressed); kept locally only
 hw_data/**/counts.json
+latency/decode_bench

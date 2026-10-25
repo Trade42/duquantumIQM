@@ -142,6 +142,10 @@ def main(argv=None):
     ap.add_argument("--skip", nargs="*", default=[], help="decoder names to skip")
     ap.add_argument("--pretrain-pauli", action="store_true", help="pre-train on the Pauli calibration model instead of the coherence one")
     ap.add_argument("--device", default=None)
+    ap.add_argument("--export", default=None, help="directory for weights and compiled lookup-table decoders")
+    ap.add_argument("--device-tag", default="hw", help="name prefix for exported files (e.g. emerald)")
+    ap.add_argument("--cover-sim-shots", type=int, default=20_000_000,
+                    help="simulated shots added to the training syndromes for sparse tables")
     ap.add_argument("--output", default="iyanu/hw_data/decoder_eval")
     a = ap.parse_args(argv)
     device = pick_device(a.device)
@@ -241,6 +245,24 @@ def main(argv=None):
         if "lookup_hw" in dec:
             dec["lookup_hw"](dets)
             row["lookup_hw_unseen_fraction"] = lk_hw.last_unseen
+        if a.export and "ens_ft" in dec:
+            import torch
+            from iyanu.compiled import Compiled, compile_ensemble
+            exp = Path(a.export)
+            exp.mkdir(parents=True, exist_ok=True)
+            tag = f"{a.device_tag}_{basis}_r{rounds}"
+            torch.save(dict(mlp=mlp.model.state_dict(), conv=conv.model.state_dict()), exp/f"{tag}_weights.pt")
+            cover = None
+            if te["dets"].shape[1] > 24:  # training shots + simulated shots; never the test shots
+                sim, _ = calibrated.compile_detector_sampler(seed=rounds+17).sample(a.cover_sim_shots, separate_observables=True)
+                cover = np.vstack([tr["dets"], sim])
+            meta = compile_ensemble(mlp, conv, te["dets"].shape[1], exp/f"{tag}_compiled.npz", cover_dets=cover)
+            comp = Compiled(exp/f"{tag}_compiled.npz")
+            cpred = comp.decode_batch(dets)
+            row["compiled"] = dict(meta, errors=int(np.any(cpred != obs, 1).sum()), test_hit_fraction=comp.last_hit,
+                                   agrees_with_ens_ft=float((cpred == preds["ens_ft"]).mean()))
+            print(f"  compiled {meta['mode']} table, {meta['entries']:,} entries: errors {row['compiled']['errors']}"
+                  f" (ens_ft {row['errors']['ens_ft']}), test hit {comp.last_hit:.4%}", flush=True)
         rows.append(row)
         print(f"{basis} r{rounds} ({n} test shots): " + "  ".join(
             f"{k} {e/n:.4f}" for k, e in sorted(row["errors"].items(), key=lambda kv: kv[1])), flush=True)
