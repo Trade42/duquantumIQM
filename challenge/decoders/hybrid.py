@@ -1,17 +1,15 @@
-"""Frozen adapters for comparing existing decoders on identical hardware records.
+"""The retained Garnet decoders: correlated MWPM and posterior/count lookup.
 
-Training labels are accepted only by the empirical-table builder. Inference
-accepts detection events only. This module does not change any circuit or frame.
+Training uses independent labeled records. Inference accepts detection events
+only, preserves shot order, and scores every returned shot.
 """
 from __future__ import annotations
-
 import hashlib
 import json
 import math
 from functools import lru_cache
 from pathlib import Path
 import numpy as np
-
 
 @lru_cache(maxsize=1)
 def model_posterior(dem_text):
@@ -82,10 +80,7 @@ class FrozenAdapter:
         self.metadata = dict(metadata or {})
 
     def decode_batch(self, det_events, *, enable_correlations=None):
-        neural=self.metadata.get('family') in {'mlp','conv'}
-        if neural and enable_correlations:
-            raise ValueError('Correlated matching does not apply to a neural decoder.')
-        if not neural and enable_correlations is False:
+        if enable_correlations is False:
             raise ValueError("This frozen decoder requires its recorded correlation policy.")
         dets = binary_rows(det_events, self.num_detectors)
         if not len(dets):
@@ -100,65 +95,22 @@ class FrozenAdapter:
         return prediction
 
 
-def build_decoder(model, family, *, train_dets=None, train_obs=None, coherence_models=None):
-    """Reuse standalone implementations; fit only on explicitly supplied training.
-
-    Exact ML is capped at 24 detector bits by the original Ethan implementation.
-    Fitted weights preserve Dara's decomposed joint mechanisms. Empirical tables
-    have an explicit correlated-MWPM fallback, with no dropped shots.
-    """
-    from darawork.decoders.ensemble_decoder import MatchingDecoder, EnsembleDecoder
+def build_decoder(model, family, *, train_dets=None, train_obs=None):
+    """Build only the two retained policies; never fit on evaluation records."""
+    from darawork.decoders.matching import MatchingDecoder
     from darawork.decoders.dem_fit import choose_dem
-    from darawork.decoders.lut_decoder import LUTDecoder
     if model.num_observables != 1:
-        raise ValueError("Headline study requires exactly one logical observable.")
+        raise ValueError("Garnet memory requires exactly one logical observable.")
+    if family not in {"mwpm", "posterior_10"}:
+        raise ValueError("Supported final decoder families are mwpm and posterior_10.")
     meta = dict(family=family, history="offline full measured history",
                 approximate_disjoint_errors=True, physical_oracle_inputs=False)
-    if family=='coherence':
-        td=binary_rows(train_dets,model.num_detectors)
-        to=binary_rows(train_obs,1,'Training observables')
-        if not coherence_models or len(td)!=len(to) or len(td)<4:
-            raise ValueError('Coherence selection requires models and independent training shots.')
-        half=len(td)//2
-        candidates={ns:MatchingDecoder(circuit) for ns,circuit in coherence_models.items()}
-        errors={ns:int(np.any(dec.decode(td[half:])!=to[half:],axis=1).sum()) for ns,dec in candidates.items()}
-        chosen=min(errors,key=lambda ns:(errors[ns],ns))
-        dem=coherence_models[chosen].detector_error_model(decompose_errors=True,approximate_disjoint_errors=True)
-        meta.update(train_shots=len(td),measure_ns=chosen,training_cv_errors=errors,
-                    dem_sha256=hashlib.sha256(str(dem).encode()).hexdigest())
-        return FrozenAdapter(candidates[chosen],model.num_detectors,metadata=meta),dem
-    if family in {"mlp", "conv"}:
-        import torch
-        from iyanu.finetune_hw import finetune
-        td = binary_rows(train_dets, model.num_detectors)
-        to = binary_rows(train_obs, 1, "Training observables")
-        if len(td) != len(to) or len(td) < 100:
-            raise ValueError("Neural fitting requires at least 100 aligned training shots.")
-        permutation = np.random.default_rng(2221).permutation(len(td))
-        cutoff = int(.8*len(td))
-        fit, valid = permutation[:cutoff], permutation[cutoff:]
-        if family == "mlp":
-            from iyanu.neural_gpu import NeuralConfig, train_neural_decoder
-            config = NeuralConfig(steps=1000, batch=1024, seed=2221, device="cpu")
-            decoder = train_neural_decoder(model, config)
-            module, forward = decoder.model, decoder.model
-        else:
-            from iyanu.conv_decoders import ConvConfig, ConvDecoder
-            config = ConvConfig(channels=8, layers=2, head=64, steps=1000, batch=256, seed=2221, device="cpu")
-            decoder = ConvDecoder(model, config).train(model)
-            decoder._headline_circuit = model
-            module, forward = decoder.model, decoder.logits
-        info = finetune(module, forward, td[fit], to[fit], (td[valid],to[valid]),
-                        steps=600, batch=1024, lr=1e-4, device=torch.device("cpu"), eval_every=100)
-        module.eval()
-        from dataclasses import asdict
-        meta.update(train_shots=len(td), config=asdict(config), finetune=info,
-                    inner_validation_shots=len(valid), seed=2221,
-                    correlations="learned full history; no PyMatching correlation switch")
-        return FrozenAdapter(decoder, model.num_detectors, metadata=meta), model.detector_error_model(approximate_disjoint_errors=True)
-    fitted = family.endswith("_fit") or family.startswith(("empirical_","posterior_"))
     dem = model.detector_error_model(decompose_errors=True, approximate_disjoint_errors=True)
-    if fitted:
+    if family == "mwpm":
+        decoder = MatchingDecoder(dem)
+        meta["train_shots"] = 0
+    else:
+        from iqm_surface_code.decoders.lookup_table import LookupTableDecoder
         if train_dets is None or train_obs is None:
             raise ValueError("This decoder requires independent training shots.")
         td = binary_rows(train_dets, model.num_detectors)
@@ -167,105 +119,45 @@ def build_decoder(model, family, *, train_dets=None, train_obs=None, coherence_m
             raise ValueError("Require at least four aligned training shots.")
         dem, chosen, cv = choose_dem(model, td, to)
         meta.update(weight_choice=chosen, training_cv_errors=cv, train_shots=len(td))
-    else:
-        meta["train_shots"] = 0
-    if family in {"mwpm", "mwpm_fit"}:
-        decoder = MatchingDecoder(dem)
-    elif family in {"ensemble", "ensemble_fit"}:
-        decoder = EnsembleDecoder(dem, members=21, sigma=.5, seed=2197)
-        meta.update(members=21, sigma=.5, seed=2197)
-    elif family in {"ml", "ml_fit"}:
-        from iqm_surface_code.decoders.lookup_table import build_lookup_table
-        # Keep undecomposed mechanisms for the original model; fitted DEMs
-        # retain separators as correlated parts of a single Bernoulli fault.
-        decoder = build_lookup_table(dem if fitted else model)
-        meta.update(decoder.metadata)
-    elif family.startswith('posterior_'):
-        from iqm_surface_code.decoders.lookup_table import LookupTableDecoder
-        alpha=int(family.split('_')[1])
-        if alpha not in {1,10,100}:raise ValueError('Unsupported posterior prior strength.')
-        posterior=model_posterior(str(dem))
-        keys=td.astype(np.uint32)@(np.uint32(1)<<np.arange(model.num_detectors,dtype=np.uint32))
-        unique,inverse,counts=np.unique(keys,return_inverse=True,return_counts=True)
-        flips=np.bincount(inverse,weights=to[:,0],minlength=len(unique))
-        table=(posterior>.5).astype(np.uint8)
-        table[unique]=(flips+alpha*posterior[unique])>.5*(counts+alpha)
-        meta.update(algorithm='Dara posterior-plus-data rule on exact native DEM posterior',alpha=alpha,
-            table_entries=len(table),table_bytes=table.nbytes,empirical_entries=len(unique),
-            estimated_transform_peak_bytes=(1<<(model.num_detectors+1))*16,
-            unseen_syndrome_fallback='exact modeled ML',joint_dem_faults=True,
-            table_sha256=hashlib.sha256(table.tobytes()).hexdigest())
-        decoder=LookupTableDecoder(table,model.num_detectors,meta)
-    elif family.startswith("empirical_"):
-        minimum = int(family.split("_")[1])
-        decoder = LUTDecoder(td, to, MatchingDecoder(dem), min_count=minimum)
-        meta.update(min_count=minimum, fallback="correlated MWPM", table_entries=len(decoder.table))
-    else:
-        raise ValueError(f"Unknown decoder family: {family}")
+        alpha = 10
+        posterior = model_posterior(str(dem))
+        keys = td.astype(np.uint32) @ (np.uint32(1) << np.arange(model.num_detectors, dtype=np.uint32))
+        unique, inverse, counts = np.unique(keys, return_inverse=True, return_counts=True)
+        flips = np.bincount(inverse, weights=to[:, 0], minlength=len(unique))
+        table = (posterior > .5).astype(np.uint8)
+        table[unique] = (flips + alpha*posterior[unique]) > .5*(counts + alpha)
+        meta.update(algorithm="Dara posterior-plus-data rule on exact native DEM posterior", alpha=alpha,
+                    table_entries=len(table), table_bytes=table.nbytes, empirical_entries=len(unique),
+                    estimated_transform_peak_bytes=(1 << (model.num_detectors+1))*16,
+                    unseen_syndrome_fallback="exact modeled ML", joint_dem_faults=True,
+                    table_sha256=hashlib.sha256(table.tobytes()).hexdigest())
+        decoder = LookupTableDecoder(table, model.num_detectors, meta)
     meta["dem_sha256"] = hashlib.sha256(str(dem).encode()).hexdigest()
     return FrozenAdapter(decoder, model.num_detectors, metadata=meta), dem
 
 
 def save_decoder(adapter, dem, directory):
-    """Save all frozen inference state without credentials or pickle objects."""
+    """Save inference state as DEM, JSON and optional non-pickled lookup."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     dem.to_file(directory / "model.dem")
     (directory / "metadata.json").write_text(json.dumps(adapter.metadata, indent=2, default=str)+"\n")
-    decoder = adapter.decoder
-    if adapter.metadata['family'] in {'mlp','conv'}:
-        np.savez_compressed(directory / 'weights.npz', **{k:v.detach().cpu().numpy() for k,v in decoder.model.state_dict().items()})
-        if adapter.metadata['family']=='conv':
-            # The original ConvDecoder derives a spatial detector map from
-            # the exact circuit; persist that model rather than guessing it.
-            decoder._headline_circuit.to_file(directory / 'circuit.stim')
-        return
-    if hasattr(decoder, "table"):
-        if isinstance(decoder.table, np.ndarray):
-            decoder.save(directory / "table.npz")
-        else:
-            keys = np.array([list(k) for k in decoder.table], dtype=np.uint8)
-            counts = np.array(list(decoder.table.values()), dtype=np.int64)
-            np.savez_compressed(directory / "empirical.npz", keys=keys, counts=counts)
+    if adapter.metadata["family"] == "posterior_10":
+        adapter.decoder.save(directory / "table.npz")
 
 
 def load_decoder(directory):
+    """Load a frozen final policy without training or network access."""
     import stim
-    from darawork.decoders.ensemble_decoder import MatchingDecoder, EnsembleDecoder
-    from darawork.decoders.lut_decoder import LUTDecoder
+    from darawork.decoders.matching import MatchingDecoder
     directory = Path(directory)
     meta = json.loads((directory / "metadata.json").read_text())
     dem = stim.DetectorErrorModel.from_file(directory / "model.dem")
-    family = meta["family"]
-    if family not in {'mlp','conv','mwpm','mwpm_fit','ensemble','ensemble_fit','ml','ml_fit','empirical_1','empirical_3','empirical_10','empirical_30','posterior_1','posterior_10','posterior_100','coherence'}:
-        raise ValueError('Unknown frozen decoder family: '+str(family))
-    if family in {'mlp','conv'}:
-        import torch
-        if family=='mlp':
-            from iyanu.neural_gpu import _mlp, NeuralDecoder, NeuralConfig
-            config=NeuralConfig(**meta['config'])
-            module=_mlp(dem.num_detectors,1,config.hidden,config.layers)
-            decoder=NeuralDecoder(module,dem.num_detectors,1,torch.device('cpu'),config,{})
-        else:
-            from iyanu.conv_decoders import ConvDecoder,ConvConfig
-            decoder=ConvDecoder(stim.Circuit.from_file(directory/'circuit.stim'),ConvConfig(**meta['config']))
-            module=decoder.model
-        with np.load(directory/'weights.npz',allow_pickle=False) as weights:
-            module.load_state_dict({k:torch.from_numpy(weights[k].copy()) for k in weights.files})
-        module.eval()
-    elif family.startswith("empirical_"):
-        # Construct from the frozen counts without invoking training or CV.
-        decoder = object.__new__(LUTDecoder)
-        with np.load(directory / "empirical.npz", allow_pickle=False) as data:
-            decoder.table = {bytes(k): tuple(map(int, v)) for k, v in zip(data["keys"], data["counts"])}
-        decoder.fallback = MatchingDecoder(dem)
-        decoder.min_count = meta["min_count"]
-        decoder.coverage = None
-    elif family.startswith(("ml","posterior_")):
+    if meta["family"] == "mwpm":
+        decoder = MatchingDecoder(dem)
+    elif meta["family"] == "posterior_10":
         from iqm_surface_code.decoders.lookup_table import LookupTableDecoder
         decoder = LookupTableDecoder.load(directory / "table.npz")
-    elif family.startswith("ensemble"):
-        decoder = EnsembleDecoder(dem, members=meta["members"], sigma=meta["sigma"], seed=meta["seed"])
     else:
-        decoder = MatchingDecoder(dem)
+        raise ValueError("Unknown final decoder family: " + str(meta["family"]))
     return FrozenAdapter(decoder, dem.num_detectors, metadata=meta)

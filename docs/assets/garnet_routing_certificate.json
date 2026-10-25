@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "device": "garnet",
+  "distance": 3,
+  "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+  "measurement_manifest_sha256": "d7c874c7d988c49046f49cf667429ac53f559bd03ae7da7a1975a7d45a9586f5",
+  "architecture_sha256_canonical": "20e04b07d8430be31d78f682c72c402abb9df5e201a890e95c0a64f47c688bc0",
+  "hardware_qubits": 20,
+  "hardware_couplers": 30,
+  "placement": {
+    "1": "QB12",
+    "2": "QB7",
+    "3": "QB6",
+    "9": "QB11",
+    "8": "QB16",
+    "10": "QB10",
+    "11": "QB5",
+    "5": "QB2",
+    "12": "QB4",
+    "13": "QB1",
+    "14": "QB20",
+    "15": "QB19",
+    "16": "QB15",
+    "17": "QB14",
+    "18": "QB9",
+    "19": "QB8",
+    "25": "QB13"
+  },
+  "routing_method": "none",
+  "routing_swap_lower_bound": 0,
+  "routing_swaps_achieved": 0,
+  "optimal_routing_swap_count": 0,
+  "cases_verified": 12,
+  "cases": [
+    {
+      "id": "confirm0_baseline_X_r1",
+      "basis": "X",
+      "rounds": 1,
+      "source_file": "optimized/confirm0_baseline_X_r1.source.stim",
+      "native_file": "optimized/confirm0_baseline_X_r1.native.stim",
+      "source_sha256": "2bd4c6af556e57949ed1f37173990ad1144e66c646c13e7cb264b5de0f3fc278",
+      "native_sha256": "4814549913e9069e1579cfd3b75362849cf84dfaedccd1fd74f5367ad69c9573",
+      "source_cz": 24,
+      "native_cz": 24,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm0_baseline_X_r2",
+      "basis": "X",
+      "rounds": 2,
+      "source_file": "optimized/confirm0_baseline_X_r2.source.stim",
+      "native_file": "optimized/confirm0_baseline_X_r2.native.stim",
+      "source_sha256": "2f0e854c1d3fe18c56fc916c59b83ddf41dc28d663e7bce1db2dd1c448bcdc35",
+      "native_sha256": "c5e67ff76dcd0c17f5c58c6555a289e89b66643eeea5c119411e002609964431",
+      "source_cz": 48,
+      "native_cz": 48,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm0_baseline_X_r3",
+      "basis": "X",
+      "rounds": 3,
+      "source_file": "optimized/confirm0_baseline_X_r3.source.stim",
+      "native_file": "optimized/confirm0_baseline_X_r3.native.stim",
+      "source_sha256": "2bb173a2dab01724c8e64a1ef8dd48b53eec9f614bd008f8f16bde81f888b32e",
+      "native_sha256": "1b895302c1f7635ad1f5c9a77d18b220c38c7904f05e70f815bb5343f45ffeab",
+      "source_cz": 72,
+      "native_cz": 72,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm0_baseline_Z_r1",
+      "basis": "Z",
+      "rounds": 1,
+      "source_file": "optimized/confirm0_baseline_Z_r1.source.stim",
+      "native_file": "optimized/confirm0_baseline_Z_r1.native.stim",
+      "source_sha256": "a277bb0a638fe8acc7b30e94f8c059b7b6ca11bf9edc557ca133a9d03ef491a8",
+      "native_sha256": "1f2af744f80d2a3c268d830adbc16a984d211bf11bc96a5e7dd57b99503d1b82",
+      "source_cz": 24,
+      "native_cz": 24,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm0_baseline_Z_r2",
+      "basis": "Z",
+      "rounds": 2,
+      "source_file": "optimized/confirm0_baseline_Z_r2.source.stim",
+      "native_file": "optimized/confirm0_baseline_Z_r2.native.stim",
+      "source_sha256": "640eb0ad137e011a001bfa7012de301b52f517e0f7ae4222846af7313995f322",
+      "native_sha256": "fbc35f84d1c7731c26087624c1970c25f85d184bbcb9a87b8035df75cd6a7dfd",
+      "source_cz": 48,
+      "native_cz": 48,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm0_baseline_Z_r3",
+      "basis": "Z",
+      "rounds": 3,
+      "source_file": "optimized/confirm0_baseline_Z_r3.source.stim",
+      "native_file": "optimized/confirm0_baseline_Z_r3.native.stim",
+      "source_sha256": "8b0f5a6c383383f59d41585b158802f2f9fb519fccd96b261d3613d5bd2faf26",
+      "native_sha256": "fdc9147741c575c32d563c4b4d515e6acf256fc919ec235865fc54b400d769ba",
+      "source_cz": 72,
+      "native_cz": 72,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_X_r1",
+      "basis": "X",
+      "rounds": 1,
+      "source_file": "optimized/confirm1_baseline_X_r1.source.stim",
+      "native_file": "optimized/confirm1_baseline_X_r1.native.stim",
+      "source_sha256": "2bd4c6af556e57949ed1f37173990ad1144e66c646c13e7cb264b5de0f3fc278",
+      "native_sha256": "4814549913e9069e1579cfd3b75362849cf84dfaedccd1fd74f5367ad69c9573",
+      "source_cz": 24,
+      "native_cz": 24,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_X_r2",
+      "basis": "X",
+      "rounds": 2,
+      "source_file": "optimized/confirm1_baseline_X_r2.source.stim",
+      "native_file": "optimized/confirm1_baseline_X_r2.native.stim",
+      "source_sha256": "2f0e854c1d3fe18c56fc916c59b83ddf41dc28d663e7bce1db2dd1c448bcdc35",
+      "native_sha256": "c5e67ff76dcd0c17f5c58c6555a289e89b66643eeea5c119411e002609964431",
+      "source_cz": 48,
+      "native_cz": 48,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_X_r3",
+      "basis": "X",
+      "rounds": 3,
+      "source_file": "optimized/confirm1_baseline_X_r3.source.stim",
+      "native_file": "optimized/confirm1_baseline_X_r3.native.stim",
+      "source_sha256": "2bb173a2dab01724c8e64a1ef8dd48b53eec9f614bd008f8f16bde81f888b32e",
+      "native_sha256": "1b895302c1f7635ad1f5c9a77d18b220c38c7904f05e70f815bb5343f45ffeab",
+      "source_cz": 72,
+      "native_cz": 72,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_Z_r1",
+      "basis": "Z",
+      "rounds": 1,
+      "source_file": "optimized/confirm1_baseline_Z_r1.source.stim",
+      "native_file": "optimized/confirm1_baseline_Z_r1.native.stim",
+      "source_sha256": "a277bb0a638fe8acc7b30e94f8c059b7b6ca11bf9edc557ca133a9d03ef491a8",
+      "native_sha256": "1f2af744f80d2a3c268d830adbc16a984d211bf11bc96a5e7dd57b99503d1b82",
+      "source_cz": 24,
+      "native_cz": 24,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_Z_r2",
+      "basis": "Z",
+      "rounds": 2,
+      "source_file": "optimized/confirm1_baseline_Z_r2.source.stim",
+      "native_file": "optimized/confirm1_baseline_Z_r2.native.stim",
+      "source_sha256": "640eb0ad137e011a001bfa7012de301b52f517e0f7ae4222846af7313995f322",
+      "native_sha256": "fbc35f84d1c7731c26087624c1970c25f85d184bbcb9a87b8035df75cd6a7dfd",
+      "source_cz": 48,
+      "native_cz": 48,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    },
+    {
+      "id": "confirm1_baseline_Z_r3",
+      "basis": "Z",
+      "rounds": 3,
+      "source_file": "optimized/confirm1_baseline_Z_r3.source.stim",
+      "native_file": "optimized/confirm1_baseline_Z_r3.native.stim",
+      "source_sha256": "8b0f5a6c383383f59d41585b158802f2f9fb519fccd96b261d3613d5bd2faf26",
+      "native_sha256": "fdc9147741c575c32d563c4b4d515e6acf256fc919ec235865fc54b400d769ba",
+      "source_cz": 72,
+      "native_cz": 72,
+      "explicit_swaps": 0,
+      "added_two_qubit_gates": 0,
+      "non_native_couplings": 0,
+      "required_couplers": 24,
+      "used_qubits": 17,
+      "data_qubits": 9,
+      "check_qubits": 8,
+      "check_weights": {
+        "2": 4,
+        "4": 4
+      },
+      "check_types": {
+        "X": 4,
+        "Z": 4
+      },
+      "same_edge_multiset": true,
+      "same_order_on_every_wire": true,
+      "static_coordinate_mapping": true,
+      "static_measurement_mapping": true
+    }
+  ],
+  "scope": "Recorded optimized d3 X/Z memory circuits at rounds 1--3; routing SWAP optimality for this fixed schedule."
+}

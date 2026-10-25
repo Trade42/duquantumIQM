@@ -19,3 +19,11 @@ Software documentation:
 The [methods](METHODS.md) link each technique to its implementation. The
 [measurement manifest](../benchmarks/garnet/manifest.json) records the software
 versions used for acquisition.
+
+## Learned decoding and the next scaling questions
+
+- [Varbanov et al., neural network decoder](https://arxiv.org/abs/2307.03280): recurrent detector-history inference.
+- [Mueller et al., Relay-BP](https://arxiv.org/abs/2506.01779): message-passing decoder used for uncertain shots.
+- [Acharya et al., below-threshold surface-code error correction](https://arxiv.org/abs/2408.13687): external context for distance scaling and real-time decoding.
+
+The [ML evidence](ML_DECODER.md) separates the imported hardware study from the final R1-3 Garnet pipeline.

@@ -1,6 +1,6 @@
 # Contributing
 
-Read the [challenge methods](docs/METHODS.md),
+Read the [retained improvements](improvements.md), [challenge methods](docs/METHODS.md),
 [evaluation](docs/EVALUATION.md) and [reproduction guide](docs/REPRODUCIBILITY.md).
 
 ## Scientific interfaces

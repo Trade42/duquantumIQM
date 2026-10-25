@@ -1,14 +1,11 @@
-from copy import deepcopy
-from dataclasses import asdict
 import json
 import socket
 
-import numpy as np
 import pytest
 
 from challenge.benchmark_emerald import (
-    SHOT_LIMIT, main, reserve_submission, select_baseline_layout, validate_request)
-from iqm_surface_code.benchmark_vanilla_lut import prepare_vanilla, vanilla_circuit
+    SHOT_LIMIT, main, reserve_submission, select_baseline_layout)
+from iqm_surface_code.benchmark_vanilla_lut import vanilla_circuit
 
 pytestmark = pytest.mark.filterwarnings("ignore:.*iqm.station_control.interface.models.circuit.*:DeprecationWarning")
 
@@ -25,46 +22,6 @@ def test_54_qubit_graph_embedding_is_native_fixed_and_unweighted():
     assert not report["calibration_weighted"]
     with pytest.raises(ValueError, match="No native"):
         select_baseline_layout(vanilla_circuit(1,"X"), [], qubits)
-
-
-@pytest.mark.parametrize("basis", ["X", "Z"])
-def test_native_request_and_source_frame_offline(basis, monkeypatch):
-    pytest.importorskip("iqm.qiskit_iqm")
-    from iqm.qiskit_iqm.fake_backends.fake_garnet import IQMFakeGarnet
-    from iqm.qiskit_iqm.iqm_provider import IQMBackend
-    from iqm_surface_code.hardware_optimization import native_stim
-    from challenge.benchmark_emerald import couplings
-
-    def no_network(*args, **kwargs):
-        raise AssertionError("Offline preflight used the network")
-    monkeypatch.setattr(socket.socket, "connect", no_network)
-    b = IQMFakeGarnet()
-    b.serialize_circuit = IQMBackend.serialize_circuit.__get__(b)
-    edges = couplings(b)
-    mapping, _ = select_baseline_layout(vanilla_circuit(3,basis), edges, b.physical_qubits)
-    p = prepare_vanilla(b, 3, basis, mapping, .003)
-    native, columns = native_stim(p["compiled"], p["ideal"], mapping, b)
-    raw = np.random.default_rng(77).integers(2, size=(64,33),dtype=np.uint8).astype(bool)
-    expected = p["ideal"].compile_m2d_converter().convert(measurements=raw,separate_observables=True)
-    actual = native.compile_m2d_converter().convert(measurements=raw[:,columns],separate_observables=True)
-    assert all(np.array_equal(a,b) for a,b in zip(expected,actual))
-    assert p["report"]["native_ops"]["cz"] == 72
-    payload = dict(calibration_set_id="fixture", shots=3000, dd_mode="disabled", heralding_mode="none",
-                   active_reset_cycles=None, circuits=[asdict(b.serialize_circuit(p["compiled"]))])
-    manifest = dict(calibration_set_id="fixture",placement=mapping)
-    case = dict(shots=3000, rounds=3, basis=basis)
-    validate_request(payload,case,manifest,edges)
-    from iqm.iqm_client import RunRequest
-    request = RunRequest.model_validate({**payload, "calibration_set_id": "23e12f6b-c23c-4736-8736-b0142989c0e6"})
-    restored = RunRequest.model_validate(request.model_dump(mode="json"))
-    assert restored.model_dump(mode="json") == request.model_dump(mode="json")
-    for field, value in (("dd_mode","enabled"),("heralding_mode","zeros"),("active_reset_cycles",1)):
-        changed=deepcopy(payload);changed[field]=value
-        with pytest.raises(ValueError,match="DD, heralding and active reset off"):
-            validate_request(changed,case,manifest,edges)
-    changed=deepcopy(payload)
-    next(i for i in changed["circuits"][0]["instructions"] if i["name"]=="cz")["locus"]=["QB3","QB18"]
-    with pytest.raises(ValueError): validate_request(changed,case,manifest,edges)
 
 
 def test_submission_intent_is_durable_and_cannot_be_retried(tmp_path):

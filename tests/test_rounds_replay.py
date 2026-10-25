@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 import stim
 
-from challenge.benchmark_rounds import digest
+from challenge.benchmark_headline import digest
 from challenge.replay_rounds import verify_case
 
 

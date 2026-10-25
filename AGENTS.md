@@ -56,13 +56,13 @@ Inspect the live code before assuming that later integration has happened.
   Record model approximations and fail explicitly on unsupported cases.
 - Persistent leakage flags are hidden simulator state. A decoder may use
   measured syndrome history; it may not receive hidden flags as oracle data.
-- Static-patch S/T are unsupported. The transversal CNOT helper is a primitive,
-  not an implemented two-block syndrome/decoder pipeline.
+- The final pipeline is X/Z identity memory at distance three and rounds 1–3.
+  Keep inference and compiled source/native measurement frames aligned.
 
 ## Validation and claims
 
 Read [IMPLEMENTATION.md](IMPLEMENTATION.md) for the pipeline and noise models,
-and [TRANSVERSAL_GATES.md](TRANSVERSAL_GATES.md) for logical frames and benchmarks.
+and [improvements.md](improvements.md) for the retained Garnet improvements.
 Run focused backend tests first; the integration owner runs the relevant shared
 regressions and full `python -m pytest -q` before completing integration.
 Do not change global packages or dependency pins for an individual backend.

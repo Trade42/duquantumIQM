@@ -91,9 +91,9 @@ both decoding **and statistics**, so even unrelated-looking changes can collide.
 | `challenge/decoding.py::decode_syndromes` | Validate shapes/circuit identity, predict logical flips, aggregate failures |
 | `challenge/decoding.py::DecodeResult` | Shots, failures, probability, SE, Wilson interval and raw logical-flip diagnostic |
 | `challenge/decoding.py::fit_ler` | Binomial maximum-likelihood rate fit, optional SPAM amplitude, profile interval |
-| `challenge/experiment.py::simulate_memory` | Physical sampling, direct PyMatching call, diagnostics, optional stopping |
+| `challenge/submission.py::evaluate` | Frozen-policy replay, all-shot scoring and challenge LER comparison |
 | `challenge/run_on_hardware.py::decode_hardware_results` | Hardware result wrapper; noisy decoder circuit is required |
-| `challenge/logical_gates.py` | Logical operation schedule, H boundary orientation, virtual Pauli readout frame |
+| `challenge/replay_rounds.py::verify_case` | Source/native measurement order and detector/observable verification |
 
 The core backend behavior is `decode_batch(det_events) -> logical_predictions`.
 Accept a binary two-dimensional input, keep shot order and return a binary
@@ -135,9 +135,8 @@ information; do not use them for tuning without explicitly reporting adaptation.
   definitions; avoid hand-written bulk-only formulas.
 - Sparse Stim qubit indices, dense hardware indices, measurement indices and
   detector indices are separate spaces. Do not interchange them.
-- A physical H changes future check types and terminal readout. Preserve the
-  generated code frame. `virtual_readout_xor` corrects actual raw logical bits;
-  do not apply it again to reference-normalized observable-flip labels.
+- Preserve the generated X/Z memory frame and terminal readout. Observable
+  flips are already reference-normalized; do not apply a second correction.
 - Use the actual noisy schedule. Do not substitute a reset circuit, move logical
   gates, delete QEC rounds or alter the noise model to improve decoder scores.
 - Static DEMs approximate persistent leakage. Hidden simulator flags and future
@@ -149,8 +148,8 @@ information; do not use them for tuning without explicitly reporting adaptation.
 - Do not suppress non-deterministic-detector errors or silently discard
   hyperedges. Preserve `approximate_disjoint_errors` and decomposition settings
   in metadata. A fallback decoder must be named and timed, not hidden.
-- The CNOT helper alone does not provide joint two-block detectors or decoding.
-  Do not claim a multi-block threshold from independent memory matching.
+- The retained pipeline is single-logical identity memory. Do not claim
+  multi-block logical-gate behavior from memory decoding.
 
 ## 5. Compare decoders fairly
 
@@ -177,16 +176,14 @@ This reserved resource is a coordination name rather than a repository file.
 Ordinary correctness tests can run independently.
 
 Use paired failure differences or a paired bootstrap when comparing decoders
-on common shots. Existing logical-circuit before/after benchmarks use independent
-physical samples and different interval logic; do not copy that independence
-assumption into a common-shot decoder comparison. Report negative and null gains.
+on common shots. Physical before/after comparisons use independent samples; do not copy that
+independence assumption into a common-shot decoder comparison. Report negative and null gains.
 
 One round count gives logical failure probability. Per-round LER requires a
 multi-round fit and its assumptions. Effective algorithm-cycle rates also depend
 on the operation schedule and preparation offset. Zero-failure points retain a
 positive uncertainty bound. Fixed-shot Wilson intervals do not become
-optional-stopping-safe by stopping after a target number of errors; use the
-existing confidence-sequence machinery or another justified method.
+optional-stopping-safe by stopping after a target number of errors; use a justified anytime-valid method.
 
 ## 6. Validate and hand off
 
@@ -200,7 +197,7 @@ Do not claim support for an untested regime; state its limitation explicitly.
 Run your focused tests, then relevant existing regressions, for example:
 
 ```powershell
-python -m pytest -q tests/test_surface_code.py tests/test_logical_gates.py
+python -m pytest -q tests/test_surface_code.py tests/decoders/test_hybrid.py
 ```
 
 Before completing shared integration, the integration owner runs:
@@ -233,6 +230,6 @@ Next concrete step:
 ```
 
 Source material: [pipeline and models](../IMPLEMENTATION.md),
-[logical gates and frames](../TRANSVERSAL_GATES.md),
+[retained improvements](../improvements.md),
 [validation history](../VALIDATION.md). Code is authoritative when a document's
 test count or integration description has become stale.

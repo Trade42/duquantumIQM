@@ -1,0 +1,21 @@
+{
+ "device": "garnet",
+ "calibration_set_id": "a18a947f-0408-4628-81ea-1715637e434f",
+ "source_directory": "InfoRecord/calibration/garnet",
+ "snapshot_json": "20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json",
+ "source_sha256": {
+  "qubits.csv": "e18d58a93789c57c89c33127bf99bc6aaef4cbbc7cd0d6f7ecdcbc661ac2fc8c",
+  "couplers.csv": "fa9a8959c829fef9034445b7f8bfbb52aacd8379edfe9bd87c763e358ec5fd06",
+  "durations.json": "6120a6db83b1cc33d30ce577988d18da8c84dc856694796e78cdb931effcab38",
+  "placement.json": "30386fd6b3e332b0d344caee8ebc6b101ff35a4fea41186ee570a5e272564eab",
+  "20261024T191313Z-a18a947f-0408-4628-81ea-1715637e434f.json": "1fa346d3d6feeb405522b4802ec3cea30371fb43eb384f19b9f6062ac4d4c3ac",
+  "README.md": "10796b1b8a45e854b4797b5196d50d9fa6714205963aaca9a163d4534a621040"
+ },
+ "vendored_sha256": {
+  "qubits.csv": "e18d58a93789c57c89c33127bf99bc6aaef4cbbc7cd0d6f7ecdcbc661ac2fc8c",
+  "couplers.csv": "fa9a8959c829fef9034445b7f8bfbb52aacd8379edfe9bd87c763e358ec5fd06",
+  "durations.json": "6120a6db83b1cc33d30ce577988d18da8c84dc856694796e78cdb931effcab38",
+  "placement.json": "30386fd6b3e332b0d344caee8ebc6b101ff35a4fea41186ee570a5e272564eab",
+  "metrics.json": "310b770a8207b89b7603f646e87cb5ba273f641b0947d71908d59493870af748"
+ }
+}

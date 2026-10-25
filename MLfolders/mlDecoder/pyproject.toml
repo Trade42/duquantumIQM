@@ -1,0 +1,14 @@
+[project]
+name = "garnet-ml-decoder"
+version = "0.1.0"
+description = "Optional retained LSTM and confidence-gated Relay-BP cascade"
+requires-python = ">=3.13"
+dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2", "stim>=1.16,<1.17", "pymatching>=2.4,<3", "matplotlib>=3.9,<4"]
+
+[project.optional-dependencies]
+ml = ["torch>=2.13,<3", "relay-bp==0.2.2"]
+test = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+testpaths = ["tests"]

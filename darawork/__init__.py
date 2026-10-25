@@ -1,4 +1,1 @@
-"""Dara's DuQuantum work: Garnet hardware path, decoders, benchmarks, selection protocol.
-
-Builds on the team's challenge/ package (circuits, noise models, decoding helpers).
-"""
+"""Correlated matching and training-only detector-prior fitting for Garnet memory."""

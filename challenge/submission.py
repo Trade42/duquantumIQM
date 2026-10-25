@@ -13,6 +13,7 @@ from .decoders.hybrid import load_decoder
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 BUNDLE = REPOSITORY / "benchmarks/garnet"
+RUNTIME_SOURCES = Path(__file__).with_name("runtime_sources.json")
 ROUNDS = (1, 2, 3)
 
 
@@ -26,7 +27,13 @@ def verify_bundle(bundle=BUNDLE):
             raise ValueError("Artifact path escapes the comparison bundle.")
         if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError(f"Artifact hash mismatch: {relative}")
-    for relative, expected in manifest["source_dependencies"].items():
+    sources = manifest["source_dependencies"]
+    if bundle == BUNDLE.resolve():
+        runtime = json.loads(RUNTIME_SOURCES.read_text())
+        if hashlib.sha256((bundle / "manifest.json").read_bytes()).hexdigest() != runtime["published_manifest_sha256"]:
+            raise ValueError("Published evidence manifest hash mismatch.")
+        sources = runtime["source_dependencies"]
+    for relative, expected in sources.items():
         path = (REPOSITORY / relative).resolve()
         if not path.is_relative_to(REPOSITORY):
             raise ValueError("Source path escapes the repository.")

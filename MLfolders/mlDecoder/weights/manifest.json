@@ -1,0 +1,225 @@
+{
+ "format": "mlDecoder.weights/1",
+ "models": [
+  {
+   "device": "emerald",
+   "patch": "eA",
+   "basis": "X",
+   "backend": "rnn_lstm",
+   "file": "emerald/rnn_lstm_eA_X.pt",
+   "sha256": "a97dbbac52f43e6c31e3e74af4e0060de5987a3661cbbe4202a1af18b5bcb7ac",
+   "bytes": 499895,
+   "parameters": 243714,
+   "dtype": "float16",
+   "stage": "finetuned",
+   "source_run": "rnn_lstm/20261024-211525-finetune-20261024-195414",
+   "source_commit": "b0768311d007369822595547d23156b89a3d402e",
+   "calibration_set": "23e12f6b",
+   "default": true,
+   "note": "fine-tuned on the device's real shots (batches 1-2, HARDWARE); the cascade's prior and tau chosen on validation; scored on the held-out batch 3",
+   "inputs": "detection events only (no observables, no leakage flags)",
+   "prior": {
+    "noise": "calibrated_coherence",
+    "p": 0.001,
+    "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+   },
+   "cascade": {
+    "tau": 0.19,
+    "rule": "one standard error: the smallest tau whose validation failures exceed the argmin tau's by at most sqrt(b + c), b and c the shots on which only one of the two fails (the argmin tau is recorded)",
+    "prior": {
+     "noise": "uniform",
+     "p": 0.001,
+     "calibration": null
+    },
+    "prior_choice": {
+     "chosen": "uniform",
+     "shots": 8800,
+     "calibrated_failures": 1934,
+     "uniform_failures": 1807,
+     "only_uniform_fails": 633,
+     "only_calibrated_fails": 760,
+     "se": 37.322915213043046,
+     "rule": "calibrated unless uniform-weight correlated MWPM fails fewer validation shots by more than sqrt(b + c), b and c the shots on which only one of the two fails"
+    },
+    "relay_config": {
+     "gamma0": 0.1,
+     "pre_iter": 80,
+     "num_sets": 60,
+     "set_max_iter": 60,
+     "gamma_dist_interval": [
+      -0.24,
+      0.66
+     ],
+     "stop_nconv": 5,
+     "parallel": false
+    },
+    "validation_shots": 8800
+   }
+  },
+  {
+   "device": "emerald",
+   "patch": "eA",
+   "basis": "Z",
+   "backend": "rnn_lstm",
+   "file": "emerald/rnn_lstm_eA_Z.pt",
+   "sha256": "db3f615d01541faf805bec1e946f36367ee3dfbbb072aa1262080b4595cd7d83",
+   "bytes": 499959,
+   "parameters": 243714,
+   "dtype": "float16",
+   "stage": "finetuned",
+   "source_run": "rnn_lstm/20261024-211525-finetune-20261024-195414",
+   "source_commit": "b0768311d007369822595547d23156b89a3d402e",
+   "calibration_set": "23e12f6b",
+   "default": true,
+   "note": "fine-tuned on the device's real shots (batches 1-2, HARDWARE); the cascade's prior and tau chosen on validation; scored on the held-out batch 3",
+   "inputs": "detection events only (no observables, no leakage flags)",
+   "prior": {
+    "noise": "calibrated_coherence",
+    "p": 0.001,
+    "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+   },
+   "cascade": {
+    "tau": 0.0,
+    "rule": "one standard error: the smallest tau whose validation failures exceed the argmin tau's by at most sqrt(b + c), b and c the shots on which only one of the two fails (the argmin tau is recorded)",
+    "prior": {
+     "noise": "calibrated_coherence",
+     "p": 0.001,
+     "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+    },
+    "prior_choice": {
+     "chosen": "calibrated",
+     "shots": 8800,
+     "calibrated_failures": 2060,
+     "uniform_failures": 2238,
+     "only_uniform_fails": 871,
+     "only_calibrated_fails": 693,
+     "se": 39.54743986657038,
+     "rule": "calibrated unless uniform-weight correlated MWPM fails fewer validation shots by more than sqrt(b + c), b and c the shots on which only one of the two fails"
+    },
+    "relay_config": {
+     "gamma0": 0.1,
+     "pre_iter": 80,
+     "num_sets": 60,
+     "set_max_iter": 60,
+     "gamma_dist_interval": [
+      -0.24,
+      0.66
+     ],
+     "stop_nconv": 5,
+     "parallel": false
+    },
+    "validation_shots": 8800
+   }
+  },
+  {
+   "device": "garnet",
+   "patch": "pA",
+   "basis": "X",
+   "backend": "rnn_lstm",
+   "file": "garnet/rnn_lstm_pA_X.pt",
+   "sha256": "54b963929ac215b02831d536899f191d578221d11670943ce36e9c3f122f1b5d",
+   "bytes": 500535,
+   "parameters": 243714,
+   "dtype": "float16",
+   "stage": "finetuned",
+   "source_run": "rnn_lstm/20261024-210821-finetune-20261024-191223",
+   "source_commit": "b0768311d007369822595547d23156b89a3d402e",
+   "calibration_set": "a18a947f",
+   "default": true,
+   "note": "fine-tuned on the device's real shots (batches 1-2, HARDWARE); the cascade's prior and tau chosen on validation; scored on the held-out batch 3",
+   "inputs": "detection events only (no observables, no leakage flags)",
+   "prior": {
+    "noise": "calibrated_coherence",
+    "p": 0.001,
+    "calibration": "inforecord:garnet:a18a947f:pA:t2=ramsey:window=1096:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+   },
+   "cascade": {
+    "tau": 0.0,
+    "rule": "one standard error: the smallest tau whose validation failures exceed the argmin tau's by at most sqrt(b + c), b and c the shots on which only one of the two fails (the argmin tau is recorded)",
+    "prior": {
+     "noise": "calibrated_coherence",
+     "p": 0.001,
+     "calibration": "inforecord:garnet:a18a947f:pA:t2=ramsey:window=1096:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+    },
+    "prior_choice": {
+     "chosen": "calibrated",
+     "shots": 22000,
+     "calibrated_failures": 7890,
+     "uniform_failures": 7879,
+     "only_uniform_fails": 3174,
+     "only_calibrated_fails": 3185,
+     "se": 79.74333827975852,
+     "rule": "calibrated unless uniform-weight correlated MWPM fails fewer validation shots by more than sqrt(b + c), b and c the shots on which only one of the two fails"
+    },
+    "relay_config": {
+     "gamma0": 0.1,
+     "pre_iter": 80,
+     "num_sets": 60,
+     "set_max_iter": 60,
+     "gamma_dist_interval": [
+      -0.24,
+      0.66
+     ],
+     "stop_nconv": 5,
+     "parallel": false
+    },
+    "validation_shots": 22000
+   }
+  },
+  {
+   "device": "garnet",
+   "patch": "pA",
+   "basis": "Z",
+   "backend": "rnn_lstm",
+   "file": "garnet/rnn_lstm_pA_Z.pt",
+   "sha256": "c4740baea42502bb4498bade7f3f3d60fd7c642acf0c17a11b8933ddfd4bb7aa",
+   "bytes": 499959,
+   "parameters": 243714,
+   "dtype": "float16",
+   "stage": "finetuned",
+   "source_run": "rnn_lstm/20261024-210821-finetune-20261024-191223",
+   "source_commit": "b0768311d007369822595547d23156b89a3d402e",
+   "calibration_set": "a18a947f",
+   "default": true,
+   "note": "fine-tuned on the device's real shots (batches 1-2, HARDWARE); the cascade's prior and tau chosen on validation; scored on the held-out batch 3",
+   "inputs": "detection events only (no observables, no leakage flags)",
+   "prior": {
+    "noise": "calibrated_coherence",
+    "p": 0.001,
+    "calibration": "inforecord:garnet:a18a947f:pA:t2=ramsey:window=1096:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+   },
+   "cascade": {
+    "tau": 0.0,
+    "rule": "one standard error: the smallest tau whose validation failures exceed the argmin tau's by at most sqrt(b + c), b and c the shots on which only one of the two fails (the argmin tau is recorded)",
+    "prior": {
+     "noise": "calibrated_coherence",
+     "p": 0.001,
+     "calibration": "inforecord:garnet:a18a947f:pA:t2=ramsey:window=1096:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess"
+    },
+    "prior_choice": {
+     "chosen": "calibrated",
+     "shots": 22000,
+     "calibrated_failures": 7263,
+     "uniform_failures": 7608,
+     "only_uniform_fails": 3049,
+     "only_calibrated_fails": 2704,
+     "se": 75.8485332752058,
+     "rule": "calibrated unless uniform-weight correlated MWPM fails fewer validation shots by more than sqrt(b + c), b and c the shots on which only one of the two fails"
+    },
+    "relay_config": {
+     "gamma0": 0.1,
+     "pre_iter": 80,
+     "num_sets": 60,
+     "set_max_iter": 60,
+     "gamma_dist_interval": [
+      -0.24,
+      0.66
+     ],
+     "stop_nconv": 5,
+     "parallel": false
+    },
+    "validation_shots": 22000
+   }
+  }
+ ]
+}

@@ -1,0 +1,243 @@
+{
+  "schema": "emerald-vanilla-ml/1",
+  "rounds": [
+    1,
+    2,
+    3
+  ],
+  "sources": [
+    {
+      "path": "benchmarks/emerald/vanilla/20261025T022556Z/manifest.json",
+      "sha256": "a8d6b21a1e304979fbb3f224f2716df6146010bc68401c24bd84ffc7cfd87179"
+    },
+    {
+      "path": "MLfolders/mlDecoder/results_record/rnn_lstm/20261024-220320-finetune-20261024-195414/result.json",
+      "sha256": "2e80eb0520c05c272051a403014dc6aef9907fac9023c40473b88336f4798090"
+    }
+  ],
+  "fit": "P_L(R) = (1 - (1 - 2*epsilon)**R) / 2; binomial maximum likelihood",
+  "results": [
+    {
+      "basis": "X",
+      "vanilla": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          341,
+          681,
+          859
+        ],
+        "shots": [
+          3000,
+          3000,
+          3000
+        ],
+        "epsilon_per_round": 0.12352334670059434,
+        "ci95_profile": [
+          0.11773424536934664,
+          0.1295315580915801
+        ]
+      },
+      "lstm": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          19,
+          75,
+          160
+        ],
+        "shots": [
+          2000,
+          2000,
+          2000
+        ],
+        "epsilon_per_round": 0.021785765605280484,
+        "ci95_profile": [
+          0.019205257428980767,
+          0.024590189507332525
+        ],
+        "relative_ler_reduction": 0.8236303809183009
+      },
+      "telescope": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          19,
+          74,
+          161
+        ],
+        "shots": [
+          2000,
+          2000,
+          2000
+        ],
+        "epsilon_per_round": 0.02178562001004263,
+        "ci95_profile": [
+          0.019205136993369922,
+          0.0245900132482733
+        ],
+        "relative_ler_reduction": 0.8236315596042881
+      }
+    },
+    {
+      "basis": "Z",
+      "vanilla": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          46,
+          301,
+          456
+        ],
+        "shots": [
+          3000,
+          3000,
+          3000
+        ],
+        "epsilon_per_round": 0.047488882070121405,
+        "ci95_profile": [
+          0.04424392237087715,
+          0.05089387687117235
+        ]
+      },
+      "lstm": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          17,
+          162,
+          202
+        ],
+        "shots": [
+          2000,
+          2000,
+          2000
+        ],
+        "epsilon_per_round": 0.03317853814843864,
+        "ci95_profile": [
+          0.029935680203352855,
+          0.03665210362262726
+        ],
+        "relative_ler_reduction": 0.30134093071621093
+      },
+      "telescope": {
+        "rounds": [
+          1,
+          2,
+          3
+        ],
+        "failures": [
+          17,
+          162,
+          202
+        ],
+        "shots": [
+          2000,
+          2000,
+          2000
+        ],
+        "epsilon_per_round": 0.03317853814843864,
+        "ci95_profile": [
+          0.029935680203352855,
+          0.03665210362262726
+        ],
+        "relative_ler_reduction": 0.30134093071621093
+      }
+    }
+  ],
+  "timing": {
+    "host": "Ryzen 9 8945HS",
+    "cpu_threads": 1,
+    "batch": 1,
+    "metric": "Mean complete-history decode time divided by syndrome round count",
+    "records": [
+      {
+        "basis": "X",
+        "decoder": "lstm",
+        "rounds": 3,
+        "mean_decode_us_per_round": 164.05651105450445,
+        "mean_history_us": 492.16953316351334,
+        "median_history_us": 541.8000000645407,
+        "p99_history_us": 877.782001371088
+      },
+      {
+        "basis": "X",
+        "decoder": "lstm",
+        "rounds": 20,
+        "mean_decode_us_per_round": 38.18408333184682,
+        "mean_history_us": 763.6816666369365,
+        "median_history_us": 700.4499993854552,
+        "p99_history_us": 1216.00300009959
+      },
+      {
+        "basis": "X",
+        "decoder": "telescope",
+        "rounds": 3,
+        "mean_decode_us_per_round": 204.79796127582094,
+        "mean_history_us": 614.3938838274628,
+        "median_history_us": 572.2000005334849,
+        "p99_history_us": 1751.3440008406192
+      },
+      {
+        "basis": "X",
+        "decoder": "telescope",
+        "rounds": 20,
+        "mean_decode_us_per_round": 710.1615000016561,
+        "mean_history_us": 14203.230000033122,
+        "median_history_us": 14124.549999905867,
+        "p99_history_us": 47747.99799950412
+      },
+      {
+        "basis": "Z",
+        "decoder": "lstm",
+        "rounds": 3,
+        "mean_decode_us_per_round": 245.01611111190869,
+        "mean_history_us": 735.048333335726,
+        "median_history_us": 714.7500000428408,
+        "p99_history_us": 1343.7089997933072
+      },
+      {
+        "basis": "Z",
+        "decoder": "lstm",
+        "rounds": 20,
+        "mean_decode_us_per_round": 39.90233333358144,
+        "mean_history_us": 798.0466666716287,
+        "median_history_us": 723.0999999592314,
+        "p99_history_us": 1344.2700003724885
+      },
+      {
+        "basis": "Z",
+        "decoder": "telescope",
+        "rounds": 3,
+        "mean_decode_us_per_round": 242.31122220751584,
+        "mean_history_us": 726.9336666225475,
+        "median_history_us": 695.5499993637204,
+        "p99_history_us": 1484.1679992969148
+      },
+      {
+        "basis": "Z",
+        "decoder": "telescope",
+        "rounds": 20,
+        "mean_decode_us_per_round": 38.946250000359825,
+        "mean_history_us": 778.9250000071964,
+        "median_history_us": 707.1000009091222,
+        "p99_history_us": 1178.0290010210588
+      }
+    ]
+  }
+}

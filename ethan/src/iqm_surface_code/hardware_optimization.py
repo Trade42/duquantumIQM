@@ -6,7 +6,6 @@ an explicit PulseExecutor construction, and submit is a separate explicit call.
 from __future__ import annotations
 
 from collections import Counter
-from dataclasses import replace
 import math
 import uuid
 import numpy as np
@@ -14,7 +13,7 @@ import stim
 
 VALIDATED_MEMORY_PROFILES={
     "X":dict(profile="fused_xy4",decoder=dict(family="mwpm",parameters=dict(phase_round=0.,backaction_scale=.5))),
-    "Z":dict(profile="fenced_xy4",decoder=dict(family="lut",parameters=dict(phase_round=0.,backaction_scale=0.))),
+    "Z":dict(profile="fenced_xy4",decoder=dict(family="posterior_10",parameters=dict(phase_round=0.,backaction_scale=0.))),
 }
 
 
@@ -24,7 +23,7 @@ def validated_memory_profile(basis):
     return deepcopy(VALIDATED_MEMORY_PROFILES[basis.upper()])
 
 
-def optimize_native(circuit,*,mode="aggressive"):
+def optimize_native(circuit,*,mode="fenced"):
     from iqm.qiskit_iqm.iqm_transpilation import IQMOptimizeSingleQubitGates
     from qiskit.transpiler import PassManager
     working=circuit
@@ -38,10 +37,8 @@ def optimize_native(circuit,*,mode="aggressive"):
             working.append(inst)
             measuring=is_measure
         working._layout=circuit.layout
-    elif mode=="retain":
-        return circuit.copy(),dict(before=dict(circuit.count_ops()),after=dict(circuit.count_ops()),
-            depth_before=circuit.depth(),depth_after=circuit.depth(),mode="retain measurement/entangler schedule")
-    elif mode!="aggressive":raise ValueError("Unknown native optimization mode.")
+    else:
+        raise ValueError("Final memory optimization mode must be fenced or fused.")
     if mode=="fused":
         # After the last entangler, all remaining basis rotations commute with
         # measurements on other wires. Move them ahead of the final joint
@@ -67,7 +64,7 @@ def optimize_native(circuit,*,mode="aggressive"):
         fused.barrier()
         for inst in measurements:fused.append(inst)
         fused._layout=circuit.layout;working=fused
-    optimized=PassManager(IQMOptimizeSingleQubitGates(ignore_barriers=mode=="aggressive")).run(working)
+    optimized=PassManager(IQMOptimizeSingleQubitGates(ignore_barriers=False)).run(working)
     optimized._layout=circuit.layout
     return optimized,dict(before=dict(circuit.count_ops()),after=dict(optimized.count_ops()),
                           depth_before=circuit.depth(),depth_after=optimized.depth(),mode=mode)
@@ -140,7 +137,7 @@ def quality_values(quality):
 
 
 def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_scale=0.,
-                 fast_ancillas=False,gate_scale=1.,readout_scale=1.,measurement_operations=None):
+                 measurement_operations=None):
     """Native-gate priors plus explicit residual measurement-noise proxies.
 
     QND/leakage numbers are repeated-readout metrics, not per-CZ leakage.
@@ -148,7 +145,7 @@ def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_s
     or evaluation labels enter this constructor. Residual phase/backaction
     parameters must be frozen using independent pilot data before evaluation.
     """
-    if min(phase_round,backaction_scale,gate_scale,readout_scale)<0 or phase_round>.8:
+    if phase_round != 0 or backaction_scale not in (0., .5):
         raise ValueError("Invalid residual noise parameters.")
     from .internal_helpers import get_qubit_lists
     data,ancillas=get_qubit_lists(ideal)
@@ -172,7 +169,7 @@ def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_s
             for q in qs:
                 name=backend.index_to_qubit_name(q)
                 terminal=index==last_measure[q]
-                use_fidelity=terminal and (q in data or not fast_ancillas)
+                use_fidelity=terminal
                 if measurement_operations is not None:
                     if not readouts[name]:raise ValueError("Compiled readout trace does not cover native measurements.")
                     gate,implementation=readouts[name].popleft()
@@ -180,7 +177,7 @@ def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_s
                 else:
                     ro=(1-values[f"metrics.ssro.measure_fidelity.constant.{name}.fidelity"]
                         if use_fidelity else calibration.qubits[name].readout_error)
-                out.append("M",[q],bounded(ro*readout_scale))
+                out.append("M",[q],bounded(ro))
                 if q in ancillas:
                     if phase_round:
                         out.append("Z_ERROR",data,bounded(phase_round/len(ancillas)))
@@ -196,11 +193,11 @@ def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_s
             if inst.name=="R": out.append("X_ERROR",qs,.002)
             elif inst.name=="CZ":
                 for a,b in zip(qs[::2],qs[1::2]):
-                    out.append("DEPOLARIZE2",[a,b],bounded(1.25*gate_scale*calibration.edge_error(
+                    out.append("DEPOLARIZE2",[a,b],bounded(1.25*calibration.edge_error(
                         backend.index_to_qubit_name(a),backend.index_to_qubit_name(b))))
             elif inst.name in {"X","Y","H_XY","H_NXY","SQRT_X","SQRT_X_DAG","SQRT_Y","SQRT_Y_DAG"}:
                 for q in qs:
-                    p=bounded(1.5*gate_scale*calibration.qubits[backend.index_to_qubit_name(q)].single_qubit_infidelity)
+                    p=bounded(1.5*calibration.qubits[backend.index_to_qubit_name(q)].single_qubit_infidelity)
                     out.append("DEPOLARIZE1",[q],1-(1-p)**(2 if inst.name in {"X","Y","H_XY","H_NXY"} else 1))
     if out.without_noise()!=ideal:
         raise ValueError("Native noise insertion changed noiseless instructions/parities.")
@@ -210,8 +207,7 @@ def native_noise(ideal,backend,calibration,quality,*,phase_round=0.,backaction_s
 
 def dd_strategy(sequence,targets):
     from iqm.iqm_client import DDStrategy
-    choices={"xx":[(5,"XX","center")],"xy4":[(5,"YXYX","asap")],
-             "adaptive":[(9,"XYXYYXYX","asap"),(5,"YXYX","asap"),(2,"XX","center")]}
+    choices={"xy4":[(5,"YXYX","asap")]}
     if sequence=="off": return None
     if sequence not in choices: raise ValueError("Unknown pulse DD strategy.")
     return DDStrategy(gate_sequences=choices[sequence],target_qubits=frozenset(targets),
@@ -281,25 +277,13 @@ class PulseExecutor:
         self.compiler.pulse_stages.insert(3,before)
         self.compiler.pulse_stages.insert(5,after)
 
-    def compile(self,circuit,*,shots,dd,targets,ancilla_names=(),fast_ancillas=False):
-        from iqm.pulse import Circuit
+    def compile(self,circuit,*,shots,dd="xy4",targets=()):
         from iqm.cpc.compiler.post_process import _process_readout_metrics
         native=self.backend.serialize_circuit(circuit)
-        if fast_ancillas:
-            # Explicit implementation on ancillas; terminal data readout uses
-            # fidelity calibration. Disable the automatic rewrite that would
-            # otherwise replace the final fast ancilla measurement.
-            native=Circuit(name=native.name,instructions=tuple(
-                replace(i,implementation="fast_constant") if i.name=="measure" and i.locus[0] in ancilla_names
-                else replace(i,name="measure_fidelity",implementation="constant") if i.name=="measure"
-                else i for i in native.instructions))
         circuits=[native]
         settings=self.compiler.get_settings(circuits=circuits)
         settings.set_shots(shots)
         settings.stages.dynamical_decoupling.apply_dd_strategy.dd_is_disabled=dd=="off"
-        if fast_ancillas:
-            settings.stages.circuit_stage.subscribe_and_probe.convert_terminal_measurements=False
-            settings.stages.circuit_stage.subscribe_and_probe.probe_all=False
         strategy=dd_strategy(dd,targets)
         context={"DDStrategy":strategy} if strategy else {}
         run,context=self.compiler.compile(circuits=circuits,settings=settings,context=context)
@@ -310,7 +294,7 @@ class PulseExecutor:
         audit=dict(before=before,after=after,dd_added_iq_pulses=added,total_dd_added_iq_pulses=sum(added.values()),
             dd_strategy=strategy.model_dump(mode="json") if strategy else None,
             schedule_duration_ns=max(v["duration_ns"] for v in after.values()),
-            measurement_implementation="fast_constant on ancillas; fidelity on data" if fast_ancillas else "standard IQM defaults",
+            measurement_implementation="standard IQM defaults",
             measurement_operations=self._measurement_operations,
             calibration_set_id=str(self.backend.architecture.calibration_set_id),
             readout_mapping=mapping,mapped_readout_keys=context.get("mapped_readout_keys",{}),
@@ -336,16 +320,10 @@ class PulseExecutor:
         return dict(Counter(memory)),memory
 
 
-def run_integrated_qiskit(backend,*,token,distance,rounds,shots,basis,calibration=None,
-                          qubit_map=None,profile=None,residual_noise=None,artifact_dir=None,
-                          source_options=None):
-    """Explicit pulse path behind run_qiskit(hardware_profile=...).
-
-    Accept a frozen selection entry {profile, decoder:{family,parameters}} from
-    benchmark_integrated. A named physical profile uses explicit conservative
-    priors unless residual_noise is supplied; it does not silently reuse fitted
-    parameters from some other circuit or device session.
-    """
+def run_integrated_qiskit(backend, *, token, distance, rounds, shots, basis,
+                          calibration=None, qubit_map=None, artifact_dir=None,
+                          train_dets=None, train_obs=None):
+    """Explicit final-policy execution; selection and research profiles are removed."""
     from datetime import datetime,timezone
     from pathlib import Path
     import os,time
@@ -355,65 +333,46 @@ def run_integrated_qiskit(backend,*,token,distance,rounds,shots,basis,calibratio
     from .internal_helpers import get_qubit_lists
     from .benchmark_vanilla_lut import memory_syndromes
     from .extract_syndromes import extract_syndromes
-    from .decoding import make_matcher
-    from .decoders.lookup_table import build_lookup_table
+    from challenge.decoders.hybrid import build_decoder
     from qiskit import qpy
     from iqm.station_control.client.serializers.run_serializers import serialize_run_definition
     token=token or os.environ.get("IQM_TOKEN")
     if not token:raise ValueError("Pulse profile needs an explicit token or IQM_TOKEN.")
-    profiles={"current":(False,"xx","retain"),
-              "native_off":(False,"off","aggressive"),"native_xx":(False,"xx","aggressive"),
-              "native_xy4":(False,"xy4","aggressive"),"native_adaptive":(False,"adaptive","aggressive"),
-              "fast_off":(True,"off","aggressive"),"fast_adaptive":(True,"adaptive","aggressive"),
-              "protected_xx":(False,"xx","retain"),"protected_xy4":(False,"xy4","retain"),
-              "protected_adaptive":(False,"adaptive","retain"),
-              "fenced_xx":(False,"xx","fenced"),"fenced_xy4":(False,"xy4","fenced"),
-              "fused_xx":(False,"xx","fused"),"fused_xy4":(False,"xy4","fused")}
-    config=(validated_memory_profile(basis) if profile=="validated" else
-            dict(profile=profile) if isinstance(profile,str) else dict(profile or {}))
-    name=config.get("profile")
-    if name not in profiles:raise ValueError("Choose a tested native/fast physical profile or pass a frozen selection entry.")
-    fast,dd,mode=profiles[name]
-    selection=config.get("decoder",{})
-    parameters=dict(selection.get("parameters",dict(phase_round=.15,backaction_scale=.5)))
-    if residual_noise is not None:parameters=dict(residual_noise)
-    if name=="current":parameters={}
+    config = validated_memory_profile(basis)
+    name = config["profile"]
+    mode = "fused" if basis == "X" else "fenced"
+    selection = config["decoder"]
+    parameters = dict(selection["parameters"])
     quality=backend.client.get_quality_metric_set(backend.architecture.calibration_set_id).model_dump(mode="json")
     if calibration is None:
         pulse=backend.client.get_calibration_set(backend.architecture.calibration_set_id).model_dump(mode="json")
         calibration=calibration_from_observations(backend.architecture.model_dump(mode="json"),quality,pulse)
-    options=dict(source_options or {})
-    if options.pop("noise",None) is not None:
-        raise ValueError("Native pulse profile uses native calibrated noise plus residual_noise; noise= belongs to the standard path.")
     if qubit_map is None and backend.num_qubits<=20:
         ref=make_stim_circuit(distance,rounds,basis,gate_basis="cz")
         edges=[(backend.index_to_qubit_name(a),backend.index_to_qubit_name(b)) for a,b in backend.coupling_map.get_edges()]
         qubit_map,_=select_native_layout(ref,edges,backend.physical_qubits,calibration)
-    prepared=prepare_qiskit(backend,distance,rounds,basis,calibration=calibration,qubit_map=qubit_map,dd="off",**options)
+    prepared=prepare_qiskit(backend,distance,rounds,basis,calibration=calibration,qubit_map=qubit_map)
     reference=prepared["stim_circuit"]
     compiled,optimization=optimize_native(prepared["circuit"],mode=mode)
     native,columns=native_stim(compiled,reference,prepared["placement"].stim_to_physical,backend)
     data,anc=get_qubit_lists(reference)
     mapping=prepared["placement"].stim_to_physical
     executor=PulseExecutor(backend,token)
-    run,context,audit=executor.compile(compiled,shots=shots,dd=dd,targets=[mapping[q] for q in data],
-                                    ancilla_names=[mapping[q] for q in anc],fast_ancillas=fast)
-    model=(prepared["decoder_circuit"] if name=="current" else
-           native_noise(native,backend,calibration,quality,fast_ancillas=fast,
-                        measurement_operations=audit["measurement_operations"],**parameters))
-    family=selection.get("family","mwpm")
-    if family not in {"mwpm","lut"}:raise ValueError("Unknown selected native decoder family.")
-    decoder=build_lookup_table(model) if family=="lut" else make_matcher(model)
+    run,context,audit=executor.compile(compiled,shots=shots,dd="xy4",targets=[mapping[q] for q in data])
+    model = native_noise(native, backend, calibration, quality,
+                         measurement_operations=audit["measurement_operations"], **parameters)
+    family = selection["family"]
+    decoder, dem = build_decoder(model, family, train_dets=train_dets, train_obs=train_obs)
     output=Path(artifact_dir) if artifact_dir else Path("results/integrated_api")/(datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")+"-"+uuid.uuid4().hex[:8])
     output.mkdir(parents=True,exist_ok=False)
     native.to_file(output/"executed.stim");model.to_file(output/"decoder.stim");reference.to_file(output/"source_reference.stim")
     with (output/"native.qpy").open("wb") as stream:qpy.dump(compiled,stream)
     import hashlib
     write_json(output/"quality_metrics.json",quality);calibration.save(output/"calibration.json")
-    if family=="lut":decoder.save(output/"decoder.lut.npz")
+    from challenge.decoders.hybrid import save_decoder
+    save_decoder(decoder, dem, output/"inference")
     report=dict(profile=name,optimization=optimization,pulse_audit=audit,parameters=parameters,
                 distance=distance,rounds=rounds,basis=basis,shots=shots,placement=mapping,
-                logical_algorithm=prepared["logical_algorithm"],
                 source_sha256=hashlib.sha256(str(reference).encode()).hexdigest(),
                 native_sha256=hashlib.sha256(str(native).encode()).hexdigest(),
                 decoder_sha256=hashlib.sha256(str(model).encode()).hexdigest(),
@@ -442,8 +401,8 @@ def run_integrated_qiskit(backend,*,token,distance,rounds,shots,basis,calibratio
     report.update(dataset_sha256=hashlib.sha256((output/"shots.npz").read_bytes()).hexdigest(),
                   playlist_sha256=hashlib.sha256((output/"playlist.pb").read_bytes()).hexdigest())
     write_json(output/"manifest.json",report)
-    source=reference if name=="current" else native
-    syndromes=src if name=="current" else dst
+    source=native
+    syndromes=dst
     syndromes.update(stim_circuit=source,decoder_circuit=model,decoder=decoder,job_id=str(job.job_id),
-        hardware_report=report,rounds=rounds,basis=basis,logical_algorithm=prepared["logical_algorithm"],artifacts=str(output))
+        hardware_report=report,rounds=rounds,basis=basis,artifacts=str(output))
     return syndromes

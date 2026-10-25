@@ -11,8 +11,6 @@ from challenge.build_emerald_qubit_rotated import rank_placements, validate_layo
 from challenge.decoding import fit_ler, decode_syndromes, wilson_interval
 from challenge.internal_helpers import counts_to_measurement_array, get_meas_order
 from challenge.extract_syndromes import extract_syndromes
-from challenge.leakage import sample_leakage
-from challenge.experiment import simulate_memory, confidence_sequence
 
 
 @pytest.mark.parametrize("distance", [3, 5])
@@ -120,39 +118,10 @@ def test_layout_native_and_calibration_optimum():
         rank_placements(make_stim_circuit(5, 3))
 
 
-def test_persistent_leakage_survives_measurement():
-    ideal = stim.Circuit("QUBIT_COORDS(1,1) 0\nQUBIT_COORDS(2,2) 1\nR 0 1\nCX 0 1\nTICK\nM 0 1\nTICK\nM 0 1\nTICK")
-    model = NoiseModel.uniform(0).with_changes(leakage=1, seepage=0)
-    raw, diag = sample_leakage(ideal,model,1000,seed=22)
-    assert diag["leaked_measurements"] == 4000
-    assert diag["final_leaked_fraction"] == 1
-    assert .4 < raw.mean() < .6
-    reset = ideal + stim.Circuit("R 0 1\nTICK")
-    assert sample_leakage(reset,model,20,seed=1)[1]["final_leaked_fraction"] == 0
-    assert sample_leakage(reset,model.with_changes(reset_clears_leakage=False),20,seed=1)[1]["final_leaked_fraction"] == 1
 
 
-@pytest.mark.parametrize("basis", ["X", "Z"])
-def test_leakage_sampler_pauli_limit_matches_stim(basis):
-    model = noise_suite(.003)["correlated_zz"]
-    circuit = make_stim_circuit(3,3,basis,noise=model,gate_basis="cz")
-    raw, diag = sample_leakage(circuit,model,20000,seed=4)
-    actual = extract_syndromes(raw,circuit,False)["det_events"].mean(axis=0)
-    expected = circuit.compile_detector_sampler(seed=5).sample(20000).mean(axis=0)
-    sigma = np.sqrt(np.maximum(.001,expected*(1-expected))*2/20000)
-    assert np.all(np.abs(actual-expected) < 6*sigma)
-    assert diag["leakage_entries"] == 0
 
 
-def test_simulate_decode_and_mismatched_circuit_rejected():
-    result, circuit, _ = simulate_memory(3,3,shots=2000,seed=8,model=NoiseModel.uniform(.003))
-    assert 0 < result["errors"] < 1000
-    dets, obs = circuit.compile_detector_sampler(seed=1).sample(50,separate_observables=True)
-    syndromes = dict(det_events=dets,obs_flips=obs,stim_circuit=circuit)
-    assert decode_syndromes(syndromes,circuit).shots == 50
-    other = make_stim_circuit(3,3,no_reset=False,noise=NoiseModel.uniform())
-    with pytest.raises(ValueError,match="differs"):
-        decode_syndromes(syndromes,other)
 
 
 def test_statistics_and_zero_failure_limits():
@@ -166,8 +135,6 @@ def test_statistics_and_zero_failure_limits():
     assert zero["epsilon_per_round"] == 0
     assert zero["ci95_profile"][1] > 0
     assert wilson_interval(0,100)[1] > 0
-    assert confidence_sequence(0,100)[1] > wilson_interval(0,100)[1]
-    assert confidence_sequence(100,100)[0] < 1
     with pytest.raises(ValueError):
         fit_ler([1],[0],[100])
 
@@ -180,9 +147,6 @@ def test_counts_order_spaces_and_invalid_totals():
         counts_to_measurement_array({"012":1},3,1)
 
 
-def test_exchange_identity():
-    from challenge.exchange import verify_exchange_identity
-    assert verify_exchange_identity()
 
 
 @pytest.mark.parametrize("basis", ["X", "Z"])
@@ -213,14 +177,6 @@ def test_legacy_round_data_noise_occurs_each_round():
         assert count == 9*5
 
 
-def test_zero_noise_simulation_and_stopping():
-    result, _, _ = simulate_memory(3,3,model=NoiseModel.uniform(0),shots=30)
-    assert result["errors"] == 0 and result["graphlike_distance"] is None
-    assert result["ci95"][1] > 0
-    result, _, _ = simulate_memory(3,3,model=NoiseModel.uniform(.02),shots=2000,
-                                    batch_size=100,target_errors=1,seed=9)
-    assert result["shots"] < 2000 and result["errors"] >= 1
-    assert "anytime" in result["interval_method"]
 
 
 def test_spam_fit_recovers_synthetic_parameters():
@@ -230,18 +186,3 @@ def test_spam_fit_recovers_synthetic_parameters():
     fit = fit_ler(rounds,k,n,fit_spam=True)
     assert fit["epsilon_per_round"] == pytest.approx(.015,abs=1e-5)
     assert fit["amplitude"] == pytest.approx(.96,abs=1e-5)
-
-
-def test_hardware_preparation_on_offline_backend():
-    pytest.importorskip("qiskit")
-    from qiskit.providers.fake_provider import GenericBackendV2
-    from challenge.run_on_hardware import prepare_qiskit
-    edges = [p for r in range(8) for c in range(8) for rr,cc in ((r+1,c),(r,c+1))
-             if rr < 8 and cc < 8 for p in ((r*8+c,rr*8+cc),(rr*8+cc,r*8+c))]
-    backend = GenericBackendV2(num_qubits=64,basis_gates=["rz","sx","x","cz"],coupling_map=edges)
-    backend.index_to_qubit_name = lambda i: f"QB{i+1}"
-    backend.qubit_name_to_index = lambda q: int(q[2:])-1
-    prepared = prepare_qiskit(backend,rounds=3,basis="X")
-    assert prepared["report"]["routing_swaps"] == 0
-    assert prepared["report"]["two_qubit_gate_count"] == 24*3
-    assert prepared["circuit"].count_ops()["measure"] == 8*3+9

@@ -5,6 +5,8 @@ logical-error metric into one surface-code memory pipeline on Garnet.
 
 | Document | Contents |
 |---|---|
+| [Retained improvements](../improvements.md) | Complete inventory of the final Garnet improvements and settings |
+| [ML decoder evidence](ML_DECODER.md) | Learned cascade, held-out records, accuracy and latency |
 | [Methods](METHODS.md) | Every technique used, its mechanism, implementation and X/Z role |
 | [Evaluation](EVALUATION.md) | Vanilla baseline, raw failures, LER fits and comparison |
 | [Error analysis](ERROR_ANALYSIS.md) | Remaining physical and model error pathways |

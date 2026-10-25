@@ -1,7 +1,7 @@
 # Agent guide for Ethan's isolated solution
 
 The repository's parent `AGENTS.md` coordination and validation rules apply.
-Read `docs/DECODER_AGENT_GUIDE.md` before decoder work.
+Read the parent `docs/DECODER_AGENT_GUIDE.md` before decoder work.
 
 - Own implementation: `ethan/src/iqm_surface_code/`; tests: `ethan/tests/`;
   docs: `ethan/docs/`. Keep changes within this folder for independent merging.
@@ -11,10 +11,10 @@ Read `docs/DECODER_AGENT_GUIDE.md` before decoder work.
 - Keep a decoder in its own module and tests. Claim shared integration files
   before editing them. Preserve shot order, no-reset parities, source/native
   frames, correlation handling and explicit unsupported-case failures.
-- Use `iqm_surface_code` imports. The shared `challenge` package and `iyanu/`
-  have independent owners; changes there require their own explicit scope.
-- From `ethan/`, run `python -m pytest -q` and
-  `python tools/replay_benchmarks.py`; from the repository root use
+- Use `iqm_surface_code` imports. The shared `challenge` package has independent
+  ownership; changes there require their own explicit scope.
+- From `ethan/`, run `python -m pytest -q`. From the repository root, run
+  `python -m examples.reproduce` and
   `python -m pytest -q -c ethan/pyproject.toml ethan/tests`.
 - Imports, tests and evidence replay must stay offline. Hardware jobs require
   explicit user authorization and an explicit submission entry point.

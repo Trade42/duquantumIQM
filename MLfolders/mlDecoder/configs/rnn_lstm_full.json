@@ -1,0 +1,183 @@
+{
+ "backend": "rnn_lstm",
+ "description": "Stage 1, SIMULATED pre-training: one rnn_lstm per Garnet (patch, basis), on a mixture of the team's calibrated models built from InfoRecord's Garnet package (calset a18a947f) with mlDecoder's readout-window extension, asymmetric readout and QND flips, plus the plain leakage model; R in the hardware set 1-20. Each model anneals over 540 s; four models stay under the 45-minute cap. Scored on frozen development sets against correlated MWPM, MWPM and uniform-weight correlated MWPM.",
+ "mode": "mixture",
+ "devices": [
+  {
+   "name": "garnet",
+   "calset": "a18a947f",
+   "window_ns": 1096,
+   "patches": [
+    "pA",
+    "pB"
+   ]
+  }
+ ],
+ "bases": [
+  "Z",
+  "X"
+ ],
+ "distance": 3,
+ "rounds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  15,
+  20
+ ],
+ "mixture": [
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess"
+   },
+   "weight": 0.15,
+   "eval": true
+  },
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "echo",
+    "readout": "asym",
+    "qnd": "excess"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "calibrated_coherence",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.003,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.25,
+   "eval": true
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.003,
+   "options": {
+    "t2": "echo",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.15
+  },
+  {
+   "noise": "calibrated_leakage",
+   "p": 0.001,
+   "options": {
+    "t2": "ramsey",
+    "readout": "asym",
+    "qnd": "excess",
+    "leak": "readout"
+   },
+   "weight": 0.1
+  },
+  {
+   "noise": "leakage",
+   "p": 0.003,
+   "weight": 0.15,
+   "eval": true
+  }
+ ],
+ "curriculum": {
+  "fraction": 0.15,
+  "max_rounds": 5
+ },
+ "device": "cuda",
+ "seed": 1234,
+ "workers": 6,
+ "test": {
+  "target_failures": 100,
+  "safety": 1.25,
+  "max_shots": 10000000,
+  "min_shots": 50000,
+  "min_shots_leakage": 50000,
+  "pilot_target_failures": 30,
+  "pilot_max_shots": 200000,
+  "pilot_max_shots_leakage": 100000,
+  "keep_raw": true
+ },
+ "max_total_train_seconds": 2700,
+ "model": {
+  "hidden": 128,
+  "head": 128,
+  "dropout": 0.05,
+  "aux_weight": 0.5
+ },
+ "train": {
+  "batch_size": 4096,
+  "lr": 0.001,
+  "final_lr_fraction": 0.05,
+  "weight_decay": 0.0001,
+  "warmup_fraction": 0.03,
+  "anneal_by_time": true,
+  "time_budget_seconds": 540,
+  "max_wall_seconds": 600,
+  "eval_every_seconds": 30,
+  "patience_evals": 12,
+  "min_progress_to_stop": 0.6,
+  "checkpoint_seconds": 120,
+  "amp": true,
+  "grad_clip": 1.0,
+  "leakage_ahead": 2,
+  "reservoir_chunks": 16
+ },
+ "val": {
+  "rounds": [
+   2,
+   6,
+   15
+  ],
+  "shots": 20000
+ },
+ "eval": {
+  "rounds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   10,
+   12,
+   15,
+   20
+  ],
+  "speed_rounds": [
+   3,
+   20
+  ],
+  "batch_sizes": [
+   1,
+   64,
+   4096,
+   65536
+  ],
+  "min_seconds": 0.2,
+  "max_cpu_call_seconds": 4
+ }
+}

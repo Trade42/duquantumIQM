@@ -1,0 +1,644 @@
+{
+  "upstream_commit": "0383456080e783d6b2965385452112db81e028c2",
+  "verified_artifacts": 474,
+  "cases": 44,
+  "shots": 154000,
+  "lstm_predictions_recomputed": true,
+  "groups": [
+    {
+      "group": "garnet_pA_Z",
+      "lstm": 20222,
+      "cascade": 20222,
+      "matching": 21211,
+      "uniform_matching": 21874,
+      "shots": 55000,
+      "deferred": 0,
+      "probabilities": {
+        "lstm": 0.36767272727272726,
+        "cascade": 0.36767272727272726,
+        "matching": 0.38565454545454547,
+        "uniform_matching": 0.3977090909090909
+      },
+      "lstm_fit": {
+        "epsilon": 0.11039144385029026,
+        "ci95_profile": [
+          0.10778903271360024,
+          0.11307061844743975
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.11039144385029026,
+          0.19641034594987694,
+          0.26343774644708334,
+          0.3156666439074532,
+          0.3563642945651051,
+          0.3880766003879311,
+          0.4320424276633167,
+          0.4587375682484402,
+          0.4749463052385543,
+          0.488146483014811,
+          0.49659482345189576
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 474.30194731213817,
+          "deviance": 651.0177101329971,
+          "dof": 10,
+          "pearson_p": 1.3610847478285707e-95,
+          "deviance_p": 2.0356053815649314e-133
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "cascade_fit": {
+        "epsilon": 0.11039144385029026,
+        "ci95_profile": [
+          0.10778903271360024,
+          0.11307061844743975
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.11039144385029026,
+          0.19641034594987694,
+          0.26343774644708334,
+          0.3156666439074532,
+          0.3563642945651051,
+          0.3880766003879311,
+          0.4320424276633167,
+          0.4587375682484402,
+          0.4749463052385543,
+          0.488146483014811,
+          0.49659482345189576
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 474.30194731213817,
+          "deviance": 651.0177101329971,
+          "dof": 10,
+          "pearson_p": 1.3610847478285707e-95,
+          "deviance_p": 2.0356053815649314e-133
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "matching_fit": {
+        "epsilon": 0.12722112374837327,
+        "ci95_profile": [
+          0.1241324904018467,
+          0.13040478074200676
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.12722112374837324,
+          0.22207181884114868,
+          0.29278848989788975,
+          0.34551185223546543,
+          0.3848201637642831,
+          0.4141267801624061,
+          0.4522668244005667,
+          0.4734672106494269,
+          0.48525158022944853,
+          0.4938879153354484,
+          0.49859202217855625
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 494.85803263084733,
+          "deviance": 655.6557312033239,
+          "dof": 10,
+          "pearson_p": 5.540947502032354e-100,
+          "deviance_p": 2.0599390176325581e-134
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "lstm_to_matching": {
+        "no_spam": 0.867713164274748,
+        "no_spam_ci95_paired_bootstrap": [
+          0.8493042372298786,
+          0.886848411621097
+        ],
+        "spam": 0.8677131612556358,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8473739411266799,
+          0.88754622701222
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      },
+      "tau": 0.0,
+      "timings": {
+        "3": {
+          "cpu_median_us": 580.7652174131574,
+          "cpu_p99_us": 841.1919997888617,
+          "mwpm_cpu_median_us": 11.48222467598905,
+          "cuda_shots_per_second": 78766.4285018747,
+          "cuda_batch": 4096
+        },
+        "20": {
+          "cpu_median_us": 789.5243333405233,
+          "cpu_p99_us": 1332.7620002928595,
+          "mwpm_cpu_median_us": 89.48461882150268,
+          "cuda_shots_per_second": 171117.83150597816,
+          "cuda_batch": 4096
+        }
+      },
+      "promoted_fp16_cpu_failures": 20218
+    },
+    {
+      "group": "garnet_pA_X",
+      "lstm": 19891,
+      "cascade": 19892,
+      "matching": 20847,
+      "uniform_matching": 21181,
+      "shots": 55000,
+      "deferred": 0,
+      "probabilities": {
+        "lstm": 0.36165454545454545,
+        "cascade": 0.36167272727272726,
+        "matching": 0.3790363636363636,
+        "uniform_matching": 0.3851090909090909
+      },
+      "lstm_fit": {
+        "epsilon": 0.10634143348694063,
+        "ci95_profile": [
+          0.1038338633562639,
+          0.10892304644489179
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.10634143348694064,
+          0.19006586602176645,
+          0.2559835462093242,
+          0.3078816651903247,
+          0.3487419434358945,
+          0.3809119405588459,
+          0.42618109085991507,
+          0.4542420006488997,
+          0.4716360681970803,
+          0.48615746789178194,
+          0.4958124109907694
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 303.8056416617471,
+          "deviance": 374.74590846022124,
+          "dof": 10,
+          "pearson_p": 2.4378461654151515e-59,
+          "deviance_p": 2.212569005408346e-74
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "cascade_fit": {
+        "epsilon": 0.10634933482724643,
+        "ci95_profile": [
+          0.1038416524010693,
+          0.1089310569756085
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.1063493348272464,
+          0.1900783076180973,
+          0.2559982392847969,
+          0.30789708918227454,
+          0.3487571227499604,
+          0.3809262815357616,
+          0.426192943310714,
+          0.4542511841622589,
+          0.4716428991421986,
+          0.4861616349238357,
+          0.4958140916988889
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 303.93783790819737,
+          "deviance": 374.8943451263918,
+          "dof": 10,
+          "pearson_p": 2.285866952582179e-59,
+          "deviance_p": 2.0575408247509677e-74
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "matching_fit": {
+        "epsilon": 0.11970139494274457,
+        "ci95_profile": [
+          0.1168393125266742,
+          0.12264988996526098
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.11970139494274457,
+          0.21074594198301128,
+          0.27999417045797753,
+          0.33266417984140906,
+          0.3727248420351522,
+          0.4031948699350531,
+          0.44399744658370344,
+          0.4676020683300461,
+          0.4812575335862174,
+          0.49175309625794456,
+          0.497900748047018
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 405.62615725280375,
+          "deviance": 509.79114262653934,
+          "dof": 10,
+          "pearson_p": 5.972816701650733e-81,
+          "deviance_p": 3.567300988798823e-103
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "lstm_to_matching": {
+        "no_spam": 0.8883892584360086,
+        "no_spam_ci95_paired_bootstrap": [
+          0.866312349301067,
+          0.9101863904538833
+        ],
+        "spam": 0.8883892699833229,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8710894001679104,
+          0.9075772758040934
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      },
+      "tau": 0.0,
+      "timings": {
+        "3": {
+          "cpu_median_us": 621.9024844879342,
+          "cpu_p99_us": 956.3239995441113,
+          "mwpm_cpu_median_us": 10.788519829585816,
+          "cuda_shots_per_second": 92937.26689172153,
+          "cuda_batch": 4096
+        },
+        "20": {
+          "cpu_median_us": 722.4173333270301,
+          "cpu_p99_us": 924.0339996176763,
+          "mwpm_cpu_median_us": 83.92911231747101,
+          "cuda_shots_per_second": 169635.65882951417,
+          "cuda_batch": 4096
+        }
+      },
+      "promoted_fp16_cpu_failures": 19887
+    },
+    {
+      "group": "emerald_eA_Z",
+      "lstm": 4994,
+      "cascade": 4994,
+      "matching": 5124,
+      "uniform_matching": 5214,
+      "shots": 22000,
+      "deferred": 0,
+      "probabilities": {
+        "lstm": 0.227,
+        "cascade": 0.227,
+        "matching": 0.2329090909090909,
+        "uniform_matching": 0.237
+      },
+      "lstm_fit": {
+        "epsilon": 0.04364185517731622,
+        "ci95_profile": [
+          0.04210084584931033,
+          0.04524058279435096
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.043641855177316224,
+          0.08347448730799678,
+          0.11983037951312037,
+          0.15301299455332767,
+          0.1832993078335563,
+          0.21094211931772378,
+          0.259200036102302,
+          0.2994013431625909,
+          0.33289108323094196,
+          0.3729405330638673,
+          0.4195203577500548
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145571833445,
+          "deviance": 111.45088949070269,
+          "dof": 10,
+          "pearson_p": 1.315810229956464e-13,
+          "deviance_p": 2.7194161167799545e-19
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "cascade_fit": {
+        "epsilon": 0.04364185517731622,
+        "ci95_profile": [
+          0.04210084584931033,
+          0.04524058279435096
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.043641855177316224,
+          0.08347448730799678,
+          0.11983037951312037,
+          0.15301299455332767,
+          0.1832993078335563,
+          0.21094211931772378,
+          0.259200036102302,
+          0.2994013431625909,
+          0.33289108323094196,
+          0.3729405330638673,
+          0.4195203577500548
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145571833445,
+          "deviance": 111.45088949070269,
+          "dof": 10,
+          "pearson_p": 1.315810229956464e-13,
+          "deviance_p": 2.7194161167799545e-19
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "matching_fit": {
+        "epsilon": 0.045288580891530865,
+        "ci95_profile": [
+          0.04369739680428673,
+          0.04693954313300527
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04528858089153087,
+          0.08647505066472427,
+          0.12393096690199795,
+          0.15799423255451528,
+          0.18897214428316517,
+          0.21714416468946768,
+          0.2660641100680501,
+          0.30652334593637554,
+          0.33998515286156206,
+          0.3796467423106461,
+          0.42513356866468915
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 97.28395049043343,
+          "deviance": 125.00984734893157,
+          "dof": 10,
+          "pearson_p": 1.9025173154235014e-16,
+          "deviance_p": 4.854386428645951e-22
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "lstm_to_matching": {
+        "no_spam": 0.9636392732605452,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9312541317356116,
+          0.9964739151337685
+        ],
+        "spam": 0.9636393120985911,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9316308841234453,
+          0.9981414157638272
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      },
+      "tau": 0.0,
+      "timings": {
+        "3": {
+          "cpu_median_us": 726.9336666225475,
+          "cpu_p99_us": 1484.1679992969148,
+          "mwpm_cpu_median_us": 8.612667808966194,
+          "cuda_shots_per_second": 15713.827627662093,
+          "cuda_batch": 64
+        },
+        "20": {
+          "cpu_median_us": 778.9250000071964,
+          "cpu_p99_us": 1178.0290010210588,
+          "mwpm_cpu_median_us": 48.40257658061626,
+          "cuda_shots_per_second": 27465.426197904733,
+          "cuda_batch": 64
+        }
+      },
+      "promoted_fp16_cpu_failures": 4993
+    },
+    {
+      "group": "emerald_eA_X",
+      "lstm": 4237,
+      "cascade": 4254,
+      "matching": 4520,
+      "uniform_matching": 4365,
+      "shots": 22000,
+      "deferred": 5069,
+      "probabilities": {
+        "lstm": 0.1925909090909091,
+        "cascade": 0.19336363636363638,
+        "matching": 0.20545454545454545,
+        "uniform_matching": 0.1984090909090909
+      },
+      "lstm_fit": {
+        "epsilon": 0.03410336722852504,
+        "ci95_profile": [
+          0.03287189975683621,
+          0.03537851912520504
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03410336722852503,
+          0.06588065514440278,
+          0.09549051802163705,
+          0.12308078884429413,
+          0.14878921739135215,
+          0.1727441579791929,
+          0.21586381652352082,
+          0.25330197235884216,
+          0.28580722772650513,
+          0.3267139852882782,
+          0.3782801663159251
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 111.18777110611077,
+          "deviance": 130.15591641760665,
+          "dof": 10,
+          "pearson_p": 3.0731333620388228e-19,
+          "deviance_p": 4.3413588561690724e-23
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "cascade_fit": {
+        "epsilon": 0.03423621942680802,
+        "ci95_profile": [
+          0.033002583214693584,
+          0.035513510447336034
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03423621942680799,
+          0.06612820141233489,
+          0.09583646161143716,
+          0.12351052478060914,
+          0.14928967735159882,
+          0.17330366847447343,
+          0.21651135009805533,
+          0.2540045391757087,
+          0.28653901393552644,
+          0.32745370512854133,
+          0.3789724665076891
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 119.99060188892255,
+          "deviance": 139.4364237419416,
+          "dof": 10,
+          "pearson_p": 5.08231442058272e-21,
+          "deviance_p": 5.498064573066491e-25
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "matching_fit": {
+        "epsilon": 0.03742875006152654,
+        "ci95_profile": [
+          0.03609316203281993,
+          0.03881247884765686
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03742875006152652,
+          0.07205567746071662,
+          0.10409051963786087,
+          0.13372731361278756,
+          0.16114557127908924,
+          0.1865113667187619,
+          0.23168863841338944,
+          0.27035535227245044,
+          0.30344975360692283,
+          0.34436778817093283,
+          0.39452667154017934
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 91.8413173367544,
+          "deviance": 105.61000242478951,
+          "dof": 10,
+          "pearson_p": 2.3087283500644742e-15,
+          "deviance_p": 4.083951617198727e-18
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "lstm_to_matching": {
+        "no_spam": 0.9111543178028887,
+        "no_spam_ci95_paired_bootstrap": [
+          0.880709369278636,
+          0.9443786163323634
+        ],
+        "spam": 0.9111542826227298,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8818405226379634,
+          0.9369238823772312
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      },
+      "tau": 0.19,
+      "timings": {
+        "3": {
+          "cpu_median_us": 614.3938838274628,
+          "cpu_p99_us": 1751.3440008406192,
+          "mwpm_cpu_median_us": 8.376568121288278,
+          "cuda_shots_per_second": 10537.2853316602,
+          "cuda_batch": 64
+        },
+        "20": {
+          "cpu_median_us": 14203.230000033122,
+          "cpu_p99_us": 47747.99799950412,
+          "mwpm_cpu_median_us": 39.138325461245365,
+          "cuda_shots_per_second": 74.86137486421495,
+          "cuda_batch": 64
+        }
+      },
+      "promoted_fp16_cpu_failures": 4239
+    }
+  ],
+  "promoted_replay_differences": [
+    {
+      "group": "garnet_pA_Z",
+      "rounds": 8,
+      "published_failures": 2319,
+      "promoted_fp16_cpu_failures": 2317
+    },
+    {
+      "group": "garnet_pA_Z",
+      "rounds": 10,
+      "published_failures": 2426,
+      "promoted_fp16_cpu_failures": 2425
+    },
+    {
+      "group": "garnet_pA_Z",
+      "rounds": 12,
+      "published_failures": 2485,
+      "promoted_fp16_cpu_failures": 2484
+    },
+    {
+      "group": "garnet_pA_Z",
+      "rounds": 15,
+      "published_failures": 2501,
+      "promoted_fp16_cpu_failures": 2499
+    },
+    {
+      "group": "garnet_pA_Z",
+      "rounds": 20,
+      "published_failures": 2461,
+      "promoted_fp16_cpu_failures": 2463
+    },
+    {
+      "group": "garnet_pA_X",
+      "rounds": 3,
+      "published_failures": 1281,
+      "promoted_fp16_cpu_failures": 1280
+    },
+    {
+      "group": "garnet_pA_X",
+      "rounds": 5,
+      "published_failures": 1905,
+      "promoted_fp16_cpu_failures": 1904
+    },
+    {
+      "group": "garnet_pA_X",
+      "rounds": 12,
+      "published_failures": 2471,
+      "promoted_fp16_cpu_failures": 2469
+    },
+    {
+      "group": "emerald_eA_Z",
+      "rounds": 6,
+      "published_failures": 409,
+      "promoted_fp16_cpu_failures": 407
+    },
+    {
+      "group": "emerald_eA_Z",
+      "rounds": 12,
+      "published_failures": 714,
+      "promoted_fp16_cpu_failures": 715
+    },
+    {
+      "group": "emerald_eA_X",
+      "rounds": 15,
+      "published_failures": 699,
+      "promoted_fp16_cpu_failures": 700
+    },
+    {
+      "group": "emerald_eA_X",
+      "rounds": 20,
+      "published_failures": 829,
+      "promoted_fp16_cpu_failures": 830
+    }
+  ],
+  "torch_version": "2.13.0+cu130",
+  "numpy_version": "2.2.6",
+  "python_version": "3.13.14",
+  "replay_device": "CPU, one Torch thread",
+  "replay_note": "Published scores precede promotion to float16. CPU/runtime/precision differences are reported separately; published scores and artifacts are never rewritten."
+}

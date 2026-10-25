@@ -37,8 +37,7 @@ def vanilla_circuit(rounds, basis):
     Retains original ticks and all conversion H gates. Does not call the custom
     H-cancellation/ASAP optimizer. Mandatory IQM native gate synthesis still runs.
     """
-    original=make_stim_circuit(3,rounds,basis,no_reset=True,gate_basis="cx",
-                               transversal_gate_set="none",logical_operations=())
+    original=make_stim_circuit(3,rounds,basis,no_reset=True,gate_basis="cx")
     out=stim.Circuit()
     for inst in original.flattened():
         if inst.name == "CX":
@@ -229,8 +228,8 @@ def save_report(output,manifest):
         if "analysis" in c:
             a=c["analysis"];lo,hi=a["ci95"]
             lines.append(f"| {c['basis']} | {c['rounds']} | {a['errors']} / {a['shots']} | "
-                         f"{100*a['probability']:.2f}% ({100*lo:.2f}–{100*hi:.2f}%) | {a['timing']['shots_per_second']:,.0f} |")
-        else: lines.append(f"| {c['basis']} | {c['rounds']} | {c['status']} | — | — |")
+                         f"{100*a['probability']:.2f}% ({100*lo:.2f}â€“{100*hi:.2f}%) | {a['timing']['shots_per_second']:,.0f} |")
+        else: lines.append(f"| {c['basis']} | {c['rounds']} | {c['status']} | â€” | â€” |")
     lines += ["", "Primary LER fit: P(r) = [1 - (1 - 2 epsilon)^r]/2 (challenge equation). "
               "Exploratory post-first-cycle fit: P(r) = [1 - V1(1 - 2 epsilon)^(r-1)]/2, "
               "where V1 is visibility after the first round. This diagnostic was added after observing primary-fit mismatch.",
@@ -239,7 +238,7 @@ def save_report(output,manifest):
     for f in manifest["fits"]:
         lo,hi=f["ci95_profile"]
         lines.append(f"- {f['basis']}, {f['fit_role']}: **{100*f['epsilon_per_round']:.3f}%/round** "
-                     f"(95% profile interval {100*lo:.3f}–{100*hi:.3f}%), visibility={f['amplitude']:.4f}; "
+                     f"(95% profile interval {100*lo:.3f}â€“{100*hi:.3f}%), visibility={f['amplitude']:.4f}; "
                      f"deviance {f['deviance']:.2f}, nominal df {f['nominal_degrees_of_freedom']}.")
     lines += ["", "Large deviance or a boundary fit limits interpretation: prefer measured per-round-count probabilities "
               "when the stationary model does not describe the data. This is an encoded baseline, and does not "
@@ -290,8 +289,8 @@ def plot_report(output,manifest):
         ax.grid(axis="y",alpha=.2);ax.legend(frameon=False,fontsize=8)
     axes[0].set_ylabel("Decoded logical failure (%)")
     shots=sum(c["shots"] for c in manifest["cases"])
-    fig.suptitle(f"Live Garnet vanilla surface-code / LUT baseline · {shots:,} shots\n"
-                 "Distance 3 · DD off · 95% Wilson error bars",fontsize=12)
+    fig.suptitle(f"Live Garnet vanilla surface-code / LUT baseline Â· {shots:,} shots\n"
+                 "Distance 3 Â· DD off Â· 95% Wilson error bars",fontsize=12)
     fig.savefig(output/"comparison.png",dpi=180);plt.close(fig)
 
 
@@ -310,7 +309,7 @@ def main(argv=None):
     secret=read_token(args.token_file)
     output=args.resume or args.output or Path("results/decoders/lookup_table")/datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     from .run_on_hardware import connect_backend
-    from .dynamical_decoupling import iqm_compilation_options
+    from iqm.iqm_client import CircuitCompilationOptions, DDMode
     from iqm.qiskit_iqm.iqm_provider import IQMBackend
     from qiskit import qpy
     try:
@@ -334,7 +333,7 @@ def main(argv=None):
                 runtime=dict(python=platform.python_version(),os=platform.platform(),processor=platform.processor(),
                              logical_cpus=os.cpu_count(),thread_environment={k:os.environ.get(k) for k in
                              ("OMP_NUM_THREADS","OPENBLAS_NUM_THREADS","MKL_NUM_THREADS")}),
-                challenge_reference="reference/README.md",baseline_definition=__doc__,
+                challenge_reference="challenge/README.md",baseline_definition=__doc__,
                 calibration_usage="archived only; not used for layout ranking or decoder probabilities")
             specifications=[(b,r) for b in ("X","Z") for r in (1,2,3)]
             random.Random(1917).shuffle(specifications)
@@ -370,7 +369,7 @@ def main(argv=None):
                 with (output/f"{c['id']}.qpy").open("rb") as stream: qc=qpy.load(stream)[0]
                 c.update(status="submission_started",submitted_utc=datetime.now(timezone.utc).isoformat())
                 save_report(output,manifest)
-                job=backend.run(qc,shots=c["shots"],circuit_compilation_options=iqm_compilation_options("off"))
+                job=backend.run(qc,shots=c["shots"],circuit_compilation_options=CircuitCompilationOptions(dd_mode=DDMode.DISABLED))
                 c.update(job_id=job.job_id(),status="submitted")
                 save_report(output,manifest)
                 print(f"Submitted {c['id']}: {c['job_id']}",flush=True)

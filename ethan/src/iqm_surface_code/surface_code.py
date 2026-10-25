@@ -1,19 +1,13 @@
-"""Hook-safe rotated memories: four interaction layers, optional IQM CZ lowering."""
+"""Hook-safe rotated surface-code memory and native CZ lowering."""
 from __future__ import annotations
 from numbers import Integral
 from typing import Mapping
 import stim
-
-try:
-    from .internal_helpers import get_qubit_lists, get_meas_order
-except ImportError:
-    from internal_helpers import get_qubit_lists, get_meas_order
-
+from .internal_helpers import get_qubit_lists, get_meas_order
 DEFAULT_NOISE = dict(after_clifford_depolarization=0.003,
                      after_reset_flip_probability=0.003,
                      before_measure_flip_probability=0.003,
                      before_round_data_depolarization=0.003)
-
 
 def remove_ancilla_resets(circuit: stim.Circuit) -> stim.Circuit:
     """Substitute s_j = m_j XOR m_prev(j), including final data boundaries.
@@ -113,19 +107,9 @@ def lower_to_cz(circuit: stim.Circuit) -> stim.Circuit:
 
 
 def make_stim_circuit(distance: int, rounds: int, basis: str = "Z",
-                      no_reset: bool = True, noise=None, *,
-                      gate_basis: str = "cx", qubit_map: Mapping[int, str] | None = None,
-                      transversal_gate_set="pauli_h", logical_operations=(),
-                      logical_after_round: int = 1, optimize_logical_gates: bool = False,
-                      dd=None
-                      ) -> stim.Circuit:
-    """Odd-distance >=3 X/Z memory. None = ideal; dict = legacy Stim rates.
-
-    transversal_gate_set selects none/pauli/pauli_h/css or an explicit subset.
-    Logical operations are inserted between QEC rounds; H tracks dual boundaries.
-    Optimized Pauli readout metadata is available via make_logical_algorithm.
-    NoiseModel supports calibration; CZ lowering precedes noise insertion.
-    """
+                      no_reset: bool = True, noise=None, *, gate_basis: str = "cx",
+                      qubit_map: Mapping[int, str] | None = None) -> stim.Circuit:
+    """Generate X/Z memory; add a uniform or calibrated Pauli prior last."""
     if isinstance(distance, bool) or not isinstance(distance, Integral) or distance < 3 or distance % 2 == 0:
         raise ValueError("distance must be an odd integer >= 3")
     if isinstance(rounds, bool) or not isinstance(rounds, Integral) or rounds < 1:
@@ -135,38 +119,24 @@ def make_stim_circuit(distance: int, rounds: int, basis: str = "Z",
         raise ValueError("basis must be X or Z")
     if gate_basis not in {"cx", "cz"}:
         raise ValueError("gate_basis must be cx or cz")
-    try:
-        from .logical_gates import normalize_gate_set, insert_logical_operations
-    except ImportError:
-        from logical_gates import normalize_gate_set, insert_logical_operations
-    normalize_gate_set(transversal_gate_set)
     circuit = stim.Circuit.generated(f"surface_code:rotated_memory_{basis.lower()}",
                                     distance=int(distance), rounds=int(rounds))
     if no_reset:
         circuit = remove_ancilla_resets(circuit)
-    if logical_operations:
-        circuit, _ = insert_logical_operations(circuit,distance,rounds,logical_operations,
-            transversal_gate_set=transversal_gate_set,after_round=logical_after_round,
-            optimize=optimize_logical_gates)
     if gate_basis == "cz":
         circuit = lower_to_cz(circuit)
     if noise is not None:
-        try:
-            from .noise_models import NoiseModel, add_noise
-        except ImportError:
-            from noise_models import NoiseModel, add_noise
+        from .noise_models import NoiseModel, add_noise
         model = NoiseModel.from_legacy(noise) if isinstance(noise, dict) else noise
-        circuit = add_noise(circuit, model, qubit_map=qubit_map,dd=dd)
-    elif dd is not None:
-        try:
-            from .dynamical_decoupling import DDPlan,insert_dd,normalize_dd
-        except ImportError:
-            from dynamical_decoupling import DDPlan,insert_dd,normalize_dd
-        if isinstance(dd,DDPlan):
-            circuit = insert_dd(circuit,dd)
-        elif normalize_dd(dd) is not None:
-            raise ValueError("Local DD needs a timing/noise model or DDPlan; hardware uses run_qiskit(dd=...).")
+        circuit = add_noise(circuit, model, qubit_map=qubit_map)
     return circuit
+
+
+def make_qiskit_circuit(distance: int, rounds: int, basis: str = "Z",
+                        no_reset: bool = True, *, gate_basis: str = "cz"):
+    from .stim_to_qiskit import stim_to_qiskit
+    return stim_to_qiskit(make_stim_circuit(distance, rounds, basis, no_reset,
+                                          gate_basis=gate_basis))[0]
 
 
 def get_circuit_info(circuit: stim.Circuit) -> dict:
@@ -181,34 +151,3 @@ def get_circuit_info(circuit: stim.Circuit) -> dict:
                 dd_pulses=sum(len(i.targets_copy()) for i in circuit.flattened() if i.tag.startswith("dd:")),
                 reset_measurements=sum(len(i.targets_copy()) for i in circuit.flattened()
                                        if i.name in {"MR", "MRX"}))
-
-
-def make_qiskit_circuit(distance: int, rounds: int, basis: str = "Z",
-                        no_reset: bool = True, *, gate_basis: str = "cz",
-                        transversal_gate_set="pauli_h", logical_operations=(),
-                        logical_after_round=1, optimize_logical_gates=False):
-    try:
-        from .stim_to_qiskit import stim_to_qiskit
-    except ImportError:
-        from stim_to_qiskit import stim_to_qiskit
-    return stim_to_qiskit(make_stim_circuit(distance, rounds, basis, no_reset,
-        gate_basis=gate_basis,transversal_gate_set=transversal_gate_set,
-        logical_operations=logical_operations,logical_after_round=logical_after_round,
-        optimize_logical_gates=optimize_logical_gates))[0]
-
-
-def make_qrisp_experiment(distance: int, rounds: int, basis: str = "Z",
-                         no_reset: bool = True, p: float | None = None, *,
-                         transversal_gate_set="pauli_h",logical_operations=(),
-                         logical_after_round=1,optimize_logical_gates=False):
-    try:
-        from .stim_to_qrisp import stim_to_detector_experiment
-        from .noise_models import NoiseModel
-    except ImportError:
-        from stim_to_qrisp import stim_to_detector_experiment
-        from noise_models import NoiseModel
-    circuit = make_stim_circuit(distance, rounds, basis, no_reset,
-        None if p is None else NoiseModel.uniform(p),transversal_gate_set=transversal_gate_set,
-        logical_operations=logical_operations,logical_after_round=logical_after_round,
-        optimize_logical_gates=optimize_logical_gates)
-    return stim_to_detector_experiment(circuit, no_reset=False)

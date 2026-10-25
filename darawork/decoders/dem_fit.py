@@ -69,7 +69,7 @@ def choose_dem(circuit, train_dets, train_obs):
     second half (paired, same shots), then refit on all training shots if it won.
     Small or saturated samples make p_ij noisy, so the fit is not trusted blindly.
     """
-    from .ensemble_decoder import MatchingDecoder
+    from .matching import MatchingDecoder
     model = circuit.detector_error_model(decompose_errors=True, approximate_disjoint_errors=True)
     half = len(train_dets) // 2
     held_d, held_o = train_dets[half:], train_obs[half:]

@@ -50,6 +50,12 @@ fidelity proxy: multiplying favorable operation fidelities becomes an additive
 placement cost. The chosen seventeen-qubit embedding supplies every required
 coupling directly, with zero routing SWAPs.
 
+The [routing proof](GARNET_ROUTING_PROOF.md) checks the saved native circuits,
+including physical edge multiplicities, ordered interactions on every wire and
+measurement placement. All twelve optimized cases use exactly `24*rounds` CZ
+gates and zero added entanglers. A legal static embedding achieves zero SWAPs;
+nonnegative gate counts make this routing SWAP count optimal.
+
 This reduces the need for additional entangling operations and assigns checks
 to a calibration-aware physical patch. The mapping is fixed for the optimized
 experiment. Stim qubit IDs, dense circuit indices and Garnet `QB` names each

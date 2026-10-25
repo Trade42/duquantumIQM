@@ -1,0 +1,2711 @@
+{
+  "fits": [
+    {
+      "decoder": "mwpm",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03824242699214334,
+        "ci95_profile": [
+          0.03687632592318641,
+          0.03965827988346402
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.038242426992143363,
+          0.07355988753978787,
+          0.10617609727435001,
+          0.1362976609698433,
+          0.1641153812643084,
+          0.1898054672838756,
+          0.23544121716798594,
+          0.2743630457935582,
+          0.30755870374605043,
+          0.34842403532737315,
+          0.39817592979288013
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 88.61508532469375,
+          "deviance": 104.76542888741682,
+          "dof": 10,
+          "pearson_p": 1.0075235658767931e-14,
+          "deviance_p": 6.036764676968921e-18
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.03824242614766889,
+        "ci95_profile": [
+          0.036876325923076915,
+          0.03965827988346468
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03824242614766887,
+          0.07355988598001795,
+          0.10617609511364323,
+          0.1362976583092494,
+          0.16411537819293492,
+          0.18980546388012365,
+          0.23544121329732898,
+          0.2743630416670497,
+          0.3075586995227495,
+          0.348424031169281,
+          0.39817592606850893
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 88.6150868859995,
+          "deviance": 104.76542888741832,
+          "dof": 9,
+          "pearson_p": 3.0858596810581154e-15,
+          "deviance_p": 1.7037781347019338e-18
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03992130494802302,
+          "ci95_profile": [
+            0.03843557925178768,
+            0.04146629772957142
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.929788971408293,
+            "deviance": 22.899087534322256,
+            "dof": 8,
+            "pearson_p": 0.005047606901526234,
+            "deviance_p": 0.0034962510924312186
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04137299504668781,
+          "ci95_profile": [
+            0.03967525599613664,
+            0.04315220714580325
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 3.6012665266009884,
+            "deviance": 3.6022288495878314,
+            "dof": 6,
+            "pearson_p": 0.73045150207467,
+            "deviance_p": 0.7303226421498217
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.04445707771741219,
+          "ci95_profile": [
+            0.04259376275557081,
+            0.04636848670040177
+          ],
+          "amplitude": 1.0741248333884488,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7679084869972926,
+          "fitted_P_L": [
+            0.010690034501928292,
+            0.05419661683003241,
+            0.09383484813457754,
+            0.1299486795797487,
+            0.16285148020245693,
+            0.1928287560963567,
+            0.24502408753964833,
+            0.288350253400078,
+            0.3243143252099282,
+            0.36713388134490155,
+            0.4165914168570178
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 9.602451167952637,
+            "deviance": 9.876031067179959,
+            "dof": 9,
+            "pearson_p": 0.3836164505097707,
+            "deviance_p": 0.3606142000716745
+          },
+          "lr_test_a_above_1": {
+            "statistic": 94.88939782023954,
+            "p_value": 2.0132521922699016e-22,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": "free A, all R",
+      "ratio_to_mwpm_corr": {
+        "no_spam": 1.021739356224273,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9951768223781733,
+          1.048510017537373
+        ],
+        "spam": 1.0217393245173403,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9959355184183203,
+          1.0494459989985196
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "mwpm_corr",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03742875006152654,
+        "ci95_profile": [
+          0.03609316203281993,
+          0.03881247884765686
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03742875006152652,
+          0.07205567746071662,
+          0.10409051963786087,
+          0.13372731361278756,
+          0.16114557127908924,
+          0.1865113667187619,
+          0.23168863841338944,
+          0.27035535227245044,
+          0.30344975360692283,
+          0.34436778817093283,
+          0.39452667154017934
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 91.8413173367544,
+          "deviance": 105.61000242478951,
+          "dof": 10,
+          "pearson_p": 2.3087283500644742e-15,
+          "deviance_p": 4.083951617198727e-18
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.037428750396520404,
+        "ci95_profile": [
+          0.03609316203271213,
+          0.03881247884765765
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03742875039652038,
+          0.07205567808055069,
+          0.1040905204980132,
+          0.1337273146738055,
+          0.1611455725060803,
+          0.18651136808093177,
+          0.23168863996787703,
+          0.27035535393553584,
+          0.30344975531502194,
+          0.34436778986156436,
+          0.39452667306785394
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 91.84131674951819,
+          "deviance": 105.6100024247863,
+          "dof": 9,
+          "pearson_p": 6.949000056954604e-16,
+          "deviance_p": 1.1481073457951998e-18
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03893171586107501,
+          "ci95_profile": [
+            0.037486881031521015,
+            0.04043330554586295
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 32.84457073267773,
+            "deviance": 33.43355779407655,
+            "dof": 8,
+            "pearson_p": 6.568861303309671e-05,
+            "deviance_p": 5.143799491360569e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04026718961157688,
+          "ci95_profile": [
+            0.038625529827551,
+            0.04198575383254762
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 17.150065240264702,
+            "deviance": 17.284111160804912,
+            "dof": 6,
+            "pearson_p": 0.00874727008619815,
+            "deviance_p": 0.008293897207624844
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.0433754487285251,
+          "ci95_profile": [
+            0.04156584046478405,
+            0.04523148592033796
+          ],
+          "amplitude": 1.0718111147276406,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7642143201148892,
+          "fitted_P_L": [
+            0.01058473068971183,
+            0.053041944531563245,
+            0.09181595696910821,
+            0.12722628902968525,
+            0.1595647430047551,
+            0.18909780707511414,
+            0.24070013329561124,
+            0.28373770786120467,
+            0.31963207464952365,
+            0.3626188738090106,
+            0.4127283187149813
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 11.449529794266011,
+            "deviance": 11.484299307185355,
+            "dof": 9,
+            "pearson_p": 0.24614918635122224,
+            "deviance_p": 0.24396658820979616
+          },
+          "lr_test_a_above_1": {
+            "statistic": 94.12570311759919,
+            "p_value": 2.961091291225497e-22,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": "free A, all R"
+    },
+    {
+      "decoder": "mwpm_corr_uniform",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03562539292485043,
+        "ci95_profile": [
+          0.0343453555863632,
+          0.036951226552182116
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03562539292485045,
+          0.06871244860760095,
+          0.09944202557150261,
+          0.12798209602789745,
+          0.15448866403606837,
+          0.1791066182434785,
+          0.22320535824840698,
+          0.2612438334408383,
+          0.2940548750897267,
+          0.3350140758450341,
+          0.3859909858599477
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 108.53163269264206,
+          "deviance": 126.4524256886593,
+          "dof": 10,
+          "pearson_p": 1.0547360458226039e-18,
+          "deviance_p": 2.4688075137880673e-22
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.03562539152949747,
+        "ci95_profile": [
+          0.03434535558627494,
+          0.03695122655218268
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03562539152949745,
+          0.06871244601573495,
+          0.09944202196071233,
+          0.12798209155653928,
+          0.15448865884510532,
+          0.17910661245815512,
+          0.22320535159470578,
+          0.26124382626669196,
+          0.2940548676638387,
+          0.33501406840878745,
+          0.38599097900846085
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 108.53163588509497,
+          "deviance": 126.45242568866473,
+          "dof": 9,
+          "pearson_p": 2.9257792694376316e-19,
+          "deviance_p": 6.353617910329267e-23
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03723687563678397,
+          "ci95_profile": [
+            0.035848484469180104,
+            0.0386792731762312
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 35.48864693253369,
+            "deviance": 36.41217668801427,
+            "dof": 8,
+            "pearson_p": 2.177807695081505e-05,
+            "deviance_p": 1.4757105392940222e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.038707882054928006,
+          "ci95_profile": [
+            0.037126986376818064,
+            0.040361826990324236
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 14.71735169575814,
+            "deviance": 14.865092642715062,
+            "dof": 6,
+            "pearson_p": 0.02257275503650149,
+            "deviance_p": 0.021332346122406285
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.041444750120110466,
+          "ci95_profile": [
+            0.039741345954965514,
+            0.04319502823073395
+          ],
+          "amplitude": 1.0711469484314182,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7943155372706767,
+          "fitted_P_L": [
+            0.00881994340394987,
+            0.04953361282315982,
+            0.08687254653126603,
+            0.12111647468480452,
+            0.15252194074743414,
+            0.18132422342332122,
+            0.23196445928266285,
+            0.27455753976848435,
+            0.31038222491234313,
+            0.3537337782288675,
+            0.4051030244735975
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 19.039244109565793,
+            "deviance": 19.678083693537165,
+            "dof": 9,
+            "pearson_p": 0.024861271125938385,
+            "deviance_p": 0.020006384937554314
+          },
+          "lr_test_a_above_1": {
+            "statistic": 106.77434199512209,
+            "p_value": 4.988575406570522e-25,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9518189324059262,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9194351272016771,
+          0.9849192379729917
+        ],
+        "spam": 0.9518188866067359,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9212247229959266,
+          0.9826871122311994
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "relay_bp",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03730873749156679,
+        "ci95_profile": [
+          0.035981161627891604,
+          0.038683833073126124
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03730873749156677,
+          0.07183359119670424,
+          0.10378228749420232,
+          0.13334705274497805,
+          0.16070576986427182,
+          0.18602304859334606,
+          0.23113123253841222,
+          0.26975885079320705,
+          0.3028369479707674,
+          0.3437610130686317,
+          0.39397802642387064
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 126.88258062263387,
+          "deviance": 144.07404205317553,
+          "dof": 10,
+          "pearson_p": 2.0178254269434936e-22,
+          "deviance_p": 6.154283407094577e-26
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.037308738095472097,
+        "ci95_profile": [
+          0.03598116162769232,
+          0.03868383307312529
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03730873809547208,
+          0.07183359231439113,
+          0.10378228904563414,
+          0.13334705465920194,
+          0.16070577207850845,
+          0.18602305105216516,
+          0.23113123534583546,
+          0.2697588537983179,
+          0.3028369510588174,
+          0.34376101612748206,
+          0.3939780291914713
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 126.88257922581376,
+          "deviance": 144.07404205317516,
+          "dof": 9,
+          "pearson_p": 5.184334111868305e-23,
+          "deviance_p": 1.4853768518625266e-26
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.038994947756281685,
+          "ci95_profile": [
+            0.03755248095514125,
+            0.0404937458903885
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 54.218204712749255,
+            "deviance": 55.50886976907373,
+            "dof": 8,
+            "pearson_p": 6.262401671133811e-09,
+            "deviance_p": 3.5153993740777684e-09
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04070865467341967,
+          "ci95_profile": [
+            0.03905346465267103,
+            0.04244131415068675
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 29.255633975363732,
+            "deviance": 29.831404017543978,
+            "dof": 6,
+            "pearson_p": 5.442031309401017e-05,
+            "deviance_p": 4.2318048552075145e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.0434745906875587,
+          "ci95_profile": [
+            0.04170927817647653,
+            0.0452906537079843
+          ],
+          "amplitude": 1.0749424884075218,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7944611990735535,
+          "fitted_P_L": [
+            0.009261440492421946,
+            0.051930756510810194,
+            0.09089001043156342,
+            0.1264617891169218,
+            0.15894063076553144,
+            0.1885954637207824,
+            0.24039393456957964,
+            0.28357634087952266,
+            0.3195758633395628,
+            0.36266555194706895,
+            0.4128526395928647
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 28.66167868813092,
+            "deviance": 29.144882643922465,
+            "dof": 9,
+            "pearson_p": 0.0007388862819601629,
+            "deviance_p": 0.000612561870045084
+          },
+          "lr_test_a_above_1": {
+            "statistic": 114.92915940925013,
+            "p_value": 8.155961140496833e-27,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9967935725942633,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9599949711254891,
+          1.031931540517876
+        ],
+        "spam": 0.9967935798075839,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9607024941855493,
+          1.0304508975059816
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_cascade",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03423621942680802,
+        "ci95_profile": [
+          0.033002583214693584,
+          0.035513510447336034
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03423621942680799,
+          0.06612820141233489,
+          0.09583646161143716,
+          0.12351052478060914,
+          0.14928967735159882,
+          0.17330366847447343,
+          0.21651135009805533,
+          0.2540045391757087,
+          0.28653901393552644,
+          0.32745370512854133,
+          0.3789724665076891
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 119.99060188892255,
+          "deviance": 139.4364237419416,
+          "dof": 10,
+          "pearson_p": 5.08231442058272e-21,
+          "deviance_p": 5.498064573066491e-25
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.03423621840819491,
+        "ci95_profile": [
+          0.03300258321459626,
+          0.03551351044733607
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03423621840819491,
+          0.06612819951460258,
+          0.09583645895975224,
+          0.12351052148711894,
+          0.14928967351662775,
+          0.1733036641876159,
+          0.2165113451381978,
+          0.2540045337958529,
+          0.28653900833352397,
+          0.32745369946822844,
+          0.3789724612140086
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 119.99060440492487,
+          "deviance": 139.4364237419445,
+          "dof": 9,
+          "pearson_p": 1.3420950055425908e-21,
+          "deviance_p": 1.3485456806568968e-25
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.035702821835011375,
+          "ci95_profile": [
+            0.03437078630717559,
+            0.03708583054029488
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 49.78281119116426,
+            "deviance": 50.90515436134855,
+            "dof": 8,
+            "pearson_p": 4.498881586360187e-08,
+            "deviance_p": 2.7368033952879165e-08
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03712387891130875,
+          "ci95_profile": [
+            0.035613151680550674,
+            0.03870267040118603
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 28.081500456245088,
+            "deviance": 28.625787543173928,
+            "dof": 6,
+            "pearson_p": 9.069935095841323e-05,
+            "deviance_p": 7.16014707896986e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.04000144576032994,
+          "ci95_profile": [
+            0.03837851228837214,
+            0.04166964251268724
+          ],
+          "amplitude": 1.071599406693163,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.8293159534205239,
+          "fitted_P_L": [
+            0.00706582219705687,
+            0.046501981750651344,
+            0.08278313450948827,
+            0.1161616901399154,
+            0.1468698648051252,
+            0.17512129670379667,
+            0.22502439401138508,
+            0.26726211006860534,
+            0.3030118882183291,
+            0.34660916752452764,
+            0.39890452519590114
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.288526740120858,
+            "deviance": 21.554160838313,
+            "dof": 9,
+            "pearson_p": 0.011429130638842166,
+            "deviance_p": 0.01040461804414761
+          },
+          "lr_test_a_above_1": {
+            "statistic": 117.88226290362945,
+            "p_value": 1.8399185217837717e-27,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9147037870762305,
+        "no_spam_ci95_paired_bootstrap": [
+          0.8828854870762374,
+          0.948612578641047
+        ],
+        "spam": 0.9147037516747475,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8856437632430783,
+          0.944785020580983
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_finetuned",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03410336722852504,
+        "ci95_profile": [
+          0.03287189975683621,
+          0.03537851912520504
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03410336722852503,
+          0.06588065514440278,
+          0.09549051802163705,
+          0.12308078884429413,
+          0.14878921739135215,
+          0.1727441579791929,
+          0.21586381652352082,
+          0.25330197235884216,
+          0.28580722772650513,
+          0.3267139852882782,
+          0.3782801663159251
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 111.18777110611077,
+          "deviance": 130.15591641760665,
+          "dof": 10,
+          "pearson_p": 3.0731333620388228e-19,
+          "deviance_p": 4.3413588561690724e-23
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.03410336621700676,
+        "ci95_profile": [
+          0.03287189975676558,
+          0.03537851912520491
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.03410336621700677,
+          0.065880653259351,
+          0.09549051538691916,
+          0.12308078557094432,
+          0.14878921357874547,
+          0.17274415371611945,
+          0.21586381158836704,
+          0.2533019670027279,
+          0.28580722214604226,
+          0.3267139796449029,
+          0.3782801610305537
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 111.18777352095712,
+          "deviance": 130.15591641760702,
+          "dof": 9,
+          "pearson_p": 8.424307701466805e-20,
+          "deviance_p": 1.1015325443042813e-23
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.035546185169710004,
+          "ci95_profile": [
+            0.03421712226824797,
+            0.03692622514740971
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 42.76844168052435,
+            "deviance": 43.82128093689035,
+            "dof": 8,
+            "pearson_p": 9.71169637491621e-07,
+            "deviance_p": 6.149461711755644e-07
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03695363974574563,
+          "ci95_profile": [
+            0.035446491511984785,
+            0.038528857333814934
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.480374220876335,
+            "deviance": 21.881572509226732,
+            "dof": 6,
+            "pearson_p": 0.0015033343023274134,
+            "deviance_p": 0.0012721784751415473
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.03980846115847839,
+          "ci95_profile": [
+            0.03818204346966687,
+            0.041479081334442225
+          ],
+          "amplitude": 1.0707263551011328,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.8236847102946661,
+          "fitted_P_L": [
+            0.007260790967836217,
+            0.046491170295868744,
+            0.08259814756047662,
+            0.11583039842110798,
+            0.14641679974655086,
+            0.1745680059337107,
+            0.22432492751456606,
+            0.2664742650522277,
+            0.3021791800352981,
+            0.34576679875116545,
+            0.39813593618372034
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 17.318809251541982,
+            "deviance": 17.557464995464283,
+            "dof": 9,
+            "pearson_p": 0.04395132225802012,
+            "deviance_p": 0.04066900878568798
+          },
+          "lr_test_a_above_1": {
+            "statistic": 112.59845142214544,
+            "p_value": 2.642140304567613e-26,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9111543178028887,
+        "no_spam_ci95_paired_bootstrap": [
+          0.880709369278636,
+          0.9443786163323634
+        ],
+        "spam": 0.9111542826227298,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8818405226379634,
+          0.9369238823772312
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_pretrained",
+      "d": 3,
+      "basis": "X",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_X",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 26,
+      "reference_shortfall": {
+        "1": 74,
+        "2": 9
+      },
+      "no_spam": {
+        "epsilon": 0.03463391008817794,
+        "ci95_profile": [
+          0.03338693472254244,
+          0.03592516362162966
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.034633910088177955,
+          0.06686880472036394,
+          0.09687085846776383,
+          0.1247947353512675,
+          0.15078438615217793,
+          0.17497379049496464,
+          0.21844201875974922,
+          0.25609691008977764,
+          0.2887159262695777,
+          0.32965046547524235,
+          0.381022565464492
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 114.85461090201417,
+          "deviance": 131.89565719266466,
+          "dof": 10,
+          "pearson_p": 5.580468877550311e-20,
+          "deviance_p": 1.9166792431592073e-23
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.03463390894398644,
+        "ci95_profile": [
+          0.03338693472245601,
+          0.0359251636216299
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.034633908943986436,
+          0.06686880259049216,
+          0.09687085549425362,
+          0.12479473166121197,
+          0.15078438185911108,
+          0.17497378570013006,
+          0.2184420132216361,
+          0.2560969040929537,
+          0.28871592003579005,
+          0.32965045919268865,
+          0.3810225596139164
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 114.85461360320795,
+          "deviance": 131.89565719266457,
+          "dof": 9,
+          "pearson_p": 1.5056175313504104e-20,
+          "deviance_p": 4.8315394070431805e-24
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.03605113483693117,
+          "ci95_profile": [
+            0.034706294569797944,
+            0.03744764202016631
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 50.638129909721634,
+            "deviance": 52.12470947120295,
+            "dof": 8,
+            "pearson_p": 3.0807339178141674e-08,
+            "deviance_p": 1.5923101138289496e-08
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.037663485479896314,
+          "ci95_profile": [
+            0.03612883213246019,
+            0.03926791901730439
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 23.757963159755867,
+            "deviance": 24.227691471318245,
+            "dof": 6,
+            "pearson_p": 0.0005785852364551115,
+            "deviance_p": 0.0004742112348233351
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.04034631270504175,
+          "ci95_profile": [
+            0.03869643491610514,
+            0.04204127132571669
+          ],
+          "amplitude": 1.0706075858733373,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.810917340050984,
+          "fitted_P_L": [
+            0.007891275507366846,
+            0.047600820473884864,
+            0.08410609800321478,
+            0.11766566884737933,
+            0.1485172298124926,
+            0.17687929732533164,
+            0.22692227720640085,
+            0.26921490307224466,
+            0.30495750287104023,
+            0.34846551386988445,
+            0.40050180539211166
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.08713730746033,
+            "deviance": 21.270077520520694,
+            "dof": 9,
+            "pearson_p": 0.012269088595128895,
+            "deviance_p": 0.011503742607451786
+          },
+          "lr_test_a_above_1": {
+            "statistic": 110.62557967214525,
+            "p_value": 7.147136398822358e-26,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9253290593793714,
+        "no_spam_ci95_paired_bootstrap": [
+          0.89170411660686,
+          0.9586007261451217
+        ],
+        "spam": 0.9253290205276588,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.8916231951297077,
+          0.9541648666395205
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "mwpm",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.04787440963177247,
+        "ci95_profile": [
+          0.046196763478980295,
+          0.04961587856249599
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.047874409631772474,
+          0.09116490106836345,
+          0.13031037906456222,
+          0.16570772376311793,
+          0.19771581450172215,
+          0.22665916834522465,
+          0.2764973480967282,
+          0.31724854239528555,
+          0.35056957950055156,
+          0.38951424897867165,
+          0.4332038094867045
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 107.91807625383635,
+          "deviance": 138.60347411513152,
+          "dof": 10,
+          "pearson_p": 1.4018963283415854e-18,
+          "deviance_p": 8.143817880835092e-25
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04787441222185962,
+        "ci95_profile": [
+          0.04619676347861066,
+          0.04961587856249605
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04787441222185962,
+          0.09116490575254216,
+          0.13031038541807338,
+          0.1657077314233445,
+          0.19771582316018332,
+          0.22665917774053312,
+          0.2764973583397465,
+          0.3172485528645489,
+          0.3505695897730371,
+          0.3895142584727498,
+          0.43320381713979683
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 107.91807209298041,
+          "deviance": 138.60347411513078,
+          "dof": 9,
+          "pearson_p": 3.899609823149074e-19,
+          "deviance_p": 2.0033864456261005e-25
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04955144623389558,
+          "ci95_profile": [
+            0.04772111887145663,
+            0.051459575321734057
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 38.64985402997001,
+            "deviance": 39.35988267566327,
+            "dof": 8,
+            "pearson_p": 5.707839597620153e-06,
+            "deviance_p": 4.214442683327963e-06
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.05087028195327099,
+          "ci95_profile": [
+            0.04875895287173358,
+            0.05309345706468937
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 23.613543939302843,
+            "deviance": 23.610798084033746,
+            "dof": 6,
+            "pearson_p": 0.0006149974618168766,
+            "deviance_p": 0.0006157111553056051
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.05715564955241131,
+          "ci95_profile": [
+            0.054734397693980884,
+            0.05963518651257302
+          ],
+          "amplitude": 1.1037496232737138,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.8131916978220756,
+          "fitted_P_L": [
+            0.011210715024581486,
+            0.06708485317863894,
+            0.11657194601394377,
+            0.16040210497832386,
+            0.19922198153151488,
+            0.23360430756482176,
+            0.29102737093382636,
+            0.33607257572509486,
+            0.3714080377440466,
+            0.41065769843742633,
+            0.4513074344710497
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 28.289967759196763,
+            "deviance": 27.627143048238086,
+            "dof": 9,
+            "pearson_p": 0.0008530403322395374,
+            "deviance_p": 0.0011007132079644741
+          },
+          "lr_test_a_above_1": {
+            "statistic": 110.97633106688954,
+            "p_value": 5.988138733977157e-26,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 1.057096704938378,
+        "no_spam_ci95_paired_bootstrap": [
+          1.034407051914045,
+          1.0818028697698074
+        ],
+        "spam": 1.0570967778460354,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          1.0336453624954638,
+          1.0799981161268597
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "mwpm_corr",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.045288580891530865,
+        "ci95_profile": [
+          0.04369739680428673,
+          0.04693954313300527
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04528858089153087,
+          0.08647505066472427,
+          0.12393096690199795,
+          0.15799423255451528,
+          0.18897214428316517,
+          0.21714416468946768,
+          0.2660641100680501,
+          0.30652334593637554,
+          0.33998515286156206,
+          0.3796467423106461,
+          0.42513356866468915
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 97.28395049043343,
+          "deviance": 125.00984734893157,
+          "dof": 10,
+          "pearson_p": 1.9025173154235014e-16,
+          "deviance_p": 4.854386428645951e-22
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04528858021817985,
+        "ci95_profile": [
+          0.043697396803998985,
+          0.046939543133005336
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04528858021817983,
+          0.08647504944000262,
+          0.1239309652313132,
+          0.15799423052870348,
+          0.18897214198026574,
+          0.2171441621762965,
+          0.2660641072966928,
+          0.306523343071312,
+          0.3399851500181015,
+          0.37964673963730244,
+          0.4251335664473976
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 97.28395155162511,
+          "deviance": 125.00984734893026,
+          "dof": 9,
+          "pearson_p": 5.567648312441705e-17,
+          "deviance_p": 1.2563671023309121e-22
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.046624248247687565,
+          "ci95_profile": [
+            0.04490455635950331,
+            0.048415403505728996
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 35.19409461931812,
+            "deviance": 36.15645531810278,
+            "dof": 8,
+            "pearson_p": 2.4647053204943062e-05,
+            "deviance_p": 1.6439070059321574e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04798724764540193,
+          "ci95_profile": [
+            0.04601069694260006,
+            0.05006496288648755
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 18.34243097713362,
+            "deviance": 18.368533690076227,
+            "dof": 6,
+            "pearson_p": 0.0054310679919795015,
+            "deviance_p": 0.005374279971016299
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.05355834828926064,
+          "ci95_profile": [
+            0.0512686429865528,
+            0.05589842843202642
+          ],
+          "amplitude": 1.0941492695145918,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.794153805616333,
+          "fitted_P_L": [
+            0.01152619289980672,
+            0.06384989348151332,
+            0.1105688521041438,
+            0.1522834302115294,
+            0.18952968051288527,
+            0.2227862355220231,
+            0.2789939338732102,
+            0.3238049926676013,
+            0.359530187777498,
+            0.40000757347707605,
+            0.44325329920909845
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 27.62741392802228,
+            "deviance": 26.530276390266657,
+            "dof": 9,
+            "pearson_p": 0.0011005989218593518,
+            "deviance_p": 0.0016720459598027638
+          },
+          "lr_test_a_above_1": {
+            "statistic": 98.47957095866514,
+            "p_value": 3.283950369638327e-23,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null
+    },
+    {
+      "decoder": "mwpm_corr_uniform",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.04670427772708427,
+        "ci95_profile": [
+          0.04506120777635813,
+          0.04840987110118731
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.0467042777270843,
+          0.08904597633815137,
+          0.12743259804648288,
+          0.16223358087227346,
+          0.1937838541639217,
+          0.2223870620032128,
+          0.27182769221926595,
+          0.3124633440585952,
+          0.34586211331358396,
+          0.3851464960292727,
+          0.42966000535663035
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.65411566292627,
+          "deviance": 111.86704066411014,
+          "dof": 10,
+          "pearson_p": 1.512330850389201e-13,
+          "deviance_p": 2.2411142229690746e-19
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04670427767765698,
+        "ci95_profile": [
+          0.04506120777604986,
+          0.04840987110118604
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.046704277677657,
+          0.08904597624853061,
+          0.12743259792460876,
+          0.16223358072495347,
+          0.19378385399697284,
+          0.22238706182158752,
+          0.27182769202022694,
+          0.31246334385410557,
+          0.34586211311189785,
+          0.3851464958414186,
+          0.4296600052032331
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.654115734361,
+          "deviance": 111.86704066410886,
+          "dof": 9,
+          "pearson_p": 4.791708790971549e-14,
+          "deviance_p": 6.125207530690459e-20
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.048074772283855365,
+          "ci95_profile": [
+            0.04629542628450423,
+            0.04992934677805636
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 17.966717175237264,
+            "deviance": 18.44231386870476,
+            "dof": 8,
+            "pearson_p": 0.02147740134455524,
+            "deviance_p": 0.018144155353868395
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.049446591334330596,
+          "ci95_profile": [
+            0.04739462261272032,
+            0.05160631015454992
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 6.5002389975210955,
+            "deviance": 6.533056252128148,
+            "dof": 6,
+            "pearson_p": 0.36954219844618785,
+            "deviance_p": 0.3661928641493172
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.05530199032033327,
+          "ci95_profile": [
+            0.05289252537877551,
+            0.057760951724924084
+          ],
+          "amplitude": 1.0963887954435243,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7850845888601824,
+          "fitted_P_L": [
+            0.012438084831177476,
+            0.0663643734576363,
+            0.1143261999008312,
+            0.15698325742061192,
+            0.19492227457628708,
+            0.22866508541295,
+            0.28536722341789944,
+            0.33022004796746285,
+            0.36569976603203247,
+            0.4055151205413763,
+            0.4474178644802551
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 20.535560581246948,
+            "deviance": 19.188134124601177,
+            "dof": 9,
+            "pearson_p": 0.014880119113431923,
+            "deviance_p": 0.023639911007697603
+          },
+          "lr_test_a_above_1": {
+            "statistic": 92.67890653951326,
+            "p_value": 6.150563383356316e-22,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": "A=1, R>=5",
+      "ratio_to_mwpm_corr": {
+        "no_spam": 1.0312594655801668,
+        "no_spam_ci95_paired_bootstrap": [
+          0.996299356861262,
+          1.0668534856688783
+        ],
+        "spam": 1.0312594798215564,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9962276516519181,
+          1.0693690169424945
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "relay_bp",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.04494895935072439,
+        "ci95_profile": [
+          0.0433724362780162,
+          0.04658437353431704
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.044948959350724405,
+          0.08585710080802267,
+          0.12308768549036536,
+          0.1569713180977274,
+          0.18780888265564305,
+          0.2158742143419805,
+          0.2646626467847789,
+          0.30507341250256387,
+          0.3385450758484263,
+          0.3782913016981057,
+          0.4240072509732088
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 104.63185705861927,
+          "deviance": 133.5864313657891,
+          "dof": 10,
+          "pearson_p": 6.421502727058634e-18,
+          "deviance_p": 8.653396872826901e-24
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04494895899280402,
+        "ci95_profile": [
+          0.043372436277715504,
+          0.04658437353431625
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.044948958992804044,
+          0.08585710015653453,
+          0.12308768460098429,
+          0.15697131701849065,
+          0.18780888142787355,
+          0.21587421300110582,
+          0.26466264530394235,
+          0.30507341096936896,
+          0.338545074324518,
+          0.3782913002621562,
+          0.42400724977776694
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 104.63185765796504,
+          "deviance": 133.58643136578937,
+          "dof": 9,
+          "pearson_p": 1.8134956682152137e-18,
+          "deviance_p": 2.16771375345239e-24
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.046357675632412526,
+          "ci95_profile": [
+            0.044651601941255246,
+            0.048134222103991674
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 40.77351872019505,
+            "deviance": 41.924509209351115,
+            "dof": 8,
+            "pearson_p": 2.2980210622247985e-06,
+            "deviance_p": 1.3991436167308976e-06
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04829612055502201,
+          "ci95_profile": [
+            0.0463076588990219,
+            0.050386572907551955
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 18.29577068443944,
+            "deviance": 18.409038598023045,
+            "dof": 6,
+            "pearson_p": 0.005534035301025194,
+            "deviance_p": 0.00528729905356121
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.053394395006329524,
+          "ci95_profile": [
+            0.05116111420964612,
+            0.055681713843245266
+          ],
+          "amplitude": 1.0967633638503211,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.8178662844354645,
+          "fitted_P_L": [
+            0.010179334352734215,
+            0.06248669056040096,
+            0.1092082074898898,
+            0.15094039015892263,
+            0.18821604353614213,
+            0.22151107499227707,
+            0.2778142209370271,
+            0.3227343496103079,
+            0.35857280812209646,
+            0.39921511304022755,
+            0.44269846742917107
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 22.74917709266171,
+            "deviance": 21.8717852328234,
+            "dof": 9,
+            "pearson_p": 0.00678489012062313,
+            "deviance_p": 0.00929432931303804
+          },
+          "lr_test_a_above_1": {
+            "statistic": 111.7146461329612,
+            "p_value": 4.1262322722936306e-26,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9925009454012284,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9662893657317392,
+          1.02101310632445
+        ],
+        "spam": 0.992500952254637,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9651086104997553,
+          1.0210907059371601
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_cascade",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.04364185517731622,
+        "ci95_profile": [
+          0.04210084584931033,
+          0.04524058279435096
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.043641855177316224,
+          0.08347448730799678,
+          0.11983037951312037,
+          0.15301299455332767,
+          0.1832993078335563,
+          0.21094211931772378,
+          0.259200036102302,
+          0.2994013431625909,
+          0.33289108323094196,
+          0.3729405330638673,
+          0.4195203577500548
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145571833445,
+          "deviance": 111.45088949070269,
+          "dof": 10,
+          "pearson_p": 1.315810229956464e-13,
+          "deviance_p": 2.7194161167799545e-19
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04364185628736869,
+        "ci95_profile": [
+          0.04210084584908602,
+          0.04524058279435081
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04364185628736872,
+          0.08347448933432272,
+          0.11983038228731147,
+          0.15301299792939355,
+          0.18329931168529423,
+          0.21094212353637648,
+          0.25920004078810593,
+          0.29940134804198315,
+          0.3328910881086812,
+          0.3729405376997879,
+          0.41952036166525286
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145402855846,
+          "deviance": 111.45088949070438,
+          "dof": 9,
+          "pearson_p": 4.1615330173685454e-14,
+          "deviance_p": 7.446048393359833e-20
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04493052507817965,
+          "ci95_profile": [
+            0.04326776339507738,
+            0.04666194754838276
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.04255218732721,
+            "deviance": 21.506247422442243,
+            "dof": 8,
+            "pearson_p": 0.007035248522464806,
+            "deviance_p": 0.005917532183985593
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04609730405506711,
+          "ci95_profile": [
+            0.04419940538650674,
+            0.04809088336538694
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 10.154478977945075,
+            "deviance": 10.197961216018179,
+            "dof": 6,
+            "pearson_p": 0.11829551190460558,
+            "deviance_p": 0.11655919392424403
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.051529890904768554,
+          "ci95_profile": [
+            0.049304608614982745,
+            0.053798936176157726
+          ],
+          "amplitude": 1.0904507782398407,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7961230218668454,
+          "fitted_P_L": [
+            0.010965420519798597,
+            0.0613652175783469,
+            0.10657082254879624,
+            0.14711754773442298,
+            0.18348553626932773,
+            0.21610544784097346,
+            0.27160633455097927,
+            0.3162568953136544,
+            0.352178349809298,
+            0.39333337844394484,
+            0.43807784964989654
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 20.021732701129388,
+            "deviance": 19.00034976704129,
+            "dof": 9,
+            "pearson_p": 0.01777875682476742,
+            "deviance_p": 0.025189921254732312
+          },
+          "lr_test_a_above_1": {
+            "statistic": 92.45053972366077,
+            "p_value": 6.90285661214134e-22,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": "A=1, R>=5",
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9636392732605452,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9298962665246223,
+          0.9978419950589587
+        ],
+        "spam": 0.9636393120985911,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.932828108059501,
+          1.000687040684258
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_finetuned",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.04364185517731622,
+        "ci95_profile": [
+          0.04210084584931033,
+          0.04524058279435096
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.043641855177316224,
+          0.08347448730799678,
+          0.11983037951312037,
+          0.15301299455332767,
+          0.1832993078335563,
+          0.21094211931772378,
+          0.259200036102302,
+          0.2994013431625909,
+          0.33289108323094196,
+          0.3729405330638673,
+          0.4195203577500548
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145571833445,
+          "deviance": 111.45088949070269,
+          "dof": 10,
+          "pearson_p": 1.315810229956464e-13,
+          "deviance_p": 2.7194161167799545e-19
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04364185628736869,
+        "ci95_profile": [
+          0.04210084584908602,
+          0.04524058279435081
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04364185628736872,
+          0.08347448933432272,
+          0.11983038228731147,
+          0.15301299792939355,
+          0.18329931168529423,
+          0.21094212353637648,
+          0.25920004078810593,
+          0.29940134804198315,
+          0.3328910881086812,
+          0.3729405376997879,
+          0.41952036166525286
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 82.96145402855846,
+          "deviance": 111.45088949070438,
+          "dof": 9,
+          "pearson_p": 4.1615330173685454e-14,
+          "deviance_p": 7.446048393359833e-20
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04493052507817965,
+          "ci95_profile": [
+            0.04326776339507738,
+            0.04666194754838276
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 21.04255218732721,
+            "deviance": 21.506247422442243,
+            "dof": 8,
+            "pearson_p": 0.007035248522464806,
+            "deviance_p": 0.005917532183985593
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.04609730405506711,
+          "ci95_profile": [
+            0.04419940538650674,
+            0.04809088336538694
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 10.154478977945075,
+            "deviance": 10.197961216018179,
+            "dof": 6,
+            "pearson_p": 0.11829551190460558,
+            "deviance_p": 0.11655919392424403
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.051529890904768554,
+          "ci95_profile": [
+            0.049304608614982745,
+            0.053798936176157726
+          ],
+          "amplitude": 1.0904507782398407,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.7961230218668454,
+          "fitted_P_L": [
+            0.010965420519798597,
+            0.0613652175783469,
+            0.10657082254879624,
+            0.14711754773442298,
+            0.18348553626932773,
+            0.21610544784097346,
+            0.27160633455097927,
+            0.3162568953136544,
+            0.352178349809298,
+            0.39333337844394484,
+            0.43807784964989654
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 20.021732701129388,
+            "deviance": 19.00034976704129,
+            "dof": 9,
+            "pearson_p": 0.01777875682476742,
+            "deviance_p": 0.025189921254732312
+          },
+          "lr_test_a_above_1": {
+            "statistic": 92.45053972366077,
+            "p_value": 6.90285661214134e-22,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": "A=1, R>=5",
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9636392732605452,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9312541317356116,
+          0.9964739151337685
+        ],
+        "spam": 0.9636393120985911,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9316308841234453,
+          0.9981414157638272
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    },
+    {
+      "decoder": "rnn_lstm_pretrained",
+      "d": 3,
+      "basis": "Z",
+      "noise": "calibrated_coherence",
+      "p": 0.001,
+      "calibration": "inforecord:emerald:23e12f6b:eA:t2=ramsey:window=1036:terminal=measure_fidelity:leak=none:readout=asym:qnd=excess",
+      "calibration_label": "emerald-23e12f6b-eA-ramsey-w1036-mf-noleak-asym-qndx",
+      "group": "emerald_eA_Z",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ],
+      "distinct_rounds": 11,
+      "enough_rounds": true,
+      "min_reference_failures": 19,
+      "reference_shortfall": {
+        "1": 81
+      },
+      "no_spam": {
+        "epsilon": 0.045184180008549,
+        "ci95_profile": [
+          0.04360059703233073,
+          0.046827034448599904
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.04518418000854901,
+          0.0862851397710081,
+          0.12367187320460504,
+          0.1576800288514114,
+          0.18861492324520968,
+          0.21675428196533825,
+          0.2656340747056589,
+          0.30607866794882665,
+          0.3395437264300578,
+          0.37923158226970843,
+          0.42478903395099715
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 100.05195581250211,
+          "deviance": 130.44111814835935,
+          "dof": 10,
+          "pearson_p": 5.320767424909747e-17,
+          "deviance_p": 3.7969701784082556e-23
+        },
+        "form": "challenge: 2 P_L = 1 - (1 - 2 eps)^R (A = 1)"
+      },
+      "spam": {
+        "epsilon": 0.04518418070462862,
+        "ci95_profile": [
+          0.04360059703202362,
+          0.04682703444860157
+        ],
+        "amplitude": 1.0,
+        "boundary_fit": false,
+        "fitted_P_L": [
+          0.045184180704628596,
+          0.08628514103736012,
+          0.12367187493247583,
+          0.15768003094704602,
+          0.18861492562802906,
+          0.21675428456632378,
+          0.2656340775751692,
+          0.30607867091672425,
+          0.33954372937692984,
+          0.37923158504218546,
+          0.4247890362531518
+        ],
+        "goodness_of_fit": {
+          "pearson_chi2": 100.05195473765221,
+          "deviance": 130.4411181483613,
+          "dof": 9,
+          "pearson_p": 1.5359004472456442e-17,
+          "deviance_p": 9.62368609778071e-24
+        },
+        "form": "2 P_L = 1 - A (1 - 2 eps)^R, A fitted"
+      },
+      "sensitivity": {
+        "a1_r_min_3": {
+          "rounds": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.046676672335827486,
+          "ci95_profile": [
+            0.0449592447076411,
+            0.04846531422933033
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 33.599423819811946,
+            "deviance": 33.97165819419963,
+            "dof": 8,
+            "pearson_p": 4.800770457954843e-05,
+            "deviance_p": 4.1109784778420866e-05
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 3 only"
+        },
+        "a1_r_min_5": {
+          "rounds": [
+            5,
+            6,
+            8,
+            10,
+            12,
+            15,
+            20
+          ],
+          "epsilon": 0.047838948107481,
+          "ci95_profile": [
+            0.04587642351811014,
+            0.0499012419965238
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 22.969444138015078,
+            "deviance": 22.957875336921376,
+            "dof": 6,
+            "pearson_p": 0.0008067774158868529,
+            "deviance_p": 0.0008107107028017189
+          },
+          "form": "SENSITIVITY: challenge form (A = 1) on R >= 5 only"
+        },
+        "free_amplitude": {
+          "epsilon": 0.053652182458040085,
+          "ci95_profile": [
+            0.05138780131115071,
+            0.055966909123386505
+          ],
+          "amplitude": 1.0969766651009007,
+          "amplitude_bound": 2.0,
+          "round_offset": 0.8154192892671768,
+          "fitted_P_L": [
+            0.010366859637755521,
+            0.06290663280619208,
+            0.10980865898195469,
+            0.1516778930256497,
+            0.18905437550076332,
+            0.22242019826108783,
+            0.2787951301664364,
+            0.3237206232890525,
+            0.3595219957093133,
+            0.4000647823758767,
+            0.4433453424449245
+          ],
+          "goodness_of_fit": {
+            "pearson_chi2": 25.468716246284945,
+            "deviance": 24.74622518269134,
+            "dof": 9,
+            "pearson_p": 0.0024941683815543157,
+            "deviance_p": 0.0032651083930190236
+          },
+          "lr_test_a_above_1": {
+            "statistic": 105.6948929656719,
+            "p_value": 8.600875479509183e-25,
+            "note": "likelihood ratio, free A in (0, 2] against A <= 1; chi2(1) reference"
+          },
+          "form": "SENSITIVITY: 2 P_L = 1 - A (1 - 2 eps)^R, A in (0, 2] (mlDecoder, not fit_ler)"
+        }
+      },
+      "trusted_fit": null,
+      "ratio_to_mwpm_corr": {
+        "no_spam": 0.9976947636484368,
+        "no_spam_ci95_paired_bootstrap": [
+          0.9674637089366994,
+          1.0281007746697566
+        ],
+        "spam": 0.9976947938520421,
+        "bootstrap_samples": 2000,
+        "method": "paired: shots resampled jointly for both decoders at each R; no-SPAM refit per sample",
+        "spam_ci95_paired_bootstrap": [
+          0.9674286537375454,
+          1.02743021708889
+        ],
+        "spam_bootstrap_samples": 200,
+        "spam_method": "REDUCED paired bootstrap: the first resamples of the same paired draws, refit with fit_ler(fit_spam=True), A free"
+      }
+    }
+  ],
+  "lambdas": [],
+  "reference": "mwpm_corr",
+  "bootstrap": 2000,
+  "spam_bootstrap": 200,
+  "label": "HARDWARE",
+  "simulated": false,
+  "step03": "InfoRecord's det_events.npy / obs_flips.npy (the m2d conversion of the raw record, checked); decoded per shot; a shot fails if ANY observable is wrong.",
+  "rules": "Fixed shots (no optional stopping). Points with fewer than 100 reference failures are listed.",
+  "batch_review": {
+    "status": "passed",
+    "verdict": "APPROVE at batches 47eb36a (reports/batches-review.md, 2026-10-25 01:55 UTC; no BLOCKER, no MAJOR)",
+    "detail": "The reviewer re-pulled all 26 jobs by id from IQM (417/417 circuits equal the committed raw data) and reproduced all 417 runs, every fit, and 5f24c07's E3 fix.",
+    "source": "dq-orch-3, the mini PC's orchestrator, over the cross-session bridge",
+    "relabelled_utc": "2026-10-25T02:12:13.071349+00:00",
+    "previous_label": "HARDWARE (PROVISIONAL: batch review pending)"
+  }
+}

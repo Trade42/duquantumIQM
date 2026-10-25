@@ -40,6 +40,14 @@ Verified 54,000 recorded shots, circuit frames, decoder states and comparison in
 
 ## Evaluation bundle
 
+The separate [routing certificate](GARNET_ROUTING_PROOF.md) verifies the
+seventeen-qubit placement and zero routing overhead from the saved native
+circuits without decoding measurements:
+
+```powershell
+python -m challenge.audit_garnet_routing
+```
+
 [`benchmarks/garnet/`](../benchmarks/garnet/) contains eighteen physical cases:
 six vanilla cases and twelve optimized cases across two acquisition blocks.
 Their total is 54,000 shots. The [manifest](../benchmarks/garnet/manifest.json)
@@ -55,7 +63,7 @@ specifies calibration, placement, versions, pulse audits and SHA-256 hashes.
 | `metadata.json` | Decoder family, training configuration and model information |
 | `evaluation.json` | Reproducible counts, intervals, fits and comparisons |
 
-Reproduction verifies artifact and scientific-source hashes, reconstructs the
+Reproduction verifies artifact and retained-runtime source hashes, reconstructs the
 source/native detector frames, checks native measurement-column order, reloads
 the inference state and scores every shot. It then refits the challenge equation
 and recomputes the independent bootstrap comparison. The example disables
@@ -87,8 +95,8 @@ git diff --check
 ```
 
 [CI](../.github/workflows/offline.yml) reproduces the comparison and runs these
-checks on Windows and Ubuntu with Python 3.12. The broader research regression
-suites can be run with their optional dependencies:
+checks on Windows and Ubuntu with Python 3.12. All retained regression
+suites can be run with:
 
 ```powershell
 python -m pytest -q
@@ -99,3 +107,18 @@ Recorded acquisition versions include Stim 1.16.0, PyMatching 2.4.0, Qiskit
 2.1.2, IQM client 35.0.3 and PulLA 14.0.3. Reproduction of the measurement
 comparison uses the saved circuits and inference state with the base environment.
 Repository attributes preserve the byte representation used by the hashes.
+
+## Retained runtime source integrity
+
+The original published Garnet bundle remains byte-for-byte unchanged. Its
+`source_dependencies` field records acquisition-time provenance, including
+source paths retired during cleanup. Current source validation uses
+[`challenge/runtime_sources.json`](../challenge/runtime_sources.json), which
+pins the original measurement manifest and every retained implementation
+dependency. No historical source checksum is presented as a checksum of the
+cleaned runtime. The unchanged saved records, decoder states and measured
+scores are verified by offline replay.
+
+Exact bootstrap-interval reproduction uses the recorded NumPy 2.5.4 runtime.
+Other NumPy versions can produce different binomial draws with the same seed,
+while preserving all failure counts and point estimates.

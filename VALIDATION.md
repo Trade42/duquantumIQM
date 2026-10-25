@@ -12,7 +12,7 @@ observable frames, measurement order, all 54,000 shot predictions, challenge
 fits and bootstrap intervals. The tests also exercise corrupted-state rejection
 and equal-width observable-frame errors.
 
-Run the full root regressions with the optional research dependencies:
+Run all retained core regressions:
 
 ```powershell
 python -m pytest -q

@@ -25,3 +25,5 @@ for the complete X/Z inference interface.
 Read the [methods](../docs/METHODS.md), [Garnet evaluation](../docs/EVALUATION.md)
 and [reproduction guide](../docs/REPRODUCIBILITY.md). Package regressions run with
 `python -m pytest -q -c ethan/pyproject.toml ethan/tests` from the repository root.
+
+[Every retained Garnet improvement](../improvements.md) is documented at the repository root.
