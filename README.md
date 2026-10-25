@@ -23,7 +23,17 @@ decoder combinations are retained only when the measured evidence supports
 them. The runner is `python -m challenge.benchmark_headline`; hardware
 submission requires an explicit `--submit` and credential file.
 
-**Garnet result, 300,000 shots:** retain Ethan's native/DD compiler; X keeps
+**Latest validation, 96,000 new Garnet shots:** no new change qualified for
+release. Keep the existing XY4/native compiler, X correlated MWPM and Z Bayesian
+ML. Fresh R1–3 challenge fits: **X 5.808%, Z 4.255%**; stationary fits are rejected,
+so these remain descriptive estimates. Adaptive DD plus fitted matching gave
+X 6.066%; fitting alone's small gain did not survive the adjusted interval.
+The [bounded readout/history study](docs/GARNET_ROUNDS.md) includes R1–7
+diagnostics, frozen component comparisons, all-shot evidence and offline replay.
+The experimental runner is `python -m challenge.benchmark_rounds`; the adopted
+decoder is available through its offline `load_adopted` function.
+
+**Earlier Garnet result, 300,000 shots:** retain Ethan's native/DD compiler; X keeps
 correlated MWPM, Z adds training-fitted Bayesian ML decoding. Challenge R1–3
 fit: **X 5.220%, Z 3.763% per round**. Z improves over standalone native ML
 (3.920%; adjusted gain interval +0.037–0.274 percentage points). X additions

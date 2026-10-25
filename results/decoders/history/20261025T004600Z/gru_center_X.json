@@ -1,0 +1,65 @@
+{
+  "hidden": 32,
+  "seed": 7319,
+  "steps": 1200,
+  "training_seconds": 6.059736499999417,
+  "train_shots": 57694,
+  "tuning_shots": 6406,
+  "checkpoint_rule": "minimum tuning binary cross entropy",
+  "history": [
+    [
+      100,
+      0.38909727272888023
+    ],
+    [
+      200,
+      0.3711972100039323
+    ],
+    [
+      300,
+      0.369172690436244
+    ],
+    [
+      400,
+      0.36833457214136917
+    ],
+    [
+      500,
+      0.36564824047187966
+    ],
+    [
+      600,
+      0.38486738068362075
+    ],
+    [
+      700,
+      0.3649764123062293
+    ],
+    [
+      800,
+      0.3630108206222455
+    ],
+    [
+      900,
+      0.36315419897437096
+    ],
+    [
+      1000,
+      0.3621824358900388
+    ],
+    [
+      1100,
+      0.35831968983014423
+    ],
+    [
+      1200,
+      0.36180268848935765
+    ]
+  ],
+  "inputs": "measured detector history, fixed coordinate mask, correlated MWPM prediction",
+  "inference": "offline complete measured history",
+  "hidden_leakage_inputs": false,
+  "approximate_disjoint_errors": true,
+  "correlations": "bidirectional GRU plus correlated MWPM",
+  "sampling": "Balanced round records plus current-domain replay; counts include reused training exposure"
+}

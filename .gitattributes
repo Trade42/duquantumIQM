@@ -1,0 +1,11 @@
+# Published Garnet evidence seals these source bytes. Preserve them on checkout.
+challenge/benchmark_rounds.py -text
+challenge/decoders/history.py -text
+challenge/rounds_hardware.py -text
+challenge/benchmark_headline.py -text
+challenge/decoders/hybrid.py -text
+# These two recorded dependencies already use CRLF in the working tree.
+darawork/decoders/dem_fit.py text eol=crlf
+darawork/decoders/ensemble_decoder.py text eol=crlf
+ethan/src/iqm_surface_code/hardware_optimization.py -text
+ethan/src/iqm_surface_code/decoders/lookup_table.py -text

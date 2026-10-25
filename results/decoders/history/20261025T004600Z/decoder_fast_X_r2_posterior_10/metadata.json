@@ -1,0 +1,22 @@
+{
+  "family": "posterior_10",
+  "history": "offline full measured history",
+  "approximate_disjoint_errors": true,
+  "physical_oracle_inputs": false,
+  "weight_choice": "fit",
+  "training_cv_errors": {
+    "model": 755,
+    "fit": 752
+  },
+  "train_shots": 14600,
+  "algorithm": "Dara posterior-plus-data rule on exact native DEM posterior",
+  "alpha": 10,
+  "table_entries": 65536,
+  "table_bytes": 65536,
+  "empirical_entries": 2626,
+  "estimated_transform_peak_bytes": 2097152,
+  "unseen_syndrome_fallback": "exact modeled ML",
+  "joint_dem_faults": true,
+  "table_sha256": "45dbcca45f2685a5d6960e9a5c9cb91b110de27fd37d2d5a09bf014476e7421a",
+  "dem_sha256": "4c6c8b04b78266fdd13a009bfbae326ed7df4d56c1f33ff673b952d304903fc9"
+}
